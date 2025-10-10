@@ -1,0 +1,56 @@
+{% extends 'usuarios/base2.html' %}
+{% load static %}
+
+{% block title %}Todos os Eventos Cadastrados - Casa de Atena{% endblock %}
+
+{% block content %} 
+
+<div class="todos-eventos-container"> 
+    <div class="tabela-eventos-titulo">
+        <h1>Eventos Cadastrados</h1>
+    </div>
+
+    <table class="todos-eventos-tabela"> 
+        <tr> 
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Data de início</th>
+            <th>Data de término</th>
+            <th>Horário de início</th>
+            <th>Horário de término</th>
+            <th>Local</th>
+            <th>Organizador responsável</th>
+            <th>Quantidade de participantes</th>
+            <th>Vagas</th>
+            <th>Emitido</th>
+            <th>Horas complementares</th>
+            <th>Assinado por</th>
+        </tr>
+        {% for evento in eventos %}
+        <tr>
+            <td>{{evento.id_evento}} </td>
+            <td>{{evento.nome}} </td>
+            <td>{{evento.tipoevento}} </td>
+            <td>{{evento.dataI}} </td>
+            <td>{{evento.dataF}} </td>
+            <td>{{evento.horarioI}} </td>
+            <td>{{evento.horarioF}} </td>
+            <td>{{evento.local}} </td>
+            <td>{{evento.organResp}} </td>
+            <td>{{evento.quantPart}} </td>
+            <td>{{evento.vagas}} </td>
+            <td>{{evento.emitido}} </td>
+            <td>{{evento.horas}} </td>
+            <td>{{evento.assinatura}} </td>
+
+            <td> 
+                <a href = "{% url 'deletar_evento' evento.id_evento %}" class="botao-tabela-eventos">Deletar</a>
+                <a href = "{% url 'editar_evento' evento.id_evento %}" class="botao-tabela-eventos">Editar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}  

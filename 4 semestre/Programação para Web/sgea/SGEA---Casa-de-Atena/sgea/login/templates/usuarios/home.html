@@ -1,0 +1,86 @@
+{% extends 'usuarios/base2.html' %}
+{% load static %}
+
+{% block title %}Cadastre-se - Casa de Atena{% endblock %}
+{% block content %}
+
+    <form action = "{% url 'listagem_usuarios' %}" method = "post"> 
+        {% csrf_token %}
+            <div class='cadastroUsu-container'>
+
+                <div class="formulario-cadastroUsu">
+                  <div class="cadastroUsu-titulo">
+                    <h1>Cadastre-se</h1>
+                  </div>
+
+                  <div class="form-cadastroUsu-linha">
+                    <div class="form-cadastroUsu-grupo">
+                      <label>Nome</label>
+                      <input name = "nome" class = "form-control-sm" type = "text" required>
+                    </div> 
+
+                    <div class="form-cadastroUsu-grupo">
+                      <label>Senha</label>
+                      <input name = "senha" class = "form-control-sm" type = "text" required>
+                    </div> 
+                  </div>
+
+                  <div class="form-cadastroUsu-linha">
+                    <div class="form-cadastroUsu-grupo">
+                      <label>Telefone</label>
+                      <input name = "telefone" class = "form control-sm" type = "text" required>
+                    </div>  
+
+                    <div class="form-cadastroUsu-grupo">
+                      <label for = "ensi">Instituição de ensino</label>
+                      <select name = "ensi" id = "ensi">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value = "CEUB"> CEUB </option> 
+                        <option value = "UNIEURO"> UNIEURO </option>
+                        <option value = "IFB"> IFB </option>
+                        <option value = "UNB"> UNB </option>
+                        <option value = "CATOLICA"> CATOLICA </option>
+                        <option value = "UNIPLAN"> UNIPLAN </option>
+                        <option value = "IESB"> IESB </option>
+                        <option value = "UDF"> UDF </option>
+                        <option value = "UPIS"> UPIS </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-cadastroUsu-linha">
+                    <div class="form-cadastroUsu-grupo">
+                      <label for="tipo">Você é</label>
+                        <select name="tipo" id="tipo" onchange="mostrarCampoSenha()">
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="estudante">Estudante</option>
+                            <option value="professor">Professor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-cadastroUsu-grupo">
+                      <label>Email</label>
+                      <input name = "email" class = "form control-sm" type = "text" required>
+                    </div>  
+
+                    <div class="form-cadastroUsu-grupo" id="campoSenhaProfessor" style="display:none;">
+                        <label for="senha_professor">Senha de professor</label>
+                        <input type="password" name="senha_professor" id="senha_professor">
+                    </div>
+                  </div>
+
+                  <div class="botao-enviar-cadastroUsu">
+                    <button class = "form-control-sm" id="botao-enviar-cadastroUsu">Cadastrar</button>
+                  </div> 
+                </div>
+
+                <div class="ja-possui-conta">
+                  <h1>Já possui uma conta?</h1>
+                  <a href = "{% url 'login' %}" class="ir-login">
+                    Login
+                  </a>
+                </div>
+
+            </div>
+    </form>
+{% endblock %}

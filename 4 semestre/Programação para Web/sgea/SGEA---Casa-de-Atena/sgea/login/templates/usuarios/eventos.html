@@ -1,0 +1,90 @@
+{% extends 'usuarios/base2.html' %}
+{% load static %}
+
+{% block title %}Cadastro de Eventos - Casa de Atena{% endblock %}
+
+{% block content %} 
+        
+  <form action = "{% url 'visu_eventos' %}" method = "post"> 
+  {% csrf_token %}
+      <div class='evento-container'> 
+        <div class="cadastro-titulo">
+          <h1>Cadastro de eventos</h1>
+        </div>
+
+        <div class="formulario">
+          <div class="form-linha">
+            <div class="form-grupo">
+              <label>Nome do evento</label>
+              <input name = "nome" class = "form-control-sm" type="text" autocomplete="off" placeholder="" required>
+            </div>  
+
+            <div class="form-grupo">
+              <label>Tipo do evento</label>
+              <input name = "tipoE" class = "form-control-sm" type = "text" autocomplete="off" placeholder="" required>
+            </div>
+            
+            <div class="form-grupo">
+              <label>Local</label>
+              <input name = "local" class = "form-control-sm" type = "text" autocomplete="off" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="form-linha">
+            <div class="form-grupo">
+              <label>Data de Início</label>
+              <input name = "dataI" class = "form-control-sm" type = "text" autocomplete="off" placeholder="dd" required>
+            </div>
+
+            <div class="form-grupo">
+              <label>Data de término</label>
+              <input name = "dataF" class = "form-control-sm" type = "text" autocomplete="off" placeholder="dd" required>
+            </div>
+
+            <div class="form-grupo">
+              <label>Organizador Responsável</label>
+              <input name = "organResp" class = "form-control-sm" type = "text" autocomplete="off" placeholder="" required>
+            </div>
+          </div>
+          
+          <div class="form-linha">
+            <div class="form-grupo">
+              <label>Horário de Início</label>
+              <input name = "horarioI" class = "form-control-sm" type = "text" autocomplete="off" placeholder="hh" required>
+            </div>
+
+            <div class="form-grupo">
+              <label>Horário de término</label> 
+              <input name = "horarioF" class = "form-control-sm" type = "text" autocomplete="off" placeholder="hh" required>
+            </div>
+            
+            <div class="form-grupo">
+              <label>Nº Participantes</label>
+              <input name = "quantPart" class = "form-control-sm" type ="text" autocomplete="off" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="form-linha">
+            <div class="form-grupo">  
+              <label>Nº Vagas</label>
+              <input name="vagas" class = "form-control-sm" type = "text" autocomplete="off" placeholder="" required> 
+            </div>
+
+            <div class="form-grupo">  
+              <label>Horas complementares</label>
+              <input name="horas" class = "form-control-sm" type = "number" min="0" autocomplete="off" placeholder="" oninput="validity.valid||(value='');"> 
+            </div>
+          
+            <div class="form-grupo">  
+              <label>Assinatura</label>
+              <input name="assinatura" class = "form-control-sm" type = "text" autocomplete="off" placeholder="" required> 
+            </div>
+          </div>
+
+          <div class="botao-enviar">
+            <button class="form-control-sm" id="botao-enviar">Enviar</button>
+          </div>
+        </div>
+      </div>
+  </form>
+{% endblock %}
