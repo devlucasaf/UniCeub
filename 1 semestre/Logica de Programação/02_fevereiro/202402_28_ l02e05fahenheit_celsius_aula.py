@@ -1,6 +1,5 @@
 """            Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Elabore o programa que faça a conversão de graus Fahrenheit (ºF) para
@@ -34,3 +33,4 @@ print(f"Graus correspondente em Celsius: {celsius:.3f} °C")
       Obs.: o valor 3 é a quantidade de casas decimais.
 
 '''
+
