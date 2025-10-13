@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Elabore o programa que verifica se o usuário digitou a senha correta.
@@ -35,3 +34,4 @@ else:
     print("Senha incorreta.")
 
 '''
+
