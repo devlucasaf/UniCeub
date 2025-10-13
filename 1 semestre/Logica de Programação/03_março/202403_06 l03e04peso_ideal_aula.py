@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Construa o programa que calcule o peso ideal de uma pessoa.
@@ -44,3 +43,4 @@ else:
     print(f"Peso ideal = {62.1 * altura - 44.7:.2f} Kg")
 
 '''
+
