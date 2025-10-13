@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Operadores de Comparação:
@@ -46,3 +45,4 @@ else:
     print("Mensagem n")     # Executa, se todos os testes anteriores forem falsos.
 
 """
+
