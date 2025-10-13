@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Elabore o programa que leia um número qualquer e verifique se ele é
@@ -47,3 +46,4 @@ else:
     print(f'o valor {numero} é um número negativo.')
 
 '''
+
