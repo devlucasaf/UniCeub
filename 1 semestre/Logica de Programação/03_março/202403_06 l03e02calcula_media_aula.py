@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Refaça o programa que calcule a média aritmética de um aluno que
@@ -48,3 +47,4 @@ else:
     print("Média = {:.2f}   Aluno reprovado" .format(media))           
 
 '''
+
