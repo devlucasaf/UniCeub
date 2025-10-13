@@ -1,6 +1,5 @@
 """            Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 Crie um novo programa dentro do mesmo projeto:
@@ -45,3 +44,4 @@ print ('Valor da massa: ', massa)                                     # a.
 print("Quantidade ideal: {:.1f}" .format(dose_ideal))  # Solução 1    # b.
 
 '''
+
