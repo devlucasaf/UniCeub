@@ -1,6 +1,5 @@
 """            Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Operadores aritméticos:
@@ -44,3 +43,4 @@ print(f"Área: {area:.3f}")                                      # b.
 Obs.: o número 3 significa a quantidade de casas decimais.
 
 '''
+
