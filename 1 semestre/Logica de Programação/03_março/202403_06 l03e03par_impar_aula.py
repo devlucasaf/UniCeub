@@ -1,5 +1,4 @@
 """               Comentários de várias linhas.
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Operadores aritméticos:
@@ -49,3 +48,4 @@ print("Valor digitado: ", valor)                                    # a.
 print("Resto da divisão: ", resto)              .
     
 '''
+
