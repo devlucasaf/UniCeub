@@ -1,6 +1,5 @@
 """               Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 - Projete o programa que leia um valor numérico e verifique se ele é maior
@@ -33,3 +32,4 @@ a. Mostrar também o valor numérico lido, na tela de saída.
 print("Valor lido: ", valor)                  # Solução 1               # a.
 
 '''
+
