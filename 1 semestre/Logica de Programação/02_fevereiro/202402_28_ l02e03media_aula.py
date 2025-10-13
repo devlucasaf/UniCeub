@@ -1,6 +1,5 @@
 """            Comentários de várias linhas.
 
-  CEUB  -  FATECS  -  BCC  -  ADS  -  Programação  -  Prof. Barbosa
 ctlr<d>, duplica linha. ctrl<y>, apaga linha. ctrl</>, comenta linha.
 
 Crie um novo programa dentro do mesmo projeto:
@@ -42,3 +41,4 @@ a. Mostre a média com duas casas decimais
 print(f'Média: {media:.2f}')  # Mostra com 2 casas decimais.    # a.
 
 '''
+
