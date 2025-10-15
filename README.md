@@ -13,8 +13,8 @@
         <tr>
             <td>
                 <br>
-                    ◽️ Neste repertório, estarei salvando todos os códigos desenvolvidos por mim e pelos professores, durante as aulas e atividades ou trabalhos passados!<br><br>
-                    ◽️Cursos do 1°, 2°, 3° e 4° semestres do curso de Ciência da Computação (Em desenvolvimento até a finalização do curso)<br><br>
+                    ◽️ Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br><br>
+                    ◽️Cursos do 1°, 2°, 3° e 4° semestres (Em desenvolvimento até a finalização do curso)<br><br>
                     ◽️Curso iniciado em 2024 e finalizará em 2027
                 <br>
             </td>
