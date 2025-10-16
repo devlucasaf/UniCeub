@@ -12,11 +12,9 @@
     <table>
         <tr>
             <td>
-                <br>
                     ◽️ Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br><br>
                     ◽️Cursos do 1°, 2°, 3° e 4° semestres (Em desenvolvimento até a finalização do curso)<br><br>
                     ◽️Curso iniciado em 2024 e finalizará em 2027
-                <br>
             </td>
         </tr>
     </table>
@@ -49,17 +47,25 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
     />
     <img 
-            align="center"
-            alt="django" 
-            title="Django"
-            height="60"
-            style="padding-right: 10px;" 
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"  
+        align="center"
+        alt="django" 
+        title="Django"
+        height="60"
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"  
     />
     <img
         align="center" 
         alt="Prolog" 
         title="Prolog"
+        height="60" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center" 
+        alt="Scheme" 
+        title="Scheme"
         height="60" 
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
@@ -73,12 +79,12 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     />
     <img 
-            align="center"
-            alt="JavaScript"
-            tittle="JavaScript"
-            height="60" 
-            style="padding-right: 10px;"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+        align="center"
+        alt="JavaScript"
+        tittle="JavaScript"
+        height="60" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
     />
     <img 
         align="center" 
@@ -139,7 +145,7 @@
         tittle="Eclipse"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
     <img
         align="center"
@@ -163,3 +169,4 @@
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
