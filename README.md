@@ -47,6 +47,14 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
     />
     <img 
+        align="center" 
+        alt="C#" 
+        title="C#"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+    />
+    <img 
         align="center"
         alt="django" 
         title="Django"
