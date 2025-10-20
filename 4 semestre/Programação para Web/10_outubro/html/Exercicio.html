@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <tittle>Especificidade de seletores</tittle>
+    <style>
+        p {
+            color: green;
+            font-size: 18px;
+            text-align: left;
+        }
+        .destaque {
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+        }
+        #principal {
+            color: purple;
+            font-size: 22px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de Especificidade</h1>
+
+    <p>Este texto segue o estilo da TAG &lt;p&gt;
+    (verde, alinhado à esquerda).
+        <p class="destaque">Este texto segue a CLASSE (azul, centralizado)</p>
+        <p class="destaque">Este texto segue o ID (roxo, alinhado à direita).</p>
+        <p 
+            class="destaque" 
+            id="principal" 
+            style="color:red; 
+                font-size: 24px; 
+                text-align: center;">
+        </p>
+    </p>
+</body>
+
+</html>
