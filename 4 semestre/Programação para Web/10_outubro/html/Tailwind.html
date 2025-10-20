@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <h1 class="text-3x1 font-bold text-blue-600">Olá Tailwind!</h1>
+        <p class="mt-4 text-gray-700">Primeiro exemplo com Tailwind CSS</p>
+    <br/>
+    
+    <h3>Cores</h3>
+        <p class="text-red-500">Texto vermelho</p>
+        <p class="bg-green-200">Fundo verde claro</p>
+    <br/>
+
+    <h3>Tipografia</h3>
+        <p class="font-bold text-xl">Texto grande e em negrito</p>
+        <p class="italic underline">Itálico e sublinhado</p>
+        <br/>
+
+        <h3>Espaçamento</h3>
+        <div class="m-4 p-6 bg-blue-100">
+            Margem externa (m-4) e padding interno (p-6)
+        </div>
+        <br/>
+
+        <h3>Layout</h3>
+        <p>Flexboy</p>
+        <div class="flex space-x-4 bg-gray-200 p-4">
+            <div class="bg-red-400 p-4">1</div>
+            <div class="bg-green-400 p-4">2</div>
+            <div class="bg-blue-400 p-4">3</div>
+        </div>
+
+        <p>Grid</p>
+        <div class="grid grid-cols-3 gap-4 p-4">
+            <div class="bg-red-300 p-4">A</div>
+            <div class="bg-green-300 p-4">B</div>
+            <div class="bg-blue-300 p-4">C</div>
+        </div>
+        <br/>
+
+        <h3>Responsividade</h3>
+        <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-red-300 p-6">1</div>
+            <div class="bg-green-300 p-6">2</div>
+            <div class="bg-blue-300 p-6">3</div>
+        </div>
+        <br/>
+</body>
+</html>
