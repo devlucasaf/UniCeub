@@ -72,14 +72,6 @@
     />
     <img
         align="center" 
-        alt="Scheme" 
-        title="Scheme"
-        height="60" 
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
-    />
-    <img
-        align="center" 
         alt="SQL" 
         title="SQL"
         height="60" 
@@ -177,4 +169,5 @@
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
 
