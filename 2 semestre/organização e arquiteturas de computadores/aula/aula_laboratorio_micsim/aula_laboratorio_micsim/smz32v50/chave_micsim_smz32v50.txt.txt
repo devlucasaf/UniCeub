@@ -1,0 +1,42 @@
+Please save and print this page for your records.
+
+C Neil Bauers
+87 Cliff Hill
+Gorleston
+GREAT YARMOUTH
+Norfolk
+NR31 6DH
+United Kingdom
+
+MAIL: nbauers at samphire dot demon dot co dot uk
+WEB: http://www.SoftwareForEducation.com/
+
+Microcontroller Simulator Key, created on May 30, 2007, 1:23 am.
+
+The whole of the next line is your key.
+
+miguel CEUBDGOXT
+This key is for your personal use only.
+
+If you want to make institutional use of the simulator, please purchase a site registration key. 
+
+If there are errors in the information below, please mail me.
+
+ 
+
+Registration Fee: Free 
+Contact Address: archanj0@yahoo.com.br 
+Country: BRAZIL - BR 
+
+ 
+
+HOW TO REGISTER
+Type in the key while the simulator is running. From the main program menu select Help - Register Now and type or paste the key into the space provided.
+
+TECHNICAL INFORMATION
+The simulator reads its registration information from a text file named UserInfo.Reg. This file must be in the same directory as the simulator program. This is particularly important with network installations.
+
+Thank you for registering.
+
+Please mail me if you have any problems. 
+

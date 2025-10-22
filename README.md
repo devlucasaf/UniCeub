@@ -65,14 +65,6 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
     />
-    <img 
-        align="center"
-        alt="django" 
-        title="Django"
-        height="60"
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"  
-    />
     <img
         align="center" 
         alt="Prolog" 
@@ -81,6 +73,15 @@ Semestre 8
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
     />
+    <img 
+        align="center" 
+        alt="Assembly" 
+        title="Assembly"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
+    />
+    <br>
     <img
         align="center" 
         alt="SQL" 
@@ -88,6 +89,14 @@ Semestre 8
         height="60" 
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+    />
+    <img 
+        align="center"
+        alt="django" 
+        title="Django"
+        height="60"
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"  
     />
     <img 
         align="center"
