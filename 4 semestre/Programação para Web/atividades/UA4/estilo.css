@@ -1,0 +1,18 @@
+/* estilo.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+h1 {
+    color: green; /* basta mudar aqui se quiser trocar a cor */
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
