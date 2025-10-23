@@ -14,7 +14,7 @@
             <td>
                     ◽️ Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br><br>
                     ◽️Cursos do 1°, 2°, 3° e 4° semestres (Em desenvolvimento até a finalização do curso)<br><br>
-                    ◽️Curso iniciado em 2024 e finalizará em 2027
+                    ◽️2024 -------- 2027
             </td>
         </tr>
     </table>
@@ -30,7 +30,6 @@ Semestre 4
 ...
 Semestre 8
 ```
-
 <div align="center"> 
     <h1>🚀Linguagens </h1>
     <img 
@@ -189,6 +188,7 @@ Semestre 8
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
 
 
 
