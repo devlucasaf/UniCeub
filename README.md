@@ -4,7 +4,7 @@
 />
 
 <div align="center">
-    <h1>Todos os códigos salvos ou desenvolvidos por mim na durante a Faculdade</h1>
+    <h1>🎓Faculdade de Ciência da Computação🎓</h1>
 </div>
 
 <div>
@@ -189,6 +189,7 @@ Semestre 8
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
 
 
 
