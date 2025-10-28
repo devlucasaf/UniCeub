@@ -4,7 +4,7 @@
 />
 
 <div align="center">
-    <h1>Todos os códigos salvos ou desenvolvidos por mim na durante a Faculdade</h1>
+    <h1>🎓Faculdade de Ciência da Computação🎓</h1>
 </div>
 
 <div>
@@ -14,7 +14,11 @@
             <td>
                     ◽️Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br><br>
                     ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br><br>
+<<<<<<< HEAD
                     ◽️Atualmente estou cursando o 4º semestre
+=======
+                    ◽️Atualmente no 4º semestre
+>>>>>>> f6444b61724d84f662bc3d48a93f54f25757e068
                     ◽️Curso iniciado em 2024 e finalizará em 2027
             </td>
         </tr>
@@ -31,7 +35,6 @@ Semestre 4
 ...
 Semestre 8
 ```
-
 <div align="center"> 
     <h1>🚀Linguagens </h1>
     <img 
@@ -190,6 +193,9 @@ Semestre 8
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
+
+
 
 
 
