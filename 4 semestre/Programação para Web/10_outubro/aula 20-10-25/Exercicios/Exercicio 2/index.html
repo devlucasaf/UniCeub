@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texto Mágico</title>
+    <style>
+        /* Apenas um estilo básico para o parágrafo */
+        #texto-magico {
+        font-size: 16px;
+        color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="texto-magico">Este é o texto original.</p>
+    <button id="btn-mudar">Mudar Texto</button>
+
+    <script>
+    // Seleciona os elementos pelo ID
+    const paragrafo = document.getElementById('texto-magico');
+    const botao = document.getElementById('btn-mudar');
+
+    // Adiciona o evento de clique ao botão
+    botao.addEventListener('click', function() {
+        paragrafo.textContent = 'A mágica aconteceu!';
+        paragrafo.style.color = 'red';
+        paragrafo.style.fontSize = '24px';
+    });
+    </script>
+
+</body>
+</html>
