@@ -1,9 +1,3 @@
-    mov	    al,f0
-    out	    02
-    mov	    al,f5
-    out	    02
-    end	
-
 	org 0
 	jmp inicio
 
@@ -23,4 +17,16 @@ prox:
         dec bl                
         jnz prox              
 
+;########################################
+
+	mov cl, e0           
+        mov bl, 11         
+        mov dl, 20           
+prox1:
+        mov al, [dl]         
+    mov [cl], al        
+        inc cl               
+        dec dl              
+        dec bl                
+        jnz prox1     
 end

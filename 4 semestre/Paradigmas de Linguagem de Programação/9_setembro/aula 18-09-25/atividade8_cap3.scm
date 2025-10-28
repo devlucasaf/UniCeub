@@ -47,9 +47,9 @@
 
 (define (converte-tempo s)
   (let* ((h (quotient s 3600))
-         (resto1 (remainder s 3600))
-         (m (quotient resto1 60))
-         (seg (remainder resto1 60)))
+          (resto1 (remainder s 3600))
+          (m (quotient resto1 60))
+          (seg (remainder resto1 60)))
     (list h m seg)))
 
 (display "Converter segundos em horas, minutos e segundos")
@@ -77,9 +77,9 @@
 
 (define (idade-em-anos dias)
   (let* ((anos (quotient dias 365))
-         (resto1 (remainder dias 365))
-         (meses (quotient resto1 30))
-         (dias-resto (remainder resto1 30)))
+          (resto1 (remainder dias 365))
+          (meses (quotient resto1 30))
+          (dias-resto (remainder resto1 30)))
     (list anos meses dias-resto)))
 
 (display "Converter idade em dias → anos, meses e dias")

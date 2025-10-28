@@ -133,7 +133,7 @@ cons
 (display "a.")
 (let ((triplo-a (* 3 a)))       
   (+ (- triplo-a b)             
-     (+ triplo-a b)))           
+      (+ triplo-a b)))           
 
 ;b.
 (display "b.")
@@ -147,8 +147,8 @@ cons
 
 (let ([x 9])
   (* x
-     (let ([x (/ x 3)])
-       (+ x x))))  
+    (let ([x (/ x 3)])
+      (+ x x))))  
 
 ; +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 
