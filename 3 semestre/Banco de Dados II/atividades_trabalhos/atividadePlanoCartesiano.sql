@@ -1,7 +1,5 @@
 -- =========================================================
--- BANCO DE DADOS: Empresa_Produto_Cartesiano
--- Autor: Lucas André Ferreira de Freitas
--- Professor: Michel Junio Ferreira Rosa
+-- BANCO DE DADOS : Empresa_Produto_Cartesiano=
 -- =========================================================
 
 CREATE DATABASE Empresa_Produto_Cartesiano;

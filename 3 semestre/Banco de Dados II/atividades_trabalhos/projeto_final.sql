@@ -116,7 +116,7 @@ BEGIN
         SELECT *
         FROM emprestimos
         WHERE usuario_id = p_usuario_id
-          AND data_prevista < CURRENT_DATE
+            AND data_prevista < CURRENT_DATE
     );
 END;
 $$ LANGUAGE plpgsql;
@@ -144,8 +144,8 @@ BEGIN
 			SELECT SUM(GREATEST(CURRENT_DATE - emprestimos.data_prevista, 0))
             FROM emprestimos 
             WHERE emprestimos.usuario_id = p_usuario_id
-              AND emprestimos.data_prevista < CURRENT_DATE
-              AND emprestimos.data_devolucao IS NULL
+                AND emprestimos.data_prevista < CURRENT_DATE
+                AND emprestimos.data_devolucao IS NULL
         ), 0)
         *
         (
@@ -189,7 +189,7 @@ BEGIN
     SELECT COUNT(*) INTO emprestimo_ativo
     FROM emprestimos
     WHERE recurso_id = p_recurso_id
-      AND data_devolucao IS NULL;
+        AND data_devolucao IS NULL;
 
     -- Se houver empréstimo ativo, recurso não está disponível
     IF emprestimo_ativo > 0 THEN
@@ -281,9 +281,9 @@ BEGIN
         SELECT 1
         FROM usuarios
         WHERE id = NEW.usuario_id
-          -- Verifica se o campo está preenchido e se a a data atual é menor que ou igual a data da penalização
-		  AND penalizado_ate IS NOT NULL
-          AND CURRENT_DATE <= penalizado_ate
+            -- Verifica se o campo está preenchido e se a a data atual é menor que ou igual a data da penalização
+            AND penalizado_ate IS NOT NULL
+            AND CURRENT_DATE <= penalizado_ate
     ) THEN
         -- Mostra uma mensagem de erro caso haja um erro (no caso, seria o bloqueio de um novo empréstimo no evento de um usuário ainda estar penalizado)
 		RAISE EXCEPTION 'Empréstimo negado: usuário % está penalizado atualmente.', NEW.usuario_id;
@@ -315,14 +315,14 @@ BEGIN
 	-- Caso o recurso já tenha sido renovado múltiplas vezes, apresenta uma mensagem de erro
     IF OLD.renovado = TRUE THEN
         RAISE EXCEPTION 'Renovação negada: já foi renovado.';
-   
-   -- Caso o recurso já tenha sido renovado por outro usuário, impede a renovação do mesmo recurso
+
+    -- Caso o recurso já tenha sido renovado por outro usuário, impede a renovação do mesmo recurso
 	ELSIF EXISTS (
         SELECT 1 FROM reservas
 		-- Verifica se o recurso da reserva é o mesmo do recurso que está sendo renovado
 		WHERE recurso_id = NEW.recurso_id
-		  -- Verifica se a reserva já não foi feita por outro usuário
-		  AND usuario_id <> NEW.usuario_id
+            -- Verifica se a reserva já não foi feita por outro usuário
+            AND usuario_id <> NEW.usuario_id
     ) THEN
         RAISE EXCEPTION 'Renovação negada: recurso reservado por outro usuário.';
     END IF;
