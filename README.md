@@ -12,13 +12,9 @@
     <table>
         <tr>
             <td>
-                    ◽️Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br><br>
-                    ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br><br>
-<<<<<<< HEAD
-                    ◽️Atualmente estou cursando o 4º semestre
-=======
-                    ◽️Atualmente no 4º semestre
->>>>>>> f6444b61724d84f662bc3d48a93f54f25757e068
+                    ◽️Neste repertório, estarei salvando todos os códigos desenvolvidos ao longo curso de Ciência da Computação<br>
+                    ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br>
+                    ◽️Atualmente estou cursando o 4º semestre<br>
                     ◽️Curso iniciado em 2024 e finalizará em 2027
             </td>
         </tr>
@@ -63,8 +59,8 @@ Semestre 8
     />
     <img 
         align="center" 
-        alt="C#" 
-        title="C#"
+        alt="C++" 
+        title="C++"
         height="60" 
         style="padding-right: 10px;" 
         src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
