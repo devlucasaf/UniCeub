@@ -12,7 +12,7 @@
         <tr>
             <td>
                 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quarto semestre de curso de Ciência da Computação!<br>
-                ◽️Códigos em Python, Prolog, Scheme, HTML, CSS, JavaScript e Rust<br>
+                ◽️Códigos em Python, Java, Prolog, Scheme, HTML, CSS, JavaScript e Rust<br>
                 ◽️Disciplinas:<br>
                     - Paradigmas de Linguagem de Programação<br>
                     - Probabilidade e Estatística<br>
@@ -43,6 +43,14 @@ Semestre 8
         height="60" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    />
+    <img 
+        align="center" 
+        alt="Java" 
+        title="Java"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
     />
     <img 
         align="center" 
@@ -115,6 +123,14 @@ Semestre 8
         height="60" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+    />
+    <img 
+        align="center" 
+        alt="Intellij" 
+        title="Intellij"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
 </div>
 <img 

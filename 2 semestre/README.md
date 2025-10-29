@@ -58,6 +58,14 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     />
+    <img 
+        align="center" 
+        alt="Assembly" 
+        title="Assembly"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
+    />
     <img
         align="center"
         alt="github"
