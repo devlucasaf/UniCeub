@@ -6,8 +6,8 @@ import mysql.connector
 # Função para criar a conexão com o MySQL
 def create_connection():
     con = mysql.connector.connect(user="root",  # usuário do MySQL
-                                  password="ceub123456",  # senha do usuário
-                                  host="127.0.0.1")  # endereço do servidor (localhost)
+                                password="ceub123456",  # senha do usuário
+                                host="127.0.0.1")  # endereço do servidor (localhost)
     print(f"Conexão: {con}")  # imprime o objeto de conexão
     return con  # retorna a conexão criada
 
