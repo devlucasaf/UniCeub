@@ -12,7 +12,7 @@
         <tr>
             <td>
                 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu segundo semestre de curso de Ciência da Computação!<br>
-                ◽️Códigos em Python, Java e SQL<br>
+                ◽️Códigos em Python, Java, SQL e Assembly<br>
                 ◽️Disciplinas:<br>
                     - Álgebra e Geometria Analítica<br>
                     - Banco de Dados I<br>
