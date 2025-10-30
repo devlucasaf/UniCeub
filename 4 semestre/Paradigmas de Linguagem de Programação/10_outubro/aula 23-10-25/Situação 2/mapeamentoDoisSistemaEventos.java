@@ -1,3 +1,9 @@
+/**
+Paradigmas de Linguagem de Programação
+Aula: 23-10-25
+II Atividade 2 (POO e Diagrama de Classes)
+*/
+
 class Evento {
     private String nome, local;
     private Date data;

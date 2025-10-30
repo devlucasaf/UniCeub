@@ -1,3 +1,8 @@
+-- Paradigmas de Linguagem de Programação
+-- Aula: 23-10-25
+-- II Atividade 2 (POO e Diagrama de Classes)
+
+
 CREATE TABLE aluno (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),

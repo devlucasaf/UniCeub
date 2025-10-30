@@ -1,3 +1,9 @@
+/**
+Paradigmas de Linguagem de Programação
+Aula: 30-10-25
+II Atividade 3 (POO-Encapsulamento e Classes/Obejto)
+*/
+
 // Classe Carro
 class Carro {
     void ligar() {
