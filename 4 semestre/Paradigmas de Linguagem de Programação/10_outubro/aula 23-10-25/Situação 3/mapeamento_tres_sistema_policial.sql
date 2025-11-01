@@ -1,3 +1,7 @@
+-- Paradigmas de Linguagem de Programação
+-- Aula: 23-10-25
+-- II Atividade 2 (POO e Diagrama de Classes)
+
 -- Tabela principal: Ocorrencia
 CREATE TABLE ocorrencia (
     id SERIAL PRIMARY KEY,

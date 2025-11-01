@@ -1,3 +1,9 @@
+/*
+Paradigmas de Linguagem de Programação
+Aula: 23-10-25
+Slide 27: Linguagem Procedural
+*/
+
 #include <studio.h>
 
 struct retangula{
