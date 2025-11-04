@@ -62,7 +62,7 @@ class Heap {
 }
 
 
-class HeapSort {
+public class HeapSort {
     public static void main(String args[]) {
         int arr[] = {
         432, 809, 213, 725, 37, 960, 578, 63, 921, 145, 689, 281, 506, 955, 194, 374, 820, 62,

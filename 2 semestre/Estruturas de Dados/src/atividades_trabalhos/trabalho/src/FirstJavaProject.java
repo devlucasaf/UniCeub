@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
     
     
-public class projeto1 {
+public class FirstJavaProject {
     public static void main(String[] args) {
         ArrayList<String> cars = new ArrayList<String> ();
             //ArrayList<Integer> numeros = new ArrayList<Integer> ();		
