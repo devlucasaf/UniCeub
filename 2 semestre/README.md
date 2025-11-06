@@ -32,8 +32,9 @@ Semestre 2
 ...
 Semestre 8
 ```
+
 <div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+    <h1>📊 Linguagens</h1>
     <img 
         align="center" 
         alt="Python" 
@@ -66,6 +67,10 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
+</div>
+
+<div align="center">
+    <h1>🛠️ Software</h1>
     <img
         align="center"
         alt="github"
@@ -92,6 +97,14 @@ Semestre 8
     />
     <img
         align="center"
+        alt="IntelliJ"
+        tittle="IntelliJ"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img
+        align="center"
         alt="PostegreSQL"
         tittle="PostegreSQL"
         height="60"
@@ -99,6 +112,7 @@ Semestre 8
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     />
 </div>
+
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"

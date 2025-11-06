@@ -34,7 +34,7 @@ Semestre 3
 Semestre 8
 ```
 <div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+    <h1>📊 Linguagens</h1>
     <img 
         align="center" 
         alt="Python" 
@@ -59,6 +59,9 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     />
+</div>
+<div align="center">
+    <h1>🛠️ Software</h1>
     <img
         align="center"
         alt="github"
@@ -66,22 +69,6 @@ Semestre 8
         height="60" 
         style="padding-right: 10px;" 
         src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
-    />
-    <img
-        align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="60"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
-        alt="vscode"
-        tittle="VsCode"
-        height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
     />
     <img
         align="center"
@@ -99,7 +86,23 @@ Semestre 8
         style="padding-right: 10px"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     />
-</div>
+    <img
+        align="center"
+        alt="pycharm"
+        tittle="PyCharm"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img
+        align="center"
+        alt="vscode"
+        tittle="VsCode"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+    />
+
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"

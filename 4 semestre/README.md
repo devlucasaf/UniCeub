@@ -34,8 +34,9 @@ Semestre 4
 ...
 Semestre 8
 ```
+
 <div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+    <h1>🚀Linguagens </h1>
     <img 
         align="center" 
         alt="Python" 
@@ -44,37 +45,29 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
     />
-    <img 
-        align="center" 
-        alt="Java" 
-        title="Java"
+    <img
+        align="center"
+        alt="Java"
+        tittle="Java"
         height="60" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
     />
-    <img 
-        align="center" 
-        alt="Rust" 
-        title="Rust"
-        height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
-    />
-    <img 
-        align="center" 
-        alt="MySQL" 
-        title="MySQL"
-        height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-    />
-    <img 
+    <img
         align="center" 
         alt="Prolog" 
         title="Prolog"
         height="60" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center" 
+        alt="SQL" 
+        title="SQL"
+        height="60" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     />
     <img 
         align="center"
@@ -109,6 +102,20 @@ Semestre 8
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
     />
     <img
+        align="center" 
+        alt="Rust" 
+        title="Rust"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
+    />
+</div>
+
+---
+
+<div align="center"> 
+    <h1>🛠️ Ferramentas</h1>
+    <img
         align="center"
         alt="github"
         tittle="GitHub"
@@ -132,7 +139,33 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
+    <img
+        align="center"
+        alt="pycharm"
+        tittle="PyCharm"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img
+        align="center"
+        alt="PostegreSQL"
+        tittle="PostegreSQL"
+        height="60"
+        style="padding-right: 10px"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+    />
+    <img
+        align="center"
+        alt="DBSQLite"
+        tittle="DBSQLite"
+        height="60"
+        style="padding-right: 10px"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+    />
 </div>
+
+
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
