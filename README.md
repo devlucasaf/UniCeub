@@ -73,6 +73,14 @@ Semestre 8
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
     />
+    <img
+        align="center" 
+        alt="Scheme" 
+        title="Scheme"
+        height="60" 
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
     <img 
         align="center" 
         alt="Assembly" 
@@ -189,6 +197,7 @@ Semestre 8
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
 
 
 
