@@ -11,8 +11,8 @@ import math
 from math import comb
 
 def linha():
-     """Função para criar uma linha divisória visual no output"""
-     print("+=+="*69)
+    """Função para criar uma linha divisória visual no output"""
+    print("+=+="*69)
 
 # +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 
@@ -30,8 +30,9 @@ def mostrar_dados():
             else:
                 impar += 1
 
-        print(f"Pares: {par} \nImpar: {impar}")
-   
+        print(f"Pares: {par}")
+        print(f"Impar: {impar}")
+
 mostrar_dados()  # Chama a função para executar
 
 # +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
@@ -58,13 +59,14 @@ linha()
 print("Exercicio 3 \n")
 
 def calculaArranjo(n, k):
-     """Calcula arranjo de n elementos tomados k a k: n!/(n-k)!"""
-     arranjo = math.factorial(n) // math.factorial(n-k)
-     return arranjo
+    """Calcula arranjo de n elementos tomados k a k: n!/(n-k)!"""
+    arranjo = math.factorial(n) // math.factorial(n - k)
+    return arranjo
 
 n = 10  # Total de elementos
 k = 3   # Elementos escolhidos
-resultado_arranjo = calculaArranjo(n,k)
+
+resultado_arranjo = calculaArranjo(n, k)
 
 print(f"O arranjo de {n} elementos escolhendo {k} elementos de cada vez é: {resultado_arranjo}")
 
@@ -81,6 +83,7 @@ def calcular_combinacao(n, k):
 # Exemplo:
 n = 10  # Total de elementos
 k = 2   # Elementos escolhidos
+
 resultado_combinacao = calcular_combinacao(n,k)
 
 print(f"A combinação de {n} elementos escolhendo {k} elemento de cada vez é {resultado_combinacao}")
@@ -98,6 +101,7 @@ def calcula_prob(evento_desejado, resultados_possiveis):
 evento_desejado = 1  # Caso favorável (provavelmente soma 2 ou 12)
 resultados_possiveis = 36  # Total de combinações possíveis com dois dados
 resultado = calcula_prob(evento_desejado, resultados_possiveis)
+
 print(f"A probabildade é igual a {resultado * 100:.2f}%")  # Formata como porcentagem
 
 round(resultado, 2)  # Arredonda (novamente sem armazenar)
