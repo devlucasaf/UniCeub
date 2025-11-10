@@ -1,0 +1,31 @@
+<!-- inicio/templates/aulaweb/index.html -->
+{% extends "aulaweb/base.html" %}
+
+{% block conteudo %}
+        
+
+    <main class="container my-5">
+        <h2 class="mb-4">Ofertas da Semana 🛒</h2>
+
+        <div class="row">
+            <!-- Produto 1 -->
+            {% for produto in list_produtos %}
+                <div class="col-md-4 mb-4">
+                        <div class="card produto-card">
+                                <img src="{{ produto.url }}" class="card-img-top" />
+                                <div class="card-body">
+                                        <h3 class="card-title">{{ produto.nome }}</h3>
+                                        <p class="card-text">R$ {{ produto.preco }}</p>
+                                </div>
+                        </div>
+                </div>
+           {% endfor %}
+        </div>
+    </main>
+
+
+
+{% endblock %}
+ 
+
+

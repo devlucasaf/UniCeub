@@ -1,0 +1,47 @@
+{% extends "aulaweb/base.html" %}
+
+{% block conteudo %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style_form.css' %}" />
+
+<h1>Novo Pedido</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ pedido_form.as_p }}
+  <h3>Produtos</h3>
+  {{ formset.management_form }}
+  <div id="formset-area">
+    {% for form in formset %}
+      <div class="item-form">
+        {{ form.as_p }}
+      </div>
+    {% endfor %}
+  </div>
+  <button type="button" id="add-item" style="background-color: blueviolet;">+ Produtos</button>
+
+
+  <button type="submit">Salvar</button>
+  <br/>
+  <button type="button" class="btn_voltar" style="background-color: #c7621e;" onclick="history.back()">Voltar</button>
+</form>
+
+
+<script>
+  document.getElementById("add-item").addEventListener("click", function() {
+      let formsetArea = document.getElementById("formset-area");
+      let totalForms = document.getElementById("id_itempedido_set-TOTAL_FORMS");
+      let formNum = parseInt(totalForms.value);
+
+      // clona o primeiro formulário
+      let newForm = formsetArea.children[0].cloneNode(true);
+
+      // atualiza os nomes/ids
+      newForm.innerHTML = newForm.innerHTML.replace(/-\d+-/g, "-" + formNum + "-");
+
+      formsetArea.appendChild(newForm);
+      totalForms.value = formNum + 1;
+  });
+</script>
+
+{% endblock %}
