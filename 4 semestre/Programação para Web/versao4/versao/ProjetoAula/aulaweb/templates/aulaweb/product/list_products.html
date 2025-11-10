@@ -1,0 +1,28 @@
+{% extends "aulaweb/base.html" %}
+
+{% block conteudo %}
+
+<style>
+
+</style>
+
+
+<a href="{% url 'create_product' %}" class="btn-add">+ Novo Produto</a>
+
+<div class="produtos-container">
+
+  {% for produto in lista_produtos %}
+    <div class="produto-card">
+      <div class="produto-nome"><a href="{% url 'detalhar_produto' produto.pk %}">{{ produto.nome }}</a></div>
+      <div class="produto-preco">R$ {{ produto.preco }}</div>
+      <div style="margin-top:10px;">
+        <a href="{% url 'update_product' produto.pk %}">✏️ Editar</a> | 
+        <a href="{% url 'delete_product' produto.pk %}">🗑️ Remover</a>
+      </div>
+    </div>
+  {% empty %}
+    <div class="sem-produtos">Nenhum produto encontrado</div>
+  {% endfor %}
+</div>
+
+{% endblock %}
