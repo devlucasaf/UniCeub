@@ -1,0 +1,20 @@
+<!-- inicio/templates/meu_app/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bem-vindo ao Django</title>
+    </head>
+    <body>
+        <h1>Sobre o meu projeto {{nome_projeto}}</h1>
+    </body>
+    {% if latest_question_list%}
+    <ul>
+        {% for question in latest_question_list%}
+            <li><a href="/polls//{{ question.id}}/">{{question.question_text}}</a></li>
+        {%endfor%}
+        </ul>
+    {%else%}
+        <p>No polls are availabel.</p>
+    {%endif%}
+</html>
