@@ -1,3 +1,19 @@
+/**
+Paradigmas de Linguagem de Programação
+Aula: 13-11-25
+II Atividade 4 (Pilares em Programação Orientada a Objetos)
+Questão 2) Implemente em alguma linguagem de programação OO os pilares 
+(crie classes com vários atributos e métodos) :
+
+2.1. abstração;
+
+2.2. herança; 
+
+2.3. encapsulamento;
+
+2.4.  polimorfismo. 
+*/
+
 class Filme {
     private String nome;
     private String genero;
