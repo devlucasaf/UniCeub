@@ -31,6 +31,7 @@ Semestre 4
 ...
 Semestre 8
 ```
+
 <details>
     <summary>🗃️ Arquitetura</summary>
 
