@@ -201,7 +201,114 @@ Semestre 8
     │   │     └──AulaQuickSort.java
     │   ├──Linguagem e Tecnicas de Programação I
     │   ├──Organização e Arquiteturas de Computadores
-    │      └──README.md
+    │   │  ├──atividades
+    │   │  │  ├──folha de exercicio 1
+    │   │  │  │  ├──questao1.asm
+    │   │  │  │  ├──questao2.asm
+    │   │  │  │  ├──questao4.asm
+    │   │  │  │  ├──questao5.asm
+    │   │  │  │  ├──questao6.asm
+    │   │  │  │  └──questao7.asm
+    │   │  │  ├──folha de exercicio 2
+    │   │  │  │  ├──codigo_fonte.asm
+    │   │  │  │  ├──questao1.asm
+    │   │  │  │  ├──questao2.asm
+    │   │  │  │  └──questao3.asm
+    │   │  │  ├──folha de exercicio 3
+    │   │  │  │  ├──codigo_fonte.asm
+    │   │  │  │  ├──questao1.asm
+    │   │  │  │  ├──questao2.asm
+    │   │  │  │  ├──questao3.asm
+    │   │  │  │  ├──questao4.asm
+    │   │  │  │  └──questao5.asm
+    │   │  │  ├──folha de exercicio 4
+    │   │  │  │  └──ex_teorico.asm    
+    │   │  │  ├──folha de exercicio 5
+    │   │  │  │  └──ex_teorico.asm 
+    │   │  │  └──ex4.asm  
+    │   │  ├──aula
+    │   │  │  ├──Aula 1
+    │   │  │  │  ├──fl_1_ex1.asm
+    │   │  │  │  ├──fl_1_ex2.asm
+    │   │  │  │  ├──fl_1_ex3.asm
+    │   │  │  │  └──fl_1_ex4.asm
+    │   │  │  ├──folha de exercicio 2
+    │   │  │  │  ├──f2_1.asm
+    │   │  │  │  ├──f2_2.asm
+    │   │  │  │  ├──f2_3.asm
+    │   │  │  │  ├──f2_4.asm
+    │   │  │  │  ├──f2_5.asm
+    │   │  │  │  ├──f2_6.asm
+    │   │  │  │  ├──f2_7.asm
+    │   │  │  │  └──f2_8.asm
+    │   │  │  ├──folha de exercicio 3
+    │   │  │  │  ├──extra.asm
+    │   │  │  │  ├──f3_1.asm
+    │   │  │  │  ├──f3_2.asm
+    │   │  │  │  ├──f3_3.asm
+    │   │  │  │  ├──f3_4.asm
+    │   │  │  │  └──f3_5.asm
+    │   │  │  └──aula_laboratorio_micsim.zip
+    │   │  ├──atividades
+    │   │  │  └──questao_prova_2.asm
+    │   └──README.md
+	├──3º semestre                    
+    │   ├──Banco de Dados II
+    │	│  ├──03_março
+	│	│  │  ├──aula 10-03-25
+    │	│  │  │  └──DDL_DML.sql
+	│	│  │  ├──aula 17-03-25
+    │	│  │  │  └──joins.sql
+	│	│  │  └──aula 24-03-25
+    │	│  │     └──join.sql
+    │	│  ├──04_abril
+	│	│  │  ├──aula 07-04-25
+    │	│  │  │  └──aula_Views_Triggers.sql
+	│	│  │  ├──aula 14-04-25
+    │	│  │  │  └──functions_stored_procedures.sql
+	│	│  │  └──aula 28-04-25
+    │	│  │     └──indices.sql
+    │	│  ├──05_maio
+	│	│  │  ├──aula 12-05-25
+    │	│  │  │  └──DB_escola.sql
+	│	│  │  └──aula 26-05-25
+    │	│  │     └──aula dia 26-05-25.sql
+    │	│  ├──06_junho
+	│	│  │  ├──aula 09-06-25.sql
+	│	│  │  └──aula dia 02-06-25.sql
+    │	│  ├──atividades_trabalhos
+	│	│  │  ├──atividade rule.sql
+    │	│  │  ├──Atividade_AlgebraRelacional.sql  
+	│	│  │  ├──atividade_cliente_marketing.sql
+    │	│  │  ├──atividade_consulta.sql  
+    │	│  │  ├──atividade_DDL_DML.sql
+    │	│  │  ├──atividade_DDL.sql
+    │	│  │  ├──atividade_ua.sql
+    │	│  │  ├──atividadePlanoCartesiano.sql
+    │	│  │  ├──atividadeViews.sql
+    │	│  │  ├──criacao_de_tabelas.sql
+	│	│  │  └──projeto_final.sql
+    │	│  └──aulas
+	│	│     ├──aula_algebra.sql
+	│	│     └──aula11_Concultas_Alinhadas.sql
+    │   ├──Computação Grafica
+    │	│  ├──atividade_trabalho
+	│	│  │  ├──Game2DSDL2.cpp
+	│	│  │  └──RelogioOpenGL.cpp
+    │	│  ├──aula 4
+	│	│  │  └──RotacaoQuadrado.cpp
+    │	│  ├──aula 11-04-25
+	│	│  │  └──rotacaoMatriz.cpp
+    │	│  ├──aulaPrimitivasGraficas.cpp
+    │	│  ├──exemploTriangulo.cpp
+    │	│  ├──percepcaoTridimensionalPerspectiva.cpp
+    │	│  ├──projeto.cpp
+    │	│  └──SDL2-2.32.0.zip
+    │   ├──Linguagem e Tecnicas de Programação II
+    │   └──README.md
+	├──4º semestre                    
+    │   ├──Paradigmas de Linguagem de Programação
+
 </details>
 
 <div align="center"> 
