@@ -25,7 +25,7 @@ class ThreadNoticias implements Runnable {
         // Array contendo 10 notícias pré-definidas
         String[] noticias = {
                 "Caesb tem a melhor água do país!",
-                "Motoboy busina para encontrar dono do pedido",
+                "Motoboy buzina para encontrar dono do pedido",
                 "Van♡Maid anuncia o fim das atividades",
                 "Flamengo é o time mais odiado do Brasil",
                 "Pedro comeu o frango",
@@ -116,3 +116,4 @@ public class Questao2 {
         System.out.println("=== PROGRAMA ENCERRADO ===");
     }
 }
+
