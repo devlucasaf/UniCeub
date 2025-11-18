@@ -1,20 +1,20 @@
 /**
- Paradigmas de Linguagens de Programação
- Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
- Exercício do Capítulo 5
+    Paradigmas de Linguagens de Programação
+    Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
+    Exercício do Capítulo 5
 
- Questão 5)
-     Cinco lebres disputarão uma corrida. Cada lebre pode dar um salto
-     que varia de 1 a 3 metros de distância. A distância percorrida é de 20
-     metros. Na corrida, cada lebre dará um salto. Informar quantos
-     metros ela pulou a cada salto realizado. Em seguida, a lebre pára para
-     descansar por 2 segundos (sleep). Escreva um programa, utilizando
-     threads (uma para cada lebre), que informe a lebre vencedora e a
-     colocação de cada uma delas ao final da corrida. Informar, também,
-     quantos pulos cada uma delas deu.
+    Questão 5)
+        Cinco lebres disputarão uma corrida. Cada lebre pode dar um salto
+        que varia de 1 a 3 metros de distância. A distância percorrida é de 20
+        metros. Na corrida, cada lebre dará um salto. Informar quantos
+        metros ela pulou a cada salto realizado. Em seguida, a lebre pára para
+        descansar por 2 segundos (sleep). Escreva um programa, utilizando
+        threads (uma para cada lebre), que informe a lebre vencedora e a
+        colocação de cada uma delas ao final da corrida. Informar, também,
+        quantos pulos cada uma delas deu.
 
- *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
- */
+    *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
+*/
 
 import java.util.ArrayList;
 import java.util.Comparator;

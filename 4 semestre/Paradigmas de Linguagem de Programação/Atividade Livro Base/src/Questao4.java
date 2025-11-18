@@ -1,19 +1,19 @@
 /**
- Paradigmas de Linguagens de Programação
- Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
- Exercício do Capítulo 5
+    Paradigmas de Linguagens de Programação
+    Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
+    Exercício do Capítulo 5
 
- Questão 4)
- Escreva uma classe em Java que permita paralelizar uma pesquisa em
- um vetor de número inteiros. Isso deve ser feito com o seguinte
- método: public buscaParalela(int x, int[] A, int numThreads). Este
- método cria tantas threads quanto especificadas em numThreads,
- divide o array A em muitas partes e dá a cada thread parte do array
- para procurarsequencialmente pelo valor X. Se uma thread encontrar
- o valor X, deve mostrar uma mensagem indicando a posição onde o
- valorfoi encontrado
+    Questão 4)
+        Escreva uma classe em Java que permita paralelizar uma pesquisa em
+        um vetor de número inteiros. Isso deve ser feito com o seguinte
+        método: public buscaParalela(int x, int[] A, int numThreads). Este
+        método cria tantas threads quanto especificadas em numThreads,
+        divide o array A em muitas partes e dá a cada thread parte do array
+        para procurarsequencialmente pelo valor X. Se uma thread encontrar
+        o valor X, deve mostrar uma mensagem indicando a posição onde o
+        valorfoi encontrado
 
- *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
+    *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
 */
 
 import java.util.Random;
@@ -39,13 +39,14 @@ public class Questao4 {
         private final String nomeThread;
 
         /**
-         * Construtor da Thread de Busca.
-         * @param alvo O número a ser procurado.
-         * @param vetor O array principal.
-         * @param inicio O índice de início da busca no vetor.
-         * @param fim O índice final (exclusivo) da busca no vetor.
-         * @param nomeThread Nome identificador da thread.
-         */
+            * Construtor da Thread de Busca.
+            * @param alvo O número a ser procurado.
+            * @param vetor O array principal.
+            * @param inicio O índice de início da busca no vetor.
+            * @param fim O índice final (exclusivo) da busca no vetor.
+            * @param nomeThread Nome identificador da thread.
+        */
+
         public BuscaThread(int alvo, int[] vetor, int inicio, int fim, String nomeThread) {
             this.alvo = alvo;
             this.vetor = vetor;
