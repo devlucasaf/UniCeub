@@ -12,10 +12,10 @@
     <table>
         <tr>
             <td>
-                    ◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
-                    ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br>
-                    ◽️Atualmente cursando o 4º semestre<br>
-                    ◽️Curso iniciado em 2024 e finalizará em 2027
+                ◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
+                ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br>
+                ◽️Atualmente cursando o 4º semestre<br>
+                ◽️Curso iniciado em 2024 e finalizará em 2027
             </td>
         </tr>
     </table>
@@ -111,7 +111,7 @@ Semestre 8
         align="center"
         alt="JavaScript"
         tittle="JavaScript"
-        height="60" 
+        height="60"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
     />
@@ -147,6 +147,14 @@ Semestre 8
     <h1>🛠️ Ferramentas</h1>
     <img
         align="center"
+        alt="git"
+        tittle="Git"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    />
+    <img
+        align="center"
         alt="github"
         tittle="GitHub"
         height="60" 
@@ -161,6 +169,14 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
     />
+    <img
+        align="center"
+        alt="Visual Studio"
+        tittle="Visual Studio"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
+    />
     <img 
         align="center"
         title="MS Windows" 
@@ -170,11 +186,19 @@ Semestre 8
     />
     <img
         align="center"
+        alt="Intellij"
+        tittle="Intellij"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img
+        align="center"
         alt="Eclipse"
         tittle="Eclipse"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
     />
     <img
         align="center"

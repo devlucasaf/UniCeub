@@ -32,7 +32,7 @@ Semestre 1
 Semestre 8
 ```
 <div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+    <h1>📊 Linguagens</h1>
     <img 
         align="center" 
         alt="Python" 
@@ -49,6 +49,18 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
     />
+</div>
+
+<div align="center"> 
+    <h1>🛠️ Ferramentas</h1>
+    <img
+        align="center"
+        alt="git"
+        tittle="Git"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    />
     <img
         align="center"
         alt="github"
@@ -56,6 +68,22 @@ Semestre 8
         height="60" 
         style="padding-right: 10px;" 
         src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+    />
+    <img
+        align="center"
+        alt="vscode"
+        tittle="VsCode"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+    />
+    <img
+        align="center"
+        alt="Visual Studio"
+        tittle="Visual Studio"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
     />
     <img
         align="center"

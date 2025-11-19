@@ -73,6 +73,14 @@ Semestre 8
     <h1>🛠️ Software</h1>
     <img
         align="center"
+        alt="git"
+        tittle="Git"
+        height="60"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    />
+    <img
+        align="center"
         alt="github"
         tittle="GitHub"
         height="60" 
