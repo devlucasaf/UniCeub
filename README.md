@@ -28,7 +28,9 @@ Semestre 1
 Semestre 2
 Semestre 3
 Semestre 4
-...
+.
+.
+.
 Semestre 8
 ```
 
@@ -40,7 +42,8 @@ Semestre 8
         title="Python"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=python""
     />
     <img
         align="center"
@@ -48,7 +51,8 @@ Semestre 8
         tittle="Java"
         height="60" 
         style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=java"
     />
     <img 
         align="center" 
@@ -56,7 +60,8 @@ Semestre 8
         title="C#"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cs""
     />
     <img 
         align="center" 
@@ -64,7 +69,8 @@ Semestre 8
         title="C++"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cpp"
     />
     <img
         align="center" 
@@ -96,48 +102,54 @@ Semestre 8
         alt="SQL" 
         title="SQL"
         height="60" 
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        style="margin-top: 20px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=mysql"
     />
     <img 
         align="center"
         alt="django" 
         title="Django"
         height="60"
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"  
+        style="margin-top: 20px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=django" 
     />
     <img 
         align="center"
         alt="JavaScript"
         tittle="JavaScript"
         height="60"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+        style="margin-top: 20px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=javascript" 
     />
     <img 
         align="center" 
         alt="HTML" 
         title="HTML"
         height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        style="margin-top: 20px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=html"
     />
     <img 
         align="center" 
         alt="CSS" 
         title="CSS"
         height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        style="margin-top: 20px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=css"
     />
     <img
         align="center" 
         alt="Rust" 
         title="Rust"
         height="60" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
+        style="margin-top: 20px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=rust"
     />
 </div>
 
@@ -151,7 +163,8 @@ Semestre 8
         tittle="Git"
         height="60"
         style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=git"
     />
     <img
         align="center"
@@ -159,7 +172,8 @@ Semestre 8
         tittle="GitHub"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=github"
     />
     <img
         align="center"

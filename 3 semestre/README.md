@@ -30,7 +30,9 @@
 Semestre 1
 Semestre 2
 Semestre 3
-...
+.
+.
+.
 Semestre 8
 ```
 <div align="center"> 
@@ -41,7 +43,8 @@ Semestre 8
         title="Python"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=python"
     />
     <img 
         align="center" 
@@ -49,7 +52,8 @@ Semestre 8
         title="C++"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cpp"
     />
     <img 
         align="center" 
@@ -57,7 +61,8 @@ Semestre 8
         title="MySQL"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=mysql"
     />
 </div>
 <div align="center">
@@ -68,7 +73,8 @@ Semestre 8
         tittle="Git"
         height="60"
         style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=git"
     />
     <img
         align="center"
@@ -76,7 +82,8 @@ Semestre 8
         tittle="GitHub"
         height="60" 
         style="padding-right: 10px;" 
-        src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=github"
     />
     <img
         align="center"
