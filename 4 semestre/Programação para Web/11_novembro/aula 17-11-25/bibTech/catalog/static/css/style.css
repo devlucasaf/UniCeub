@@ -1,0 +1,140 @@
+/* Estilos gerais para a página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilo para o título principal */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 300;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Container da tabela */
+#tabela-livros_wrapper {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo do cabeçalho da tabela */
+#tabela-livros thead th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    padding: 15px 10px;
+    border: none;
+    text-align: left;
+}
+
+/* Estilo das células da tabela */
+#tabela-livros tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito hover nas linhas */
+#tabela-livros tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Estilo para linhas pares */
+#tabela-livros tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#tabela-livros tbody tr:nth-child(even):hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo da paginação */
+.dataTables_paginate .paginate_button {
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    color: #3498db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Estilo da busca */
+.dataTables_filter input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.dataTables_filter input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Estilo do seletor de quantidade de itens */
+.dataTables_length select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Estilo das informações da tabela */
+.dataTables_info {
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .dataTables_filter input {
+        width: 100%;
+    }
+    
+    #tabela-livros_wrapper {
+        padding: 10px;
+    }
+}
+
+/* Loading state */
+.dataTables_wrapper .dataTables_processing {
+    border: none;
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+    border-radius: 4px;
+}

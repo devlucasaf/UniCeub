@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>DataTables</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Diego Mariano">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+</head>
+
+<body>
+    <h1>BiblioTech - Catálogo</h1>
+    <table id="tabela-livros" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Editora</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            {% for liv in livros %}
+            <tr>
+                <td>{{ liv.nome }}</td>
+                <td>{{ liv.autor.nome }}</td>
+                <td>{{ liv.editora.nome }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tabela-livros').DataTable();
+        });
+    </script>
+
+</body>
+
+</html>
