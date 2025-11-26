@@ -14,6 +14,13 @@
         quantos pulos cada uma delas deu.
 
     *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
+
+    prompts:
+        - Desenvolva e explique o passo a passo em Java utilizando threads para simular uma corrida entre cinco lebres usando threads. Cada lebre deve ser um thread separada, 
+        onde cada uma delas faz saltos aleatórios entre 1 e 3 metros até percorrer 20 metros. Depois de cada salto, cada lebre deverá descansar por 2 segundos. 
+        O sistema deverá registrar a quantidade de pulos que cada lebre deu, que lebre chegou primeiro e me apresente a classificação geral do final da corrida. 
+        Gere um código completo e comentado linha por linha.
+        - Adicione cores hexadecimais para fazer a diferenciação de cada lebre. Eu quero as seguintes cores: vermelho cênico, verde elétrico, azul brilhante, rosa choque e ciano claro
 */
 
 // Importa as classes necessárias para listas, comparação, geração de números aleatórios
@@ -257,3 +264,4 @@ public class Questao5 {
         System.out.println("-------------------------------------------------------");
     }
 }
+
