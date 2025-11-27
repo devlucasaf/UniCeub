@@ -12,6 +12,8 @@
     *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
 */
 
+import java.util.Random;
+
 // Classe que implementa Runnable para executar o cálculo de soma em uma thread
 class CalculadoraLinha implements Runnable {
     // Array que representa uma linha da matriz
@@ -30,7 +32,7 @@ class CalculadoraLinha implements Runnable {
         // Inicializa a soma da linha com zero
         this.somaLinha = 0;
     }
-    
+
     // Método run() - será executado quando a thread for iniciada
     @Override
     public void run() {
@@ -58,12 +60,23 @@ public class Questao1 {
     // Método principal - ponto de entrada do programa
     public static void main(String[] args) {
         // Declara e inicializa uma matriz 4x4 com valores inteiros
-        int[][] matriz = {
-                {10, 5, 2, 3},    // Linha 0
-                {1, 1, 1, 1},     // Linha 1
-                {10, 10, 10, 10}, // Linha 2
-                {50, 20, 0, 5}    // Linha 3
-        };
+        Random random = new Random();
+        int[][] matriz = new int[4][4];
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                matriz[i][j] = random.nextInt(100); // gera número entre 0 a 99
+            }
+        }
+
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Linha " + i + ": ");
+            for (int j = 0; j < 4; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
         // Array para armazenar as 4 threads que serão criadas
         Thread[] threads = new Thread[4];
@@ -84,7 +97,7 @@ public class Questao1 {
             // Inicia a execução da thread (chama o método run())
             threads[i].start();
         }
-        
+
         // Variável para armazenar a soma total de todos os elementos da matriz
         int somaTotalMatriz = 0;
 
