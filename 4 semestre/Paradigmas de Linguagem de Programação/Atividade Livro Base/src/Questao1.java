@@ -10,6 +10,12 @@
     linha seja realizado emparalelo, porthreads;
 
     *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
+
+    prompt:
+        - Explique passo a passo o desenvolvimento deste 
+        código Java que realiza o cálculo da soma de uma 
+        matriz 4x4 de número inteiros usando threads em 
+        paralelo.
 */
 
 import java.util.Random;
@@ -126,3 +132,4 @@ public class Questao1 {
         System.out.println("Soma total de todos os elementos da matriz: " + somaTotalMatriz);
     }
 }
+

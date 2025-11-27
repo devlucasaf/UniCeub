@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+/**
+    Paradigmas de Linguagens de Programação
+    Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
+    Exercício do Capítulo 5
+
+    Questão 5)
+        Cinco lebres disputarão uma corrida. Cada lebre pode dar um salto
+        que varia de 1 a 3 metros de distância. A distância percorrida é de 20
+        metros. Na corrida, cada lebre dará um salto. Informar quantos
+        metros ela pulou a cada salto realizado. Em seguida, a lebre pára para
+        descansar por 2 segundos (sleep). Escreva um programa, utilizando
+        threads (uma para cada lebre), que informe a lebre vencedora e a
+        colocação de cada uma delas ao final da corrida. Informar, também,
+        quantos pulos cada uma delas deu.
+
+    *Atividade Desenvolvida com o auxílio da IA com autorização do professor*
+
+    prompts:
+        - Desenvolva e explique o passo a passo em Java utilizando threads para simular uma corrida entre cinco lebres usando threads. Cada lebre deve ser um thread separada, 
+        onde cada uma delas faz saltos aleatórios entre 1 e 3 metros até percorrer 20 metros. Depois de cada salto, cada lebre deverá descansar por 2 segundos. 
+        O sistema deverá registrar a quantidade de pulos que cada lebre deu, que lebre chegou primeiro e me apresente a classificação geral do final da corrida. 
+        Gere um código completo e comentado linha por linha.
+        - Adicione cores hexadecimais para fazer a diferenciação de cada lebre. Eu quero as seguintes cores: vermelho cênico, verde elétrico, azul brilhante, rosa choque e ciano claro
+*/
+
+>>>>>>> 9c6a4a15115f838849a96ae548b7d94265fce7a4
 // Importa as classes necessárias para listas, comparação, geração de números aleatórios
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -239,3 +267,4 @@ public class Questao5 {
         System.out.println("-------------------------------------------------------");
     }
 }
+
