@@ -3,28 +3,18 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="center">
-    <h1>2º Semestre</h1>
-</div>
+# 2º Semestre
 
-<div>
-    <table>
-        <tr>
-            <td>
-                ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu segundo semestre de curso de Ciência da Computação!<br>
-                ◽️Códigos em Python, Java, SQL e Assembly<br>
-                ◽️Disciplinas:<br>
-                    - Álgebra e Geometria Analítica<br>
-                    - Banco de Dados I<br>
-                    - Estrutura de Dados<br>
-                    - Linguagem e Técnicas de Programação I<br>
-                    - Organização e Arquitetura de Computadores<br>
-            </td>
-        </tr>
-    </table>
-</div>
+◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu segundo semestre de curso de Ciência da Computação!<br>
+◽️Códigos em Python, Java, SQL e Assembly<br>
+◽️Disciplinas:<br>
+- Álgebra e Geometria Analítica<br>
+- Banco de Dados I<br>
+- Estrutura de Dados<br>
+- Linguagem e Técnicas de Programação I<br>
+- Organização e Arquitetura de Computadores<br>
 
-### 📁 **Estrutura**
+## 📁 **Estrutura**
 
 ```diff
 Semestre 1

@@ -3,26 +3,16 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="center">
-    <h1>1º Semestre</h1>
-</div>
+# 1º Semestre
 
-<div>
-    <table>
-        <tr>
-            <td>
-                ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu primeiro semestre de curso<br>
-                ◽️Códigos em Python e C#<br>
-                ◽️Disciplinas:<br>
-                    - Administração e Sistemas de Informação<br>
-                    - Introdução à Ciência da Computação<br>
-                    - Lógica de Programação<br>
-                    - Matemática para Computação<br>
-                    - Sistemas Digitais<br>
-            </td>
-        </tr>
-    </table>
-</div>
+◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu primeiro semestre de curso<br>
+◽️Códigos em Python e C#<br>
+◽️Disciplinas:<br>
+- Administração e Sistemas de Informação<br>
+- Introdução à Ciência da Computação<br>
+- Lógica de Programação<br>
+- Matemática para Computação<br>
+- Sistemas Digitais<br>
 
 ### 📁 **Estrutura**
 

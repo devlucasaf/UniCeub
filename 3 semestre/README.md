@@ -3,28 +3,18 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="center">
-    <h1>3º Semestre</h1>
-</div>
+# 3º Semestre
 
-<div>
-    <table>
-        <tr>
-            <td>
-                ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu terceiro semestre de curso de Ciência da Computação!<br>
-                ◽️Códigos em Python, C++ e SQL<br>
-                ◽️Disciplinas:<br>
-                    - Banco de Dados II<br>
-                    - Cálculo Diferencial e Integral<br>
-                    - Computação Gráfica<br>
-                    - Engenharia de Software<br>
-                    - Linguagem e Técnicas de Programação II<br>
-            </td>
-        </tr>
-    </table>
-</div>
+◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu terceiro semestre de curso de Ciência da Computação!<br>
+◽️Códigos em Python, C++ e SQL<br>
+◽️Disciplinas:<br>
+- Banco de Dados II<br>
+- Cálculo Diferencial e Integral<br>
+- Computação Gráfica<br>
+- Engenharia de Software<br>
+- Linguagem e Técnicas de Programação II<br>
 
-### 📁 **Estrutura**
+## 📁 **Estrutura**
 
 ```diff
 Semestre 1

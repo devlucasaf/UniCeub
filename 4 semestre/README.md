@@ -3,28 +3,19 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="center">
-    <h1>4º Semestre</h1>
-</div>
+# 4º Semestre
+            
+◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quarto semestre de curso de Ciência da Computação!<br>
+◽️Códigos em Python, Java, Prolog, Scheme, HTML, CSS, JavaScript, Rust e Ruby<br>
+◽️Disciplinas:
+- Paradigmas de Linguagem de Programação<br>
+- Probabilidade e Estatística<br>
+- Programação para Web<br>
+- Sistemas Operacionais<br>
+- Teoria da Computação
 
-<div>
-    <table>
-        <tr>
-            <td>
-                ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quarto semestre de curso de Ciência da Computação!<br>
-                ◽️Códigos em Python, Java, Prolog, Scheme, HTML, CSS, JavaScript e Rust<br>
-                ◽️Disciplinas:<br>
-                    - Paradigmas de Linguagem de Programação<br>
-                    - Probabilidade e Estatística<br>
-                    - Programação para Web<br>
-                    - Sistemas Operacionais<br>
-                    - Teoria da Computação<br>
-            </td>
-        </tr>
-    </table>
-</div>
 
-### 📁 **Estrutura**
+## 📁 **Estrutura**
 
 ```diff
 Semestre 1
