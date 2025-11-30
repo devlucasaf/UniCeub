@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 /**
     Paradigmas de Linguagens de Programação
     Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
@@ -23,6 +25,7 @@
         - Adicione cores hexadecimais para fazer a diferenciação de cada lebre. Eu quero as seguintes cores: vermelho cênico, verde elétrico, azul brilhante, rosa choque e ciano claro
 */
 
+>>>>>>> 9c6a4a15115f838849a96ae548b7d94265fce7a4
 // Importa as classes necessárias para listas, comparação, geração de números aleatórios
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -110,6 +110,15 @@ Semestre 8
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=rust"
     />
+    <img
+        align="center" 
+        alt="Ruby" 
+        title="Ruby"
+        height="60" 
+        style="padding-right: 10px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=ruby"
+    />
 </div>
 
 ---
@@ -172,7 +181,16 @@ Semestre 8
         tittle="DBSQLite"
         height="60"
         style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=sqlite"
+    />
+    <img
+        align="center"
+        alt="RubyMine"
+        tittle="RubyMine"
+        height="60"
+        style="padding-right: 10px"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
 </div>
 

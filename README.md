@@ -151,6 +151,15 @@ Semestre 8
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=rust"
     />
+    <img
+        align="center" 
+        alt="Ruby" 
+        title="Ruby"
+        height="60" 
+        style="margin-top: 20px" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=ruby"
+    />
 </div>
 
 ---
@@ -229,6 +238,14 @@ Semestre 8
         height="60"
         style="padding-right: 10px"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+    />
+    <img
+        align="center"
+        alt="RubyMine"
+        tittle="RubyMine"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
 </div>
 
