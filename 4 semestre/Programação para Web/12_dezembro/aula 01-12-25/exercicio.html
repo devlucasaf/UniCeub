@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Problema: falta meta viewport para mobile -->
+  <title>Página Demo - Loja</title>
+  <style>
+    /* Problemas: contraste ruim, uso de font-size pequeno, estilos inline no CSS */
+    body { font-family: Arial, sans-serif; background: #eee; color: #666; }
+    header { background: #fff; padding: 5px; }
+    .nav { display: inline-block; margin-left: 50px; }
+    .nav a { margin-right: 10px; text-decoration: none; color: #888; }
+    .banner { height: 300px; background: url('banner.jpg') no-repeat center; background-size: cover; }
+    .btn { display: inline-block; padding: 4px 6px; background: #09f; color: #fff; border-radius: 2px; }
+    .small { font-size: 10px; }
+    .hidden-visually { position: absolute; left: -9999px; top: -9999px; }
+    /* sem :focus visível */
+    a:focus, button:focus { outline: none; }
+    table.layout { width: 100%; border-collapse: collapse; }
+    table.layout td { padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Problema: sem atributo lang no html; heading mal utilizado -->
+  <h4>Minha Loja</h4>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </div>
+</header>
+
+<!-- Problema: imagem sem alt; decorative? não indicado -->
+<div class="banner" role="img"></div>
+
+<main>
+  <!-- Problema: tabela usada para layout -->
+  <table class="layout">
+    <tr>
+      <td style="width:70%">
+        <!-- Problema: formulário sem labels, placeholders como rótulo -->
+        <form action="/comprar" method="post">
+          <input type="text" name="nome" placeholder="Seu nome"><br>
+          <input type="email" name="email" placeholder="email"><br>
+          <input type="text" name="cc" placeholder="Número do cartão"><br>
+          <input type="submit" value="Enviar" class="btn">
+        </form>
+
+        <!-- Problema: link "clique aqui" e sem indicação do destino -->
+        <p class="small">Para promoções <a href="#">clique aqui</a>.</p>
+
+        <!-- Problema: vídeo que autoplay sem controle e sem legendas -->
+        <video src="ad.mp4" autoplay loop></video>
+      </td>
+      <td style="width:30%">
+        <h3>Produtos</h3>
+        <!-- Problema: imagens pequenas sem descrições; uso de divs clicáveis em vez de botões/links -->
+        <div class="product" onclick="openProduct(1)" tabindex="0">
+          <img src="p1.jpg">
+          <p>Produto 1</p>
+        </div>
+        <div class="product" onclick="openProduct(2)">
+          <img src="p2.jpg">
+          <p>Produto 2</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Problema: uso de cor para transmitir informação sem alternativa textual -->
+  <p>Status do pedido: <span style="color: green">OK</span></p>
+
+  <!-- Problema: links abrem em nova aba sem aviso -->
+  <p><a href="https://externo.ex" target="_blank">Saiba mais</a></p>
+
+  <!-- Problema: falta de skip link -->
+</main>
+
+<footer>
+  <!-- Problema: contraste baixo no footer, texto pequeno -->
+  <p class="small">© 2025 Minha Loja - todos os direitos reservados</p>
+</footer>
+
+<script>
+  // Código com problemas de usabilidade: dependente de mouse, sem alternativa teclado
+  function openProduct(id) {
+    alert("Abrindo produto " + id);
+  }
+
+  // Simula popup automático (invasivo)
+  setTimeout(function() {
+    var p = document.createElement('div');
+    p.id = 'promo';
+    p.style.position = 'fixed';
+    p.style.right = '10px';
+    p.style.bottom = '10px';
+    p.style.background = '#ff0';
+    p.style.padding = '10px';
+    p.innerHTML = '<p>Oferta! <a href="#">Ganhe desconto</a></p>';
+    document.body.appendChild(p);
+  }, 2000);
+</script>
+
+</body>
+</html>

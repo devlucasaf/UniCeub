@@ -4,7 +4,7 @@
 />
 
 # 4º Semestre
-            
+
 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quarto semestre de curso de Ciência da Computação!<br>
 ◽️Códigos em Python, Java, Prolog, Scheme, HTML, CSS, JavaScript, Rust e Ruby<br>
 ◽️Disciplinas:

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Texto Alternativo em Imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    figure {
+      text-align: center;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Uso do Texto Alternativo (alt)</h1>
+  <p>Abaixo temos duas imagens: uma sem descrição adequada e outra com um texto alternativo descritivo.</p>
+
+  <div class="container">
+    <!-- Exemplo incorreto -->
+    <figure>
+      <img src="https://cursinhoparamedicina.com.br/wp-content/uploads/2022/10/Paisagem-1.jpg" alt="">
+      <figcaption>Imagem sem texto alternativo descritivo</figcaption>
+    </figure>
+
+    <!-- Exemplo correto -->
+    <figure>
+      <img src="https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?q=80&w=1279&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paisagem com montanhas ao fundo e um lago em primeiro plano">
+      <figcaption>Imagem com texto alternativo descritivo</figcaption>
+    </figure>
+  </div>
+
+  <h2>Observações</h2>
+  <ul>
+    <li>O atributo <code>alt</code> é essencial para acessibilidade, pois descreve o conteúdo da imagem para <strong>leitores de tela</strong>.</li>
+    <li>Se a imagem for <strong>decorativa</strong>, pode-se usar <code>alt=""</code> para que ela seja ignorada por tecnologias assistivas.</li>
+    <li>Se a imagem tiver <strong>função informativa</strong>, o <code>alt</code> deve descrever de forma clara o que ela representa.</li>
+  </ul>
+</body>
+</html>

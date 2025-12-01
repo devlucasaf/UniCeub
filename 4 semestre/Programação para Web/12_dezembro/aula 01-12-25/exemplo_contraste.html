@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Contraste em Acessibilidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 15px;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    /* Exemplos de contraste ruim */
+    .ruim1 {
+      background-color: yellow;
+      color: white;
+    }
+    .ruim2 {
+      background-color: lightgray;
+      color: gray;
+    }
+    .ruim3 {
+      background-color: #0066cc;
+      color: #0099ff;
+    }
+    /* Exemplos de bom contraste */
+    .bom1 {
+      background-color: yellow;
+      color: black;
+    }
+    .bom2 {
+      background-color: black;
+      color: white;
+    }
+    .bom3 {
+      background-color: #0066cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplos de Contraste em Texto</h1>
+  <p>A tabela abaixo mostra comparações de <strong>contraste ruim</strong> (difícil de ler) e <strong>contraste bom</strong> (acessível):</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Contraste Ruim</th>
+        <th>Contraste Bom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ruim1">Texto branco em fundo amarelo</td>
+        <td class="bom1">Texto preto em fundo amarelo</td>
+      </tr>
+      <tr>
+        <td class="ruim2">Texto cinza em fundo cinza claro</td>
+        <td class="bom2">Texto branco em fundo preto</td>
+      </tr>
+      <tr>
+        <td class="ruim3">Texto azul claro em fundo azul escuro</td>
+        <td class="bom3">Texto branco em fundo azul escuro</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="xx" oncontextmenu="return false" onkeydown="if(event.key==='Backspace'){event.preventDefault();alert('Sem voltar!')}};">
+<head>
+  <meta charset="utf-8">
+  <title>Boas-vindas ao Painel 9.7 (Não Feche!)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=0.7, user-scalable=no">
+  <style>
+    /* Quebra: estética/minimalismo e legibilidade (baixo contraste, muita poluição) */
+    body{background:linear-gradient(45deg,#ff00ff,#00ffff,#ffff00);font-family:Comic Sans MS, Papyrus, cursive;cursor: none;}
+    h1{color:#ff00ff;text-shadow:0 0 3px #0f0, 0 0 10px #00f, 0 0 20px #f00;animation:blink 0.4s linear infinite;}
+    @keyframes blink{50%{opacity:0.1}}
+    .container{display:grid;grid-template-columns: 140px 1fr 200px 80px;gap:2px;margin:4px;border:10px ridge hotpink;padding:2px}
+    .panel{background:rgba(255,255,255,0.3);border:5px dotted lime;padding:6px}
+    .nav a{display:block;padding:3px;background:#111;color:#111;text-decoration:underline;transform:skew(20deg)}
+    /* Links com contraste ruim e aparência enganosa */
+    .nav a:hover{color:#111;background:#111}
+    /* Botões pequenos e clicáveis só em 1px */
+    button{border:8px groove gold;background:#f0f;width:120px;height:22px;font-size:9px;position:relative}
+    button::after{content:"";position:absolute;inset:0 0 0 119px} /* só 1px clicável */
+    /* Campos sem rótulo, só placeholder; texto minúsculo */
+    input, select, textarea{font-size:10px;border:4px inset #000;background:#eee;color:#eee}
+    /* Feedback confuso/oculto */
+    #status{color:#fafafa;background:#fafafa;border:1px solid #fafafa}
+    /* Conteúdo que se move (distrai) */
+    marquee{background:#0ff;color:#0ff}
+    /* Layout lotado e inconsistente */
+    .ads{animation:spin 0.6s linear infinite;border:6px double red}
+    @keyframes spin{to{transform:rotate(1turn)}}
+  </style>
+</head>
+<body onload="start()">
+
+<!-- Quebra: visibilidade do status (inexistente/ilegível), linguagem técnica -->
+<div id="status">SYS_OK=TRUE :: READY :: NO_ERRORS_DETECTED</div>
+
+<!-- Música automática sem controle (quebra: controle/ liberdade do usuário) -->
+<audio id="bgm" autoplay loop>
+  <source src="data:audio/mp3;base64,//uQZAAAAAAAAAAAAAAAAAAAA" type="audio/mpeg">
+</audio>
+
+<marquee behavior="alternate" scrollamount="50">Clique aqui para NÃO continuar</marquee>
+
+<div class="container">
+  <!-- Navegação inconsistente (rótulos vagos e termos diferentes para a mesma ação) -->
+  <div class="panel nav">
+    <h3>Menu???</h3>
+    <a href="#" onclick="randomNav(event)">Início</a>
+    <a href="#" onclick="randomNav(event)">Dashboard</a>
+    <a href="#" onclick="randomNav(event)">Painel</a>
+    <a href="#" onclick="randomNav(event)">Começo</a>
+    <a href="#" onclick="alert('Você não pode sair.'); return false;">Sair</a>
+  </div>
+
+  <!-- Formulário com placeholders como rótulo, opções ambíguas, validações hostis -->
+  <div class="panel">
+    <h1>Cadastre-se Já!!!</h1>
+    <form onsubmit="return terribleSubmit(event)">
+      <input type="text" placeholder="Digite coisa" name="x"><br>
+      <input type="password" placeholder="Senha (mostrada abaixo)" name="pwd" oninput="showPwd(this.value)"><br>
+      <div id="pwdMirror">Senha: ****** (mostrando!)</div>
+      <select name="plan">
+        <option>Selecione...</option>
+        <option>Talvez</option>
+        <option>Sim</option>
+        <option>Azul</option>
+      </select><br>
+      <label>
+        <input type="checkbox" checked>
+        Eu li 47 páginas de termos (link invisível)
+      </label><br>
+      <textarea placeholder="Escreva aqui (máx. 10 chars)" maxlength="10"></textarea><br>
+      <button type="submit">OK</button>
+      <button type="reset" onclick="confirm('Tem certeza? isso apagará tudo sem voltar.')">Cancelar</button>
+    </form>
+    <!-- Mensagens de erro não específicas -->
+    <div id="errors" style="color:#f00;text-decoration:line-through">Erro 42.</div>
+  </div>
+
+  <!-- Conteúdo que parece botão mas não é (quebra: correspondência com o mundo real) -->
+  <div class="panel ads">
+    <h2>[BOTÃO]</h2>
+    <p>Clique em “botão” (que não é clicável). Talvez funcione. Ou não.</p>
+    <img src="https://via.placeholder.com/150x90?text=An%C3%BAncio" alt="Anúncio">
+  </div>
+
+  <!-- Ajuda inútil/enganosa -->
+  <div class="panel">
+    <h3>Ajuda</h3>
+    <ul>
+      <li>Para salvar, desligue o computador.</li>
+      <li>Se travar, pressione Backspace (desativado).</li>
+      <li>Contato: suporte@ (não funciona).</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Links que não parecem links e vice-versa -->
+<p>
+  <u>Este sublinhado não é link</u> — 
+  <span onclick="alert('surpresa');" style="text-decoration:none">este é</span>.
+</p>
+
+<!-- Paginação sem contexto, muda sozinha -->
+<div id="pagination">
+  Página <input value="A" size="2"> de ???
+  <button onclick="shuffle()">Próximo?</button>
+</div>
+
+<script>
+  function start(){
+    // Quebra: mudanças inesperadas
+    setTimeout(()=>alert('Sessão expira em 3 segundos (não expira).'), 1000);
+    // Cursor escondido, tooltips ausentes, rótulos faltando
+  }
+
+  function randomNav(e){
+    e.preventDefault();
+    const pages = ['#nada','#coisa','#vazio','#bug'];
+    const p = pages[Math.floor(Math.random()*pages.length)];
+    location.hash = p; // navegação imprevisível
+    alert('Você foi para: ' + p + ' (ou não).');
+  }
+
+  function showPwd(v){
+    document.getElementById('pwdMirror').textContent = 'Senha: ' + v + ' (exposta!)';
+  }
+
+  function terribleSubmit(e){
+    // Quebra: mensagens vagas e perda de dados
+    alert('Falhou. Motivo: motivo.');
+    document.querySelector('form').reset();
+    return false;
+  }
+
+  function shuffle(){
+    // Paginação que muda o número para letras aleatórias
+    document.querySelector('#pagination input').value = String.fromCharCode(65+Math.floor(Math.random()*26));
+  }
+
+  // Popups intrusivos constantes (quebra: controle/liberdade)
+  setInterval(()=>{ if(Math.random()<0.2) alert('Newsletter obrigatória!'); }, 4000);
+</script>
+
+</body>
+</html>

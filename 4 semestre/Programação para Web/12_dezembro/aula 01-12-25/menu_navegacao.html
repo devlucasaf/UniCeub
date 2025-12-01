@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Menu Acessível vs Não Acessível</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .menu {
+      display: flex;
+      gap: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .menu div, .menu a {
+      padding: 8px 14px;
+      background: #eee;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Efeito de foco visível */
+    .menu a:focus, .menu div:focus {
+      outline: 3px solid blue;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Menus Acessíveis e Não Acessíveis</h1>
+
+  <!-- ❌ MENU NÃO ACESSÍVEL -->
+  <h2>❌ Menu Não Acessível</h2>
+  <p>Este menu usa apenas <code>&lt;div&gt;</code> sem <code>tabindex</code> e sem semântica. Usuários de teclado e leitores de tela terão dificuldade.</p>
+  <div class="menu">
+    <div>Início</div>
+    <div>Sobre</div>
+    <div>Serviços</div>
+    <div>Contato</div>
+  </div>
+
+  <!-- ✅ MENU ACESSÍVEL -->
+  <h2>✅ Menu Acessível</h2>
+  <p>Este menu usa <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code> e <code>&lt;a&gt;</code> com foco via teclado garantido. Cada item é identificado corretamente.</p>
+  <nav aria-label="Menu principal">
+    <ul class="menu" style="list-style:none; margin:0; padding:0;">
+      <li><a href="#inicio" tabindex="0">Início</a></li>
+      <li><a href="#sobre" tabindex="0">Sobre</a></li>
+      <li><a href="#servicos" tabindex="0">Serviços</a></li>
+      <li><a href="#contato" tabindex="0">Contato</a></li>
+    </ul>
+  </nav>
+
+  <h2>📌 Observações</h2>
+  <ul>
+    <li>No menu ❌, o usuário <strong>não consegue navegar por teclado</strong> (Tab não funciona).</li>
+    <li>No menu ✅, cada link pode receber <strong>foco via Tab</strong> e possui <strong>semântica correta</strong> para leitores de tela.</li>
+    <li>O uso de <code>&lt;nav&gt;</code> e <code>&lt;a&gt;</code> é preferível ao uso de <code>tabindex</code> manual em <code>&lt;div&gt;</code>.</li>
+  </ul>
+</body>
+</html>

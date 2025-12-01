@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Página Não Acessível</title>
+  <style>
+    body {
+      background-color: yellow; /* contraste ruim */
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+    .menu div {
+      background: lightgray;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .importante {
+      color: lightgray; /* contraste muito baixo */
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Meu Site</h1>
+
+  <!-- Erro 1: Menu não acessível (divs sem links e sem tabindex) -->
+  <div class="menu">
+    <div>Início</div>
+    <div>Sobre</div>
+    <div>Contato</div>
+  </div>
+
+  <!-- Erro 2: Imagem sem texto alternativo -->
+  <h2>Nosso Produto</h2>
+  <img src="https://via.placeholder.com/300x150.png?text=Produto" alt="">
+
+  <!-- Erro 3: Texto com contraste ruim -->
+  <p class="importante">Este é um aviso importante, mas quase ilegível.</p>
+
+  <!-- Erro 4: Uso apenas de cor para indicar algo -->
+  <p>Os campos obrigatórios estão marcados em <span style="color: red;">vermelho</span>.</p>
+  <form>
+    <!-- Erro 5: Sem labels -->
+    <input type="text" placeholder="Digite seu nome"><br>
+    <input type="email" placeholder="Digite seu email"><br>
+    <button>Enviar</button>
+  </form>
+
+  <!-- Erro 6: Elemento piscando (risco para epilepsia) -->
+  <marquee behavior="alternate" scrollamount="20">Promoção! Compre já!!!</marquee>
+
+  <!-- Erro 7: Conteúdo não estruturado (sem heading hierarchy correta) -->
+  <h4>Seção Importante</h4>
+  <p>Mas não segue a ordem de títulos (h2/h3 foram pulados).</p>
+</body>
+</html>
