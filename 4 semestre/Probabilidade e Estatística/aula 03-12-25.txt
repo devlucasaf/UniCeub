@@ -1,10 +1,25 @@
 └── 03/12
 └── Regressão Linear
 
-└──Covariância
+└── Covariância
 └── Correlação → Associação entre 2 variáveis
     └── Linear
 └── Coeficiente de Pearson (r)
    -1 ≤ r ≤ 1
     └── Indica a intensidade da relação
 * Gráfico de Dispersão
+
+* Regressão Linear Simples
+  │          └── Reta     └── Apenas 2 variáveis
+  └── Equação Linear
+                população
+y = σ + βx + ε ---------------------------------------------> y^ = ^σ + ^βx + ε → equação estimada
+                                                                └── y = σ + βx + ε
+                                                                    └── y = a + bx
+                                                                        coef. a
+                                                                        coef. b
+y: variável explicada
+σ: coeficiente linear
+β: coeficiente angular
+x: variável explicativo
+ε: erro/resíduo
