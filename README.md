@@ -247,9 +247,18 @@ Semestre 8
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
+    <img
+        align="center"
+        alt="Excel"
+        tittle="Excel"
+        height="60" 
+        style="padding-right: 10px;" 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png"
+    />
 </div>
 
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
+
