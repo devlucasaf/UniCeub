@@ -1,0 +1,10 @@
+└── 03/12
+└── Regressão Linear
+
+└──Covariância
+└── Correlação -> Associação entre 2 variáveis
+    └── Linear
+└── Coeficiente de Pearson (r)
+   -1 ≤ r ≤ 1
+    └── Indica a intensidade da relação
+* Gráfico de Dispersão
