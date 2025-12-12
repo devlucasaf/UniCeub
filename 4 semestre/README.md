@@ -58,6 +58,14 @@ Semestre 8
     />
     <img
         align="center" 
+        alt="Scheme" 
+        title="Scheme"
+        height="60" 
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
+    <img
+        align="center" 
         alt="SQL" 
         title="SQL"
         height="60" 
