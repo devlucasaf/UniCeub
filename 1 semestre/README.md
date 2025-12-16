@@ -23,13 +23,15 @@ Semestre 1
 .
 Semestre 8
 ```
-<div align="center"> 
-    <h1>📊 Linguagens</h1>
+
+# 📊 Linguagens
+
+<div align="left"> 
     <img 
         align="center" 
         alt="Python" 
         title="Python"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=python"
@@ -38,20 +40,23 @@ Semestre 8
         align="center" 
         alt="C#" 
         title="C#"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cs"
     />
 </div>
 
-<div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+---
+
+# 🛠️ Software
+
+<div align="left"> 
     <img
         align="center"
         alt="git"
         tittle="Git"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=git"
@@ -60,7 +65,7 @@ Semestre 8
         align="center"
         alt="github"
         tittle="GitHub"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
@@ -69,7 +74,7 @@ Semestre 8
         align="center"
         alt="vscode"
         tittle="VsCode"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
     />
@@ -77,7 +82,7 @@ Semestre 8
         align="center"
         alt="Visual Studio"
         tittle="Visual Studio"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
     />
@@ -85,11 +90,12 @@ Semestre 8
         align="center"
         alt="pycharm"
         tittle="PyCharm"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
 </div>
+
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"

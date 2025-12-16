@@ -25,13 +25,14 @@ Semestre 2
 Semestre 8
 ```
 
-<div align="center"> 
-    <h1>📊 Linguagens</h1>
+# 📊 Linguagens
+
+<div align="left"> 
     <img 
         align="center" 
         alt="Python" 
         title="Python"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=python"
@@ -40,7 +41,7 @@ Semestre 8
         align="center" 
         alt="Java" 
         title="Java"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=java"
@@ -49,7 +50,7 @@ Semestre 8
         align="center" 
         alt="MySQL" 
         title="MySQL"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=mysql"
@@ -58,19 +59,22 @@ Semestre 8
         align="center" 
         alt="Assembly" 
         title="Assembly"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
 </div>
 
-<div align="center">
-    <h1>🛠️ Software</h1>
+---
+
+# 🛠️ Software
+
+<div align="left">
     <img
         align="center"
         alt="git"
         tittle="Git"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=git"
@@ -79,7 +83,7 @@ Semestre 8
         align="center"
         alt="github"
         tittle="GitHub"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
@@ -88,7 +92,7 @@ Semestre 8
         align="center"
         alt="pycharm"
         tittle="PyCharm"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
@@ -96,7 +100,7 @@ Semestre 8
         align="center"
         alt="Eclipse"
         tittle="Eclipse"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
     />
@@ -104,7 +108,7 @@ Semestre 8
         align="center"
         alt="IntelliJ"
         tittle="IntelliJ"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
@@ -112,7 +116,7 @@ Semestre 8
         align="center"
         alt="PostegreSQL"
         tittle="PostegreSQL"
-        height="60"
+        height="40"
         style="padding-right: 10px"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     />

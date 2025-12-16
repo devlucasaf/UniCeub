@@ -3,12 +3,11 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="center">
-    <h1>🎓Faculdade de Ciência da Computação🎓</h1>
-</div>
+# **🎓Faculdade de Ciência da Computação**
+
+# 📚 UNICEUB
 
 <div>
-    <h1 align="center">📚 UNICEUB</h1>
     <table>
         <tr>
             <td>
@@ -34,13 +33,14 @@ Semestre 4
 Semestre 8
 ```
 
-<div align="center"> 
-    <h1>🚀Linguagens </h1>
+# 🚀Linguagens 
+
+<div align="left"> 
     <img 
         align="center" 
         alt="Python" 
         title="Python"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=python""
@@ -49,7 +49,7 @@ Semestre 8
         align="center"
         alt="Java"
         tittle="Java"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=java"
@@ -58,7 +58,7 @@ Semestre 8
         align="center" 
         alt="C#" 
         title="C#"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cs""
@@ -67,7 +67,7 @@ Semestre 8
         align="center" 
         alt="C++" 
         title="C++"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cpp"
@@ -76,7 +76,7 @@ Semestre 8
         align="center" 
         alt="Prolog" 
         title="Prolog"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
     />
@@ -84,7 +84,7 @@ Semestre 8
         align="center" 
         alt="Scheme" 
         title="Scheme"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
     />
@@ -92,17 +92,16 @@ Semestre 8
         align="center" 
         alt="Assembly" 
         title="Assembly"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
-    <br>
     <img
         align="center" 
         alt="SQL" 
         title="SQL"
-        height="60" 
-        style="margin-top: 20px;"
+        height="40" 
+        style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=mysql"
     />
@@ -110,8 +109,8 @@ Semestre 8
         align="center"
         alt="django" 
         title="Django"
-        height="60"
-        style="margin-top: 20px;"
+        height="40"
+        style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=django" 
     />
@@ -119,8 +118,8 @@ Semestre 8
         align="center"
         alt="JavaScript"
         tittle="JavaScript"
-        height="60"
-        style="margin-top: 20px;"
+        height="40"
+        style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=javascript" 
     />
@@ -128,8 +127,8 @@ Semestre 8
         align="center" 
         alt="HTML" 
         title="HTML"
-        height="60" 
-        style="margin-top: 20px;" 
+        height="40" 
+        style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=html"
     />
@@ -137,8 +136,8 @@ Semestre 8
         align="center" 
         alt="CSS" 
         title="CSS"
-        height="60" 
-        style="margin-top: 20px;"
+        height="40" 
+        style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=css"
     />
@@ -146,8 +145,8 @@ Semestre 8
         align="center" 
         alt="Rust" 
         title="Rust"
-        height="60" 
-        style="margin-top: 20px;"
+        height="40" 
+        style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=rust"
     />
@@ -155,22 +154,22 @@ Semestre 8
         align="center" 
         alt="Ruby" 
         title="Ruby"
-        height="60" 
-        style="margin-top: 20px" 
+        height="40" 
+        style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=ruby"
     />
 </div>
 
 ---
+# 🛠️ Ferramentas
 
-<div align="center"> 
-    <h1>🛠️ Ferramentas</h1>
+<div align="left"> 
     <img
         align="center"
         alt="git"
         tittle="Git"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=git"
@@ -179,7 +178,7 @@ Semestre 8
         align="center"
         alt="github"
         tittle="GitHub"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
@@ -188,7 +187,7 @@ Semestre 8
         align="center"
         alt="vscode"
         tittle="VsCode"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
     />
@@ -196,7 +195,7 @@ Semestre 8
         align="center"
         alt="Visual Studio"
         tittle="Visual Studio"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
     />
@@ -204,14 +203,14 @@ Semestre 8
         align="center"
         title="MS Windows" 
         alt="microsoft windows" 
-        height="60" 
+        height="40" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" 
     />
     <img
         align="center"
         alt="Intellij"
         tittle="Intellij"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
@@ -219,7 +218,7 @@ Semestre 8
         align="center"
         alt="Eclipse"
         tittle="Eclipse"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
     />
@@ -227,7 +226,7 @@ Semestre 8
         align="center"
         alt="pycharm"
         tittle="PyCharm"
-        height="60"
+        height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
@@ -235,7 +234,7 @@ Semestre 8
         align="center"
         alt="PostegreSQL"
         tittle="PostegreSQL"
-        height="60"
+        height="40"
         style="padding-right: 10px"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     />
@@ -243,7 +242,7 @@ Semestre 8
         align="center"
         alt="RubyMine"
         tittle="RubyMine"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
@@ -251,7 +250,7 @@ Semestre 8
         align="center"
         alt="Excel"
         tittle="Excel"
-        height="60" 
+        height="40" 
         style="padding-right: 10px;" 
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png"
     />
