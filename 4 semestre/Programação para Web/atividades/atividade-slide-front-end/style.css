@@ -1,0 +1,81 @@
+/* Estilos para o título principal via ID */
+#titulo-principal {
+    color: red;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o subtítulo via classe */
+.subtitulo {
+    color: green;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Estilos para o primeiro parágrafo via classe */
+.fundo-amarelo {
+    background-color: yellow;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+/* Estilos para o segundo parágrafo via classe */
+.texto-azul-borda {
+    color: darkblue;
+    border: 2px solid darkblue;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para o terceiro parágrafo via ID */
+#paragrafo-grande {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #666;
+}
+
+/* Estilos gerais para a página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
