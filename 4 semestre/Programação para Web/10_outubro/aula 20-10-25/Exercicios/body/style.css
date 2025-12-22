@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos gerais para desktop (default) */
+body {
+    background-color: #e3f2fd;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1565c0;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.box-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1565c0;
+    border-bottom: 2px solid #e3f2fd;
+    padding-bottom: 8px;
+}
+
+.box-content {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+.breakpoint-info {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #1565c0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Query para tablet (até 1023px) */
+@media (max-width: 1023px) {
+    body {
+        background-color: #fce4ec;
+    }
+    
+    .main-container {
+        flex-wrap: wrap;
+    }
+    
+    .box {
+        flex: 0 1 calc(50% - 10px);
+    }
+    
+    .breakpoint-info::before {
+        content: "Modo Tablet: 2 colunas | ";
+    }
+}
+
+/* Media Query para celular (até 599px) */
+@media (max-width: 599px) {
+    body {
+        background-color: #e8f5e9;
+    }
+    
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .box {
+        flex: 0 1 100%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .breakpoint-info::before {
+        content: "Modo Celular: 1 coluna | ";
+    }
+}
+
+/* Media Query para desktop (acima de 1023px) */
+@media (min-width: 1024px) {
+    .breakpoint-info::before {
+        content: "Modo Desktop: 3 colunas | ";
+    }
+}
+
+/* Estilos adicionais para melhor visualização */
+.color-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.desktop-color {
+    background-color: #e3f2fd;
+}
+
+.tablet-color {
+    background-color: #fce4ec;
+}
+
+.mobile-color {
+    background-color: #e8f5e9;
+}

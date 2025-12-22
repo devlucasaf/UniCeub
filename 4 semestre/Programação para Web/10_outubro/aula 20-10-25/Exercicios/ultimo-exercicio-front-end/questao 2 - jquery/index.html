@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Inclui a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercício 2: jQuery</h1>
+        <p class="instrucao">Passe o mouse sobre os elementos abaixo para alternar a cor de fundo.</p>
+        
+        <div class="elementos-container">
+            <div class="elemento" id="elemento1">
+                <h3>Elemento 1</h3>
+                <p>Passe o mouse sobre mim!</p>
+            </div>
+            
+            <div class="elemento" id="elemento2">
+                <h3>Elemento 2</h3>
+                <p>Passe o mouse sobre mim também!</p>
+            </div>
+            
+            <div class="elemento" id="elemento3">
+                <h3>Elemento 3</h3>
+                <p>Eu também mudo de cor!</p>
+            </div>
+        </div>
+        
+        <div class="controles">
+            <button id="botao-reset">Resetar Cores</button>
+            <button id="botao-alternar">Alternar Modo</button>
+        </div>
+        
+        <p class="status" id="status-text">Nenhum elemento selecionado.</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

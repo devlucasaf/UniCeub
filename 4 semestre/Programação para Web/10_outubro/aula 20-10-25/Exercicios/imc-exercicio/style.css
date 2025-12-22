@@ -1,0 +1,355 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Cards principais */
+.calculator-card, .result-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-container, .reference-card, .result-card > div {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #3498db;
+}
+
+.result-card > .result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Formulário */
+.form-container h2, .result-card h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+.form-group label i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.input-with-unit {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-unit input {
+    width: 100%;
+    padding: 15px;
+    padding-right: 50px;
+    border: 2px solid #e1e5eb;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s;
+}
+
+.input-with-unit input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.unit {
+    position: absolute;
+    right: 15px;
+    font-weight: 600;
+    color: #7f8c8d;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin-top: 5px;
+}
+
+/* Botões */
+.calculate-btn, .back-btn {
+    background: linear-gradient(to right, #3498db, #2c80b9);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-btn {
+    background: linear-gradient(to right, #7f8c8d, #6c7a7d);
+    width: auto;
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.calculate-btn:hover {
+    background: linear-gradient(to right, #2980b9, #2573a7);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(52, 152, 219, 0.3);
+}
+
+.back-btn:hover {
+    background: linear-gradient(to right, #6c7a7d, #5f6c6f);
+    transform: translateY(-2px);
+}
+
+/* Card de referência */
+.reference-card {
+    border-top-color: #2ecc71;
+}
+
+.reference-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reference-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: transform 0.2s;
+}
+
+.reference-item:hover {
+    transform: translateX(5px);
+}
+
+.category-label {
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.category-range {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Cores das categorias de IMC */
+.baixo-peso { background-color: #ffeb3b; color: #333; }
+.peso-normal { background-color: #4caf50; color: white; }
+.sobrepeso { background-color: #ff9800; color: white; }
+.obesidade-i { background-color: #f44336; color: white; }
+.obesidade-ii { background-color: #d32f2f; color: white; }
+.obesidade-iii { background-color: #b71c1c; color: white; }
+
+/* Resultado */
+#result-content {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.imc-value {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.imc-classification {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.imc-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Detalhes do resultado */
+.result-explanation h3, .health-tips h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Dicas de saúde */
+.health-tips {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #e8f4fc;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+/* Estado de carregamento */
+.loading {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.loading i {
+    font-size: 2.5rem;
+}
+
+/* Informações e rodapé */
+.info-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+.info-box h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid #e1e5eb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .calculator-card, .result-card {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .imc-value {
+        font-size: 4rem;
+    }
+    
+    .result-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

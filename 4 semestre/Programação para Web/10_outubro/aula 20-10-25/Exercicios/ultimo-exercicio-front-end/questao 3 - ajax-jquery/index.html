@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - AJAX + jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Inclui a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercício 3: AJAX + jQuery</h1>
+        <p class="instrucao">Clique no botão para buscar posts da API JSONPlaceholder.</p>
+        
+        <div class="controles">
+            <div class="input-group">
+                <label for="post-id">ID do Post (1-100):</label>
+                <input type="number" id="post-id" min="1" max="100" value="1">
+            </div>
+            
+            <div class="botoes">
+                <button id="buscar-post">Buscar Post</button>
+                <button id="buscar-aleatorio">Post Aleatório</button>
+                <button id="limpar">Limpar Resultados</button>
+            </div>
+        </div>
+        
+        <div class="resultados">
+            <div class="card">
+                <h3>Post Atual</h3>
+                <div class="conteudo" id="post-atual">
+                    <p class="sem-dados">Nenhum post carregado ainda. Clique em "Buscar Post" para começar.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Últimos Posts Buscados</h3>
+                <div class="conteudo" id="historico-posts">
+                    <p class="sem-dados">O histórico de posts aparecerá aqui.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status" id="status-api">
+            Pronto para buscar dados da API.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

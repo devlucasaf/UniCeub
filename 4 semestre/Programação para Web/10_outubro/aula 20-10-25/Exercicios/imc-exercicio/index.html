@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-weight-scale"></i> Calculadora de IMC</h1>
+            <p class="subtitle">Índice de Massa Corporal</p>
+        </header>
+
+        <main>
+            <div class="calculator-card">
+                <div class="form-container">
+                    <h2>Informe seus dados</h2>
+                    <form id="imc-form" action="resultado.html" method="get">
+                        <div class="form-group">
+                            <label for="altura">
+                                <i class="fas fa-ruler-vertical"></i> Altura (metros)
+                            </label>
+                            <div class="input-with-unit">
+                                <input type="number" id="altura" name="altura" step="0.01" min="0.5" max="2.5" placeholder="Ex: 1.75" required>
+                                <span class="unit">m</span>
+                            </div>
+                            <p class="hint">Exemplo: 1.75 para 1 metro e 75 centímetros</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="massa">
+                                <i class="fas fa-weight-hanging"></i> Massa (quilogramas)
+                            </label>
+                            <div class="input-with-unit">
+                                <input type="number" id="massa" name="massa" step="0.1" min="20" max="300" placeholder="Ex: 70.5" required>
+                                <span class="unit">kg</span>
+                            </div>
+                            <p class="hint">Informe seu peso em quilogramas</p>
+                        </div>
+
+                        <button type="submit" class="calculate-btn">
+                            <i class="fas fa-calculator"></i> CALCULAR IMC
+                        </button>
+                    </form>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> Sobre o IMC</h3>
+                        <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal.</p>
+                        <p>Fórmula: <strong>IMC = massa (kg) / altura² (m)</strong></p>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fas fa-chart-column"></i> Classificação do IMC</h3>
+                    <div class="reference-item">
+                        <span class="category-label baixo-peso">Baixo peso</span>
+                        <span class="category-range">&lt; 18,5</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="category-label peso-normal">Peso normal</span>
+                        <span class="category-range">18,5 - 24,9</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="category-label sobrepeso">Sobrepeso</span>
+                        <span class="category-range">25 - 29,9</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="category-label obesidade-i">Obesidade Grau I</span>
+                        <span class="category-range">30 - 34,9</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="category-label obesidade-ii">Obesidade Grau II</span>
+                        <span class="category-range">35 - 39,9</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="category-label obesidade-iii">Obesidade Grau III</span>
+                        <span class="category-range">≥ 40</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Calculadora de IMC &copy; 2023 - Desenvolvido para fins educacionais</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
