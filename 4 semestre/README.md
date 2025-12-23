@@ -49,12 +49,65 @@ Semestre 8
         src="https://skillicons.dev/icons?i=java"
     />
     <img
+        align="center"
+        alt="C"
+        tittle="C"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=c"
+    />
+    <img
+        align="center"
+        alt="C++"
+        tittle="C++"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cpp"
+    />
+    <img
+        align="center"
+        alt="C#"
+        tittle="C#"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cs"
+    />
+    <img
+        align="center"
+        alt="Go"
+        tittle="Go"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=go"
+    />
+    <img
+        align="center"
+        alt="Kotlin"
+        tittle="Kotlin"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=kotlin"
+    />
+    <img
         align="center" 
         alt="Prolog" 
         title="Prolog"
         height="40" 
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center" 
+        alt="Haskell" 
+        title="Haskell"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
     />
     <img
         align="center" 
