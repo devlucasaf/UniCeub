@@ -1,0 +1,142 @@
+/* Estilos específicos para formulários e confirmações de cliente */
+.cliente-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cliente-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.cliente-card .card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.cliente-form .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cliente-form .form-control,
+.cliente-form .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.cliente-form .form-control:focus,
+.cliente-form .form-select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.cliente-form .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-right: none;
+}
+
+.cliente-form .invalid-feedback {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
+/* Estilos específicos para página de confirmação de exclusão */
+.delete-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cliente-info-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.cliente-info-card .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.cliente-info-card .card-text {
+    color: #6c757d;
+}
+
+/* Botões específicos */
+.btn-cancelar {
+    min-width: 120px;
+}
+
+.btn-confirmar {
+    min-width: 140px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cliente-container {
+        padding: 0 15px;
+    }
+    
+    .cliente-card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-cancelar,
+    .btn-confirmar {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cliente-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Ícones específicos */
+.fa-user-plus,
+.fa-user-edit,
+.fa-user-times {
+    font-size: 1.2em;
+}
+
+.fa-info-circle {
+    color: #17a2b8;
+}
+
+.fa-exclamation-triangle {
+    color: #dc3545;
+}
+
+/* Estados de validação */
+.is-valid {
+    border-color: #28a745 !important;
+}
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}

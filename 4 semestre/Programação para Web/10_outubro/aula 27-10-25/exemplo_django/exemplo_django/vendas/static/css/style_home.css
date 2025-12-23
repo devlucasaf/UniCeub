@@ -1,0 +1,195 @@
+/* Estilos específicos para página inicial/dashboard */
+.dashboard-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Cards de estatísticas */
+.stats-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.stats-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stats-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.stats-card .btn {
+    margin-top: 1rem;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+/* Card de vendas recentes */
+.recent-sales-card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-sales-card .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1.25rem 1.5rem;
+}
+
+.recent-sales-table {
+    margin-bottom: 0;
+}
+
+.recent-sales-table thead th {
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+.recent-sales-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.recent-sales-table td,
+.recent-sales-table th {
+    vertical-align: middle;
+    padding: 1rem 1.5rem;
+}
+
+.recent-sales-table .btn-sm {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+}
+
+/* Botão de ação principal */
+.action-button {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.25);
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Mensagem de lista vazia */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.empty-state i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+/* Cores específicas para cada card */
+.card-border-primary {
+    border-top: 4px solid #007bff;
+}
+
+.card-border-success {
+    border-top: 4px solid #28a745;
+}
+
+.card-border-info {
+    border-top: 4px solid #17a2b8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .stats-card h2 {
+        font-size: 2rem;
+    }
+    
+    .recent-sales-table {
+        font-size: 0.9rem;
+    }
+    
+    .recent-sales-table td,
+    .recent-sales-table th {
+        padding: 0.75rem;
+    }
+    
+    .action-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-card .card-body {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.stats-card {
+    animation: slideIn 0.5s ease-out;
+}
+
+.recent-sales-card {
+    animation: slideIn 0.5s ease-out 0.2s both;
+}
+
+/* Status badges (se necessário futuramente) */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
