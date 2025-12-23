@@ -1,26 +1,20 @@
-// Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function() {
-    // Verifica se estamos na página de resultado
     if (window.location.pathname.includes('resultado.html') || 
         window.location.pathname.endsWith('resultado.html')) {
         calcularResultadoIMC();
     } else {
-        // Estamos na página inicial (formulário)
         configurarFormulario();
     }
 });
 
-// Configura o formulário na página inicial
 function configurarFormulario() {
     const form = document.getElementById('imc-form');
     
     if (form) {
-        // Adiciona validação personalizada antes do envio
         form.addEventListener('submit', function(event) {
             const altura = document.getElementById('altura').value;
             const massa = document.getElementById('massa').value;
             
-            // Validação básica
             if (!altura || altura <= 0 || altura > 2.5) {
                 alert('Por favor, insira uma altura válida entre 0.5m e 2.5m');
                 event.preventDefault();
@@ -32,21 +26,15 @@ function configurarFormulario() {
                 event.preventDefault();
                 return;
             }
-            
-            // Se passar na validação, o formulário é enviado normalmente
-            // Os parâmetros serão passados via URL (método GET)
         });
         
-        // Adiciona máscaras aos campos de entrada (opcional)
         const alturaInput = document.getElementById('altura');
         const massaInput = document.getElementById('massa');
         
-        // Permite apenas números e ponto decimal
         [alturaInput, massaInput].forEach(input => {
             input.addEventListener('input', function() {
                 this.value = this.value.replace(/[^0-9.]/g, '');
                 
-                // Remove pontos extras, permitindo apenas um
                 const parts = this.value.split('.');
                 if (parts.length > 2) {
                     this.value = parts[0] + '.' + parts.slice(1).join('');
@@ -56,32 +44,25 @@ function configurarFormulario() {
     }
 }
 
-// Calcula e exibe o resultado do IMC na página de resultado
 function calcularResultadoIMC() {
-    // Obtém os parâmetros da URL
     const urlParams = new URLSearchParams(window.location.search);
     const altura = parseFloat(urlParams.get('altura'));
     const massa = parseFloat(urlParams.get('massa'));
     
-    // Verifica se os parâmetros são válidos
     if (!altura || !massa || isNaN(altura) || isNaN(massa) || altura <= 0 || massa <= 0) {
         exibirErro();
         return;
     }
     
-    // Calcula o IMC
     const imc = massa / (altura * altura);
     
-    // Determina a classificação
     const classificacao = classificarIMC(imc);
     
-    // Exibe o resultado após um pequeno delay para simular processamento
     setTimeout(() => {
         exibirResultado(altura, massa, imc, classificacao);
     }, 800);
 }
 
-// Classifica o IMC de acordo com os valores padrão
 function classificarIMC(imc) {
     if (imc < 18.5) {
         return {
@@ -128,39 +109,31 @@ function classificarIMC(imc) {
     }
 }
 
-// Exibe o resultado na página
 function exibirResultado(altura, massa, imc, classificacao) {
     const resultContent = document.getElementById('result-content');
     
-    // Formata o IMC com 1 casa decimal
     const imcFormatado = imc.toFixed(1);
     
-    // Atualiza o conteúdo do resultado
     resultContent.innerHTML = `
         <div class="imc-value" style="color: ${classificacao.cor}">${imcFormatado}</div>
         <div class="imc-classification" style="color: ${classificacao.cor}">${classificacao.categoria}</div>
         <p class="imc-description">${classificacao.descricao}</p>
     `;
     
-    // Atualiza a interpretação
     document.getElementById('interpretation-text').textContent = classificacao.descricao;
     
-    // Atualiza as dicas de saúde
     document.getElementById('health-tip').textContent = classificacao.dica;
     
-    // Atualiza os detalhes do cálculo
     document.getElementById('detail-altura').textContent = `${altura} m`;
     document.getElementById('detail-massa').textContent = `${massa} kg`;
     document.getElementById('detail-calculo').textContent = `${massa} / (${altura} × ${altura}) = ${imcFormatado}`;
     
-    // Altera a cor da borda do card de resultado
     const resultCard = document.querySelector('.result-card > div');
     if (resultCard) {
         resultCard.style.borderTopColor = classificacao.cor;
     }
 }
 
-// Exibe mensagem de erro se os parâmetros não forem válidos
 function exibirErro() {
     const resultContent = document.getElementById('result-content');
     

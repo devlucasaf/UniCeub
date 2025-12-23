@@ -1,4 +1,3 @@
-// Função para buscar dados do usuário
 async function getUserProfile() {
     try {
         const token = localStorage.getItem('access_token');
@@ -23,7 +22,6 @@ async function getUserProfile() {
     }
 }
 
-// Função para atualizar dados do usuário
 async function updateUserProfile(updatedData) {
     try {
         const token = localStorage.getItem('access_token');
@@ -49,9 +47,7 @@ async function updateUserProfile(updatedData) {
     }
 }
 
-// Exemplo de uso
 getUserProfile().then(user => {
-    // Preencher formulário com dados do usuário
     document.getElementById('nome').value = user.first_name;
     document.getElementById('email').value = user.email;
 });

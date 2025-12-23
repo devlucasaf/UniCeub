@@ -1,4 +1,3 @@
-// Atualizar dinamicamente o indicador de breakpoint
 function updateBreakpointInfo() {
     const infoElement = document.querySelector('.breakpoint-info');
     const width = window.innerWidth;
@@ -12,8 +11,6 @@ function updateBreakpointInfo() {
     }
 }
 
-// Atualizar quando a janela for redimensionada
 window.addEventListener('resize', updateBreakpointInfo);
 
-// Executar uma vez ao carregar
 document.addEventListener('DOMContentLoaded', updateBreakpointInfo);

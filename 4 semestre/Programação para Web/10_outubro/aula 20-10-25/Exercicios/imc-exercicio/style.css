@@ -1,4 +1,3 @@
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +21,6 @@ body {
     min-height: 100vh;
 }
 
-/* Cabeçalho */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -42,7 +40,6 @@ header .subtitle {
     font-weight: 300;
 }
 
-/* Cards principais */
 .calculator-card, .result-card {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +67,6 @@ header .subtitle {
     padding-bottom: 15px;
 }
 
-/* Formulário */
 .form-container h2, .result-card h2 {
     color: #2c3e50;
     margin-bottom: 25px;
@@ -129,7 +125,6 @@ header .subtitle {
     margin-top: 5px;
 }
 
-/* Botões */
 .calculate-btn, .back-btn {
     background: linear-gradient(to right, #3498db, #2c80b9);
     color: white;
@@ -166,7 +161,6 @@ header .subtitle {
     transform: translateY(-2px);
 }
 
-/* Card de referência */
 .reference-card {
     border-top-color: #2ecc71;
 }
@@ -207,7 +201,6 @@ header .subtitle {
     color: #2c3e50;
 }
 
-/* Cores das categorias de IMC */
 .baixo-peso { background-color: #ffeb3b; color: #333; }
 .peso-normal { background-color: #4caf50; color: white; }
 .sobrepeso { background-color: #ff9800; color: white; }
@@ -215,7 +208,6 @@ header .subtitle {
 .obesidade-ii { background-color: #d32f2f; color: white; }
 .obesidade-iii { background-color: #b71c1c; color: white; }
 
-/* Resultado */
 #result-content {
     text-align: center;
     padding: 40px 20px;
@@ -244,7 +236,6 @@ header .subtitle {
     color: #555;
 }
 
-/* Detalhes do resultado */
 .result-explanation h3, .health-tips h3 {
     color: #2c3e50;
     margin-bottom: 15px;
@@ -279,7 +270,6 @@ header .subtitle {
     color: #2c3e50;
 }
 
-/* Dicas de saúde */
 .health-tips {
     margin-top: 30px;
     padding: 25px;
@@ -288,7 +278,6 @@ header .subtitle {
     border-left: 5px solid #3498db;
 }
 
-/* Estado de carregamento */
 .loading {
     font-size: 1.5rem;
     color: #7f8c8d;
@@ -302,7 +291,6 @@ header .subtitle {
     font-size: 2.5rem;
 }
 
-/* Informações e rodapé */
 .info-box {
     margin-top: 30px;
     padding: 20px;
@@ -328,7 +316,6 @@ footer {
     border-top: 1px solid #e1e5eb;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .calculator-card, .result-card {
         flex-direction: column;
