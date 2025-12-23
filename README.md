@@ -13,7 +13,7 @@
             <td>
                 ◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
                 ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br>
-                ◽️Atualmente cursando o 4º semestre<br>
+                ◽️Atualmente cursando o 5º semestre<br>
                 ◽️Curso iniciado em 2024 e finalizará em 2027
             </td>
         </tr>
@@ -23,14 +23,15 @@
 ### 📁 **Estrutura**
 
 ```diff
-Semestre 1
-Semestre 2
-Semestre 3
-Semestre 4
+1 Semestre 
+2 Semestre 
+3 Semestre 
+4 Semestre 
+5 Semestre 
 .
 .
 .
-Semestre 8
+8 Semestre 
 ```
 
 # 🚀Linguagens 
@@ -56,12 +57,12 @@ Semestre 8
     />
     <img 
         align="center" 
-        alt="C#" 
-        title="C#"
+        alt="C" 
+        title="C"
         height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=cs""
+        src="https://skillicons.dev/icons?i=c""
     />
     <img 
         align="center" 
@@ -70,7 +71,16 @@ Semestre 8
         height="40" 
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=cpp"
+        src="https://skillicons.dev/icons?i=cpp""
+    />
+    <img 
+        align="center" 
+        alt="C#" 
+        title="C#"
+        height="40" 
+        style="padding-right: 10px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=cs"
     />
     <img
         align="center" 
@@ -79,6 +89,24 @@ Semestre 8
         height="40" 
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center"
+        alt="Go"
+        tittle="Go"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=go"
+    />
+    <img
+        align="center"
+        alt="Kotlin"
+        tittle="Kotlin"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=kotlin"
     />
     <img
         align="center" 

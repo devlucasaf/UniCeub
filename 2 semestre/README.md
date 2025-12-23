@@ -17,12 +17,12 @@
 ## 📁 **Estrutura**
 
 ```diff
-Semestre 1
-Semestre 2
+1 Semestre 
+2 Semestre 
 .
 .
 .
-Semestre 8
+8 Semestre 
 ```
 
 # 📊 Linguagens
