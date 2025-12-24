@@ -3,17 +3,14 @@
 #include <iomanip>
 using namespace std;
 
-// Estrutura que representa um ponto no plano
 struct Ponto {
     double x, y;
 };
 
-// Função para calcular a distância entre dois pontos
 double distancia(Ponto a, Ponto b) {
     return sqrt(pow(b.x - a.x, 2) + pow(b.y - a.y, 2));
 }
 
-// Função para calcular a área de um triângulo usando a fórmula de Heron
 double areaTriangulo(Ponto a, Ponto b, Ponto c) {
     double ab = distancia(a, b);
     double bc = distancia(b, c);
@@ -22,7 +19,6 @@ double areaTriangulo(Ponto a, Ponto b, Ponto c) {
     return sqrt(s * (s - ab) * (s - bc) * (s - ca));
 }
 
-// Função para imprimir as informações do triângulo
 void mostrarInformacoes(Ponto a, Ponto b, Ponto c) {
     double ab = distancia(a, b);
     double bc = distancia(b, c);
@@ -44,7 +40,6 @@ void mostrarInformacoes(Ponto a, Ponto b, Ponto c) {
     cout << "\nPerímetro: " << perimetro << endl;
     cout << "Área: " << area << endl;
 
-    // Verifica o tipo do triângulo
     if (fabs(ab - bc) < 1e-6 && fabs(bc - ca) < 1e-6)
         cout << "Tipo: Equilátero\n";
     else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6)

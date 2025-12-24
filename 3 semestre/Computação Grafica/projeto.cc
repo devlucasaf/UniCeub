@@ -72,12 +72,8 @@ void circuloGirando() {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
 gl clear(gl_color_buffer_bit)
-    // Ative apenas um de cada vez para visualizar
-    quadradoSimples();         // Ex. 1
-    //simbolo();                 // Ex. 2
-    //desenhaQuadradoVermelho(); // Ex. 3
-    //quadradoRoxoMovendo();     // Ex. 4
-    //circuloGirando();          // Ex. 5
+
+    quadradoSimples();         
 
 circulo girando
     glutSwapBuffers();
@@ -88,7 +84,7 @@ void idle() {
 }
 
 void keyboard(unsigned char key, int, int) {
-    if (key == 32) { // Barra de espaço
+    if (key == 32) { 
         posY += 0.05f;
     }
 }

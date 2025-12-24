@@ -1,29 +1,25 @@
-#include<math.h> // Operações matemáticas (sqrt, pow, fabs, round, etc.)
-#include<stdio.h> // Funções de entrada e saída (printf, scanf)
-#include<windows.h> // Funções do Windows para controle do console
-#include <locale.h> // Para suporte a caracteres especiais do português
+#include<math.h>                                                        
+#include<stdio.h>                                                       
+#include<windows.h>                                                     
+#include <locale.h>                                                     
 
-// Protótipos das funções (declarações)
-void irParaXY(int x, int y); // Move cursor para coordenada específica
-int setX(int x); // Transforma coordenada X do plano cartesiano para coordenada de tela
-int setY(int y); // Transforma coordenada Y do plano cartesiano para coordenada de tela
-void planoCartesiano(void); // Desenha o plano cartesiano na tela
-void dda(float *x1, float *y1, float *x2, float *y2); // Algoritmo DDA para retas
-void bresenham(float *x1, float *y1, float *x2, float *y2); // Algoritmo Bresenham para retas
-void circulo(int *raio); // Algoritmo Bresenham para círculos
-int animacao(); // Animação do "bonequinho"
+void irParaXY(int x, int y);                                            
+int setX(int x);                                                        
+int setY(int y);                                                        
+void planoCartesiano(void);                                             
+void dda(float *x1, float *y1, float *x2, float *y2);                   
+void bresenham(float *x1, float *y1, float *x2, float *y2);             
+void circulo(int *raio);                                                
+int animacao();                                                         
 
 int main(){
-    setlocale(LC_ALL, "Portuguese"); // Configura locale para português
-    
-    // Variáveis do programa
-    int escolha = 1; // Controla o loop do menu
-    float xi, xf, yi, yf; // Coordenadas para as retas
-    int raio; // Raio para o círculo
-    
-    // Loop principal do programa
+    setlocale(LC_ALL, "Portuguese");                                  
+
+    int escolha = 1; 
+    float xi, xf, yi, yf; 
+    int raio; 
+
     while(escolha != 0){
-        // Menu de opções para o usuário
         printf("\n\nEscolha o número referente ao desafio desejado:\n");
         printf("(0) - Sair\n");
         printf("(1) - Imprime uma reta (Algoritmo DDA)\n");
@@ -33,14 +29,13 @@ int main(){
         scanf("%d", &escolha);
         
         switch (escolha) {
-            case 0: // Opção para sair do programa
+            case 0: 
                 printf("\n\tVocê escolheu (0) --> Sair\n");
                 break;
                 
-            case 1: // Algoritmo DDA para retas
+            case 1: 
                 printf("\nVocê escolheu (1) --> Imprime uma reta (Algoritmo DDA)\n");
-                
-                // Entrada das coordenadas da reta
+
                 printf("\nEscolha o valor do x inicial:");
                 scanf("%f", &xi);
                 printf("Escolha o valor do y inicial:");
@@ -49,24 +44,22 @@ int main(){
                 scanf("%f", &xf);
                 printf("Escolha o valor do y final:");
                 scanf("%f", &yf);
-                
-                system("cls"); // Limpa a tela
-                animacao(); // Executa animação
-                system("cls"); // Limpa a tela novamente
-                planoCartesiano(); // Desenha o plano cartesiano
-                dda(&xi, &yi, &xf, &yf); // Executa algoritmo DDA
-                irParaXY(0, 0); // Posiciona cursor no início da tela
-                
-                // Pergunta se usuário quer continuar
+
+                system("cls");                                              
+                animacao();                                                 
+                system("cls");                                              
+                planoCartesiano();                                          
+                dda(&xi, &yi, &xf, &yf);                                    
+                irParaXY(0, 0);                                             
+
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
                 printf("\nDigita o valor aqui --> ");
                 scanf("%d", &escolha);
                 break;
                 
-            case 2: // Algoritmo Bresenham para retas
+            case 2: 
                 printf("\nVocê escolheu (2) --> Imprime uma reta (Algoritmo de Bresenham)\n");
                 
-                // Entrada das coordenadas da reta
                 printf("\nEscolha o valor do x inicial: ");
                 scanf("%f", &xi);
                 printf("Escolha o valor do y inicial: ");
@@ -79,8 +72,8 @@ int main(){
                 system("cls");
                 animacao();
                 system("cls");
-                planoCartesiano(); // Desenha o plano cartesiano
-                bresenham(&xi, &yi, &xf, &yf); // Executa algoritmo Bresenham
+                planoCartesiano();
+                bresenham(&xi, &yi, &xf, &yf); 
                 irParaXY(0, 0);
                 
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = nao)");
@@ -88,16 +81,16 @@ int main(){
                 scanf("%d", &escolha);
                 break;
                 
-            case 3: // Algoritmo Bresenham para círculos
+            case 3: 
                 printf("Voce digitou(3) Escolheu --> Imprime o traçado de um círculo (Algoritmo de Bresenham)\n");
-                printf("qual o raio?"); // Pergunta o raio do círculo
+                printf("qual o raio?"); 
                 scanf("%d", &raio);
                 
                 system("cls");
                 animacao();
                 system("cls");
-                planoCartesiano(); // Desenha o plano cartesiano
-                circulo(&raio); // Desenha o círculo
+                planoCartesiano();
+                circulo(&raio); 
                 irParaXY(0, 0);
                 
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
@@ -105,7 +98,7 @@ int main(){
                 scanf("%d", &escolha);
                 break;
                 
-            default: // Opção inválida
+            default: 
                 printf("\((nVocê escolheu um valor que não existe))\n((Digite notamente))\n\n");
         }
     }
@@ -114,139 +107,114 @@ int main(){
     return 0;
 }
 
-// Função para posicionar o cursor em coordenadas específicas da tela
 void irParaXY(int x, int y) {
-    COORD coord; // Estrutura para coordenadas do console Windows
-    coord.X = (short) x; // Coordenada X (coluna)
-    coord.Y = (short) y; // Coordenada Y (linha)
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); // Move cursor
+    COORD coord; 
+    coord.X = (short) x; 
+    coord.Y = (short) y; 
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); 
 }
 
-// Função para converter coordenada X do plano cartesiano para coordenada de tela
-// Centraliza o plano na coluna 118
 int setX(int x) {
-    return (x + 118); // Desloca X para centralizar
+    return (x + 118); 
 }
 
-// Função para converter coordenada Y do plano cartesiano para coordenada de tela
-// Inverte Y (pois na tela Y cresce para baixo) e centraliza na linha 34
 int setY(int y) {
-    return (34 - y); // Inverte e centraliza Y
+    return (34 - y); 
 }
 
-// Função que desenha o plano cartesiano na tela
 void planoCartesiano(void) {
     int vertical, horizontal;
-    
-    // Desenha eixo Y (vertical)
+
     for (vertical = 14; vertical < 55; vertical++) {
-        irParaXY(118, vertical); // Posição fixa X=118 (centro horizontal)
-        printf("|"); // Caractere vertical
+        irParaXY(118, vertical); 
+        printf("|");
     }
-    
-    // Desenha eixo X (horizontal)
+
     for (horizontal = 18; horizontal < 219; horizontal++) {
-        irParaXY(horizontal, 34); // Posição fixa Y=34 (centro vertical)
-        printf("-"); // Caractere horizontal
+        irParaXY(horizontal, 34); 
+        printf("-"); 
     }
-    
-    // Marca a origem do plano cartesiano
+
     irParaXY(118, 34);
-    printf("X"); // Ponto central (origem)
+    printf("X"); 
 }
 
-// Implementação do algoritmo DDA (Digital Differential Analyzer) para retas
 void dda(float *x1, float *y1, float *x2, float *y2) {
-    // Caso 1: Inclinação <= 45° (variação em X é maior ou igual à variação em Y)
     if (fabs(*x2 - *x1) >= fabs(*y2 - *y1)) {
-        float m = (*y2 - *y1) / (*x2 - *x1); // Calcula coeficiente angular
-        float y = *y1; // Valor inicial de Y
+        float m = (*y2 - *y1) / (*x2 - *x1); 
+        float y = *y1; 
         int x;
-        
-        // Garante que percorremos do menor X para o maior X
+
         if (*x1 > *x2) {
             float b = *x1;
             *x1 = *x2;
             *x2 = b;
-            y = *y2; // Ajusta Y inicial
+            y = *y2;
         }
-        
-        // Percorre todos os pontos em X
+
         for (x = *x1; x <= *x2; x++) {
-            irParaXY(setX(x), setY(round(y))); // Posiciona cursor
-            printf("*"); // Desenha pixel
-            y += m; // Incrementa Y usando o coeficiente angular
+            irParaXY(setX(x), setY(round(y))); 
+            printf("*"); 
+            y += m; 
         }
     } 
-    // Caso 2: Inclinação > 45° (variação em Y é maior que variação em X)
     else {
-        float m = (*x2 - *x1) / (*y2 - *y1); // Inverso do coeficiente angular
-        float x = *x1; // Valor inicial de X
+        float m = (*x2 - *x1) / (*y2 - *y1); 
+        float x = *x1; 
         int y;
-        
-        // Garante que percorremos do menor Y para o maior Y
+
         if (*y1 > *y2) {
             float b = *y1;
             *y1 = *y2;
             *y2 = b;
-            x = *x2; // Ajusta X inicial
+            x = *x2; 
         }
         
-        // Percorre todos os pontos em Y
         for (y = *y1; y <= *y2; y++) {
-            irParaXY(setX(round(x)), setY(y)); // Posiciona cursor
-            printf("*"); // Desenha pixel
-            x += m; // Incrementa X usando o inverso do coeficiente angular
+            irParaXY(setX(round(x)), setY(y)); 
+            printf("*"); 
+            x += m; 
         }
     }
 }
 
-// Implementação do algoritmo de Bresenham para círculos
 void circulo(int *raio){
-    int x, y, p; // Variáveis do algoritmo
-    x = 0; // Inicia no ponto (0, raio)
+    int x, y, p; 
+    x = 0; 
     y = *raio;
-    p = 1 - *raio; // Parâmetro de decisão inicial
+    p = 1 - *raio; 
 
-    // Loop para desenhar 1/8 do círculo (os outros 7/8 são por simetria)
     while (x <= y) {
-        // Desenha os 8 pontos simétricos do círculo
-        // Utiliza simetria nos 8 octantes do plano cartesiano
-        irParaXY(setX(+x), setY(+y)); printf("o"); // Octante 1
-        irParaXY(setX(+x), setY(-y)); printf("o"); // Octante 4
-        irParaXY(setX(-x), setY(+y)); printf("o"); // Octante 2
-        irParaXY(setX(-x), setY(-y)); printf("o"); // Octante 3
-        irParaXY(setX(+y), setY(+x)); printf("o"); // Octante 8
-        irParaXY(setX(+y), setY(-x)); printf("o"); // Octante 5
-        irParaXY(setX(-y), setY(+x)); printf("o"); // Octante 7
-        irParaXY(setX(-y), setY(-x)); printf("o"); // Octante 6
+        irParaXY(setX(+x), setY(+y)); printf("o"); 
+        irParaXY(setX(+x), setY(-y)); printf("o"); 
+        irParaXY(setX(-x), setY(+y)); printf("o"); 
+        irParaXY(setX(-x), setY(-y)); printf("o"); 
+        irParaXY(setX(+y), setY(+x)); printf("o"); 
+        irParaXY(setX(+y), setY(-x)); printf("o"); 
+        irParaXY(setX(-y), setY(+x)); printf("o"); 
+        irParaXY(setX(-y), setY(-x)); printf("o"); 
 
-        // Atualiza parâmetro de decisão e coordenadas
         if (p <= 0) {
-            p = p + 2*x + 1; // Move apenas para a direita
+            p = p + 2*x + 1; 
         } else {
-            p = p + 2*x + 1 - 2*y; // Move para baixo e direita
-            y--; // Decrementa Y
+            p = p + 2*x + 1 - 2*y; 
+            y--; 
         }
-        x++; // Sempre incrementa X
+        x++; 
     }
 }
 
-// Implementação do algoritmo de Bresenham para retas
 void bresenham(float *x1, float *y1, float *x2, float *y2){
     float d_x, d_y, p, incE, incNE, x, y;
 
-    // Calcula diferenças absolutas
-    d_x = fabs(*x2 - *x1); // Variação em X
-    d_y = fabs(*y2 - *y1); // Variação em Y
-    p = 2 * d_y - d_x; // Parâmetro de decisão inicial
+    d_x = fabs(*x2 - *x1); 
+    d_y = fabs(*y2 - *y1); 
+    p = 2 * d_y - d_x; 
     
-    // Caso 1: Inclinação <= 45°
     if (d_y <= d_x) {
-        incE = 2 * d_y; // Incremento para movimento E (leste)
-        incNE = 2 * d_y - 2 * d_x; // Incremento para movimento NE (nordeste)
+        incE = 2 * d_y; 
+        incNE = 2 * d_y - 2 * d_x; 
 
-        // Garante que percorremos da esquerda para direita
         if (*x1 <= *x2) {
             x = *x1;
             y = *y1;
@@ -257,27 +225,23 @@ void bresenham(float *x1, float *y1, float *x2, float *y2){
             *y2 = *y1;
         }
 
-        // Percorre a reta
         while (x <= *x2) {
             irParaXY(setX(x), setY(y));
             printf("*");
 
-            // Decide próximo pixel
             if (p <= 0) {
-                p = p + incE; // Move para E
+                p = p + incE; 
             } else {
-                p = p + incNE; // Move para NE
-                y = y + ((*y2 >= *y1) ? 1 : -1); // Incrementa ou decrementa Y
+                p = p + incNE; 
+                y = y + ((*y2 >= *y1) ? 1 : -1); 
             }
-            x++; // Sempre incrementa X
+            x++; 
         }
     } 
-    // Caso 2: Inclinação > 45°
     else {
-        incE = 2 * d_x; // Incremento para movimento N (norte)
-        incNE = 2 * d_x - 2 * d_y; // Incremento para movimento NE (nordeste)
+        incE = 2 * d_x; 
+        incNE = 2 * d_x - 2 * d_y; 
 
-        // Garante que percorremos de baixo para cima
         if (*y1 <= *y2) {
             x = *x1;
             y = *y1;
@@ -288,63 +252,56 @@ void bresenham(float *x1, float *y1, float *x2, float *y2){
             *x2 = *x1;
         }
 
-        // Percorre a reta
         while (y <= *y2) {
             irParaXY(setX(round(x)), setY(round(y)));
-            printf("°"); // Usa caractere diferente para distinguir
+            printf("°"); 
 
-            // Decide próximo pixel
             if (p <= 0) {
-                p = p + incE; // Move para N
+                p = p + incE; 
             } else {
-                p = p + incNE; // Move para NE
-                x = x + ((*x2 >= *x1) ? 1 : -1); // Incrementa ou decrementa X
+                p = p + incNE; 
+                x = x + ((*x2 >= *x1) ? 1 : -1); 
             }
-            y++; // Sempre incrementa Y
+            y++; 
         }
     }
 }
 
-// Função de animação - mostra um "bonequinho" caindo
 int animacao(){
     int i = 0;
     
-    // Loop de animação com 18 frames
     while (i++ < 18){
-        // Desenha partes do boneco em posições diferentes
         irParaXY(i, 0);
-        printf(" o"); // Cabeça
+        printf(" o"); 
         printf("\n");
         irParaXY(i, 20 - i);
-        printf(" X"); // Alvo
+        printf(" X"); 
         printf("\n");
         
-        // Alterna entre duas poses para criar efeito de movimento
         if (i % 2 == 0){
             irParaXY(i, 1);
-            printf(" |"); // Braços para cima
+            printf(" |"); 
             irParaXY(i, 2);
-            printf("/ \\o"); // Pernas abertas
+            printf("/ \\o"); 
         } else {
             irParaXY(i, 1);
-            printf("-|-"); // Braços para os lados
+            printf("-|-"); 
             irParaXY(i, 2);
-            printf(" | o"); // Pernas juntas
+            printf(" | o"); 
         }
         
-        sleep(0, 0001); // Pequena pausa entre frames
-        system("cls"); // Limpa tela para próximo frame
+        sleep(0, 0001); 
+        system("cls"); 
     }
 
-    // Frames finais da animação
     irParaXY(18, 1);
-    printf("  --o"); // Posição final
+    printf("  --o"); 
     irParaXY(18, 2);
-    printf("_/ \\"); // Pernas finais
-    sleep(0, 5); // Pausa
-    system("cls"); // Limpa tela
+    printf("_/ \\"); 
+    sleep(0, 5); 
+    system("cls"); 
     
     irParaXY(18, 2);
-    printf(">->o"); // Último frame
-    sleep(1); // Pausa final
+    printf(">->o"); 
+    sleep(1); 
 }

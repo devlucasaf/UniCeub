@@ -10,7 +10,6 @@ Aula: Percepção tridimensional e perspectiva
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
-// Vertex Shader (perspectiva + rotação + camera)
 const char* vertexShaderSource = R"(
 #version 330 core
 layout (location = 0) in vec3 aPos;
@@ -25,7 +24,6 @@ void main()
 }
 )";
 
-// Fragment Shader (cor simples)
 const char* fragmentShaderSource = R"(
 #version 330 core
 out vec4 FragColor;
@@ -74,7 +72,6 @@ int main()
 
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
-    // Compila shaders
     unsigned int vShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vShader, 1, &vertexShaderSource, NULL);
     glCompileShader(vShader);
@@ -91,7 +88,6 @@ int main()
     glDeleteShader(vShader);
     glDeleteShader(fShader);
 
-    // VBO/VAO
     unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -115,16 +111,13 @@ int main()
 
         glUseProgram(shaderProgram);
 
-        // MODEL: rotação suave
         glm::mat4 model = glm::rotate(glm::mat4(1.0f),
                         (float)glfwGetTime(),
                         glm::vec3(0.5f, 1.0f, 0.0f));
 
-        // VIEW: câmera afastada
         glm::mat4 view = glm::translate(glm::mat4(1.0f),
                         glm::vec3(0.0f, 0.0f, -3.0f));
 
-        // PROJECTION: PERSPECTIVA!
         glm::mat4 projection =
             glm::perspective(glm::radians(60.0f), 800.f/600.f, 0.1f, 100.0f);
 
