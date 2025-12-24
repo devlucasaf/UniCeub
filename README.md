@@ -7,18 +7,11 @@
 
 # 📚 UNICEUB
 
-<div>
-    <table>
-        <tr>
-            <td>
-                ◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
-                ◽️Cursos do 1º, 2º, 3º e 4º semestres (Em desenvolvimento até a finalização do curso)<br>
-                ◽️Atualmente cursando o 5º semestre<br>
-                ◽️Curso iniciado em 2024 e finalizará em 2027
-            </td>
-        </tr>
-    </table>
-</div>
+
+◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
+◽️Cursos do 1º, 2º, 3º, 4º e 5º semestres (Em desenvolvimento até a finalização do curso)<br>
+◽️Atualmente cursando o 5º semestre<br>
+◽️Curso iniciado em 2024 e finalizará em 2027
 
 ### 📁 **Estrutura**
 

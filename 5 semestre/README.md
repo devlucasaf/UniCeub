@@ -1,0 +1,39 @@
+<img 
+    width=100% 
+    src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
+/>
+
+# 5º Semestre
+◽️**SEMESTRE AINDA NÃO INICIADO**<br>
+◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
+◽️Disciplinas:
+- Gerência de Projetos de TI<br>
+- Inteligência Artificial<br>
+- Interação Humano-Computador<br>
+- Programação para Dispositivos Móveis<br>
+- Projeto Integrador I<br>
+
+### 📁 **Estrutura**
+
+```diff
+1 Semestre 
+2 Semestre 
+3 Semestre 
+4 Semestre 
+5 Semestre 
+.
+.
+.
+8 Semestre 
+```
+
+# 🚀Linguagens 
+
+---
+
+# 🛠️ Ferramentas
+
+<img 
+    width=100% 
+    src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
+/>
