@@ -26,43 +26,18 @@ INSERT INTO Cliente VALUES
 (4, 'Mariana Silva', 'mariana@gmail.com', '11122233344', 'Brasília');
 
 
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- Criando Índices
-
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- Índice simples (melhora pesquisas por nome)
-
 CREATE INDEX idx_cliente_nome
 ON Cliente(nome);
-
--- Índice composto (ideal para filtrar por cidade + nome)
 
 CREATE INDEX idx_cliente_cidade_nome
 ON Cliente(cidade, nome);
 
--- Índice único já existe nos campos email e cpf pelo UNIQUE
-
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- Testando com consultas
-
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- Busca rápida pelo nome
-
 SELECT * FROM Cliente
 WHERE nome LIKE 'Lucas%';
 
--- Consulta usando índice composto (cidade + nome)
 
 SELECT * FROM Cliente
 WHERE cidade = 'Brasília'
 ORDER BY nome;
-
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- Verificando índices criados
 
 SHOW INDEX FROM Cliente;

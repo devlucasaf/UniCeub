@@ -36,10 +36,6 @@ INSERT INTO Pedidos VALUES
 (102, 1, '2025-02-02'),
 (103, 2, '2025-01-20');
 
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- INNER JOIN — traz apenas registros relacionados
--- Clientes que têm pedidos
 
 SELECT Clientes.nome, Pedidos.id_pedido, Pedidos.data_pedido
 FROM Clientes
@@ -47,19 +43,11 @@ INNER JOIN Pedidos
 ON Clientes.id_cliente = Pedidos.id_cliente;
 
 
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- LEFT JOIN — traz todos clientes e seus pedidos (se tiver)
-
 SELECT Clientes.nome, Pedidos.id_pedido
 FROM Clientes
 LEFT JOIN Pedidos
 ON Clientes.id_cliente = Pedidos.id_cliente;
 
-
--- +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-
--- RIGHT JOIN — traz todos pedidos e seus clientes
 
 SELECT Clientes.nome, Pedidos.id_pedido
 FROM Clientes
