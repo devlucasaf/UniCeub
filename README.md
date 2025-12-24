@@ -200,22 +200,6 @@
     />
     <img
         align="center" 
-        alt="Scheme" 
-        title="Scheme"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
-    />
-    <img 
-        align="center" 
-        alt="Assembly" 
-        title="Assembly"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
-    />
-    <img
-        align="center" 
         alt="Haskell" 
         title="Haskell"
         height="40" 
@@ -229,6 +213,22 @@
         height="40"
         style="padding-right: 10px;"
         src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
+    />
+    <img
+        align="center" 
+        alt="Scheme" 
+        title="Scheme"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
+    <img 
+        align="center" 
+        alt="Assembly" 
+        title="Assembly"
+        height="40" 
+        style="padding-right: 10px;" 
+        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
 </div>
 
