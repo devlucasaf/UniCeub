@@ -95,36 +95,21 @@
     />
     <img
         align="center" 
-        alt="Prolog" 
-        title="Prolog"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
-    />
-    <img
-        align="center" 
-        alt="Haskell" 
-        title="Haskell"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
-    />
-    <img
-        align="center" 
-        alt="Scheme" 
-        title="Scheme"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
-    />
-    <img
-        align="center" 
         alt="SQL" 
         title="SQL"
         height="40" 
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=mysql"
+    />
+    <img
+        align="center"
+        alt="DBSQLite"
+        tittle="DBSQLite"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=sqlite"
     />
     <img 
         align="center"
@@ -162,6 +147,24 @@
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=css"
     />
+    <img 
+        align="center" 
+        alt="Tailwind" 
+        title="Tailwind"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=tailwind"
+    />
+    <img 
+        align="center" 
+        alt="Bootstrap" 
+        title="Bootstrap"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=bootstrap"
+    />
     <img
         align="center" 
         alt="Rust" 
@@ -179,6 +182,38 @@
         style="padding-right: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=ruby"
+    />
+    <img
+        align="center" 
+        alt="Prolog" 
+        title="Prolog"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center" 
+        alt="Haskell" 
+        title="Haskell"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
+    />
+    <img
+        align="center" 
+        alt="Scheme" 
+        title="Scheme"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
+    <img
+        align="center"
+        alt="object pascal"
+        tittle="Object Pascal"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
     />
 </div>
 
@@ -207,11 +242,39 @@
     />
     <img
         align="center"
-        alt="vscode"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
+        alt="VsCode"
         tittle="VsCode"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img
+        align="center"
+        alt="Visual Studio"
+        tittle="Visual Studio"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=visualstudio"
+    />
+    <img
+        align="center"
+        alt="PostegreSQL"
+        tittle="PostegreSQL"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=postgresql"
     />
     <img 
         align="center" 
@@ -228,23 +291,6 @@
         height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
-        alt="PostegreSQL"
-        tittle="PostegreSQL"
-        height="40"
-        style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-    />
-    <img
-        align="center"
-        alt="DBSQLite"
-        tittle="DBSQLite"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=sqlite"
     />
     <img
         align="center"

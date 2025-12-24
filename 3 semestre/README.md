@@ -88,7 +88,8 @@
         tittle="Blender"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=blender"
     />
     <img
         align="center"
@@ -96,7 +97,8 @@
         tittle="PostegreSQL"
         height="40"
         style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=postgresql"
     />
     <img
         align="center"
@@ -108,12 +110,32 @@
     />
     <img
         align="center"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
         alt="vscode"
         tittle="VsCode"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
     />
+    <img
+        align="center"
+        alt="visual studio"
+        tittle="Visual Studio"
+        height="40" 
+        style="padding-right: 10px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=visualstudio"
+    />
+</div>
 
 <img 
     width=100% 

@@ -72,19 +72,30 @@
     />
     <img
         align="center"
-        alt="vscode"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
+        alt="VsCode"
         tittle="VsCode"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
     />
     <img
         align="center"
         alt="Visual Studio"
         tittle="Visual Studio"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=visualstudio"
     />
     <img
         align="center"

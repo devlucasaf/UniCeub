@@ -90,19 +90,12 @@
     />
     <img
         align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
         alt="Eclipse"
         tittle="Eclipse"
         height="40"
         style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=eclipse"
     />
     <img
         align="center"
@@ -114,11 +107,47 @@
     />
     <img
         align="center"
-        alt="PostegreSQL"
-        tittle="PostegreSQL"
+        alt="pycharm"
+        tittle="PyCharm"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img
+        align="center"
+        alt="PostgreSQL"
+        tittle="PostgreSQL"
         height="40"
         style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=postgresql"
+    />
+    <img
+        align="center"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
+        alt="vscode"
+        tittle="VsCode"
+        height="40" 
+        style="padding-right: 10px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img
+        align="center"
+        alt="visual studio"
+        tittle="visual studio"
+        height="40" 
+        style="padding-right: 10px;" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=visualstudio"
     />
 </div>
 

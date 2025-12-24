@@ -83,14 +83,6 @@
         src="https://skillicons.dev/icons?i=cs"
     />
     <img
-        align="center" 
-        alt="Prolog" 
-        title="Prolog"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
-    />
-    <img
         align="center"
         alt="Go"
         tittle="Go"
@@ -109,20 +101,13 @@
         src="https://skillicons.dev/icons?i=kotlin"
     />
     <img
-        align="center" 
-        alt="Scheme" 
-        title="Scheme"
-        height="40" 
-        style="padding-right: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
-    />
-    <img 
-        align="center" 
-        alt="Assembly" 
-        title="Assembly"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
+        align="center"
+        alt="DBSQLite"
+        tittle="DBSQLite"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=sqlite"
     />
     <img
         align="center" 
@@ -169,6 +154,24 @@
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=css"
     />
+    <img 
+        align="center" 
+        alt="Tailwind" 
+        title="Tailwind"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=tailwind"
+    />
+    <img 
+        align="center" 
+        alt="Bootstrap" 
+        title="Bootstrap"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=bootstrap"
+    />
     <img
         align="center" 
         alt="Rust" 
@@ -187,9 +190,50 @@
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=ruby"
     />
+    <img
+        align="center" 
+        alt="Prolog" 
+        title="Prolog"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img
+        align="center" 
+        alt="Scheme" 
+        title="Scheme"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
+    <img 
+        align="center" 
+        alt="Assembly" 
+        title="Assembly"
+        height="40" 
+        style="padding-right: 10px;" 
+        src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
+    />
+    <img
+        align="center" 
+        alt="Haskell" 
+        title="Haskell"
+        height="40" 
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
+    />
+    <img
+        align="center"
+        alt="object pascal"
+        tittle="Object Pascal"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
+    />
 </div>
 
 ---
+
 # 🛠️ Ferramentas
 
 <div align="left"> 
@@ -213,26 +257,48 @@
     />
     <img
         align="center"
-        alt="vscode"
+        alt="VsCode"
         tittle="VsCode"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
     />
     <img
         align="center"
         alt="Visual Studio"
         tittle="Visual Studio"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=visualstudio"
+    />
+    <img
+        align="center"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
+        alt="PostegreSQL"
+        tittle="PostegreSQL"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=postgresql"
+    />
+    <img
+        align="center"
+        alt="Eclipse"
+        tittle="Eclipse"
         height="40" 
         style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"
-    />
-    <img 
-        align="center"
-        title="MS Windows" 
-        alt="microsoft windows" 
-        height="40" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" 
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=eclipse"
     />
     <img
         align="center"
@@ -244,27 +310,11 @@
     />
     <img
         align="center"
-        alt="Eclipse"
-        tittle="Eclipse"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
-    />
-    <img
-        align="center"
         alt="pycharm"
         tittle="PyCharm"
         height="40"
         style="padding-right: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
-        alt="PostegreSQL"
-        tittle="PostegreSQL"
-        height="40"
-        style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     />
     <img
         align="center"
@@ -288,4 +338,3 @@
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
 />
-
