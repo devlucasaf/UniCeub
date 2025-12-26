@@ -6,6 +6,7 @@
 # 5º Semestre
 ◽️**SEMESTRE AINDA NÃO INICIADO**<br>
 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
+◽️Códigos em (**ESPERANDO COMEÇAR PARA INFORMAR**)<br>
 ◽️Disciplinas:
 - Gerência de Projetos de TI<br>
 - Inteligência Artificial<br>
