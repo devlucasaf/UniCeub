@@ -3,9 +3,6 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Emprestimo
-// ===============================
 import java.time.LocalDate;
 
 public class Emprestimo {
@@ -14,7 +11,7 @@ public class Emprestimo {
     private Exemplar exemplar;
     private LocalDate dataEmprestimo;
     private LocalDate dataDevolucao;
-    private String status; // ativo, finalizado
+    private String status; 
 
     public Emprestimo(int idEmprestimo, Usuario usuario, Exemplar exemplar) {
         this.idEmprestimo = idEmprestimo;

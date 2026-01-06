@@ -3,9 +3,6 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Obra
-// ===============================
 public class Obra {
     private String titulo;
     private String categoria;

@@ -3,9 +3,6 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Autor
-// ===============================
 public class Autor {
     private String nome;
     private String nacionalidade;

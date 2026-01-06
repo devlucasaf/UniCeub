@@ -41,7 +41,6 @@ class Filme {
 
 }
 
-// Classe Sessão
 class Sessao{
     private String horario;
     private String sala;
@@ -53,7 +52,6 @@ class Sessao{
         this.numeroCadeira = numeroCadeira;
     }
 
-    // Função para mostrar os valores da Sessão
     public void mostrarSessao() {
         System.out.println("Sessão: " + horario);
         System.out.println("Sala: " + sala);
@@ -61,7 +59,6 @@ class Sessao{
     }
 }
 
-// Classe Cinema
 class Cinema {
     private String nome;
     private List<Filme> filmes;
@@ -98,10 +95,8 @@ class Cinema {
     
 }
 
-// Classe principal (Main)
 public class Questao4 {
     public static void main(String[] args) {
-        // Filmes existem indenpendentemente
         Filme filme1 = new Filme("De Volta para o Futuro","Ficção Científica", 1985, 1.56);
         Filme filme2 = new Filme("Avatar", "Aventura", 2009, 2.42);
         

@@ -107,7 +107,6 @@ int main()
                     window.setView(view);
                 }
 
-                // Reset
                 if (ev.key.code == sf::Keyboard::R)
                 {
                     position = {0.f, 0.f};

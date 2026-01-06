@@ -15,7 +15,6 @@ CREATE TABLE artista (
     genero VARCHAR(60)
 );
 
--- N–N entre evento e artista
 CREATE TABLE evento_artista (
     evento_id INT REFERENCES evento(id),
     artista_id INT REFERENCES artista(id),
@@ -36,5 +35,5 @@ CREATE TABLE ingresso (
     assento VARCHAR(20),
     evento_id INT REFERENCES evento(id),
     cliente_id INT REFERENCES cliente(id),
-    UNIQUE (evento_id, assento)  -- evita assento duplicado no mesmo evento
+    UNIQUE (evento_id, assento)  
 );

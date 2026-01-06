@@ -12,11 +12,10 @@ public class Ocorrencia {
     private String descricao;
 
     // Relacionamentos
-    private List<Viatura> viaturas;   // N:N
-    private List<Suspeito> suspeitos; // N:N
-    private List<Policial> policiais; // N:N
+    private List<Viatura> viaturas;   
+    private List<Suspeito> suspeitos; 
+    private List<Policial> policiais; 
 
-    // Métodos
     public void registrar() {
         System.out.println("Ocorrência registrada com sucesso!");
     }
@@ -26,41 +25,37 @@ public class Ocorrencia {
     }
 }
 
-// Classe Policial
 public class Policial {
     private String nome;
     private int matricula;
     private String cargo;
 
-    private List<Ocorrencia> ocorrencias; // N:N
+    private List<Ocorrencia> ocorrencias; 
 
     public void atenderOcorrencia(Ocorrencia o) {
         System.out.println("Policial " + nome + " atendendo ocorrência nº " + o.getNumero());
     }
 
-    // Getters e setters omitidos para brevidade
 }
 
-// Classe Viatura
 public class Viatura {
     private String placa;
     private String modelo;
     private String estado;
 
-    private List<Ocorrencia> ocorrencias; // N:N
+    private List<Ocorrencia> ocorrencias; 
 
     public void deslocar(String local) {
         System.out.println("Viatura " + placa + " deslocando-se para " + local);
     }
 }
 
-// Classe Suspeito
 public class Suspeito {
     private String nome;
     private String cpf;
     private String situacao;
 
-    private List<Ocorrencia> ocorrencias; // N:N
+    private List<Ocorrencia> ocorrencias; 
 
     public void prestarDepoimento() {
         System.out.println("Suspeito " + nome + " prestou depoimento.");

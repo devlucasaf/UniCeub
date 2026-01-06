@@ -7,7 +7,6 @@ Slide 20: Exercício
 
 import requests
 
-# Requisição GET
 response = requests.get("https://api.agify.io/?name=ana")
 
 if response.status_code == 200:
@@ -17,7 +16,6 @@ if response.status_code == 200:
 else:
     print("Erro na requisição GET.")
 
-# Simulação de envio POST
 url_post = "https://jsonplaceholder.typicode.com/users"
 user_data = {
     "name": "Ana",

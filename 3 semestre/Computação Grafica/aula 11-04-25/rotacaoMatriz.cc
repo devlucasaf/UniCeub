@@ -25,7 +25,6 @@ int main() {
     cin >> teta;
     teta = (teta * PI / 180.0);
 
-    // matriz de rotacao
     double A[N][N] = {
         {cos(teta), -sin(teta)},
         {sin(teta),  cos(teta)}
@@ -44,11 +43,9 @@ int main() {
         cout << "\nCoordenada Original Ponto " << w + 1 << ":\n";
         cout << "Ponto " << w + 1 << ": (" << vet[0] << ", " << vet[1] << ")\n";
 
-        // Translada para a origem
         for (int z = 0; z < N; ++z)
             vet[z] -= pontoRotacao[z];
 
-        // Aplica a matriz de rotação
         for (int i = 0; i < N; ++i) {
             double soma = 0;
             for (int j = 0; j < N; ++j)
@@ -56,7 +53,6 @@ int main() {
             vetResultado[i] = soma;
         }
 
-        // Retorna à posição original
         for (int z = 0; z < N; ++z)
             vetResultado[z] += pontoRotacao[z];
 

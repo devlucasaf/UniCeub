@@ -17,11 +17,9 @@
     <button id="btn-mudar">Mudar Texto</button>
 
     <script>
-    // Seleciona os elementos pelo ID
     const paragrafo = document.getElementById('texto-magico');
     const botao = document.getElementById('btn-mudar');
 
-    // Adiciona o evento de clique ao botão
     botao.addEventListener('click', function() {
         paragrafo.textContent = 'A mágica aconteceu!';
         paragrafo.style.color = 'red';

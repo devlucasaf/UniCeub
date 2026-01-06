@@ -1,21 +1,11 @@
--- =========================================================
--- BANCO DE DADOS : Empresa_Produto_Cartesiano=
--- =========================================================
-
 CREATE DATABASE Empresa_Produto_Cartesiano;
 \c Empresa_Produto_Cartesiano;
 
--- =========================================================
--- TABELA: departamento
--- =========================================================
 CREATE TABLE departamento (
     dnr SERIAL PRIMARY KEY,
     nome_d VARCHAR(50) NOT NULL
 );
 
--- =========================================================
--- TABELA: funcionario
--- =========================================================
 CREATE TABLE funcionario (
     cpf CHAR(11) PRIMARY KEY,
     nome_f VARCHAR(60) NOT NULL,
@@ -23,9 +13,6 @@ CREATE TABLE funcionario (
     FOREIGN KEY (fk_dnr) REFERENCES departamento(dnr)
 );
 
--- =========================================================
--- INSERINDO DADOS DE EXEMPLO
--- =========================================================
 INSERT INTO departamento (nome_d) VALUES
 ('RH'),
 ('Financeiro'),
@@ -39,7 +26,6 @@ INSERT INTO funcionario (cpf, nome_f, fk_dnr) VALUES
 ('44444444444', 'LUCAS', 3),
 ('55555555555', 'JULIANA', 4);
 
--- Consultas SQL para verificar os dados inseridos:
 
 -- questão 1
 

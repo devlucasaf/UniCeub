@@ -37,10 +37,8 @@ class Query(graphene.ObjectType):
             filtrados = autores_data
         return [Autor(**autor) for autor in filtrados]
 
-# Schema
 schema = graphene.Schema(query=Query)
 
-# Teste da consulta
 query_string = '''
 {
     autores(nomeInicial: "An") {

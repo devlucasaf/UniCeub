@@ -104,7 +104,6 @@ if usuario_ativo
     end
 end
 
-# 5. RELATÓRIO FINAL (ESTADO DO SISTEMA)
 puts "\n" + "+=+=" * 69
 puts "RELATÓRIO FINAL:"
 puts "Saldo final: R$ #{saldo}"

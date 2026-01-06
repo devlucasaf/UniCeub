@@ -6,7 +6,7 @@ Data: 16-10-25
 public class Exemplar {
     private int codigo;
     private Obra obra;
-    private String midia; // física ou digital
+    private String midia; 
     private boolean disponivel;
 
     public Exemplar(int codigo, Obra obra, String midia) {

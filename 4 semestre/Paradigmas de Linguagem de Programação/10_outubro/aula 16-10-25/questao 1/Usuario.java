@@ -3,15 +3,12 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Usuario
-// ===============================
 public class Usuario {
     private String nome;
     private String endereco;
     private String telefone;
     private String email;
-    private String tipo; // Professor, Aluno, Funcionario
+    private String tipo; 
     private int idUsuario;
 
     public Usuario(String nome, String endereco, String telefone, String email, String tipo, int idUsuario) {

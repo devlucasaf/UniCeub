@@ -3,9 +3,6 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Editora
-// ===============================
 public class Editora {
     private String nome;
     private int anoFundacao;

@@ -3,14 +3,11 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Exemplar
-// ===============================
 public class Exemplar {
     private String codigoExemplar;
     private Obra obra;
     private int anoEdicao;
-    private String status; // disponível, emprestado, reservado
+    private String status; 
 
     public Exemplar(String codigoExemplar, Obra obra, int anoEdicao, String status) {
         this.codigoExemplar = codigoExemplar;

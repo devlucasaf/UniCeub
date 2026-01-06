@@ -1,7 +1,7 @@
 -- Questão 1
 
 CREATE TABLE Paciente (
-    id_paciente INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     data_nascimento DATE,
     cpf CHAR(11) UNIQUE,
@@ -12,7 +12,7 @@ CREATE TABLE Paciente (
 );
 
 CREATE TABLE Medico (
-    id_medico INT AUTO_INCREMENT PRIMARY KEY,
+    id_medico SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     especialidade VARCHAR(100),
     email_corporativo VARCHAR(100),
@@ -20,9 +20,9 @@ CREATE TABLE Medico (
 );
 
 CREATE TABLE Consulta (
-    id_consulta INT AUTO_INCREMENT PRIMARY KEY,
-    horario DATETIME,
-    data_consulta DATETIME,
+    id_consulta SERIAL PRIMARY KEY,
+    horario TIMESTAMP,
+    data_consulta TIMESTAMP,
     id_medico INT,
     motivo TEXT,
     exames TEXT,
@@ -30,7 +30,7 @@ CREATE TABLE Consulta (
 );
 
 CREATE TABLE Diagnostico (
-    id_diagnostico INT AUTO_INCREMENT PRIMARY KEY,
+    id_diagnostico SERIAL PRIMARY KEY,
     descricao VARCHAR(255),
     id_medico INT,
     data_diagnostico DATE,
@@ -38,7 +38,7 @@ CREATE TABLE Diagnostico (
 );
 
 CREATE TABLE Tratamento (
-    id_tratamento INT AUTO_INCREMENT PRIMARY KEY,
+    id_tratamento SERIAL PRIMARY KEY,
     descricao VARCHAR(255),
     data_inicio DATE,
     data_termino DATE,
@@ -51,7 +51,7 @@ CREATE TABLE Tratamento (
 -- Questão 2
 
 CREATE TABLE Aluno (
-    id_aluno INT AUTO_INCREMENT PRIMARY KEY,
+    id_aluno SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     serie VARCHAR(20),
     turma VARCHAR(20),
@@ -59,21 +59,21 @@ CREATE TABLE Aluno (
 );
 
 CREATE TABLE Autor (
-    id_autor INT AUTO_INCREMENT PRIMARY KEY,
+    id_autor SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     nacionalidade VARCHAR(50),
     data_nascimento DATE
 );
 
 CREATE TABLE Editora (
-    id_editora INT AUTO_INCREMENT PRIMARY KEY,
+    id_editora SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     cidade VARCHAR(50),
     pais VARCHAR(50)
 );
 
 CREATE TABLE Livro (
-    id_livro INT AUTO_INCREMENT PRIMARY KEY,
+    id_livro SERIAL PRIMARY KEY,
     nome VARCHAR(150),
     data_lancamento DATE,
     id_autor INT,
@@ -85,7 +85,7 @@ CREATE TABLE Livro (
 -- Questão 3
 
 CREATE TABLE Cliente (
-    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100),
     telefone CHAR(11),
@@ -95,13 +95,13 @@ CREATE TABLE Cliente (
 );
 
 CREATE TABLE Categoria (
-    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    id_categoria SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     descricao TEXT
 );
 
 CREATE TABLE Produto (
-    id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     descricao TEXT,
     valor DECIMAL(10,2),
@@ -111,7 +111,7 @@ CREATE TABLE Produto (
 );
 
 CREATE TABLE Pedido (
-    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido SERIAL PRIMARY KEY,
     codigo_rastreamento CHAR(20),
     data_pedido DATE,
     data_entrega DATE,
@@ -123,7 +123,7 @@ CREATE TABLE Pedido (
 -- Questão 4
 
 CREATE TABLE Dados_Saude (
-    id_dado INT AUTO_INCREMENT PRIMARY KEY,
+    id_dado SERIAL PRIMARY KEY,
     peso DECIMAL(5,2),
     altura DECIMAL(4,2),
     imc DECIMAL(4,2),
@@ -131,19 +131,19 @@ CREATE TABLE Dados_Saude (
 );
 
 CREATE TABLE Professor (
-    id_professor INT AUTO_INCREMENT PRIMARY KEY,
+    id_professor SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     data_nascimento DATE
 );
 
 CREATE TABLE Recepcionista (
-    id_recepcionista INT AUTO_INCREMENT PRIMARY KEY,
+    id_recepcionista SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     data_nascimento DATE
 );
 
 CREATE TABLE Aluno (
-    id_aluno INT AUTO_INCREMENT PRIMARY KEY,
+    id_aluno SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     endereco VARCHAR(150),
     email VARCHAR(100),
@@ -154,7 +154,7 @@ CREATE TABLE Aluno (
 );
 
 CREATE TABLE Treino (
-    id_treino INT AUTO_INCREMENT PRIMARY KEY,
+    id_treino SERIAL PRIMARY KEY,
     nome_treino VARCHAR(100),
     data_criacao DATE,
     data_termino DATE,
@@ -163,9 +163,9 @@ CREATE TABLE Treino (
 );
 
 CREATE TABLE Aula (
-    id_aula INT AUTO_INCREMENT PRIMARY KEY,
+    id_aula SERIAL PRIMARY KEY,
     nome_aula VARCHAR(100),
-    horario DATETIME,
+    horario TIMESTAMP,
     id_professor INT,
     FOREIGN KEY (id_professor) REFERENCES Professor(id_professor)
 );

@@ -1,94 +1,57 @@
--- ===================================================
--- CRIAÇÃO DO BANCO DE DADOS EMPRESA_MER_MERE
--- ===================================================
+CREATE DATABASE empresa_mer_mere;
 
-CREATE DATABASE EMPRESA_MER_MERE;
-USE EMPRESA_MER_MERE;
-
--- ===================================================
--- TABELA PRINCIPAL: FUNCIONARIO
--- ===================================================
-
-CREATE TABLE FUNCIONARIO (
-    CPF CHAR(11) PRIMARY KEY,
-    PNome VARCHAR(30) NOT NULL,
-    MInicial CHAR(1),
-    UNome VARCHAR(30) NOT NULL,
-    Data_Nascimento DATE NOT NULL,
-    Endereco VARCHAR(80)
+CREATE TABLE funcionario (
+    cpf CHAR(11) PRIMARY KEY,
+    pnome VARCHAR(30) NOT NULL,
+    minicial CHAR(1),
+    unome VARCHAR(30) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    endereco VARCHAR(80)
 );
 
--- ===================================================
--- SUBCLASSES POR TIPO DE FUNÇÃO
--- ===================================================
-
--- Secretaria
-
-CREATE TABLE SECRETARIA (
-    CPF_FUNC CHAR(11) PRIMARY KEY,
-    Velocidade_Digitacao VARCHAR(30) NOT NULL,
-    FOREIGN KEY (CPF_FUNC) REFERENCES FUNCIONARIO(CPF)
+CREATE TABLE secretaria (
+    cpf_func CHAR(11) PRIMARY KEY,
+    velocidade_digitacao VARCHAR(30) NOT NULL,
+    FOREIGN KEY (cpf_func) REFERENCES funcionario(cpf)
 );
 
--- Técnico
-
-CREATE TABLE TECNICO (
-    CPF_FUNC CHAR(11) PRIMARY KEY,
-    Grau_Tec VARCHAR(30) NOT NULL,
-    FOREIGN KEY (CPF_FUNC) REFERENCES FUNCIONARIO(CPF)
+CREATE TABLE tecnico (
+    cpf_func CHAR(11) PRIMARY KEY,
+    grau_tec VARCHAR(30) NOT NULL,
+    FOREIGN KEY (cpf_func) REFERENCES funcionario(cpf)
 );
 
--- Engenheiro
-
-CREATE TABLE ENGENHEIRO (
-    CPF_FUNC CHAR(11) PRIMARY KEY,
-    Tipo_Eng VARCHAR(30) NOT NULL,
-    FOREIGN KEY (CPF_FUNC) REFERENCES FUNCIONARIO(CPF)
+CREATE TABLE engenheiro (
+    cpf_func CHAR(11) PRIMARY KEY,
+    tipo_eng VARCHAR(30) NOT NULL,
+    FOREIGN KEY (cpf_func) REFERENCES funcionario(cpf)
 );
 
--- ===================================================
--- SUBCLASSES POR TIPO DE PAGAMENTO
--- ===================================================
-
--- Horista
-
-CREATE TABLE SALARIO_HORISTA (
-    CPF_FUNC CHAR(11) PRIMARY KEY,
-    Escala_Pagamento DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (CPF_FUNC) REFERENCES FUNCIONARIO(CPF)
+CREATE TABLE salario_horista (
+    cpf_func CHAR(11) PRIMARY KEY,
+    escala_pagamento DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (cpf_func) REFERENCES funcionario(cpf)
 );
 
--- Mensalista
-
-CREATE TABLE SALARIO_MENSALISTA (
-    CPF_FUNC CHAR(11) PRIMARY KEY,
-    Salario DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (CPF_FUNC) REFERENCES FUNCIONARIO(CPF)
+CREATE TABLE salario_mensalista (
+    cpf_func CHAR(11) PRIMARY KEY,
+    salario DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (cpf_func) REFERENCES funcionario(cpf)
 );
 
--- ===================================================
--- INSERÇÃO DE DADOS EXEMPLO
--- ===================================================
-
-INSERT INTO FUNCIONARIO (CPF, PNome, MInicial, UNome, Data_Nascimento, Endereco)
+INSERT INTO funcionario (cpf, pnome, minicial, unome, data_nascimento, endereco)
 VALUES 
-('1111111111', 'MARIANA', 'M', 'SILVA', '2000-01-01', 'RUA X'),
-('2222222222', 'JOAQUINA', 'N', 'MOREIRA', '1991-10-02', 'RUA 8');
+('11111111111', 'MARIANA', 'M', 'SILVA', '2000-01-01', 'RUA X'),
+('22222222222', 'JOAQUINA', 'N', 'MOREIRA', '1991-10-02', 'RUA 8');
 
--- Secretária 
+INSERT INTO secretaria (cpf_func, velocidade_digitacao)
+VALUES ('11111111111', '1000 PALAVRAS MIN');
 
-INSERT INTO SECRETARIA (CPF_FUNC, Velocidade_Digitacao)
-VALUES ('1111111111', '1000 PALAVRAS MIN');
+INSERT INTO engenheiro (cpf_func, tipo_eng)
+VALUES ('22222222222', 'ELETRICISTA');
 
--- Engenheira 
+INSERT INTO salario_mensalista (cpf_func, salario)
+VALUES ('11111111111', 2000);
 
-INSERT INTO ENGENHEIRO (CPF_FUNC, Tipo_Eng)
-VALUES ('2222222222', 'ELETRICISTA');
-
--- Pagamentos
-
-INSERT INTO SALARIO_MENSALISTA (CPF_FUNC, Salario)
-VALUES ('1111111111', 2000);
-
-INSERT INTO SALARIO_HORISTA (CPF_FUNC, Escala_Pagamento)
-VALUES ('2222222222', 78000);
+INSERT INTO salario_horista (cpf_func, escala_pagamento)
+VALUES ('22222222222', 78000);

@@ -116,12 +116,12 @@ void desenha(OBJECT* obj) {
     glEnd();
     glEndList();  
 
-    glTranslatef(-300.0, 0, 0);  // Translada para esquerda
+    glTranslatef(-300.0, 0, 0);  
     glBegin(GL_LINE_LOOP);
-    glColor3f(1.0, 1.0, 0.0);   // Define cor amarela
+    glColor3f(1.0, 1.0, 0.0);   
     for (int i = 0; i < 6; i++) {
         glPushMatrix();  
-        // Rotação: usa matriz de rotação 2D (cos30°≈0.87, sin30°=0.5)
+        
         glVertex2f((obj->vertices[i].x)*0.87 + (obj->vertices[i].y)*-0.5, 
                     (obj->vertices[i].x)*0.5 + (obj->vertices[i].y)*0.87);
         glPopMatrix();   
@@ -129,10 +129,9 @@ void desenha(OBJECT* obj) {
     glEnd();
     glEndList();  
     
-    // 7ª FORMA: ESCALA E ROTAÇÃO COMBINADAS (CIANO) com translação
-    glTranslatef(200.0, 0, 0);  // Translada para direita
+    glTranslatef(200.0, 0, 0);  
     glBegin(GL_LINE_LOOP);
-    glColor3f(0.0, 1.0, 1.0);   // Define cor ciano
+    glColor3f(0.0, 1.0, 1.0);   
     for (int i = 0; i < 6; i++) {
         glPushMatrix();  
         
@@ -143,12 +142,11 @@ void desenha(OBJECT* obj) {
     glEnd();
     glEndList();  
     
-    // 8ª FORMA: REFLEXÃO VERTICAL E CISALHAMENTO (BRANCO)
     glBegin(GL_LINE_LOOP);
-    glColor3f(1.0, 1.0, 1.0);   // Define cor branca
+    glColor3f(1.0, 1.0, 1.0);   
     for (int i = 0; i < 6; i++) {
         glPushMatrix();  
-        // Reflexão vertical (y * -1) com cisalhamento
+        
         glVertex2f((obj->vertices[i].x) + (obj->vertices[i].y)*0.47, 
                     (obj->vertices[i].y)*-1);
         glPopMatrix();   

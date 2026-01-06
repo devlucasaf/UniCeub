@@ -3,41 +3,30 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// Exemplo de Polimorfismo com os objetos da imagem
-
-// ======= CLASSES BASE =======
-
-// Classe base para seres ou objetos que se movem
 class Ser {
     void mover() {
         System.out.println("Movendo-se de alguma forma...");
     }
 }
 
-// Classe base para objetos que voam
 class Voador {
     void voar() {
         System.out.println("Voando de forma genérica...");
     }
 }
 
-// Classe base para dispositivos de armazenamento
 class Armazenamento {
     void armazenarDados() {
         System.out.println("Armazenando dados de alguma forma...");
     }
 }
 
-// Classe base para ferramentas de tratamento
 class Tratamento {
     void tratar() {
         System.out.println("Tratando de forma genérica...");
     }
 }
 
-// ======= SUBCLASSES =======
-
-// Grupo 1: VOAR
 class Borboleta extends Voador {
     @Override
     void voar() {
@@ -59,7 +48,6 @@ class Aviao extends Voador {
     }
 }
 
-// Grupo 2: MOVER
 class Pessoa extends Ser {
     @Override
     void mover() {
@@ -81,7 +69,6 @@ class Cavalo extends Ser {
     }
 }
 
-// Grupo 3: ARMAZENAR
 class Disquete extends Armazenamento {
     @Override
     void armazenarDados() {
@@ -96,7 +83,6 @@ class HD extends Armazenamento {
     }
 }
 
-// Grupo 4: TRATAR
 class Seringa extends Tratamento {
     @Override
     void tratar() {
@@ -111,35 +97,30 @@ class Remedio extends Tratamento {
     }
 }
 
-// ======= CLASSE PRINCIPAL =======
 public class PolimorfismoExercicio {
     public static void main(String[] args) {
 
-        // Grupo 1: Polimorfismo de voo
         Voador[] voadores = { new Borboleta(), new Passaro(), new Aviao() };
         for (Voador v : voadores) {
             v.voar();
         }
 
-        System.out.println("\n----------------------");
+        System.out.println("\n+=+=+=+=+=+=+=+=+=+=+=");
 
-        // Grupo 2: Polimorfismo de movimento
         Ser[] seres = { new Pessoa(), new Carro(), new Cavalo() };
         for (Ser s : seres) {
             s.mover();
         }
 
-        System.out.println("\n----------------------");
+        System.out.println("\n+=+=+=+=+=+=+=+=+=+=+=");
 
-        // Grupo 3: Polimorfismo de armazenamento
         Armazenamento[] dispositivos = { new Disquete(), new HD() };
         for (Armazenamento a : dispositivos) {
             a.armazenarDados();
         }
 
-        System.out.println("\n----------------------");
+        System.out.println("\n+=+=+=+=+=+=+=+=+=+=+=");
 
-        // Grupo 4: Polimorfismo de tratamento
         Tratamento[] tratamentos = { new Seringa(), new Remedio() };
         for (Tratamento t : tratamentos) {
             t.tratar();

@@ -3,11 +3,8 @@ Paradigmas de Linguagens de Programação
 Data: 16-10-25
 */
 
-// ===============================
-// Classe Midia
-// ===============================
 public class Midia {
-    private String tipoMidia; // físico, digital, CD, etc.
+    private String tipoMidia; 
     private String descricao;
 
     public Midia(String tipoMidia, String descricao) {
