@@ -232,6 +232,6 @@
     transition: background 0.2s ease;
   }
 
-   .btn-add:hover {
+  .btn-add:hover {
     background: #1e40af;
   }

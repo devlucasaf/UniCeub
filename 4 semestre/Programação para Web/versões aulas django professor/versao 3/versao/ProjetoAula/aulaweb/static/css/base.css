@@ -1,0 +1,286 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #1f2937;
+    background: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    color: white;
+}
+
+.topbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 16px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 16px 24px;
+}
+
+.banner h1 {
+    margin: 0 0 6px;
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+.banner p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+nav {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: saturate(1.2) blur(2px);
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.menu a:hover { 
+    background: rgba(255,255,255,0.18); 
+}
+
+.menu a:active { 
+    transform: translateY(1px); 
+}
+
+#nav-toggle { 
+    display: none; 
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.hamburger:focus { 
+    outline: 2px solid rgba(255,255,255,0.6); 
+    outline-offset: 2px; 
+}
+
+.hamburger span, .hamburger::before, .hamburger::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 24px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+.hamburger::before {
+    margin-top: 0;
+}
+
+main {
+    flex: 1 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 16px;
+    min-height: 300px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+footer {
+    flex-shrink: 0;
+    background: #0b1220;
+    color: #cbd5e1;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-links a:hover { 
+    text-decoration: underline; 
+}
+
+@media (max-width: 760px) {
+    .banner h1 { 
+        font-size: 1.4rem; 
+    }
+    
+    .banner p { 
+        font-size: 0.95rem; 
+    }
+
+    .hamburger { 
+        display: block; 
+    }
+    
+    .menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 8px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    #nav-toggle:checked ~ .menu { 
+        display: flex; 
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 14px 12px 6px;
+    }
+    
+    .brand-title {
+        font-size: 1.1rem;
+    }
+    
+    .banner {
+        padding: 20px 12px 18px;
+    }
+    
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+    
+    .banner p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    main {
+        margin: 16px auto;
+        padding: 16px;
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #0ea5e9;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+.menu a.active {
+    background: rgba(255,255,255,0.25);
+    font-weight: 600;
+}
+
+.hamburger.active span {
+    opacity: 0;
+}
+
+.hamburger.active::before {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active::after {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger span, 
+.hamburger::before, 
+.hamburger::after {
+    transition: all 0.3s ease;
+}

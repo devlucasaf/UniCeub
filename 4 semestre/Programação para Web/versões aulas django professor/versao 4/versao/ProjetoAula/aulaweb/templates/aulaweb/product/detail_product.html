@@ -1,70 +1,66 @@
 {% extends "aulaweb/base.html" %}
+{% load static %}
 
 {% block conteudo %}
+<link rel="stylesheet" href="{% static 'css/detail_product.css' %}">
 
-  <style>
+<div class="container">
+  {% if produto.url %}
+    <img src="{{ produto.url }}" 
+          alt="{{ produto.nome }}" 
+          class="produto-imagem"
+          onerror="this.onerror=null; this.src='{% static 'image/placeholder.png' %}'"
+    />
+  {% else %}
+    <div class="imagem-placeholder">
+      <span class="placeholder-text">Sem imagem</span>
+    </div>
+  {% endif %}
 
-
-    .container {
-      background: white;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .produto-imagem {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 16px;
-    }
-
-    .produto-nome {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .produto-preco {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #16a34a;
-      margin-bottom: 16px;
-    }
-
-    .produto-descricao {
-      font-size: 1rem;
-      color: #4b5563;
-      margin-bottom: 24px;
-    }
-
-    .btn-voltar {
-      display: inline-block;
-      padding: 10px 18px;
-      background: #0ea5e9;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s ease;
-    }
-    .btn-voltar:hover {
-      background: #0284c7;
-    }
-  </style>
-
-  <div class="container">
-    {% if produto.url %}
-      <img src="{{ produto.url }}" height="44" width="44" alt="{{ produto.nome }}" class="produto-imagem">
+  <div class="produto-nome">{{ produto.nome }}</div>
+  
+  <div class="produto-preco">
+    <span class="preco-valor">R$ {{ produto.preco }}</span>
+    {% if produto.desconto %}
+      <span class="produto-desconto">-{{ produto.desconto }}%</span>
     {% endif %}
-
-    <div class="produto-nome">{{ produto.nome }}</div>
-    <div class="produto-preco">R$ {{ produto.preco }}</div>
-    <div class="produto-descricao">{{ produto.descricao }} - {{ produto.categoria }}</div>
-
-    <a href="javascript:history.back()" class="btn-voltar">← Voltar</a>
   </div>
+  
+  <div class="produto-meta">
+    <span class="produto-categoria">{{ produto.categoria }}</span>
+    {% if produto.estoque %}
+      <span class="produto-estoque {% if produto.estoque < 10 %}estoque-baixo{% endif %}">
+        {% if produto.estoque < 10 %}
+          ⚠️ Apenas {{ produto.estoque }} em estoque
+        {% else %}
+          Em estoque
+        {% endif %}
+      </span>
+    {% endif %}
+  </div>
+  
+  <div class="produto-descricao">{{ produto.descricao }}</div>
+  
+  <div class="produto-acoes">
+    <button class="btn-comprar" data-produto-id="{{ produto.id }}">
+      <span class="btn-icon">🛒</span> Adicionar ao Carrinho
+    </button>
+    <a href="javascript:history.back()" class="btn-voltar">
+      <span class="btn-icon">←</span> Voltar
+    </a>
+  </div>
+  
+  {% if produto.caracteristicas %}
+  <div class="produto-caracteristicas">
+    <h3>Características</h3>
+    <ul>
+      {% for key, value in produto.caracteristicas.items %}
+      <li><strong>{{ key }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
 
+<script src="{% static 'js/detail_product.js' %}"></script>
 {% endblock %}

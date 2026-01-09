@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página com Cabeçalho, Conteúdo e Rodapé</title>
+  <title>Mercado CEUB</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 </head>
 <body>
   <header>
     <div class="topbar">
       <a class="brand" href="#">
         <span class="brand-logo" aria-hidden="true"></span>
-        <img src="{% static 'image/logo.png' %}" alt="Logo da Minha Marca" class="brand-logo">
+        <img 
+          src="{% static 'image/logo.png' %}" 
+          alt="Logo da Minha Marca" 
+          class="brand-logo"
+        />
         <span class="brand-title">Minha Marca</span>
       </a>
 
-      <!-- Toggle mobile sem JS -->
       <label for="nav-toggle" class="hamburger" aria-label="Abrir menu de navegação" role="button" tabindex="0">
         <span></span>
       </label>
@@ -33,7 +37,7 @@
         <ul class="menu" aria-label="Menu de navegação principal">
           <li><a href="{% url 'index' %}">Início</a></li>
           <li><a href="{% url 'list_produtos' %}">Produtos</a></li>
-          <li><a href="#">Pedidos</a></li>
+          <li><a href="{% url 'list_orders' %}">Pedidos</a></li>
           <li><a href="{% url 'sobre' %}">Sobre</a></li>
         </ul>
       </div>
@@ -58,9 +62,6 @@
     </div>
   </footer>
 
-  <script>
-    // Apenas para atualizar o ano automaticamente (sem bibliotecas).
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>

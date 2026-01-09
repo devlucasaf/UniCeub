@@ -1,0 +1,121 @@
+body{
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #071826;
+    color: #e6f7f2;
+    padding: 2rem;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    background:#0f2b33;
+    border: 6px solid #24d0b8;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+h2{
+    margin: 0 0 1.2rem 0;
+    font-size: 2rem;
+    letter-spacing: .6px;
+    color: #24d0b8;
+    text-align: center;
+    border-bottom: 2px solid #24d0b8;
+    padding-bottom: 1rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    margin-bottom: 1.4rem;
+    background: rgba(36, 208, 184, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #24d0b8;
+}
+
+h3{
+    margin: 0 0 .6rem 0;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #24d0b8;
+}
+
+h3::before{
+    content: "";
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background: #24d0b8;
+    border-radius: 50%;
+}
+
+ol{
+    margin: 0;
+    padding-left: 1.6rem;
+    color: #dfeef5;
+}
+
+ol li{
+    margin: .35rem 0;
+    padding: .4rem .8rem;
+    background: rgba(223, 238, 245, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+ol li:hover{
+    background: rgba(36, 208, 184, 0.2);
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    body{
+        padding: 1rem;
+    }
+    
+    .container{
+        padding: 1rem;
+        border-width: 4px;
+    }
+    
+    h2{
+        font-size: 1.6rem;
+    }
+    
+    h3{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        padding: 0.5rem;
+    }
+    
+    .container{
+        padding: 0.8rem;
+        border-width: 3px;
+    }
+    
+    h2{
+        font-size: 1.3rem;
+    }
+    
+    h3{
+        font-size: 1.1rem;
+    }
+    
+    ol li{
+        padding: .3rem .6rem;
+    }
+}

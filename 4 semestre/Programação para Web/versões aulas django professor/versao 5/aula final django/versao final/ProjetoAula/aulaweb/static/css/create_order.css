@@ -1,0 +1,69 @@
+#add-item {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+#add-item:hover {
+    background-color: #8a2be2;
+    opacity: 0.9;
+}
+
+.btn-salvar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-salvar:hover {
+    background-color: #45a049;
+}
+
+.btn-voltar {
+    background-color: #c7621e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-voltar:hover {
+    background-color: #b3591b;
+}
+
+.item-form {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#pedido-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
