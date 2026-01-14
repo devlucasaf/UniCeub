@@ -1,3 +1,11 @@
+/*
+Paradigmas de Linguagem de Programação
+Aula: 23-10-25
+Slide 9: Diferença entre Java vs C++ vs C# vs GO vs Ruby
+Exemplo em GO - Sistema de Biblioteca
+*CÓDIGO EXTRA A FINS DE COMPARAÇÃO!! VERSÃO ORIGINAL SOMENTE COM JAVA, C++ E C#*
+*/
+
 package main
 
 import (

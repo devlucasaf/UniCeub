@@ -1,7 +1,7 @@
 /*
 Paradigmas de Linguagem de Programação
 Aula: 23-10-25
-Slide 9: Diferença entre Java vs C++ vs C#
+Slide 9: Diferença entre Java vs C++ vs C# vs GO vs Ruby
 Exemplo em C++ - Sistema de Biblioteca
 */
 
