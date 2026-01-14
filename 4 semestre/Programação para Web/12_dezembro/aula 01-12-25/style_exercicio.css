@@ -1,0 +1,62 @@
+/* Problemas: contraste ruim, uso de font-size pequeno, estilos inline no CSS */
+body {
+    font-family: Arial, sans-serif;
+    background: #eee;
+    color: #666;
+}
+
+header {
+    background: #fff;
+    padding: 5px;
+}
+
+.nav {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #888;
+}
+
+.banner {
+    height: 300px;
+    background: url('banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 6px;
+    background: #09f;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.small {
+    font-size: 10px;
+}
+
+.hidden-visually {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+/* sem :focus visível */
+a:focus,
+button:focus {
+    outline: none;
+}
+
+table.layout {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.layout td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}

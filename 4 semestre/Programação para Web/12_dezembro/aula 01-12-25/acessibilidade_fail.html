@@ -3,24 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Exemplo de Página Não Acessível</title>
-  <style>
-    body {
-      background-color: yellow; /* contraste ruim */
-      font-family: Arial, sans-serif;
-    }
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
-    .menu div {
-      background: lightgray;
-      padding: 10px;
-      cursor: pointer;
-    }
-    .importante {
-      color: lightgray; /* contraste muito baixo */
-    }
-  </style>
+  <link rel="stylesheet" href="style_acessibilidade_fail.css">
 </head>
 <body>
   <h1>Bem-vindo ao Meu Site</h1>
@@ -54,5 +37,7 @@
   <!-- Erro 7: Conteúdo não estruturado (sem heading hierarchy correta) -->
   <h4>Seção Importante</h4>
   <p>Mas não segue a ordem de títulos (h2/h3 foram pulados).</p>
+
+  <script src="script_acessibilidade_fail.js"></script>
 </body>
 </html>

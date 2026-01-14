@@ -1,0 +1,19 @@
+body {
+  background-color: yellow; /* contraste ruim */
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu div {
+    background: lightgray;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.importante {
+  color: lightgray; /* contraste muito baixo */
+}

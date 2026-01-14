@@ -1,54 +1,12 @@
 {% extends "aulaweb/base.html" %}
 
 {% block conteudo %}
-
-<style>
-  .produtos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .produto-card {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .produto-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-  }
-
-  .produto-nome {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 8px;
-  }
-
-  .produto-preco {
-    font-size: 1rem;
-    color: #16a34a; /* verde */
-    font-weight: 600;
-  }
-
-  .sem-produtos {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #6b7280;
-    margin: 40px 0;
-  }
-</style>
-
 <div class="produtos-container">
   {% for produto in lista_produtos %}
     <div class="produto-card">
-      <div class="produto-nome"><a href="{% url 'detalhar_produto' produto.pk %}">{{ produto.nome }}</a></div>
+      <div class="produto-nome">
+        <a href="{% url 'detalhar_produto' produto.pk %}">{{ produto.nome }}</a>
+      </div>
       <div class="produto-preco">R$ {{ produto.preco }}</div>
     </div>
   {% empty %}
@@ -56,4 +14,6 @@
   {% endfor %}
 </div>
 
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+<script src="{% static 'js/products.js' %}"></script>
 {% endblock %}

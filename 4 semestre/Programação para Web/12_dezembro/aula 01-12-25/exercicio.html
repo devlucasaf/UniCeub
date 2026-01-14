@@ -1,23 +1,10 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
 <head>
-  <!-- Problema: falta meta viewport para mobile -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Página Demo - Loja</title>
-  <style>
-    /* Problemas: contraste ruim, uso de font-size pequeno, estilos inline no CSS */
-    body { font-family: Arial, sans-serif; background: #eee; color: #666; }
-    header { background: #fff; padding: 5px; }
-    .nav { display: inline-block; margin-left: 50px; }
-    .nav a { margin-right: 10px; text-decoration: none; color: #888; }
-    .banner { height: 300px; background: url('banner.jpg') no-repeat center; background-size: cover; }
-    .btn { display: inline-block; padding: 4px 6px; background: #09f; color: #fff; border-radius: 2px; }
-    .small { font-size: 10px; }
-    .hidden-visually { position: absolute; left: -9999px; top: -9999px; }
-    /* sem :focus visível */
-    a:focus, button:focus { outline: none; }
-    table.layout { width: 100%; border-collapse: collapse; }
-    table.layout td { padding: 10px; border: 1px solid #ccc; }
-  </style>
+  <link rel="stylesheet" href="style_exercicio.css" />
 </head>
 <body>
 
@@ -82,25 +69,6 @@
   <p class="small">© 2025 Minha Loja - todos os direitos reservados</p>
 </footer>
 
-<script>
-  // Código com problemas de usabilidade: dependente de mouse, sem alternativa teclado
-  function openProduct(id) {
-    alert("Abrindo produto " + id);
-  }
-
-  // Simula popup automático (invasivo)
-  setTimeout(function() {
-    var p = document.createElement('div');
-    p.id = 'promo';
-    p.style.position = 'fixed';
-    p.style.right = '10px';
-    p.style.bottom = '10px';
-    p.style.background = '#ff0';
-    p.style.padding = '10px';
-    p.innerHTML = '<p>Oferta! <a href="#">Ganhe desconto</a></p>';
-    document.body.appendChild(p);
-  }, 2000);
-</script>
-
+<script src="script_exercicio.js"></script>
 </body>
 </html>
