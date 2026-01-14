@@ -1,6 +1,7 @@
 -- Paradigmas de Linguagem de Programação
 -- Aula: 23-10-25
 -- II Atividade 2 (POO e Diagrama de Classes)
+-- Situação 3 - Banco de Dados do Sistema de Ocorrência Policial
 
 CREATE TABLE ocorrencia (
     id SERIAL PRIMARY KEY,

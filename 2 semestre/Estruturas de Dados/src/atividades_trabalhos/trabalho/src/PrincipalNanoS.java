@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 
-public class Principal_NanoS {
+public class PrincipalNanoS {
 
     public static void main(String[] args) {
         mostraOpcoes();

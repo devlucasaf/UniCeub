@@ -1,4 +1,4 @@
-public class ordenacao {
+public class Ordenacao {
     public static void main(String[] args) {
         int quantidade = 1000;
         int[] vetor = new int[quantidade];

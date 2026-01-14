@@ -1,4 +1,4 @@
-public class fatorial {
+public class Questao7FatorialOrientadoObjetos {
     public static int calcular(int n) {
         int resultado = 1;
         for (int i = 1; i <= n; i++) {

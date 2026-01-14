@@ -1,4 +1,4 @@
-public class insertSort {
+public class InsertSort {
     /*função que organiza o array usando insertion */
     void organizar(int lista[]) {
         int tamanho = lista.length;

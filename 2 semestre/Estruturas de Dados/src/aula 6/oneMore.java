@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class one_more {
+public class OneMore {
 	public static void main(String[] args) {
 	String nrElementos = JOptionPane.showInputDialog("Quantos nrs a lista vai ter?");
 	int nElementos = Integer.valueOf(nrElementos);

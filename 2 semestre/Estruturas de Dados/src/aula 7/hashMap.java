@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class hashMap {
+public class HashMap {
 	
 	public static void main(String[] args) {
 		

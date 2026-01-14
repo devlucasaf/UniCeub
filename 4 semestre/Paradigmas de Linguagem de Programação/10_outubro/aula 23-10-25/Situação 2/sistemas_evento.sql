@@ -1,6 +1,7 @@
 -- Paradigmas de Linguagem de Programação
 -- Aula: 23-10-25
 -- II Atividade 2 (POO e Diagrama de Classes)
+-- Situação 2 - Sistema de Gestão de Eventos
 
 CREATE TABLE evento (
     id SERIAL PRIMARY KEY,

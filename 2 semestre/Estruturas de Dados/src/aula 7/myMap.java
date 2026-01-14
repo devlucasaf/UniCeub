@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Mymap {
+public class MyMap {
 	public static void main(String[] args) {
 		int i = 0;
 		HashMap<String, String> Mymap = new HashMap<>();
