@@ -67,15 +67,18 @@ void circuloGirando() {
     glEnd();
     glPopMatrix();
     angle += 1.0f;
+    if (angle > 360.0f) angle -= 360.0f;
 }
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-gl clear(gl_color_buffer_bit)
 
     quadradoSimples();         
+    simbolo();
+    desenhaQuadradoVermelho();
+    quadradoRoxoMovendo();
+    circuloGirando();
 
-circulo girando
     glutSwapBuffers();
 }
 

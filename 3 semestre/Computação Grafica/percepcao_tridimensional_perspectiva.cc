@@ -1,8 +1,3 @@
-/*
-Computação Gráfica
-Aula: Percepção tridimensional e perspectiva
-*/
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -54,6 +49,7 @@ float cubeVertices[] = {
     0.5f, 0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f,-0.5f
 };
 
+
 void processInput(GLFWwindow* window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -62,28 +58,57 @@ void processInput(GLFWwindow* window)
 
 int main()
 {
-    glfwInit();
+    if (!glfwInit()) {
+        std::cerr << "Erro ao inicializar GLFW\n";
+        return -1;
+    }
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "3D Perspectiva em C++", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Erro ao criar janela GLFW\n";
+        glfwTerminate();
+        return -1;
+    }
     glfwMakeContextCurrent(window);
 
-    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "Erro ao inicializar GLAD\n";
+        return -1;
+    }
 
     unsigned int vShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vShader, 1, &vertexShaderSource, NULL);
     glCompileShader(vShader);
+    int success;
+    char infoLog[512];
+    glGetShaderiv(vShader, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(vShader, 512, NULL, infoLog);
+        std::cerr << "Erro no Vertex Shader:\n" << infoLog << std::endl;
+    }
 
     unsigned int fShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fShader, 1, &fragmentShaderSource, NULL);
     glCompileShader(fShader);
+    glGetShaderiv(fShader, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(fShader, 512, NULL, infoLog);
+        std::cerr << "Erro no Fragment Shader:\n" << infoLog << std::endl;
+    }
 
     unsigned int shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vShader);
     glAttachShader(shaderProgram, fShader);
     glLinkProgram(shaderProgram);
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    if (!success) {
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        std::cerr << "Erro ao linkar programa:\n" << infoLog << std::endl;
+    }
 
     glDeleteShader(vShader);
     glDeleteShader(fShader);
@@ -123,10 +148,8 @@ int main()
 
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"),
                             1, GL_FALSE, glm::value_ptr(model));
-
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"),
                             1, GL_FALSE, glm::value_ptr(view));
-
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"),
                             1, GL_FALSE, glm::value_ptr(projection));
 
@@ -136,6 +159,9 @@ int main()
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
 
     glfwTerminate();
     return 0;
