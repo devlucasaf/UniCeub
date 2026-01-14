@@ -4,28 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Texto Mágico</title>
-    <style>
-        #texto-magico {
-        font-size: 16px;
-        color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
     <p id="texto-magico">Este é o texto original.</p>
     <button id="btn-mudar">Mudar Texto</button>
 
-    <script>
-    const paragrafo = document.getElementById('texto-magico');
-    const botao = document.getElementById('btn-mudar');
-
-    botao.addEventListener('click', function() {
-        paragrafo.textContent = 'A mágica aconteceu!';
-        paragrafo.style.color = 'red';
-        paragrafo.style.fontSize = '24px';
-    });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
