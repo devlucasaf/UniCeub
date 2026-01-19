@@ -6,7 +6,7 @@ Slide 27: Linguagem Procedural
 
 #include <studio.h>
 
-struct retangula{
+struct retangulo{
     float base;
     float altura;
     float area;

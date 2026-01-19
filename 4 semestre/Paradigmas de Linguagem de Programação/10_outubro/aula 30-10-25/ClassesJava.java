@@ -34,7 +34,7 @@ class Livro {
     }
 }
 
-public class Main2 {
+public class ClassesJava {
     public static void main(String[] args) {
 
         Carro carro1 = new Carro();

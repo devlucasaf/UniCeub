@@ -18,7 +18,7 @@ class Estudante {
     }
 }
 
-public class Main {
+public class ClasseEstudante {
     public static void main(String[] args) {
         Estudante estudante1 = new Estudante("Lucas", "Computação", "202501", 9.5);
         Estudante estudante2 = new Estudante("Ana", "Engenharia", "202502", 8.7);
