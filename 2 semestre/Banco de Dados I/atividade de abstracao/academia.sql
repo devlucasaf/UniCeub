@@ -1,7 +1,10 @@
 -- Banco de Dados I - Sistema de Gestão de Academia
 -- Atividade de Abstração - Questão 1
 
-CREATE TABLE Membro (
+-- Criação das tabelas para o sistema de gestão de academia
+
+-- Criação da tabela Membro
+CREATE TABLE membro (
     id_membro INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     data_nascimento DATE NOT NULL,
@@ -11,7 +14,8 @@ CREATE TABLE Membro (
     data_cadastro DATE DEFAULT CURRENT_DATE
 );
 
-CREATE TABLE Instrutor (
+-- Criação da tabela Instrutor
+CREATE TABLE instrutor (
     id_instrutor INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     data_nascimento DATE,
@@ -21,7 +25,8 @@ CREATE TABLE Instrutor (
     horario_disponivel VARCHAR(50)
 );
 
-CREATE TABLE PlanoTreino (
+-- Criação da tabela PlanoTreino
+CREATE TABLE plano_treino (
     id_plano INT AUTO_INCREMENT PRIMARY KEY,
     nome_plano VARCHAR(100) NOT NULL,
     data_criacao DATE DEFAULT CURRENT_DATE,
@@ -30,7 +35,8 @@ CREATE TABLE PlanoTreino (
     FOREIGN KEY (id_instrutor) REFERENCES Instrutor(id_instrutor)
 );
 
-CREATE TABLE MembroPlano (
+-- Criação da tabela MembroPlano para associar membros aos planos de treino
+CREATE TABLE membro_plano (
     id_membro INT NOT NULL,
     id_plano INT NOT NULL,
     data_inicio DATE NOT NULL,
@@ -40,7 +46,8 @@ CREATE TABLE MembroPlano (
     FOREIGN KEY (id_plano) REFERENCES PlanoTreino(id_plano)
 );
 
-CREATE TABLE Aula (
+-- Criação da tabela Aula
+CREATE TABLE aula (
     id_aula INT AUTO_INCREMENT PRIMARY KEY,
     nome_aula VARCHAR(100) NOT NULL,
     descricao TEXT,
@@ -49,7 +56,8 @@ CREATE TABLE Aula (
     FOREIGN KEY (id_instrutor) REFERENCES Instrutor(id_instrutor)
 );
 
-CREATE TABLE MembroAula (
+-- Criação da tabela MembroAula para associar membros às aulas
+CREATE TABLE membro_aula (
     id_membro INT NOT NULL,
     id_aula INT NOT NULL,
     PRIMARY KEY (id_membro, id_aula),
@@ -57,8 +65,8 @@ CREATE TABLE MembroAula (
     FOREIGN KEY (id_aula) REFERENCES Aula(id_aula)
 );
 
-
-CREATE TABLE Frequencia (
+-- Criação da tabela Frequencia para registrar a presença dos membros
+CREATE TABLE frequencia (
     id_frequencia INT AUTO_INCREMENT PRIMARY KEY,
     id_membro INT NOT NULL,
     data_presenca DATE NOT NULL,
@@ -66,7 +74,8 @@ CREATE TABLE Frequencia (
     FOREIGN KEY (id_membro) REFERENCES Membro(id_membro)
 );
 
-CREATE TABLE DadosSaude (
+-- Criação da tabela DadosSaude para registrar informações de saúde dos membros
+CREATE TABLE dados_saude (
     id_saude INT AUTO_INCREMENT PRIMARY KEY,
     id_membro INT NOT NULL,
     peso DECIMAL(5,2),
