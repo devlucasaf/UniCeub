@@ -66,6 +66,15 @@
 <div align="left">
     <img
         align="center"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
         alt="git"
         tittle="Git"
         height="40"
@@ -84,6 +93,14 @@
     />
     <img
         align="center"
+        alt="pycharm"
+        tittle="PyCharm"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img
+        align="center"
         alt="Blender"
         tittle="Blender"
         height="40" 
@@ -99,23 +116,6 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=postgresql"
-    />
-    <img
-        align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
     />
     <img
         align="center"

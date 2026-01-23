@@ -72,6 +72,15 @@
 <div align="left">
     <img
         align="center"
+        alt="Windows"
+        tittle="Windows"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=windows"
+    />
+    <img
+        align="center"
         alt="git"
         tittle="Git"
         height="40"
@@ -121,15 +130,6 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=postgresql"
-    />
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
     />
     <img
         align="center"
