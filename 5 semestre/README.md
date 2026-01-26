@@ -63,6 +63,7 @@
         src="https://skillicons.dev/icons?i=github"
     />
 </div>
+
 <img 
     width=100% 
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=footer"
