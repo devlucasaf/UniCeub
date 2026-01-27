@@ -1,5 +1,15 @@
-*, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+*, 
+*::before, 
+*::after { 
+    box-sizing: border-box; 
+}
+
+html, 
+body { 
+    margin: 0; 
+    padding: 0; 
+}
+
 body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: #1f2937;
@@ -118,7 +128,9 @@ nav {
     outline-offset: 2px; 
 }
 
-.hamburger span, .hamburger::before, .hamburger::after {
+.hamburger span, 
+.hamburger::before, 
+.hamburger::after {
     content: "";
     display: block;
     height: 2px;
@@ -176,6 +188,7 @@ footer {
     text-decoration: underline; 
 }
 
+/* Responsividade */
 @media (max-width: 760px) {
     .banner h1 { 
         font-size: 1.4rem; 
