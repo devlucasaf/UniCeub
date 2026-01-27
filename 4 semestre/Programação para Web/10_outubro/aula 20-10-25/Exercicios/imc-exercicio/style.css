@@ -201,12 +201,36 @@ header .subtitle {
     color: #2c3e50;
 }
 
-.baixo-peso { background-color: #ffeb3b; color: #333; }
-.peso-normal { background-color: #4caf50; color: white; }
-.sobrepeso { background-color: #ff9800; color: white; }
-.obesidade-i { background-color: #f44336; color: white; }
-.obesidade-ii { background-color: #d32f2f; color: white; }
-.obesidade-iii { background-color: #b71c1c; color: white; }
+.baixo-peso { 
+    background-color: #ffeb3b; 
+    color: #333; 
+}
+
+.peso-normal { 
+    background-color: #4caf50; 
+    color: white; 
+}
+
+.sobrepeso { 
+    background-color: #ff9800; 
+    color: white; 
+}
+
+.obesidade-i { 
+    background-color: #f44336; 
+    color: white; 
+}
+
+.obesidade-ii { 
+    background-color: #d32f2f; 
+    color: white; 
+}
+
+.obesidade-iii { 
+    background-color: #b71c1c; 
+    color: white; 
+}
+
 
 #result-content {
     text-align: center;

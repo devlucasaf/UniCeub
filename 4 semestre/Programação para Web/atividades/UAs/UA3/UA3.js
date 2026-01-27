@@ -106,18 +106,37 @@ function setupAnimations() {
     const style = document.createElement('style');
     style.textContent = `
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                transform: translateY(-10px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
         }
+
         @keyframes fadeOut {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
+            from { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+            to { 
+                opacity: 0; 
+                transform: translateY(-10px); 
+            }
         }
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            0%, 100% { 
+                transform: scale(1); 
+            }
+            50% { 
+                transform: scale(1.05); 
+            }
         }
     `;
+    
     document.head.appendChild(style);
     
     const sections = document.querySelectorAll('li');
@@ -127,6 +146,7 @@ function setupAnimations() {
         section.style.opacity = '0';
     });
 }
+
 
 function setupPrint() {
     const printBtn = document.createElement('button');
