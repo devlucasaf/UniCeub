@@ -51,7 +51,9 @@ void quadradoRoxoMovendo() {
     glEnd();
     glPopMatrix();
     x += moveX;
-    if (x > 1.0f || x < -1.0f) moveX = -moveX;
+    if (x > 1.0f || x < -1.0f) {
+        moveX = -moveX;
+    }
 }
 
 void circuloGirando() {
@@ -67,7 +69,9 @@ void circuloGirando() {
     glEnd();
     glPopMatrix();
     angle += 1.0f;
-    if (angle > 360.0f) angle -= 360.0f;
+    if (angle > 360.0f) { 
+        angle -= 360.0f;
+    }
 }
 
 void display() {

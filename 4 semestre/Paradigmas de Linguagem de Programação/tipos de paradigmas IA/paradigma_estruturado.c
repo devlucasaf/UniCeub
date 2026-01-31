@@ -30,7 +30,9 @@ typedef struct {
     int fimMin;
 } Reserva;
 
-int min_from_hm(int h, int m) { return h * 60 + m; }
+int min_from_hm(int h, int m) { 
+    return h * 60 + m; 
+}
 
 void print_hm(int totalMin) {
     int h = totalMin / 60;
@@ -39,68 +41,109 @@ void print_hm(int totalMin) {
 }
 
 int valida_intervalo(int inicioMin, int fimMin) {
-    if (inicioMin < 0 || fimMin < 0) return 0;
-    if (inicioMin >= 24 * 60 || fimMin > 24 * 60) return 0;
-    if (inicioMin >= fimMin) return 0;
+    if (inicioMin < 0 || fimMin < 0) {
+        return 0;
+    }
+    if (inicioMin >= 24 * 60 || fimMin > 24 * 60) {
+        return 0;
+    }
+    if (inicioMin >= fimMin) {
+        return 0;
+    }
     return 1;
 }
 
 int valida_data(int d, int m, int a) {
-    if (a < 1900 || a > 2100) return 0;
-    if (m < 1 || m > 12) return 0;
-    if (d < 1 || d > 31) return 0;
-    if ((m == 4 || m == 6 || m == 9 || m == 11) && d > 30) return 0;
+    if (a < 1900 || a > 2100) {
+        return 0;
+    }
+    if (m < 1 || m > 12) {
+        return 0;
+    }
+    if (d < 1 || d > 31) {
+        return 0;
+    }
+    if ((m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
+        return 0;
+    }
     if (m == 2) {
         int bissexto = (a % 400 == 0) || (a % 4 == 0 && a % 100 != 0);
-        if (d > (bissexto ? 29 : 28)) return 0;
+        if (d > (bissexto ? 29 : 28)) {
+            return 0;
+        }
     }
     return 1;
 }
 
 int str_vazia(const char *s) {
     if (!s) return 1;
+
     while (*s) {
-        if (*s != ' ' && *s != '\n' && *s != '\t' && *s != '\r') return 0;
+        if (*s != ' ' && *s != '\n' && *s != '\t' && *s != '\r') {
+            return 0;
+        }
         s++;
     }
     return 1;
 }
 
 int ler_linha(char *buf, int tam) {
-    if (!fgets(buf, tam, stdin)) return 0;
+    if (!fgets(buf, tam, stdin)) {
+        return 0;
+    }
+
     size_t len = strlen(buf);
-    if (len > 0 && buf[len - 1] == '\n') buf[len - 1] = '\0';
+
+    if (len > 0 && buf[len - 1] == '\n') {
+        buf[len - 1] = '\0';
+    }
     return 1;
 }
 
 int buscar_morador(Morador moradores[], int n, int id) {
-    for (int i = 0; i < n; i++) if (moradores[i].id == id) return i;
+    for (int i = 0; i < n; i++) if (moradores[i].id == id) {
+        return i;
+    }
     return -1;
 }
 
 int buscar_espaco(Espaco espacos[], int n, int id) {
-    for (int i = 0; i < n; i++) if (espacos[i].id == id) return i;
+    for (int i = 0; i < n; i++) if (espacos[i].id == id) {
+        return i;
+    }
     return -1;
 }
 
 int conflito_reserva(Reserva reservas[], int nRes, int espacoId, int d, int m, int a, int ini, int fim) {
     for (int i = 0; i < nRes; i++) {
         Reserva r = reservas[i];
-        if (r.espacoId != espacoId) continue;
-        if (r.dia != d || r.mes != m || r.ano != a) continue;
-        if (ini < r.fimMin && fim > r.inicioMin) return 1;
+
+        if (r.espacoId != espacoId) {
+            continue;
+        }
+        if (r.dia != d || r.mes != m || r.ano != a) {
+            continue;
+        }
+        if (ini < r.fimMin && fim > r.inicioMin) {
+            return 1;
+        }
     }
     return 0;
 }
 
 int politica_espaco(Espaco e, int inicioMin, int fimMin) {
     int dur = fimMin - inicioMin;
+
     if (e.tipo == 1) {
-        if (dur > 6 * 60) return 0;
+        if (dur > 6 * 60) {
+            return 0;
+        }
         return 1;
     }
     if (e.tipo == 2) {
-        if (inicioMin < 18 * 60) return 0;
+        if (inicioMin < 18 * 60) {
+            return 0;
+        }
         return 1;
     }
     return 1;
@@ -108,7 +151,10 @@ int politica_espaco(Espaco e, int inicioMin, int fimMin) {
 
 void listar_moradores(Morador moradores[], int n) {
     printf("\nMoradores:\n");
-    if (n == 0) { printf("(vazio)\n"); return; }
+
+    if (n == 0) { 
+        printf("(vazio)\n"); return; 
+    }
     for (int i = 0; i < n; i++) {
         printf("  [%d] %s (Ap: %s)\n", moradores[i].id, moradores[i].nome, moradores[i].apartamento);
     }
@@ -116,7 +162,11 @@ void listar_moradores(Morador moradores[], int n) {
 
 void listar_espacos(Espaco espacos[], int n) {
     printf("\nEspacos:\n");
-    if (n == 0) { printf("(vazio)\n"); return; }
+
+    if (n == 0) { 
+        printf("(vazio)\n"); return; 
+    }
+
     for (int i = 0; i < n; i++) {
         const char *tipo = (espacos[i].tipo == 1) ? "Churrasqueira" : (espacos[i].tipo == 2) ? "Salao" : "Generico";
         printf("  [%d] %s | cap=%d | %s\n", espacos[i].id, espacos[i].nome, espacos[i].capacidade, tipo);
@@ -141,53 +191,76 @@ void listar_reservas(Reserva reservas[], int nRes, Morador moradores[], int nMor
 }
 
 int cadastrar_morador(Morador moradores[], int *nMor, int *nextId) {
-    if (*nMor >= MAX_MORADORES) return 0;
+    if (*nMor >= MAX_MORADORES) {
+        return 0;
+    }
 
     char nome[60];
     char ap[20];
 
     printf("Nome do morador: ");
-    if (!ler_linha(nome, sizeof(nome)) || str_vazia(nome)) return 0;
+    if (!ler_linha(nome, sizeof(nome)) || str_vazia(nome)) {
+        return 0;
+    }
 
     printf("Apartamento: ");
-    if (!ler_linha(ap, sizeof(ap)) || str_vazia(ap)) strcpy(ap, "N/A");
+    if (!ler_linha(ap, sizeof(ap)) || str_vazia(ap)) {
+        strcpy(ap, "N/A");
+    }
 
     Morador m;
+
     m.id = (*nextId)++;
+
     strncpy(m.nome, nome, sizeof(m.nome) - 1);
+
     m.nome[sizeof(m.nome) - 1] = '\0';
+
     strncpy(m.apartamento, ap, sizeof(m.apartamento) - 1);
+
     m.apartamento[sizeof(m.apartamento) - 1] = '\0';
 
     moradores[*nMor] = m;
+
     (*nMor)++;
 
     printf("Morador cadastrado com id %d\n", m.id);
+
     return 1;
 }
 
 int cadastrar_espaco(Espaco espacos[], int *nEsp, int *nextId) {
-    if (*nEsp >= MAX_ESPACOS) return 0;
+    if (*nEsp >= MAX_ESPACOS) {
+        return 0;
+    }
 
     char nome[60];
     int cap = 0;
     int tipo = 0;
 
     printf("Nome do espaco: ");
-    if (!ler_linha(nome, sizeof(nome)) || str_vazia(nome)) return 0;
+    if (!ler_linha(nome, sizeof(nome)) || str_vazia(nome)) {
+        return 0;
+    }
 
     printf("Capacidade: ");
-    if (scanf("%d", &cap) != 1) return 0;
+    if (scanf("%d", &cap) != 1) {
+        return 0;
+    }
 
     printf("Tipo (0=Generico, 1=Churrasqueira, 2=Salao): ");
-    if (scanf("%d", &tipo) != 1) return 0;
+    if (scanf("%d", &tipo) != 1) {
+        return 0;
+    }
 
     int c;
     while ((c = getchar()) != '\n' && c != EOF) {}
 
     Espaco e;
     e.id = (*nextId)++;
+
     strncpy(e.nome, nome, sizeof(e.nome) - 1);
+
     e.nome[sizeof(e.nome) - 1] = '\0';
     e.capacidade = (cap < 1) ? 1 : cap;
     e.tipo = (tipo < 0 || tipo > 2) ? 0 : tipo;
@@ -201,7 +274,9 @@ int cadastrar_espaco(Espaco espacos[], int *nEsp, int *nextId) {
 
 int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
                 Morador moradores[], int nMor, Espaco espacos[], int nEsp) {
-    if (*nRes >= MAX_RESERVAS) return 0;
+    if (*nRes >= MAX_RESERVAS) {
+        return 0;
+    }
 
     int moradorId, espacoId;
     int d, m, a;
@@ -209,20 +284,30 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
 
     listar_moradores(moradores, nMor);
     printf("\nID do morador: ");
-    if (scanf("%d", &moradorId) != 1) return 0;
+    if (scanf("%d", &moradorId) != 1) {
+        return 0;
+    }
 
     listar_espacos(espacos, nEsp);
     printf("\nID do espaco: ");
-    if (scanf("%d", &espacoId) != 1) return 0;
+    if (scanf("%d", &espacoId) != 1) {
+        return 0;
+    }
 
     printf("Data (dd mm aaaa): ");
-    if (scanf("%d %d %d", &d, &m, &a) != 3) return 0;
+    if (scanf("%d %d %d", &d, &m, &a) != 3) {
+        return 0;
+    }
 
     printf("Horario inicio (hh mm): ");
-    if (scanf("%d %d", &hi, &mi) != 2) return 0;
+    if (scanf("%d %d", &hi, &mi) != 2) {
+        return 0;
+    }
 
     printf("Horario fim (hh mm): ");
-    if (scanf("%d %d", &hf, &mf) != 2) return 0;
+    if (scanf("%d %d", &hf, &mf) != 2) {
+        return 0;
+    }
 
     int c;
     while ((c = getchar()) != '\n' && c != EOF) {}
@@ -280,13 +365,23 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
 }
 
 void seed(Morador moradores[], int *nMor, int *morId, Espaco espacos[], int *nEsp, int *espId) {
-    Morador a = { (*morId)++, "Ana", "A-101" };
-    Morador b = { (*morId)++, "Bruno", "B-202" };
+    Morador a = { 
+        (*morId)++, "Ana", "A-101" 
+    };
+    Morador b = { 
+        (*morId)++, "Bruno", "B-202" 
+    };
+
     moradores[(*nMor)++] = a;
     moradores[(*nMor)++] = b;
 
-    Espaco s = { (*espId)++, "Salao Principal", 80, 2 };
-    Espaco c = { (*espId)++, "Churrasqueira 1", 20, 1 };
+    Espaco s = { 
+        (*espId)++, "Salao Principal", 80, 2 
+    };
+
+    Espaco c = { 
+        (*espId)++, "Churrasqueira 1", 20, 1 
+    };
     espacos[(*nEsp)++] = s;
     espacos[(*nEsp)++] = c;
 }
@@ -302,7 +397,9 @@ int menu() {
     printf("6) Listar reservas\n");
     printf("0) Sair\n");
     printf("Opcao: ");
-    if (scanf("%d", &op) != 1) return -1;
+    if (scanf("%d", &op) != 1) {
+        return -1;
+    }
 
     int c;
     while ((c = getchar()) != '\n' && c != EOF) {}
@@ -322,20 +419,27 @@ int main() {
     for (;;) {
         int op = menu();
 
-        if (op == 0) break;
+        if (op == 0) {
+            break;
+        }
 
         if (op == 1) {
-            if (!cadastrar_morador(moradores, &nMor, &nextMorId)) printf("Falha ao cadastrar morador\n");
+            if (!cadastrar_morador(moradores, &nMor, &nextMorId)) {
+                printf("Falha ao cadastrar morador\n");
+            }
         } 
         else if (op == 2) {
-            if (!cadastrar_espaco(espacos, &nEsp, &nextEspId)) printf("Falha ao cadastrar espaco\n");
+            if (!cadastrar_espaco(espacos, &nEsp, &nextEspId)) {
+                printf("Falha ao cadastrar espaco\n");
+            }
         } 
         else if (op == 3) {
             if (nMor == 0 || nEsp == 0) {
                 printf("Cadastre ao menos 1 morador e 1 espaco antes\n");
             } else {
-                if (!criar_reserva(reservas, &nRes, &nextResId, moradores, nMor, espacos, nEsp))
+                if (!criar_reserva(reservas, &nRes, &nextResId, moradores, nMor, espacos, nEsp)) {
                     printf("Falha ao criar reserva\n");
+                }
             }
         } 
         else if (op == 4) {

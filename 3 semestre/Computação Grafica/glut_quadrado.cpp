@@ -6,7 +6,7 @@ using namespace std;
 
 float rotationAngle = 0.0f;
 
-void Desenhar(){
+void Desenhar() {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -24,20 +24,24 @@ void Desenhar(){
     glutSwapBuffers();
 }
 
-void Keyboard(unsigned char key, int x, int y){
-    if(key == 27) exit(0); 
+void Keyboard(unsigned char key, int x, int y) {
+    if(key == 27) {
+        exit(0); 
+    }
 }
 
-void ajusta_tela(){
+void ajusta_tela() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-50,50,-50,50);
     glMatrixMode(GL_MODELVIEW);
 }
 
-void anima(int timer){
+void anima(int timer) {
     rotationAngle += 2; 
-    if(rotationAngle > 360) rotationAngle -= 360;
+    if(rotationAngle > 360) {
+        rotationAngle -= 360;
+    }
     glutPostRedisplay();    
     glutTimerFunc(30, anima, 1);
 }

@@ -8,7 +8,7 @@ using namespace std;
 
 float x_position;
 
-void quadrado(){
+void quadrado() {
 	glColor3f(0,0,1);
 	glBegin(GL_QUADS);
 		glVertex2f(20,20);
@@ -18,7 +18,7 @@ void quadrado(){
 	glEnd();
 }
 
-void desenho(){
+void desenho() {
 	glClearColor(1,0,0,1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	
@@ -29,28 +29,28 @@ void desenho(){
 	glFlush();
 }
 
-void ajustar(int w, int h){
+void ajustar(int w, int h) {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
 	gluOrtho2D(-100,100,-100,100);
 }
 
-void teclado(unsigned char key, int x, int y){
+void teclado(unsigned char key, int x, int y) {
 	cout<<(int)key<<endl;
-	if(key == ESC){
+	if(key == ESC) {
 		exit(0);
 	}
 }
 
-void anima(int timer){
+void anima(int timer) {
 	glutPostRedisplay();
 	x_position+=0.1f;
 	
 	glutTimerFunc(30,anima,1);
 }
 
-int main(){
+int main() {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowPosition(200,100);
 	glutInitWindowSize(600,600);

@@ -50,14 +50,13 @@ float cubeVertices[] = {
 };
 
 
-void processInput(GLFWwindow* window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+void processInput(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
+    }
 }
 
-int main()
-{
+int main() {
     if (!glfwInit()) {
         std::cerr << "Erro ao inicializar GLFW\n";
         return -1;
@@ -127,8 +126,7 @@ int main()
 
     glEnable(GL_DEPTH_TEST);
 
-    while (!glfwWindowShouldClose(window))
-    {
+    while (!glfwWindowShouldClose(window)) {
         processInput(window);
 
         glClearColor(0.1f, 0.12f, 0.15f, 1.0f);

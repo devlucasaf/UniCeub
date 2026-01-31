@@ -1,6 +1,6 @@
 /**
- *  Paradigmas de Linguagens de Programação
- *  Aplicação de POO em JavaScript
+    Paradigmas de Linguagens de Programação
+    Aplicação de POO em JavaScript
 */
 
 class Livro {
@@ -108,9 +108,12 @@ class Usuario {
 
     limiteEmprestimos() {
         switch (this._tipo) {
-            case 'Estudante': return 5;
-            case 'Professor': return 10;
-            default: return 3;
+            case 'Estudante': 
+                return 5;
+            case 'Professor':   
+                return 10;
+            default:    
+                return 3;
         }
     }
 

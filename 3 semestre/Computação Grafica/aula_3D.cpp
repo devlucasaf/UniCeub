@@ -2,7 +2,7 @@
 
 float lado = 40;
 
-void cubo(){
+void cubo() {
 	glLineWidth(10);
 	
 	glColor3f(1,0,0);
@@ -55,7 +55,7 @@ void cubo(){
 	glEnd();
 }
 
-void desenho(){
+void desenho() {
 	glClearColor(0,0,0,0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	float matSpecular[] = {1,1,1,1};
@@ -69,7 +69,7 @@ void desenho(){
 	glFlush();
 }
 
-void ajuste(int w, int h){
+void ajuste(int w, int h) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	
@@ -83,21 +83,23 @@ void ajuste(int w, int h){
 			0,1,0);
 }
 
-void anima(int value){
+void anima(int value) {
 	glutPostRedisplay();
 	glutTimerFunc(30,anima,1);
 }
 
-void initLight(){
+void initLight() {
 	
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
 
     glEnable(GL_COLOR_MATERIAL); 
-    float globalAmb[] = {0.1f, 0.1f, 0.1f, 1};
+    float globalAmb[] = {
+		0.1f, 0.1f, 0.1f, 1
+	};
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmb);
 
-    float light0[4][4]={
+    float light0[4][4] = {
         {0.1f,0.1f,0.1f,1}, 
         {0.8f,0.8f,0.8f,1}, 
         {1,1,1,1},          
@@ -109,13 +111,25 @@ void initLight(){
     glLightfv(GL_LIGHT0, GL_SPECULAR, &light0[2][0]);
     glLightfv(GL_LIGHT0, GL_POSITION, &light0[3][0]);
 
-	float luzAmbiente[4] = {0.2,0.2,0.2,1.0};
-	float luzDifusa[4] = {0.7,0.7,0.7,1.0};
-	float luzEspecular[4] = {1.0,1.0,1.0,1.0};
-	float posicaoLuz0[4] = {300,50,0,1.0};
-	float posicaoLuz2[4] = {0,-100,0,1.0};
+	float luzAmbiente[4] = {
+		0.2,0.2,0.2,1.0
+	};
+	float luzDifusa[4] = {
+		0.7,0.7,0.7,1.0
+	};
+	float luzEspecular[4] = {
+		1.0,1.0,1.0,1.0
+	};
+	float posicaoLuz0[4] = {
+		300,50,0,1.0
+	};
+	float posicaoLuz2[4] = {
+		0,-100,0,1.0
+	};
 	
-	float especularidade[4] = {1.0,1.0,1.0,1.0}; 
+	float especularidade[4] = {
+		1.0,1.0,1.0,1.0
+	}; 
 	int especMaterial = 128;
 	
 	glMaterialfv(GL_FRONT, GL_SPECULAR,especularidade);
@@ -135,7 +149,7 @@ void initLight(){
 	glEnable(GL_DEPTH_TEST);
 }
 
-int main(){
+int main() {
 	glutInitDisplayMode(GLUT_SINGLE| GLUT_RGB);
 	glutInitWindowPosition(200,100);
 	glutInitWindowSize(800,800);

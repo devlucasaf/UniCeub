@@ -41,19 +41,25 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-    if (largura <= altura)
+    if (largura <= altura) {
         gluOrtho2D(-40.0f, 40.0f, -40.0f * altura / largura, 40.0f * altura / largura);
-    else
+    }
+
+    else {
         gluOrtho2D(-40.0f * largura / altura, 40.0f * largura / altura, -40.0f, 40.0f);
+    }
 }
 
 void Teclado(unsigned char key, int x, int y) {
     glutPostRedisplay();
 
-    if (key == 'w')   
+    if (key == 'w') {
         x_scale += 0.1f;
-    if (key == 's')   
+    }
+
+    if (key == 's') {
         x_scale -= 0.1f;
+    }
 }
 
 void Inicializa(void) {
@@ -69,10 +75,12 @@ void timer(int) {
     switch (state) {
         case 1:
             cout << "TESTE1" << '\t';
-            if (x_position < 20)
+            if (x_position < 20) {
                 x_position += 0.3f;
-            else
+            }
+            else {
                 state = -1;
+            }
             break;
         case -1:
             if (x_position > -20) {

@@ -9,8 +9,7 @@
 #include <GL/glut.h>
 #include <math.h>
 
-void Desenha(void)
-{    
+void Desenha(void) {    
     glClear(GL_COLOR_BUFFER_BIT);
 
     glMatrixMode(GL_MODELVIEW);
@@ -48,11 +47,12 @@ void Desenha(void)
     glFlush();
 }
 
-void AlteraTamanhoJanela(GLsizei w, GLsizei h)
-{
+void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     GLsizei largura, altura;
 
-    if(h == 0) h = 1;
+    if(h == 0) {
+        h = 1;
+    }
 
     largura = w;
     altura = h;
@@ -62,19 +62,19 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-    if (largura <= altura) 
+    if (largura <= altura) {
         gluOrtho2D (-40.0f, 40.0f, -40.0f*altura/largura, 40.0f*altura/largura);
-    else 
+    }
+    else {
         gluOrtho2D (-40.0f*largura/altura, 40.0f*largura/altura, -40.0f, 40.0f);
+    }
 }
 
-void Inicializa (void)
-{   
+void Inicializa (void) {   
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 }
 
-int main(void)
-{
+int main(void) {
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); 
     glutInitWindowPosition(5,5); 
     glutInitWindowSize(450,450); 

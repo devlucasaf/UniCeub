@@ -28,8 +28,12 @@ void update(int value) {
     xPos += xSpeed;
     yPos += ySpeed;
 
-    if (xPos + size > 1.0f || xPos < -1.0f) xSpeed = -xSpeed;
-    if (yPos + size > 1.0f || yPos < -1.0f) ySpeed = -ySpeed;
+    if (xPos + size > 1.0f || xPos < -1.0f) {
+        xSpeed = -xSpeed;
+    }
+    if (yPos + size > 1.0f || yPos < -1.0f) {
+        ySpeed = -ySpeed;
+    }
 
     glutPostRedisplay();
     glutTimerFunc(16, update, 0);

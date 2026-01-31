@@ -1,7 +1,6 @@
 #include <GL/glut.h>
 
-void desenho()
-{
+void desenho(){
     glClear(GL_COLOR_BUFFER_BIT);
 
     glBegin(GL_POLYGON);
@@ -38,8 +37,7 @@ void desenho()
     glutSwapBuffers();
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutInitWindowSize(600, 600);

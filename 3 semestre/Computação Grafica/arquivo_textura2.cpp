@@ -13,8 +13,7 @@ double movy = 0;
 double movz =200;
 double velocidadeCamera = 5.0f;
 
-void quadrado(float SIZE, GLuint texid)
-{
+void quadrado(float SIZE, GLuint texid) {
 	glColor3f(1.0, 1.0, 1.0);
 	glBindTexture(GL_TEXTURE_2D, texid);
 	
@@ -52,7 +51,7 @@ void quadrado(float SIZE, GLuint texid)
 	glEnd();
 }
 
-void desenho(){
+void desenho() {
 	glClearColor(0,0,0,0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
@@ -67,7 +66,7 @@ void desenho(){
 	glFlush();
 }
 
-void ajuste(int w, int h){
+void ajuste(int w, int h) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	
@@ -75,7 +74,7 @@ void ajuste(int w, int h){
 	
 }
 
-void carregarTextura(GLuint tex_id, string filepath){
+void carregarTextura(GLuint tex_id, string filepath) {
 	unsigned char* imgData;
 	int largura, altura, canais;
 	
@@ -83,7 +82,7 @@ void carregarTextura(GLuint tex_id, string filepath){
 	
 	imgData = stbi_load(filepath.c_str(), &largura, &altura,&canais, 4);
 	
-	if(imgData){
+	if(imgData) {
 		glBindTexture(GL_TEXTURE_2D, tex_id);
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, largura, 
 		altura, 0, GL_RGBA, GL_UNSIGNED_BYTE, imgData);
@@ -96,12 +95,12 @@ void carregarTextura(GLuint tex_id, string filepath){
 		
 		stbi_image_free(imgData);
 	}
-    else{
+    else {
 		cout<<"ERRO!No foi possvel carregar a imagem "<<filepath.c_str()<<endl;
 	}
 }
 
-void initializeTexture(){
+void initializeTexture() {
 	glGenTextures(3, texID);
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -112,7 +111,7 @@ void initializeTexture(){
 	glEnable(GL_DEPTH_TEST);
 }
 
-void initializeLight(){
+void initializeLight() {
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 	
@@ -135,19 +134,25 @@ void initializeLight(){
 	
 }
 
-void teclado(unsigned char key, int x, int  y){
+void teclado(unsigned char key, int x, int  y) {
 	glutPostRedisplay();
 	
-	if(key == 'w')
-		movz-=velocidadeCamera;
-	if(key == 's')
-		movz+=velocidadeCamera;
-		
-	if(key == 'a')
-		movx-=velocidadeCamera;
-	if(key == 'd')
-		movx+=velocidadeCamera;
-		
+	if (key == 'w') {
+		movz -= velocidadeCamera;
+	}
+
+	if (key == 's') {
+		movz += velocidadeCamera;
+	}
+
+	if (key == 'a') {
+		movx -= velocidadeCamera;
+	}
+
+	if (key == 'd') {
+		movx += velocidadeCamera;
+	}
+
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	

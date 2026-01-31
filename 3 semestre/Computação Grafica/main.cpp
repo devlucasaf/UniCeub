@@ -32,7 +32,9 @@ static GLuint compileShader(GLenum type, const char* src) {
 
 static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
     GLuint vs = compileShader(GL_VERTEX_SHADER, vsSrc);
-    if (!vs) return 0;
+    if (!vs) {
+        return 0;
+    }
 
     GLuint fs = compileShader(GL_FRAGMENT_SHADER, fsSrc);
     if (!fs) {
@@ -66,7 +68,9 @@ static void makeOrthoLikeWebGL(float aspect, float out[16]) {
     const float zNear = -1.0f;
     const float zFar  =  1.0f;
 
-    for (int i = 0; i < 16; i++) out[i] = 0.0f;
+    for (int i = 0; i < 16; i++) {
+        out[i] = 0.0f;
+    }
     out[0]  = 1.0f / aspect;
     out[5]  = 1.0f;
     out[10] = -2.0f / (zFar - zNear);
@@ -75,7 +79,9 @@ static void makeOrthoLikeWebGL(float aspect, float out[16]) {
 }
 
 static void makeIdentity(float out[16]) {
-    for (int i = 0; i < 16; i++) out[i] = 0.0f;
+    for (int i = 0; i < 16; i++) {
+        out[i] = 0.0f;
+    }
     out[0] = out[5] = out[10] = out[15] = 1.0f;
 }
 

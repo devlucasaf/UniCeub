@@ -43,18 +43,21 @@ int main() {
         cout << "\nCoordenada Original Ponto " << w + 1 << ":\n";
         cout << "Ponto " << w + 1 << ": (" << vet[0] << ", " << vet[1] << ")\n";
 
-        for (int z = 0; z < N; ++z)
+        for (int z = 0; z < N; ++z) {
             vet[z] -= pontoRotacao[z];
+        }
 
         for (int i = 0; i < N; ++i) {
             double soma = 0;
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < N; ++j) {
                 soma += A[i][j] * vet[j];
+            }
             vetResultado[i] = soma;
         }
 
-        for (int z = 0; z < N; ++z)
+        for (int z = 0; z < N; ++z) {
             vetResultado[z] += pontoRotacao[z];
+        }
 
         cout << "\nResultado da rotacao:\n";
         cout << "Ponto " << w + 1 << ": (" << vetResultado[0] << ", " << vetResultado[1] << ")\n";

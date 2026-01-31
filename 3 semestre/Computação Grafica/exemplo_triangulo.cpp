@@ -40,12 +40,17 @@ void mostrarInformacoes(Ponto a, Ponto b, Ponto c) {
     cout << "\nPerímetro: " << perimetro << endl;
     cout << "Área: " << area << endl;
 
-    if (fabs(ab - bc) < 1e-6 && fabs(bc - ca) < 1e-6)
+    if (fabs(ab - bc) < 1e-6 && fabs(bc - ca) < 1e-6) {
         cout << "Tipo: Equilátero\n";
-    else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6)
+    }
+        
+    else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6) {
         cout << "Tipo: Isósceles\n";
-    else
+    }
+        
+    else {
         cout << "Tipo: Escaleno\n";
+    }
 }
 
 int main() {

@@ -4,8 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 
-sf::VertexArray makeAxes(float length = 400.f)
-{
+sf::VertexArray makeAxes(float length = 400.f) {
     sf::VertexArray axes(sf::Lines, 4);
     axes[0].position = { -length, 0.f };
     axes[1].position = {  length, 0.f };
@@ -19,8 +18,7 @@ sf::VertexArray makeAxes(float length = 400.f)
     return axes;
 }
 
-sf::VertexArray makeLine()
-{
+sf::VertexArray makeLine() {
     sf::VertexArray line(sf::Lines, 2);
     line[0].position = { -50.f, 0.f };
     line[1].position = {  50.f, 0.f };
@@ -29,8 +27,7 @@ sf::VertexArray makeLine()
     return line;
 }
 
-sf::ConvexShape makeTriangle()
-{
+sf::ConvexShape makeTriangle() {
     sf::ConvexShape tri(3);
     tri.setPoint(0, { 0.f, -60.f });
     tri.setPoint(1, { 60.f, 60.f });
@@ -41,8 +38,7 @@ sf::ConvexShape makeTriangle()
     return tri;
 }
 
-sf::RectangleShape makeRectangle()
-{
+sf::RectangleShape makeRectangle() {
     sf::RectangleShape rect({ 140.f, 90.f });
     rect.setOrigin(rect.getSize() / 2.f);
     rect.setFillColor(sf::Color(120, 180, 255));
@@ -51,8 +47,7 @@ sf::RectangleShape makeRectangle()
     return rect;
 }
 
-int main()
-{
+int main() {
     sf::RenderWindow window(sf::VideoMode(1000, 700), "CG em C++ (SFML): Primitivas, Referencias e Transformacoes");
     window.setFramerateLimit(120);
 
@@ -76,39 +71,41 @@ int main()
 
     enum class Primitive { Triangle, Line, Rectangle } current = Primitive::Triangle;
 
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         sf::Event ev{};
-        while (window.pollEvent(ev))
-        {
-            if (ev.type == sf::Event::Closed)
+        while (window.pollEvent(ev)) {
+            if (ev.type == sf::Event::Closed) {
                 window.close();
-            if (ev.type == sf::Event::KeyPressed)
-            {
-                if (ev.key.code == sf::Keyboard::Escape) window.close();
+            }
+            if (ev.type == sf::Event::KeyPressed) {
+                if (ev.key.code == sf::Keyboard::Escape) {
+                    window.close();
+                }
 
-                if (ev.key.code == sf::Keyboard::Num1) current = Primitive::Triangle;
-                if (ev.key.code == sf::Keyboard::Num2) current = Primitive::Line;
-                if (ev.key.code == sf::Keyboard::Num3) current = Primitive::Rectangle;
+                if (ev.key.code == sf::Keyboard::Num1) {
+                    current = Primitive::Triangle;
+                }
+                if (ev.key.code == sf::Keyboard::Num2) {
+                    current = Primitive::Line;
+                }
+                if (ev.key.code == sf::Keyboard::Num3) {
+                    current = Primitive::Rectangle;
+                }
 
-                if (ev.key.code == sf::Keyboard::V)
-                {
+                if (ev.key.code == sf::Keyboard::V) {
                     altView = !altView;
-                    if (altView)
-                    {
+                    if (altView) {
                         view = window.getDefaultView();
                         view.zoom(0.7f);          
                         view.move({ 120.f, -60.f }); 
                     }
-                    else
-                    {
+                    else {
                         view = window.getDefaultView();
                     }
                     window.setView(view);
                 }
 
-                if (ev.key.code == sf::Keyboard::R)
-                {
+                if (ev.key.code == sf::Keyboard::R) {
                     position = {0.f, 0.f};
                     rotation = 0.f;
                     scale    = 1.f;
@@ -121,14 +118,30 @@ int main()
         float rot  = 90.f  * (1.f / 120.f); 
         float scl  = 1.0f  + 0.5f * (1.f / 120.f);
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))  position.x -= move;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) position.x += move;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))    position.y -= move;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))  position.y += move;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))     rotation -= rot;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))     rotation += rot;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))     scale /= scl;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::X))     scale *= scl;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))  {
+            position.x -= move;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+            position.x += move;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            position.y -= move;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+            position.y += move;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+            rotation -= rot;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+            rotation += rot;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
+            scale /= scl;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
+            scale *= scl;
+        }
 
         sf::Transform model = sf::Transform::Identity;
         model.translate(position);
@@ -150,22 +163,18 @@ int main()
         localAxes[3].color = sf::Color(80,200,120);
         window.draw(localAxes);
 
-        switch (current)
-        {
-            case Primitive::Triangle:
-            {
+        switch (current) {
+            case Primitive::Triangle: {
                 sf::RenderStates rs; rs.transform = model;
                 window.draw(tri, rs);
                 break;
             }
-            case Primitive::Line:
-            {
+            case Primitive::Line: {
                 sf::RenderStates rs; rs.transform = model;
                 window.draw(line, rs);
                 break;
             }
-            case Primitive::Rectangle:
-            {
+            case Primitive::Rectangle: {
                 rect.setPosition(position);
                 rect.setRotation(rotation);
                 rect.setScale(scale, scale);
@@ -176,12 +185,10 @@ int main()
 
         static sf::Font font;
         static bool fontLoaded = false;
-        if (!fontLoaded)
-        {
+        if (!fontLoaded){
             fontLoaded = font.loadFromFile("C:/Windows/Fonts/arial.ttf");
         }
-        if (fontLoaded)
-        {
+        if (fontLoaded) {
             sf::Text txt;
             txt.setFont(font);
             txt.setCharacterSize(16);

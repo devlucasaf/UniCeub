@@ -12,14 +12,14 @@ void bresenham(float *x1, float *y1, float *x2, float *y2);
 void circulo(int *raio);                                                
 int animacao();                                                         
 
-int main(){
+int main() {
     setlocale(LC_ALL, "Portuguese");                                  
 
     int escolha = 1; 
     float xi, xf, yi, yf; 
     int raio; 
 
-    while(escolha != 0){
+    while(escolha != 0) {
         printf("\n\nEscolha o número referente ao desafio desejado:\n");
         printf("(0) - Sair\n");
         printf("(1) - Imprime uma reta (Algoritmo DDA)\n");

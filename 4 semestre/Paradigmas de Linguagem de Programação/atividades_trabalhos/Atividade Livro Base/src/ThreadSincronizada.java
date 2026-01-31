@@ -15,6 +15,7 @@ public class ThreadSincronizada {
         c.start();
     }
 }
+
 class ConsumirInteiro extends Thread {
     private NumeroSincronizado cHold;
     public ConsumirInteiro(NumeroSincronizado h) {

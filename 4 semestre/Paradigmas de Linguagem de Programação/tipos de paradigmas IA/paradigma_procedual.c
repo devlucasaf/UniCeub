@@ -123,7 +123,8 @@ int main() {
             default:
                 printf("Opção inválida!\n\n");
         }
-    } while (opcao != 4);
+    } 
+    while (opcao != 4);
 
     return 0;
 }

@@ -30,7 +30,9 @@ static GLuint compileShader(GLenum type, const char* src) {
 
 static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
     GLuint vs = compileShader(GL_VERTEX_SHADER, vsSrc);
-    if (!vs) return 0;
+    if (!vs) {
+        return 0;
+    }
 
     GLuint fs = compileShader(GL_FRAGMENT_SHADER, fsSrc);
     if (!fs) {
@@ -82,7 +84,9 @@ static void createShape(GLuint program, const float* vertices, int vertexCount) 
 }
 
 int main() {
-    if (!glfwInit()) return 1;
+    if (!glfwInit()) {
+        return 1;
+    }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

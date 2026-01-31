@@ -2,8 +2,7 @@
 
 float lado = 40;
 
-void quadrado(float SIZE)
-{
+void quadrado(float SIZE) {
     glColor3f(1.0, 1.0, 1.0);
     glBegin(GL_QUADS);
         glVertex3f(-SIZE, -SIZE, 0.0);
@@ -13,14 +12,14 @@ void quadrado(float SIZE)
     glEnd();
 }
 
-void desenho(){
+void desenho() {
     glClearColor(0,0,0,0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     quadrado(40);
     glFlush();
 }
 
-void ajuste(int w, int h){
+void ajuste(int w, int h) {
     if(h == 0) h = 1;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -30,7 +29,7 @@ void ajuste(int w, int h){
     gluLookAt(0,0,200, 0,0,0, 0,1,0);
 }
 
-int main(int argc, char** argv){
+int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowPosition(200,100);

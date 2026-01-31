@@ -129,10 +129,12 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    if (w <= h)
+    if (w <= h) {
         gluOrtho2D(-500.0f, 500.0f, -500.0f, 500.0f*h / w);
-    else
+    }
+    else {
         gluOrtho2D(-500.0f, 500.0f*w / h, -500.0f, 500.0f);
+    }
 }
 
 int main(int argc, char** argv) {

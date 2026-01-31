@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
     Paradigmas de Linguagens de Programação
     Atividades do Livro Base - Capítulo 5 - Programação Concorrente em Java
@@ -25,7 +23,6 @@
         - Adicione cores hexadecimais para fazer a diferenciação de cada lebre. Eu quero as seguintes cores: vermelho cênico, verde elétrico, azul brilhante, rosa choque e ciano claro
 */
 
->>>>>>> 9c6a4a15115f838849a96ae548b7d94265fce7a4
 // Importa as classes necessárias para listas, comparação, geração de números aleatórios
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -37,11 +34,11 @@ class ANSIConverter {
     // Define o código ANSI para resetar a cor ao padrão do terminal
     public static final String RESET = "\u001B[0m";
 
-    /**
-     * Gera o código ANSI de True Color (24-bit) a partir de um valor hexadecimal.
-     * @param hexColor A string hexadecimal da cor (ex: "#FF5733" ou "FF5733").
-     * @return O código ANSI para definir a cor da fonte.
-     */
+        /**
+        * Gera o código ANSI de True Color (24-bit) a partir de um valor hexadecimal.
+        * @param hexColor A string hexadecimal da cor (ex: "#FF5733" ou "FF5733").
+        * @return O código ANSI para definir a cor da fonte.
+        */
     public static String getANSIColor(String hexColor) {
         // Remove o '#' se estiver presente na string da cor
         if (hexColor.startsWith("#")) {

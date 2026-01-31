@@ -20,9 +20,9 @@
 import java.util.Random;
 
 /**
- * Classe que implementa um método para buscar um valor em um vetor
- * utilizando múltiplas threads simultaneamente.
- */
+* Classe que implementa um método para buscar um valor em um vetor
+* utilizando múltiplas threads simultaneamente.
+*/
 public class Questao4 {
 
     // +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
@@ -43,13 +43,13 @@ public class Questao4 {
         private final String nomeThread;
 
         /**
-         * Construtor da Thread de Busca.
-         * @param alvo O número a ser procurado.
-         * @param vetor O array principal.
-         * @param inicio O índice de início da busca no vetor.
-         * @param fim O índice final (exclusivo) da busca no vetor.
-         * @param nomeThread Nome identificador da thread.
-         */
+        * Construtor da Thread de Busca.
+        * @param alvo O número a ser procurado.
+        * @param vetor O array principal.
+        * @param inicio O índice de início da busca no vetor.
+        * @param fim O índice final (exclusivo) da busca no vetor.
+        * @param nomeThread Nome identificador da thread.
+        */
         public BuscaThread(int alvo, int[] vetor, int inicio, int fim, String nomeThread) {
             this.alvo = alvo;           // Atribui o valor alvo da busca
             this.vetor = vetor;         // Atribui o vetor onde buscar

@@ -87,16 +87,24 @@ public:
         }
 
         glBegin(GL_QUADS);
-            if (useTexture) glTexCoord2f(0.0f, 1.0f);
+            if (useTexture) {
+                glTexCoord2f(0.0f, 1.0f);
+            }
             glVertex2f(x - halfW, y - halfH);
 
-            if (useTexture) glTexCoord2f(1.0f, 1.0f);
+            if (useTexture) {
+                glTexCoord2f(1.0f, 1.0f);
+            }
             glVertex2f(x + halfW, y - halfH);
 
-            if (useTexture) glTexCoord2f(1.0f, 0.0f);
+            if (useTexture) {
+                glTexCoord2f(1.0f, 0.0f);
+            }
             glVertex2f(x + halfW, y + halfH);
 
-            if (useTexture) glTexCoord2f(0.0f, 0.0f);
+            if (useTexture) {
+                glTexCoord2f(0.0f, 0.0f);
+            }
             glVertex2f(x - halfW, y + halfH);
         glEnd();
 
@@ -276,9 +284,15 @@ int main(int argc, char* argv[]) {
     GLuint texBG     = loadTexture("bg.png");
     GLuint texObs    = loadTexture("obstaculo.png");
 
-    if (!texPlayer) std::cout << "Aviso: player.png nao carregada. Personagem vai ficar branco.\n";
-    if (!texBG)     std::cout << "Aviso: bg.png nao carregada. Background vai ficar color sólido.\n";
-    if (!texObs)    std::cout << "Aviso: obstaculo.png nao carregada. Obstaculo vai ficar branco.\n";
+    if (!texPlayer) {
+        std::cout << "Aviso: player.png nao carregada. Personagem vai ficar branco.\n";
+    }
+    if (!texBG) {
+        std::cout << "Aviso: bg.png nao carregada. Background vai ficar color sólido.\n";
+    }
+    if (!texObs) {
+        std::cout << "Aviso: obstaculo.png nao carregada. Obstaculo vai ficar branco.\n";
+    }
 
     Retangulo background(0.0f, 0.0f, 2.0f, 2.0f);
     background.setTexture(texBG);
@@ -301,8 +315,9 @@ int main(int argc, char* argv[]) {
 
         SDL_Event e;
         while (SDL_PollEvent(&e)) {
-            if (e.type == SDL_QUIT)
+            if (e.type == SDL_QUIT) {
                 rodando = false;
+            }
 
             if (e.type == SDL_KEYDOWN && !e.key.repeat) {
                 if (e.key.keysym.sym == SDLK_ESCAPE) {

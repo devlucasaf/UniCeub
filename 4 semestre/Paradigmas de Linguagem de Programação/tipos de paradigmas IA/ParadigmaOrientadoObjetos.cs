@@ -21,7 +21,10 @@ namespace ParadigmaOO
             get => _nome;
             protected set
             {
-                if (string.IsNullOrWhiteSpace(value)) throw new ArgumentException("Nome invalido");
+                if (string.IsNullOrWhiteSpace(value)) 
+                {
+                    throw new ArgumentException("Nome invalido");
+                }
                 _nome = value.Trim();
             }
         }
@@ -68,7 +71,11 @@ namespace ParadigmaOO
 
     public class Funcionario : Pessoa
     {
-        public string Cargo { get; private set; }
+        public string Cargo 
+        { 
+            get; 
+            private set; 
+        }
 
         public Funcionario(string nome, string cargo) : base(nome)
         {
@@ -128,7 +135,11 @@ namespace ParadigmaOO
 
     public class SalaoFestas : Espaco
     {
-        public bool PermiteSomAlto { get; private set; }
+        public bool PermiteSomAlto 
+        { 
+            get; 
+            private set; 
+        }
 
         public SalaoFestas(string nome, int capacidade, bool permiteSomAlto) : base(nome, capacidade)
         {
@@ -137,14 +148,21 @@ namespace ParadigmaOO
 
         public override bool PodeReservar(DateTime inicio, DateTime fim)
         {
-            if (!base.PodeReservar(inicio, fim)) return false;
+            if (!base.PodeReservar(inicio, fim)) 
+            {
+                return false;
+            }
             return inicio.DayOfWeek != DayOfWeek.Monday;
         }
     }
 
     public class Churrasqueira : Espaco
     {
-        public bool TemGrelha { get; private set; }
+        public bool TemGrelha 
+        { 
+            get; 
+            private set; 
+        }
 
         public Churrasqueira(string nome, int capacidade, bool temGrelha) : base(nome, capacidade)
         {
@@ -153,25 +171,55 @@ namespace ParadigmaOO
 
         public override bool PodeReservar(DateTime inicio, DateTime fim)
         {
-            if (!base.PodeReservar(inicio, fim)) return false;
+            if (!base.PodeReservar(inicio, fim)) 
+            {
+                return false;
+            }
             return fim.Subtract(inicio).TotalHours <= 6;
         }
     }
 
     public class Reserva
     {
-        public Guid Id { get; }
-        public Guid MoradorId { get; }
-        public string MoradorNome { get; }
-        public string EspacoNome { get; }
-        public DateTime Inicio { get; }
-        public DateTime Fim { get; }
+        public Guid Id 
+        { 
+            get; 
+        }
+        public Guid MoradorId 
+        { 
+            get; 
+        }
+        public string MoradorNome 
+        { 
+            get; 
+        }
+        public string EspacoNome 
+        { 
+            get; 
+        }
+        public DateTime Inicio 
+        { 
+            get; 
+        }
+        public DateTime Fim 
+        { 
+            get; 
+        }
 
         public Reserva(Morador morador, Espaco espaco, DateTime inicio, DateTime fim)
         {
-            if (morador == null) throw new ArgumentNullException(nameof(morador));
-            if (espaco == null) throw new ArgumentNullException(nameof(espaco));
-            if (!espaco.PodeReservar(inicio, fim)) throw new InvalidOperationException("Periodo invalido para reserva");
+            if (morador == null) 
+            {
+                throw new ArgumentNullException(nameof(morador));
+            }
+            if (espaco == null) 
+            {
+                throw new ArgumentNullException(nameof(espaco));
+            }
+            if (!espaco.PodeReservar(inicio, fim)) 
+            {
+                throw new InvalidOperationException("Periodo invalido para reserva");
+            }
 
             Id = Guid.NewGuid();
             MoradorId = morador.Id;
@@ -208,19 +256,28 @@ namespace ParadigmaOO
 
         public void RegistrarPessoa(Pessoa pessoa)
         {
-            if (pessoa == null) throw new ArgumentNullException(nameof(pessoa));
+            if (pessoa == null) 
+            {
+                throw new ArgumentNullException(nameof(pessoa));
+            }
             _pessoas.Add(pessoa);
         }
 
         public void RegistrarEspaco(Espaco espaco)
         {
-            if (espaco == null) throw new ArgumentNullException(nameof(espaco));
+            if (espaco == null) 
+            {
+                throw new ArgumentNullException(nameof(espaco));
+            }
             _espacos.Add(espaco);
         }
 
         public Reserva CriarReserva(Morador morador, Espaco espaco, DateTime inicio, DateTime fim)
         {
-            if (ExisteConflito(espaco, inicio, fim)) throw new InvalidOperationException("Conflito de horario");
+            if (ExisteConflito(espaco, inicio, fim)) 
+            {
+                throw new InvalidOperationException("Conflito de horario");
+            }
 
             var reserva = new Reserva(morador, espaco, inicio, fim);
             _reservas.Add(reserva);

@@ -13,7 +13,7 @@ GLuint texID[3];
 
 using namespace std;
 
-void carregarTextura(GLuint tex_id, string filePath){
+void carregarTextura(GLuint tex_id, string filePath) {
     unsigned char* imgData; 
     int largura, altura, canais;
     stbi_set_flip_vertically_on_load(true);
@@ -33,8 +33,7 @@ void carregarTextura(GLuint tex_id, string filePath){
     }    
 }
 
-void quadrado(float SIZE, GLuint texid, float position)
-{
+void quadrado(float SIZE, GLuint texid, float position) {
     glColor3f(1.0, 1.0, 1.0);
     glBindTexture(GL_TEXTURE_2D, texid);
     
@@ -67,8 +66,7 @@ void quadrado(float SIZE, GLuint texid, float position)
     glEnd();
 }
 
-void triangulo(float SIZE, GLuint texid)
-{
+void triangulo(float SIZE, GLuint texid) {
     glBindTexture(GL_TEXTURE_2D, texid);
     glBegin(GL_TRIANGLES);
         glTexCoord2f(0.0, 0.0); glVertex3f(-SIZE, -SIZE, 0.0);
@@ -77,7 +75,7 @@ void triangulo(float SIZE, GLuint texid)
     glEnd();
 }
 
-void desenho(){
+void desenho() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     quadrado(lado, texID[0], 0);
     quadrado(lado, texID[1],-100);
@@ -85,17 +83,17 @@ void desenho(){
     glutSwapBuffers();
 }
 
-void ajuste(int w, int h){
+void ajuste(int w, int h) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(45,w/h, 0.4, 500);
 }
 
-void anima(int value){
+void anima(int value) {
     glutTimerFunc(30,anima,1);
 }
 
-void initialize(){
+void initialize() {
     glClearColor(0,0,0,0);
     glGenTextures(3,texID);
     glEnable(GL_TEXTURE_2D);
@@ -106,7 +104,7 @@ void initialize(){
     glEnable(GL_DEPTH_TEST);
 }
 
-void initLight(){
+void initLight() {
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     
@@ -127,18 +125,25 @@ void initLight(){
     glLightfv(GL_LIGHT0, GL_POSITION, posicaoLuz0);
 }
 
-void teclado(unsigned char key, int x, int y){
+void teclado(unsigned char key, int x, int y) {
     glutPostRedisplay();
     
-    if (key == 'w')
+    if (key == 'w') {
         movz-=velocidadeCamera;
-    if (key == 's')
+    }
+
+    if (key == 's') {
         movz+=velocidadeCamera;
-    if (key == 'a')
+    }
+
+    if (key == 'a') {
         movx-=velocidadeCamera;
-    if (key == 'd')
+    }
+        
+    if (key == 'd') {
         movx+=velocidadeCamera;
-    
+    }
+
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
         
@@ -148,7 +153,7 @@ void teclado(unsigned char key, int x, int y){
     cout<<"movx: "<<movx<<" movy: "<<movy<<" movz: "<< movz<<endl;    
 }
 
-int main(){
+int main() {
     glutInitDisplayMode(GLUT_DOUBLE| GLUT_RGB);
     glutInitWindowPosition(200,100);
     glutInitWindowSize(800,800);
