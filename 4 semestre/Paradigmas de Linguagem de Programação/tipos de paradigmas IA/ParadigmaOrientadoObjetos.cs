@@ -248,7 +248,7 @@ namespace ParadigmaOO
         }
     }
 
-    public static class Program
+    public static class ParadigmaOrientadoObjetos
     {
         public static void Main()
         {
