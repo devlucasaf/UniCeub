@@ -50,7 +50,9 @@ void quadradoRoxoMovendo() {
     glVertex2f(-0.1f,  0.1f);
     glEnd();
     glPopMatrix();
+
     x += moveX;
+
     if (x > 1.0f || x < -1.0f) {
         moveX = -moveX;
     }
@@ -59,8 +61,10 @@ void quadradoRoxoMovendo() {
 void circuloGirando() {
     glPushMatrix();
     glRotatef(angle, 0.0f, 0.0f, 1.0f);
+
     int numSegments = 100;
     glBegin(GL_TRIANGLE_FAN);
+
     for(int i = 0; i <= numSegments; i++) {
         float t = 2 * M_PI * i / numSegments;
         glColor3f((sin(t) + 1)/2, (cos(t) + 1)/2, 0.5);
@@ -69,6 +73,7 @@ void circuloGirando() {
     glEnd();
     glPopMatrix();
     angle += 1.0f;
+    
     if (angle > 360.0f) { 
         angle -= 360.0f;
     }

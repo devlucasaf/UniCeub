@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Responsivo com Flexbox</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Layout Responsivo</h1>
-            <p class="subtitle">Com Flexbox e Media Queries</p>
-        </header>
-        
-        <main>
-            <div class="main-container">
-                <div class="box">
-                    <h2 class="box-title">Div 1</h2>
-                    <p class="box-content">Esta é a primeira div. Em telas grandes (desktop), as três divs ficam lado a lado.</p>
-                    <p class="box-content">Em tablets, duas divs ficam na linha de cima e a terceira vai para a linha de baixo.</p>
-                </div>
-                
-                <div class="box">
-                    <h2 class="box-title">Div 2</h2>
-                    <p class="box-content">Esta é a segunda div. O layout utiliza Flexbox para organizar os elementos.</p>
-                    <p class="box-content">Em celulares, cada div ocupa 100% da largura, ficando uma embaixo da outra.</p>
-                </div>
-                
-                <div class="box">
-                    <h2 class="box-title">Div 3</h2>
-                    <p class="box-content">Esta é a terceira div. As cores de fundo mudam conforme o breakpoint:</p>
-                    <ul class="box-content">
-                        <li><span class="color-indicator desktop-color"></span> Desktop: Azul claro</li>
-                        <li><span class="color-indicator tablet-color"></span> Tablet: Rosa claro</li>
-                        <li><span class="color-indicator mobile-color"></span> Celular: Verde claro</li>
-                    </ul>
-                </div>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout Responsivo com Flexbox</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Layout Responsivo</h1>
+                <p class="subtitle">Com Flexbox e Media Queries</p>
+            </header>
             
-            <div class="breakpoint-info">
-                Redimensione a janela do navegador para ver o layout se adaptando.
-            </div>
-        </main>
-        
-        <footer>
-            <p>Layout criado com HTML, CSS Flexbox e Media Queries</p>
-            <p>Breakpoints: Desktop (>1023px) | Tablet (≤1023px) | Celular (≤599px)</p>
-        </footer>
-    </div>
+            <main>
+                <div class="main-container">
+                    <div class="box">
+                        <h2 class="box-title">Div 1</h2>
+                        <p class="box-content">Esta é a primeira div. Em telas grandes (desktop), as três divs ficam lado a lado.</p>
+                        <p class="box-content">Em tablets, duas divs ficam na linha de cima e a terceira vai para a linha de baixo.</p>
+                    </div>
+                    
+                    <div class="box">
+                        <h2 class="box-title">Div 2</h2>
+                        <p class="box-content">Esta é a segunda div. O layout utiliza Flexbox para organizar os elementos.</p>
+                        <p class="box-content">Em celulares, cada div ocupa 100% da largura, ficando uma embaixo da outra.</p>
+                    </div>
+                    
+                    <div class="box">
+                        <h2 class="box-title">Div 3</h2>
+                        <p class="box-content">Esta é a terceira div. As cores de fundo mudam conforme o breakpoint:</p>
+                        <ul class="box-content">
+                            <li><span class="color-indicator desktop-color"></span> Desktop: Azul claro</li>
+                            <li><span class="color-indicator tablet-color"></span> Tablet: Rosa claro</li>
+                            <li><span class="color-indicator mobile-color"></span> Celular: Verde claro</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="breakpoint-info">
+                    Redimensione a janela do navegador para ver o layout se adaptando.
+                </div>
+            </main>
+            
+            <footer>
+                <p>Layout criado com HTML, CSS Flexbox e Media Queries</p>
+                <p>Breakpoints: Desktop (>1023px) | Tablet (≤1023px) | Celular (≤599px)</p>
+            </footer>
+        </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

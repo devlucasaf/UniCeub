@@ -49,6 +49,7 @@ int main() {
 
         for (int i = 0; i < N; ++i) {
             double soma = 0;
+            
             for (int j = 0; j < N; ++j) {
                 soma += A[i][j] * vet[j];
             }

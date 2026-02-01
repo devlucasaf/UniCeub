@@ -1,8 +1,11 @@
-*, *::before, *::after { 
+*, 
+*::before, 
+*::after { 
     box-sizing: border-box; 
 }
 
-html, body {
+html, 
+body {
     margin: 0; 
     padding: 0; 
 }
@@ -57,11 +60,13 @@ header {
     margin: 0 auto;
     padding: 28px 16px 24px;
 }
+
 .banner h1 {
     margin: 0 0 6px;
     font-size: 1.75rem;
     line-height: 1.3;
 }
+
 .banner p {
     margin: 0;
     opacity: 0.9;
@@ -71,6 +76,7 @@ nav {
     background: rgba(255,255,255,0.12);
     backdrop-filter: saturate(1.2) blur(2px);
 }
+
 .nav-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -87,6 +93,7 @@ nav {
     padding: 0;
     margin: 0;
 }
+
 .menu a {
     display: block;
     padding: 12px 14px;
@@ -95,6 +102,7 @@ nav {
     border-radius: 10px;
     transition: background 0.2s ease, transform 0.05s ease;
 }
+
 .menu a:hover { 
     background: rgba(255,255,255,0.18); 
 }
@@ -210,23 +218,29 @@ footer {
     .topbar {
         padding: 14px 12px 6px;
     }
+
     .brand-title {
         font-size: 1.1rem;
     }
+
     .banner {
         padding: 20px 12px 18px;
     }
+
     .banner h1 {
         font-size: 1.2rem;
     }
+
     .banner p {
         font-size: 0.9rem;
     }
+
     .footer-inner {
         flex-direction: column;
         text-align: center;
         gap: 12px;
     }
+    
     main {
         margin: 16px auto;
         padding: 16px;

@@ -71,6 +71,7 @@ static void makeOrthoLikeWebGL(float aspect, float out[16]) {
     for (int i = 0; i < 16; i++) {
         out[i] = 0.0f;
     }
+
     out[0]  = 1.0f / aspect;
     out[5]  = 1.0f;
     out[10] = -2.0f / (zFar - zNear);
@@ -82,6 +83,7 @@ static void makeIdentity(float out[16]) {
     for (int i = 0; i < 16; i++) {
         out[i] = 0.0f;
     }
+
     out[0] = out[5] = out[10] = out[15] = 1.0f;
 }
 
@@ -165,6 +167,7 @@ int main() {
         2 * sizeof(float),  
         (void*)0            
     );
+
     glEnableVertexAttribArray(0);
 
     glBindVertexArray(0);
@@ -178,11 +181,14 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         int w, h;
+
         glfwGetFramebufferSize(window, &w, &h);
+
         float aspect = (h == 0) ? 1.0f : (float)w / (float)h;
 
         float projection[16];
         float modelView[16];
+        
         makeOrthoLikeWebGL(aspect, projection);
         makeIdentity(modelView);
 

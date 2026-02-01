@@ -1,8 +1,12 @@
 /* Reset básico */
-*, *::before, *::after { 
+*, 
+*::before, 
+*::after { 
   box-sizing: border-box; 
 }
-html, body { 
+
+html, 
+body { 
   margin: 0; 
   padding: 0; 
 }
@@ -192,6 +196,7 @@ footer {
   .banner h1 { 
     font-size: 1.4rem; 
   }
+
   .banner p { 
     font-size: 0.95rem; 
   }
@@ -213,6 +218,7 @@ footer {
     flex-direction: column;
     gap: 4px;
   }
+  
   #nav-toggle:checked ~ .menu { 
     display: flex; 
   }

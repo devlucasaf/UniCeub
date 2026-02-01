@@ -52,5 +52,4 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log(`Novo item adicionado. Total: ${totalForms.value}`);
     }
-    
 });

@@ -49,7 +49,11 @@ namespace ParadigmaOO
 
         public IReadOnlyList<Reserva> Reservas => _reservas;
 
-        public string Apartamento { get; private set; }
+        public string Apartamento 
+        { 
+            get; 
+            private set; 
+        }
 
         public Morador(string nome, string apartamento) : base(nome)
         {
@@ -185,22 +189,27 @@ namespace ParadigmaOO
         { 
             get; 
         }
+
         public Guid MoradorId 
         { 
             get; 
         }
+
         public string MoradorNome 
         { 
             get; 
         }
+
         public string EspacoNome 
         { 
             get; 
         }
+
         public DateTime Inicio 
         { 
             get; 
         }
+
         public DateTime Fim 
         { 
             get; 
@@ -212,10 +221,12 @@ namespace ParadigmaOO
             {
                 throw new ArgumentNullException(nameof(morador));
             }
+
             if (espaco == null) 
             {
                 throw new ArgumentNullException(nameof(espaco));
             }
+
             if (!espaco.PodeReservar(inicio, fim)) 
             {
                 throw new InvalidOperationException("Periodo invalido para reserva");
@@ -346,6 +357,7 @@ namespace ParadigmaOO
 
             Console.WriteLine();
             Console.WriteLine("Reservas do Salao Principal:");
+
             foreach (var r in condominio.ListarReservasPorEspaco("Salao Principal"))
             {
                 Console.WriteLine(r);
@@ -353,6 +365,7 @@ namespace ParadigmaOO
 
             Console.WriteLine();
             Console.WriteLine("Reservas da Churrasqueira 1:");
+
             foreach (var r in condominio.ListarReservasPorEspaco("Churrasqueira 1"))
             {
                 Console.WriteLine(r);
@@ -360,6 +373,7 @@ namespace ParadigmaOO
 
             Console.WriteLine();
             Console.WriteLine("Resumo por pessoa:");
+
             foreach (var p in condominio.Pessoas)
             {
                 Console.WriteLine(p.ToString());

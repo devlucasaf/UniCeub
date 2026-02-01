@@ -16,10 +16,12 @@ using namespace std;
 void carregarTextura(GLuint tex_id, string filePath) {
     unsigned char* imgData; 
     int largura, altura, canais;
+
     stbi_set_flip_vertically_on_load(true);
-    
+
     imgData = stbi_load(filePath.c_str(), &largura, &altura, &canais, 4);
-    if(imgData){
+
+    if(imgData) {
         glBindTexture(GL_TEXTURE_2D, tex_id);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, largura, altura, 0, GL_RGBA, GL_UNSIGNED_BYTE, imgData);
         glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -28,7 +30,7 @@ void carregarTextura(GLuint tex_id, string filePath) {
         glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T, GL_REPEAT);
         stbi_image_free(imgData);    
     }
-    else{
+    else {
         cout<<"ERRO! No foi possivel carregar a textura"<< filePath.c_str() <<endl ;
     }    
 }

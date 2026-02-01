@@ -31,6 +31,7 @@ void update(int value) {
     if (xPos + size > 1.0f || xPos < -1.0f) {
         xSpeed = -xSpeed;
     }
+    
     if (yPos + size > 1.0f || yPos < -1.0f) {
         ySpeed = -ySpeed;
     }

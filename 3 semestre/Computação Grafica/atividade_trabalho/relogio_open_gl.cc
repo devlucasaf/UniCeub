@@ -14,6 +14,7 @@ float anguloSegundo = 0.0f;
 void desenharRelogio() {
     glColor3f(0.0f, 1.0f, 0.0f); 
     glBegin(GL_LINE_STRIP);
+    
     for (int i = 0; i <= 360; i++) {
         float ang = i * M_PI / 180.0f;
         glVertex2f(cos(ang), sin(ang));

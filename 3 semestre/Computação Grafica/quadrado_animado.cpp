@@ -31,7 +31,9 @@ void Desenha() {
 
 void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     GLsizei largura, altura;
-    if (h == 0) h = 1;
+    if (h == 0) {
+        h = 1;
+    }
 
     largura = w;
     altura = h;

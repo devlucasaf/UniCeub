@@ -43,11 +43,11 @@ void mostrarInformacoes(Ponto a, Ponto b, Ponto c) {
     if (fabs(ab - bc) < 1e-6 && fabs(bc - ca) < 1e-6) {
         cout << "Tipo: Equilátero\n";
     }
-        
+
     else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6) {
         cout << "Tipo: Isósceles\n";
     }
-        
+
     else {
         cout << "Tipo: Escaleno\n";
     }

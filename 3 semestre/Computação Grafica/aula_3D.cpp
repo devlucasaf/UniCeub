@@ -114,15 +114,19 @@ void initLight() {
 	float luzAmbiente[4] = {
 		0.2,0.2,0.2,1.0
 	};
+
 	float luzDifusa[4] = {
 		0.7,0.7,0.7,1.0
 	};
+
 	float luzEspecular[4] = {
 		1.0,1.0,1.0,1.0
 	};
+
 	float posicaoLuz0[4] = {
 		300,50,0,1.0
 	};
+
 	float posicaoLuz2[4] = {
 		0,-100,0,1.0
 	};
@@ -130,6 +134,7 @@ void initLight() {
 	float especularidade[4] = {
 		1.0,1.0,1.0,1.0
 	}; 
+	
 	int especMaterial = 128;
 	
 	glMaterialfv(GL_FRONT, GL_SPECULAR,especularidade);

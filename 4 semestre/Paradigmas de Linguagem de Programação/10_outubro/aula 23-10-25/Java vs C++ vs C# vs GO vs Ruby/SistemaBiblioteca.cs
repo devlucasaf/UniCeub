@@ -10,9 +10,23 @@ using System.Collections.Generic;
 
 class Livro
 {
-    public string Titulo { get; private set; }
-    public string Autor { get; private set; }
-    public bool Emprestado { get; private set; }
+    public string Titulo 
+    { 
+        get; 
+        private set; 
+    }
+
+    public string Autor 
+    { 
+        get; 
+        private set; 
+    }
+
+    public bool Emprestado 
+    { 
+        get; 
+        private set; 
+    }
 
     public Livro(string titulo, string autor)
     {
@@ -168,3 +182,37 @@ class SistemaBiblioteca
                 case 4:
                     biblioteca.ListarLivros();
                     Console.Write("Digite o número do livro para emprestar: ");
+                    if (int.TryParse(Console.ReadLine(), out int indiceEmprestimo))
+                    {
+                        biblioteca.EmprestarLivro(indiceEmprestimo - 1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número inválido.");
+                    }
+                    break;
+
+                case 5:
+                    biblioteca.ListarLivros();
+                    Console.Write("Digite o número do livro para devolver: ");
+                    if (int.TryParse(Console.ReadLine(), out int indiceDevolucao))
+                    {
+                        biblioteca.DevolverLivro(indiceDevolucao - 1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número inválido.");
+                    }
+                    break;
+
+                case 0:
+                    Console.WriteLine("Saindo...");
+                    break;
+
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+        } while (opcao != 0);
+    }
+}

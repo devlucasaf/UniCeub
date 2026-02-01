@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado do IMC</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-chart-line"></i> Resultado do IMC</h1>
-            <p class="subtitle">Seu Índice de Massa Corporal</p>
-        </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado do IMC</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1><i class="fas fa-chart-line"></i> Resultado do IMC</h1>
+                <p class="subtitle">Seu Índice de Massa Corporal</p>
+            </header>
 
-        <main>
-            <div class="result-card">
-                <div class="result-header">
-                    <h2>Seu Resultado</h2>
-                    <a href="index.html" class="back-btn">
-                        <i class="fas fa-arrow-left"></i> Novo Cálculo
-                    </a>
-                </div>
-
-                <div id="result-content">
-                    <div class="loading">
-                        <i class="fas fa-spinner fa-spin"></i> Calculando IMC...
+            <main>
+                <div class="result-card">
+                    <div class="result-header">
+                        <h2>Seu Resultado</h2>
+                        <a href="index.html" class="back-btn">
+                            <i class="fas fa-arrow-left"></i> Novo Cálculo
+                        </a>
                     </div>
-                </div>
 
-                <div class="result-explanation">
-                    <h3><i class="fas fa-lightbulb"></i> Interpretação do Resultado</h3>
-                    <p id="interpretation-text">Aguarde o cálculo do seu IMC para ver a interpretação.</p>
-                    
-                    <div class="result-details">
-                        <h4>Detalhes do Cálculo</h4>
-                        <div class="details-grid">
-                            <div class="detail-item">
-                                <span class="detail-label">Altura informada:</span>
-                                <span id="detail-altura" class="detail-value">-</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Massa informada:</span>
-                                <span id="detail-massa" class="detail-value">-</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Fórmula aplicada:</span>
-                                <span class="detail-value">massa / altura²</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Cálculo:</span>
-                                <span id="detail-calculo" class="detail-value">-</span>
+                    <div id="result-content">
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i> Calculando IMC...
+                        </div>
+                    </div>
+
+                    <div class="result-explanation">
+                        <h3><i class="fas fa-lightbulb"></i> Interpretação do Resultado</h3>
+                        <p id="interpretation-text">Aguarde o cálculo do seu IMC para ver a interpretação.</p>
+                        
+                        <div class="result-details">
+                            <h4>Detalhes do Cálculo</h4>
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Altura informada:</span>
+                                    <span id="detail-altura" class="detail-value">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Massa informada:</span>
+                                    <span id="detail-massa" class="detail-value">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Fórmula aplicada:</span>
+                                    <span class="detail-value">massa / altura²</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Cálculo:</span>
+                                    <span id="detail-calculo" class="detail-value">-</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="health-tips">
+                        <h3><i class="fas fa-heartbeat"></i> Recomendações</h3>
+                        <p id="health-tip">Assim que seu IMC for calculado, você verá recomendações personalizadas aqui.</p>
+                    </div>
                 </div>
+            </main>
 
-                <div class="health-tips">
-                    <h3><i class="fas fa-heartbeat"></i> Recomendações</h3>
-                    <p id="health-tip">Assim que seu IMC for calculado, você verá recomendações personalizadas aqui.</p>
-                </div>
-            </div>
-        </main>
+            <footer>
+                <p>Calculadora de IMC &copy; 2023 - Resultados para fins informativos. Consulte um profissional de saúde.</p>
+            </footer>
+        </div>
 
-        <footer>
-            <p>Calculadora de IMC &copy; 2023 - Resultados para fins informativos. Consulte um profissional de saúde.</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

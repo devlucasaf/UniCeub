@@ -40,14 +40,17 @@ header .subtitle {
     font-weight: 300;
 }
 
-.calculator-card, .result-card {
+.calculator-card, 
+.result-card {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 30px;
 }
 
-.form-container, .reference-card, .result-card > div {
+.form-container, 
+.reference-card, 
+.result-card > div {
     flex: 1;
     min-width: 300px;
     background: white;
@@ -125,7 +128,8 @@ header .subtitle {
     margin-top: 5px;
 }
 
-.calculate-btn, .back-btn {
+.calculate-btn, 
+.back-btn {
     background: linear-gradient(to right, #3498db, #2c80b9);
     color: white;
     border: none;
@@ -230,7 +234,6 @@ header .subtitle {
     background-color: #b71c1c; 
     color: white; 
 }
-
 
 #result-content {
     text-align: center;

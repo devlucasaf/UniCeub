@@ -5,7 +5,8 @@
   box-sizing: border-box; 
 }
 
-html, body { 
+html, 
+body { 
   margin: 0; padding: 0; 
 }
 
@@ -76,6 +77,7 @@ nav {
   background: rgba(255,255,255,0.12);
   backdrop-filter: saturate(1.2) blur(2px);
 }
+
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -93,6 +95,7 @@ nav {
   padding: 0;
   margin: 0;
 }
+
 .menu a {
   display: block;
   padding: 12px 14px;
@@ -101,6 +104,7 @@ nav {
   border-radius: 10px;
   transition: background 0.2s ease, transform 0.05s ease;
 }
+
 .menu a:hover { 
   background: rgba(255,255,255,0.18); 
 }
@@ -110,7 +114,10 @@ nav {
 }
 
 /* Toggle mobile (checkbox hack, sem JS) */
-#nav-toggle { display: none; }
+#nav-toggle { 
+  display: none; 
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -185,6 +192,7 @@ footer {
   .banner h1 { 
     font-size: 1.4rem; 
   }
+
   .banner p { 
     font-size: 0.95rem; 
   }
@@ -192,6 +200,7 @@ footer {
   .hamburger { 
     display: block; 
   }
+
   .menu {
     position: absolute;
     left: 0;
@@ -205,6 +214,7 @@ footer {
     flex-direction: column;
     gap: 4px;
   }
+  
   #nav-toggle:checked ~ .menu { 
     display: flex; 
   }

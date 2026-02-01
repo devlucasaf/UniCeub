@@ -76,7 +76,9 @@ int valida_data(int d, int m, int a) {
 }
 
 int str_vazia(const char *s) {
-    if (!s) return 1;
+    if (!s) {
+        return 1;
+    }
 
     while (*s) {
         if (*s != ' ' && *s != '\n' && *s != '\t' && *s != '\r') {
@@ -175,13 +177,19 @@ void listar_espacos(Espaco espacos[], int n) {
 
 void listar_reservas(Reserva reservas[], int nRes, Morador moradores[], int nMor, Espaco espacos[], int nEsp) {
     printf("\nReservas:\n");
-    if (nRes == 0) { printf("(vazio)\n"); return; }
+    if (nRes == 0) { 
+        printf("(vazio)\n"); return; 
+    }
+
     for (int i = 0; i < nRes; i++) {
         Reserva r = reservas[i];
+
         int im = buscar_morador(moradores, nMor, r.moradorId);
         int ie = buscar_espaco(espacos, nEsp, r.espacoId);
+
         const char *nm = (im >= 0) ? moradores[im].nome : "Desconhecido";
         const char *ne = (ie >= 0) ? espacos[ie].nome : "Desconhecido";
+
         printf("  [%d] %s -> %s em %02d/%02d/%04d ", r.id, nm, ne, r.dia, r.mes, r.ano);
         print_hm(r.inicioMin);
         printf(" - ");
@@ -284,27 +292,32 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
 
     listar_moradores(moradores, nMor);
     printf("\nID do morador: ");
+
     if (scanf("%d", &moradorId) != 1) {
         return 0;
     }
 
     listar_espacos(espacos, nEsp);
     printf("\nID do espaco: ");
+
     if (scanf("%d", &espacoId) != 1) {
         return 0;
     }
 
     printf("Data (dd mm aaaa): ");
+
     if (scanf("%d %d %d", &d, &m, &a) != 3) {
         return 0;
     }
 
     printf("Horario inicio (hh mm): ");
+
     if (scanf("%d %d", &hi, &mi) != 2) {
         return 0;
     }
 
     printf("Horario fim (hh mm): ");
+
     if (scanf("%d %d", &hf, &mf) != 2) {
         return 0;
     }
@@ -319,24 +332,28 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
 
     int ini = min_from_hm(hi, mi);
     int fim = min_from_hm(hf, mf);
+
     if (!valida_intervalo(ini, fim)) {
         printf("Horario invalido\n");
         return 0;
     }
 
     int im = buscar_morador(moradores, nMor, moradorId);
+
     if (im < 0) {
         printf("Morador nao encontrado\n");
         return 0;
     }
 
     int ie = buscar_espaco(espacos, nEsp, espacoId);
+
     if (ie < 0) {
         printf("Espaco nao encontrado\n");
         return 0;
     }
 
     Espaco e = espacos[ie];
+
     if (!politica_espaco(e, ini, fim)) {
         printf("Regra do espaco bloqueou a reserva\n");
         return 0;
@@ -397,6 +414,7 @@ int menu() {
     printf("6) Listar reservas\n");
     printf("0) Sair\n");
     printf("Opcao: ");
+
     if (scanf("%d", &op) != 1) {
         return -1;
     }
@@ -442,15 +460,19 @@ int main() {
                 }
             }
         } 
+
         else if (op == 4) {
             listar_moradores(moradores, nMor);
         } 
+
         else if (op == 5) {
             listar_espacos(espacos, nEsp);
         } 
+
         else if (op == 6) {
             listar_reservas(reservas, nRes, moradores, nMor, espacos, nEsp);
         } 
+        
         else {
             printf("Opcao invalida\n");
         }

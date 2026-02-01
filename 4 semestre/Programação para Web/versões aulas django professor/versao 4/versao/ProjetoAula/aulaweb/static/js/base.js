@@ -18,7 +18,9 @@ function setupMobileMenu() {
     const navToggle = document.getElementById('nav-toggle');
     const menu = document.querySelector('.menu');
     
-    if (!hamburger || !navToggle || !menu) return;
+    if (!hamburger || !navToggle || !menu) {
+        return;
+    }
     
     hamburger.addEventListener('click', function(e) {
         e.preventDefault();
@@ -38,20 +40,20 @@ function setupMobileMenu() {
     
     document.addEventListener('click', function(e) {
         if (window.innerWidth <= 768 && navToggle.checked) {
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-            navToggle.checked = false;
-            hamburger.classList.remove('active');
-            menu.style.display = 'none';
-        }
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                navToggle.checked = false;
+                hamburger.classList.remove('active');
+                menu.style.display = 'none';
+            }
         }
     });
     
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && navToggle.checked) {
-        navToggle.checked = false;
-        hamburger.classList.remove('active');
-        menu.style.display = 'none';
-        hamburger.focus();
+            navToggle.checked = false;
+            hamburger.classList.remove('active');
+            menu.style.display = 'none';
+            hamburger.focus();
         }
     });
 }
@@ -76,8 +78,8 @@ function highlightActiveLink() {
     menuLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href && currentPath.includes(href.replace(/^\//, ''))) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
         }
     });
 }
@@ -86,7 +88,9 @@ function enhanceHamburgerAccessibility() {
     const hamburger = document.querySelector('.hamburger');
     const navToggle = document.getElementById('nav-toggle');
     
-    if (!hamburger || !navToggle) return;
+    if (!hamburger || !navToggle) {
+        return;
+    }
     
     function updateHamburgerLabel() {
         const isExpanded = navToggle.checked;
@@ -100,8 +104,8 @@ function enhanceHamburgerAccessibility() {
     
     hamburger.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        this.click();
+            e.preventDefault();
+            this.click();
         }
     });
 }
@@ -112,9 +116,15 @@ function handleResize() {
     const hamburger = document.querySelector('.hamburger');
     
     if (window.innerWidth > 768) {
-        if (menu) menu.style.display = 'flex';
-        if (navToggle) navToggle.checked = false;
-        if (hamburger) hamburger.classList.remove('active');
+        if (menu) {
+            menu.style.display = 'flex';
+        }
+        if (navToggle) {
+            navToggle.checked = false;
+        }
+        if (hamburger) {
+            hamburger.classList.remove('active');
+        }
     } else {
         if (menu && navToggle) {
         menu.style.display = navToggle.checked ? 'flex' : 'none';
@@ -126,8 +136,8 @@ function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
         const later = () => {
-        clearTimeout(timeout);
-        func(...args);
+            clearTimeout(timeout);
+            func(...args);
         };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);

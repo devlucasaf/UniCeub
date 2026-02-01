@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeMessages() {
     const messagesContainer = document.querySelector('.messages');
     
-    if (!messagesContainer) return;
+    if (!messagesContainer) {
+        return;
+    }
     
     const alerts = messagesContainer.querySelectorAll('.alert');
     
@@ -31,7 +33,10 @@ function initializeMessages() {
         setupAutoRemove(alert);
         
         alert.addEventListener('click', function(e) {
-            if (e.target.classList.contains('alert-close')) return;
+            if (e.target.classList.contains('alert-close')) {
+                return;
+            }
+
             if (confirm('Deseja fechar esta mensagem?')) {
                 closeMessage(alert);
             }
@@ -106,7 +111,9 @@ function setupAutoRemove(alertElement) {
 }
 
 function addCloseAllButton(container, alerts) {
-    if (alerts.length <= 1) return;
+    if (alerts.length <= 1) {
+        return;
+    }
     
     const closeAllBtn = document.createElement('button');
     closeAllBtn.className = 'close-all-btn';
@@ -149,14 +156,18 @@ function setupKeyboardShortcuts(alerts) {
         if (e.ctrlKey && e.shiftKey && e.key === 'X') {
             e.preventDefault();
             const closeAllBtn = document.querySelector('.close-all-btn');
-            if (closeAllBtn) closeAllBtn.click();
+            if (closeAllBtn) {
+                closeAllBtn.click();
+            }
         }
         
         if (e.key === 'Escape') {
             const focusedMessage = document.querySelector('.alert:focus-within');
             if (focusedMessage) {
                 const closeBtn = focusedMessage.querySelector('.alert-close');
-                if (closeBtn) closeBtn.click();
+                if (closeBtn) {
+                    closeBtn.click();
+                }
             }
         }
     });
@@ -182,13 +193,17 @@ export function addMessage(text, type = 'info') {
     messagesContainer.appendChild(alert);
     initializeMessages();
     
-    alert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    alert.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'nearest' 
+    });
     
     return alert.id;
 }
 
 function createMessagesContainer() {
     const container = document.createElement('div');
+    
     container.className = 'messages';
     container.setAttribute('role', 'alert');
     container.setAttribute('aria-live', 'polite');

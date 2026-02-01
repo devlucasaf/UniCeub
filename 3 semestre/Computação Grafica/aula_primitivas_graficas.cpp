@@ -85,9 +85,11 @@ int main() {
                 if (ev.key.code == sf::Keyboard::Num1) {
                     current = Primitive::Triangle;
                 }
+
                 if (ev.key.code == sf::Keyboard::Num2) {
                     current = Primitive::Line;
                 }
+
                 if (ev.key.code == sf::Keyboard::Num3) {
                     current = Primitive::Rectangle;
                 }
@@ -121,24 +123,31 @@ int main() {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))  {
             position.x -= move;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             position.x += move;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             position.y -= move;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             position.y += move;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
             rotation -= rot;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
             rotation += rot;
         }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
             scale /= scl;
         }
+        
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
             scale *= scl;
         }

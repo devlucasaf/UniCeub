@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeMessages() {
     const messagesContainer = document.querySelector('.messages');
     
-    if (!messagesContainer) return;
+    if (!messagesContainer) {
+        return;
+    }
     
     const alerts = messagesContainer.querySelectorAll('.alert');
     
@@ -31,7 +33,9 @@ function initializeMessages() {
         setupAutoRemove(alert);
         
         alert.addEventListener('click', function(e) {
-            if (e.target.classList.contains('alert-close')) return;
+            if (e.target.classList.contains('alert-close')) {
+                return;
+            }
             if (confirm('Deseja fechar esta mensagem?')) {
                 closeMessage(alert);
             }
@@ -105,7 +109,9 @@ function setupAutoRemove(alertElement) {
 }
 
 function addCloseAllButton(container, alerts) {
-    if (alerts.length <= 1) return;
+    if (alerts.length <= 1) {
+        return;
+    }
     
     const closeAllBtn = document.createElement('button');
     closeAllBtn.className = 'close-all-btn';

@@ -147,6 +147,7 @@ void dda(float *x1, float *y1, float *x2, float *y2) {
 
         if (*x1 > *x2) {
             float b = *x1;
+
             *x1 = *x2;
             *x2 = b;
             y = *y2;
@@ -204,7 +205,7 @@ void circulo(int *raio){
     }
 }
 
-void bresenham(float *x1, float *y1, float *x2, float *y2){
+void bresenham(float *x1, float *y1, float *x2, float *y2) {
     float d_x, d_y, p, incE, incNE, x, y;
 
     d_x = fabs(*x2 - *x1); 
@@ -267,7 +268,7 @@ void bresenham(float *x1, float *y1, float *x2, float *y2){
     }
 }
 
-int animacao(){
+int animacao() {
     int i = 0;
     
     while (i++ < 18){
@@ -278,7 +279,7 @@ int animacao(){
         printf(" X"); 
         printf("\n");
         
-        if (i % 2 == 0){
+        if (i % 2 == 0) {
             irParaXY(i, 1);
             printf(" |"); 
             irParaXY(i, 2);

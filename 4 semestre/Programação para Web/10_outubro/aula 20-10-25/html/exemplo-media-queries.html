@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo Media Queries</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: steelblue;
-            color: white;
-            padding: 20px;
-        }
-        main {
-            padding: 20px;
-        }
-        .caixa {
-            background-color: lightgray;
-            padding: 20px;
-            margin: 10px;
-        }
-        /* Estilo para telas grandes */
-        @media (min-width: 1024px) {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo Media Queries</title>
+        <style>
             body {
-                background-color: #f4f4f4;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            header {
+                background-color: steelblue;
+                color: white;
+                padding: 20px;
+            }
+            main {
+                padding: 20px;
             }
             .caixa {
-                background-color: lightgreen;
-                font-size: 20px;
+                background-color: lightgray;
+                padding: 20px;
+                margin: 10px;
             }
-        }
-        /* Tablets (largura entre 600px e 1023px) */
-        @media (min-width: 600px) and (max-width: 1023px) {
-            body {
-                background-color: #ffe0b2;
+            /* Estilo para telas grandes */
+            @media (min-width: 1024px) {
+                body {
+                    background-color: #f4f4f4;
+                }
+                .caixa {
+                    background-color: lightgreen;
+                    font-size: 20px;
+                }
             }
-            .caixa {
-                background-color: orange;
-                font-size: 18px;
+            /* Tablets (largura entre 600px e 1023px) */
+            @media (min-width: 600px) and (max-width: 1023px) {
+                body {
+                    background-color: #ffe0b2;
+                }
+                .caixa {
+                    background-color: orange;
+                    font-size: 18px;
+                }
             }
-        }
-        /* Estilo para celulares (até 599px) */
-        @media (max-width: 599px) {
-            body {
-                background-color: #e0f7fa;
+            /* Estilo para celulares (até 599px) */
+            @media (max-width: 599px) {
+                body {
+                    background-color: #e0f7fa;
+                }
+                .caixa {
+                    background-color: lightcoral;
+                        font-size: 16px;
+                }
             }
-            .caixa {
-                background-color: lightcoral;
-                    font-size: 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Exemplo de Media Queries</h1>
-    </header>
-    <main>
-        <div class="caixa">Seção 1</div>
-        <div class="caixa">Seção 2</div>
-        <div class="caixa">Seção 3</div>
-    </main>
-</body>
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Exemplo de Media Queries</h1>
+        </header>
+        <main>
+            <div class="caixa">Seção 1</div>
+            <div class="caixa">Seção 2</div>
+            <div class="caixa">Seção 3</div>
+        </main>
+    </body>
 </html>

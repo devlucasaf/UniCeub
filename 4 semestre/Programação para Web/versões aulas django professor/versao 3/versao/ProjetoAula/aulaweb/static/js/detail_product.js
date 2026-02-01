@@ -16,7 +16,9 @@ function initializeProductPage() {
 function setupImageZoom() {
     const produtoImagem = document.querySelector('.produto-imagem');
     
-    if (!produtoImagem) return;
+    if (!produtoImagem) {
+        return;
+    }
     
     const modal = document.createElement('div');
     modal.className = 'modal-imagem';
@@ -58,7 +60,9 @@ function setupImageZoom() {
 function setupBuyButton() {
     const btnComprar = document.querySelector('.btn-comprar');
     
-    if (!btnComprar) return;
+    if (!btnComprar) {
+        return;
+    }
     
     btnComprar.addEventListener('click', async function() {
         const produtoId = this.dataset.produtoId;
@@ -120,7 +124,9 @@ async function addToCart(produtoId) {
 function setupBackButton() {
     const btnVoltar = document.querySelector('.btn-voltar');
     
-    if (!btnVoltar) return;
+    if (!btnVoltar) {
+        return;
+    }
     
     btnVoltar.addEventListener('click', function(e) {
         const cartUpdated = localStorage.getItem('cartUpdated');
@@ -142,7 +148,9 @@ function setupBackButton() {
 function formatProductPrice() {
     const precoElement = document.querySelector('.preco-valor');
     
-    if (!precoElement) return;
+    if (!precoElement) {
+        return;
+    }
     
     let texto = precoElement.textContent.trim();
     
@@ -197,7 +205,9 @@ function addShareButton(shareData) {
 function setupFavoriteSystem() {
     const produtoId = document.querySelector('.btn-comprar')?.dataset.produtoId;
     
-    if (!produtoId) return;
+    if (!produtoId) {
+        return;
+    }
     
     const favoriteBtn = document.createElement('button');
     favoriteBtn.className = 'btn-favorito';
@@ -268,8 +278,7 @@ function addProductMetadata() {
 function initializeRatings() {
     const ratingsContainer = document.querySelector('.produto-avaliacoes');
     
-    if (ratingsContainer) {
-    }
+    if (ratingsContainer) {}
 }
 
 function updateCartCounter() {

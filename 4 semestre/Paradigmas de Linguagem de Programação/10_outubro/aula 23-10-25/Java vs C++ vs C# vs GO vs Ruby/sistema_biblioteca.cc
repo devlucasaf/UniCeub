@@ -21,12 +21,25 @@ private:
 public:
     Livro(string t, string a) : titulo(t), autor(a), emprestado(false) {}
 
-    string getTitulo() const { return titulo; }
-    string getAutor() const { return autor; }
-    bool isEmprestado() const { return emprestado; }
+    string getTitulo() const { 
+        return titulo; 
+    }
 
-    void emprestar() { emprestado = true; }
-    void devolver() { emprestado = false; }
+    string getAutor() const { 
+        return autor; 
+    }
+
+    bool isEmprestado() const { 
+        return emprestado; 
+    }
+
+    void emprestar() { 
+        emprestado = true; 
+    }
+
+    void devolver() { 
+        emprestado = false; 
+    }
 
     void exibir() const {
         cout << titulo << " - " << autor << (emprestado ? " (Emprestado)" : " (Disponível)") << endl;

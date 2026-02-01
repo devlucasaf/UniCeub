@@ -82,28 +82,35 @@ int main() {
     unsigned int vShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vShader, 1, &vertexShaderSource, NULL);
     glCompileShader(vShader);
+
     int success;
     char infoLog[512];
+
     glGetShaderiv(vShader, GL_COMPILE_STATUS, &success);
+
     if (!success) {
         glGetShaderInfoLog(vShader, 512, NULL, infoLog);
         std::cerr << "Erro no Vertex Shader:\n" << infoLog << std::endl;
     }
 
     unsigned int fShader = glCreateShader(GL_FRAGMENT_SHADER);
+
     glShaderSource(fShader, 1, &fragmentShaderSource, NULL);
     glCompileShader(fShader);
     glGetShaderiv(fShader, GL_COMPILE_STATUS, &success);
+
     if (!success) {
         glGetShaderInfoLog(fShader, 512, NULL, infoLog);
         std::cerr << "Erro no Fragment Shader:\n" << infoLog << std::endl;
     }
 
     unsigned int shaderProgram = glCreateProgram();
+
     glAttachShader(shaderProgram, vShader);
     glAttachShader(shaderProgram, fShader);
     glLinkProgram(shaderProgram);
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    
     if (!success) {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
         std::cerr << "Erro ao linkar programa:\n" << infoLog << std::endl;

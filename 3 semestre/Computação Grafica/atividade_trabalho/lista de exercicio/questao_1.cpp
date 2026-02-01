@@ -1,6 +1,6 @@
 #include <GL/glut.h>
 
-void desenho(){
+void desenho() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     glBegin(GL_POLYGON);

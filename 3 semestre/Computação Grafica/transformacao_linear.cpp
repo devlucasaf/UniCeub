@@ -55,6 +55,7 @@ void desenha(OBJECT* obj) {
 
     glBegin(GL_LINE_LOOP);
     glColor3f(0.0, 1.0, 0.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2i(obj->vertices[i].x, obj->vertices[i].y);
     }
@@ -62,6 +63,7 @@ void desenha(OBJECT* obj) {
 
     glBegin(GL_LINE_LOOP);
     glColor3f(1.0, 0.0, 0.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2i((obj->vertices[i].x) * (-1), obj->vertices[i].y);
     }
@@ -70,6 +72,7 @@ void desenha(OBJECT* obj) {
     glTranslatef(100.0, 0, 0);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.0, 0.0, 1.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x) * (0.5), (obj->vertices[i].y) * (0.5));
     }
@@ -78,6 +81,7 @@ void desenha(OBJECT* obj) {
     glTranslatef(100.0, 0.0, 0);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.5, 0.5, 1.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].y), (obj->vertices[i].x));
     }
@@ -86,6 +90,7 @@ void desenha(OBJECT* obj) {
     glTranslatef(-100.0, -250.0, 0);
     glBegin(GL_LINE_LOOP);
     glColor3f(1.0, 0.0, 1.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x) + (obj->vertices[i].y) * 0.58, (obj->vertices[i].y));
     }
@@ -94,6 +99,7 @@ void desenha(OBJECT* obj) {
     glTranslatef(-300.0, 0, 0);
     glBegin(GL_LINE_LOOP);
     glColor3f(1.0, 1.0, 0.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x)*0.87 + (obj->vertices[i].y)*-0.5,
                     (obj->vertices[i].x)*0.5 + (obj->vertices[i].y)*0.87);
@@ -103,6 +109,7 @@ void desenha(OBJECT* obj) {
     glTranslatef(200.0, 0, 0);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.0, 1.0, 1.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x)*0.71*0.75 + (obj->vertices[i].y)*-0.71*0.75,
                     (obj->vertices[i].x)*0.71*0.75 + (obj->vertices[i].y)*0.71*0.75);
@@ -111,6 +118,7 @@ void desenha(OBJECT* obj) {
 
     glBegin(GL_LINE_LOOP);
     glColor3f(1.0, 1.0, 1.0);
+
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x) + (obj->vertices[i].y)*0.47,
                     (obj->vertices[i].y)*-1);
@@ -125,10 +133,14 @@ void display(void) {
 }
 
 void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
-    if (h == 0) h = 1;
+    if (h == 0) {
+        h = 1;
+    }
+
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
+    
     if (w <= h) {
         gluOrtho2D(-500.0f, 500.0f, -500.0f, 500.0f*h / w);
     }

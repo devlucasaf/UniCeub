@@ -11,7 +11,9 @@ function setupProductPage() {
 function setupBackButton() {
     const btnVoltar = document.querySelector('.btn-voltar');
     
-    if (!btnVoltar) return;
+    if (!btnVoltar) {
+        return;
+    }
     
     btnVoltar.addEventListener('click', function(e) {
         if (document.referrer === '') {
@@ -24,7 +26,9 @@ function setupBackButton() {
 function formatPrice() {
     const precoElement = document.querySelector('.produto-preco');
     
-    if (!precoElement) return;
+    if (!precoElement) {
+        return;
+    }
     
     let texto = precoElement.textContent.trim();
     
