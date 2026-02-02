@@ -65,7 +65,7 @@ void circuloGirando() {
     int numSegments = 100;
     glBegin(GL_TRIANGLE_FAN);
 
-    for(int i = 0; i <= numSegments; i++) {
+    for (int i = 0; i <= numSegments; i++) {
         float t = 2 * M_PI * i / numSegments;
         glColor3f((sin(t) + 1)/2, (cos(t) + 1)/2, 0.5);
         glVertex2f(cos(t)*0.3f, sin(t)*0.3f);

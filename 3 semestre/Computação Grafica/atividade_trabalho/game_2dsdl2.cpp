@@ -259,6 +259,7 @@ int main(int argc, char* argv[]) {
         WINDOW_WIDTH, WINDOW_HEIGHT,
         SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN
     );
+    
     if (!window) {
         std::cerr << "Erro SDL_CreateWindow: " << SDL_GetError() << "\n";
         return 1;
@@ -287,9 +288,11 @@ int main(int argc, char* argv[]) {
     if (!texPlayer) {
         std::cout << "Aviso: player.png nao carregada. Personagem vai ficar branco.\n";
     }
+
     if (!texBG) {
         std::cout << "Aviso: bg.png nao carregada. Background vai ficar color sólido.\n";
     }
+
     if (!texObs) {
         std::cout << "Aviso: obstaculo.png nao carregada. Obstaculo vai ficar branco.\n";
     }

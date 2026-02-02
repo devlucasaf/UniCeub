@@ -16,10 +16,10 @@ int main() {
     setlocale(LC_ALL, "Portuguese");                                  
 
     int escolha = 1; 
+    int raio;
     float xi, xf, yi, yf; 
-    int raio; 
 
-    while(escolha != 0) {
+    while (escolha != 0) {
         printf("\n\nEscolha o número referente ao desafio desejado:\n");
         printf("(0) - Sair\n");
         printf("(1) - Imprime uma reta (Algoritmo DDA)\n");

@@ -59,6 +59,7 @@ void desenha(OBJECT* obj) {
     for (int i = 0; i < 6; i++) {
         glVertex2i(obj->vertices[i].x, obj->vertices[i].y);
     }
+
     glEnd();
 
     glBegin(GL_LINE_LOOP);
@@ -67,6 +68,7 @@ void desenha(OBJECT* obj) {
     for (int i = 0; i < 6; i++) {
         glVertex2i((obj->vertices[i].x) * (-1), obj->vertices[i].y);
     }
+
     glEnd();
 
     glTranslatef(100.0, 0, 0);
@@ -76,6 +78,7 @@ void desenha(OBJECT* obj) {
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x) * (0.5), (obj->vertices[i].y) * (0.5));
     }
+
     glEnd();
 
     glTranslatef(100.0, 0.0, 0);
@@ -85,6 +88,7 @@ void desenha(OBJECT* obj) {
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].y), (obj->vertices[i].x));
     }
+
     glEnd();
 
     glTranslatef(-100.0, -250.0, 0);
@@ -94,6 +98,7 @@ void desenha(OBJECT* obj) {
     for (int i = 0; i < 6; i++) {
         glVertex2f((obj->vertices[i].x) + (obj->vertices[i].y) * 0.58, (obj->vertices[i].y));
     }
+
     glEnd();
 
     glTranslatef(-300.0, 0, 0);
@@ -104,6 +109,7 @@ void desenha(OBJECT* obj) {
         glVertex2f((obj->vertices[i].x)*0.87 + (obj->vertices[i].y)*-0.5,
                     (obj->vertices[i].x)*0.5 + (obj->vertices[i].y)*0.87);
     }
+
     glEnd();
 
     glTranslatef(200.0, 0, 0);
@@ -114,6 +120,7 @@ void desenha(OBJECT* obj) {
         glVertex2f((obj->vertices[i].x)*0.71*0.75 + (obj->vertices[i].y)*-0.71*0.75,
                     (obj->vertices[i].x)*0.71*0.75 + (obj->vertices[i].y)*0.71*0.75);
     }
+
     glEnd();
 
     glBegin(GL_LINE_LOOP);
@@ -123,6 +130,7 @@ void desenha(OBJECT* obj) {
         glVertex2f((obj->vertices[i].x) + (obj->vertices[i].y)*0.47,
                     (obj->vertices[i].y)*-1);
     }
+    
     glEnd();
 
     glFlush();

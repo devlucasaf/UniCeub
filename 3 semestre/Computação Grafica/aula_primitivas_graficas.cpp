@@ -194,7 +194,7 @@ int main() {
 
         static sf::Font font;
         static bool fontLoaded = false;
-        if (!fontLoaded){
+        if (!fontLoaded) {
             fontLoaded = font.loadFromFile("C:/Windows/Fonts/arial.ttf");
         }
         if (fontLoaded) {

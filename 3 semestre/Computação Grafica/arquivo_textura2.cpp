@@ -82,7 +82,7 @@ void carregarTextura(GLuint tex_id, string filepath) {
 	
 	imgData = stbi_load(filepath.c_str(), &largura, &altura,&canais, 4);
 	
-	if(imgData) {
+	if (imgData) {
 		glBindTexture(GL_TEXTURE_2D, tex_id);
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, largura, 
 		altura, 0, GL_RGBA, GL_UNSIGNED_BYTE, imgData);
