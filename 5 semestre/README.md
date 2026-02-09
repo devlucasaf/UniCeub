@@ -4,7 +4,7 @@
 />
 
 # 5º Semestre
-◽️**SEMESTRE AINDA NÃO INICIADO**<br>
+
 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
 ◽️Códigos em (**ESPERANDO COMEÇAR PARA INFORMAR**)<br>
 ◽️Disciplinas:
@@ -29,6 +29,36 @@
 ```
 
 # 🚀Linguagens 
+
+<div align="left">
+    <img
+        align="center"
+        alt="Java"
+        tittle="Java"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=java"
+    />
+    <img
+        align="center"
+        alt="HTML5"
+        tittle="HTML5"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=html"
+    />
+    <img
+        align="center"
+        alt="Css3"
+        tittle="Css3"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=css"
+    />
+</div>
 
 ---
 
@@ -61,6 +91,24 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
+    />
+    <img
+        align="center"
+        alt="GitLab"
+        tittle="GitLab"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=gitlab"
+    />
+    <img
+        align="center"
+        alt="VsCode"
+        tittle="VsCode"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=vscode"
     />
 </div>
 
