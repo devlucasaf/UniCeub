@@ -129,6 +129,15 @@
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=javascript" 
     />
+    <img
+        align="center"
+        alt="tyepscript"
+        tittle="typescript"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=ts"
+    />
     <img 
         align="center" 
         alt="HTML" 
@@ -283,6 +292,14 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=postgresql"
+    />
+    <img
+        align="center"
+        alt="android studio"
+        tittle="Android Studio"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png"
     />
     <img
         align="center"

@@ -42,6 +42,24 @@
     />
     <img
         align="center"
+        alt="javascript"
+        tittle="javascript"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=js"
+    />
+    <img
+        align="center"
+        alt="tyepscript"
+        tittle="typescript"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=ts"
+    />
+    <img
+        align="center"
         alt="HTML5"
         tittle="HTML5"
         height="40"
@@ -109,6 +127,22 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img
+        align="center"
+        alt="android studio"
+        tittle="Android Studio"
+        height="40"
+        style="padding-right: 10px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png"
+    />
+    <img 
+        align="center" 
+        alt="Intellij" 
+        title="Intellij"
+        height="40" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
 </div>
 
