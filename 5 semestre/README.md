@@ -6,7 +6,7 @@
 # 5º Semestre
 
 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
-◽️Códigos em Java, HTML e CSS<br>
+◽️Códigos em Java, Python, JavaScript, TypeScript, HTML e CSS<br>
 ◽️Disciplinas:
 - Gerência de Projetos de TI<br>
 - Inteligência Artificial<br>
@@ -39,6 +39,15 @@
         style="padding-right: 10px"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=java"
+    />
+    <img
+        align="center"
+        alt="python"
+        tittle="Python"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=python"
     />
     <img
         align="center"
@@ -143,6 +152,14 @@
         height="40" 
         style="padding-right: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img 
+        align="center" 
+        alt="PyCharm" 
+        title="PyCharm"
+        height="40" 
+        style="padding-right: 10px;" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
 </div>
 
