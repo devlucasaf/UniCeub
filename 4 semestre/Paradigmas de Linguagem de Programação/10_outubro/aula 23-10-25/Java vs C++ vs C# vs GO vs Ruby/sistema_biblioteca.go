@@ -29,9 +29,11 @@ func (l *Livro) Devolver() {
 
 func (l Livro) String() string {
     status := "Disponível"
+
     if l.Emprestado {
         status = "Emprestado"
     }
+
     return fmt.Sprintf("%s - %s (%s)", l.Titulo, l.Autor, status)
 }
 
@@ -48,6 +50,7 @@ func (b *Biblioteca) ListarLivros() {
         fmt.Println("Nenhum livro cadastrado.")
         return
     }
+
     for i, livro := range b.Livros {
         fmt.Printf("%d. %s\n", i+1, livro.String())
     }
@@ -69,10 +72,12 @@ func (b *Biblioteca) EmprestarLivro(indice int) {
             b.Livros[indice].Emprestar()
             fmt.Println("Livro emprestado com sucesso.")
         } 
+
 		else {
             fmt.Println("Livro já está emprestado.")
         }
     } 
+
 	else {
         fmt.Println("Índice inválido.")
     }
@@ -84,10 +89,12 @@ func (b *Biblioteca) DevolverLivro(indice int) {
             b.Livros[indice].Devolver()
             fmt.Println("Livro devolvido com sucesso.")
         } 
+
 		else {
             fmt.Println("Livro não está emprestado.")
         }
     } 
+    
 	else {
         fmt.Println("Índice inválido.")
     }
@@ -109,37 +116,49 @@ func main() {
         fmt.Scanln(&opcao)
 
         switch opcao {
-        case 1:
-            var titulo, autor string
-            fmt.Print("Título: ")
-            fmt.Scanln(&titulo)
-            fmt.Print("Autor: ")
-            fmt.Scanln(&autor)
-            biblioteca.AdicionarLivro(titulo, autor)
-        case 2:
-            biblioteca.ListarLivros()
-        case 3:
-            var busca string
-            fmt.Print("Digite o título: ")
-            fmt.Scanln(&busca)
-            biblioteca.BuscarPorTitulo(busca)
-        case 4:
-            biblioteca.ListarLivros()
-            var indice int
-            fmt.Print("Digite o número do livro para emprestar: ")
-            fmt.Scanln(&indice)
-            biblioteca.EmprestarLivro(indice - 1)
-        case 5:
-            biblioteca.ListarLivros()
-            var indice int
-            fmt.Print("Digite o número do livro para devolver: ")
-            fmt.Scanln(&indice)
-            biblioteca.DevolverLivro(indice - 1)
-        case 0:
-            fmt.Println("Encerrando...")
-            return
-        default:
-            fmt.Println("Opção inválida.")
+            case 1: {
+                var titulo, autor string
+                fmt.Print("Título: ")
+                fmt.Scanln(&titulo)
+                fmt.Print("Autor: ")
+                fmt.Scanln(&autor)
+                biblioteca.AdicionarLivro(titulo, autor)
+            }
+
+            case 2: {
+                biblioteca.ListarLivros()
+            }
+            case 3: {
+                var busca string
+                fmt.Print("Digite o título: ")
+                fmt.Scanln(&busca)
+                biblioteca.BuscarPorTitulo(busca)
+            }
+
+            case 4: {
+                biblioteca.ListarLivros()
+                var indice int
+                fmt.Print("Digite o número do livro para emprestar: ")
+                fmt.Scanln(&indice)
+                biblioteca.EmprestarLivro(indice - 1)
+            }
+
+            case 5: {
+                biblioteca.ListarLivros()
+                var indice int
+                fmt.Print("Digite o número do livro para devolver: ")
+                fmt.Scanln(&indice)
+                biblioteca.DevolverLivro(indice - 1)
+            }
+            
+            case 0: {
+                fmt.Println("Encerrando...")
+                return
+            }
+
+            default: {
+                fmt.Println("Opção inválida.")
+            }
         }
     }
 }

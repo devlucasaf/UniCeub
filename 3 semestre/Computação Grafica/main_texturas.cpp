@@ -20,7 +20,10 @@ void desenho() {
 }
 
 void ajuste(int w, int h) {
-    if(h == 0) h = 1;
+    if(h == 0) {
+        h = 1;
+    }
+    
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(45.0, (float)w/(float)h, 0.4, 500.0);

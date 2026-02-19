@@ -6,7 +6,7 @@ Slide 27: Linguagem Procedural
 
 #include <studio.h>
 
-struct retangulo{
+struct retangulo {
     float base;
     float altura;
     float area;
@@ -14,11 +14,11 @@ struct retangulo{
 
 typedef struct retangulo Retangulo;
 
-float calculaAreaRetangulo(Retangulo r){
+float calculaAreaRetangulo(Retangulo r) {
     return r.base * r.altura;
 }
 
-int main(){
+int main() {
     Retangulo r;
     r.base = 10;
     r.altura = 10;

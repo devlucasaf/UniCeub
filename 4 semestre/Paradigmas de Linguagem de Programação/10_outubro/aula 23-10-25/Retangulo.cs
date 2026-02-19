@@ -9,13 +9,34 @@ using System;
 
 class Retangulo
 {
-    public float Altura { get; set; }
-    public float Base { get; set; }
-    public float Area { get; private set; }
+    // Campos privados (backing fields) para armazenar os dados com segurança
+    private float _altura;
+    private float _base;
 
-    public void CalculaArea()
+    // Propriedade com validação no SET
+    public float Altura
     {
-        Area = Altura * Base;
+        get => _altura;
+        set => _altura = value > 0 ? value : throw new ArgumentException("A altura deve ser maior que zero.");
+    }
+
+    public float Base
+    {
+        get => _base;
+        set => _base = value > 0 ? value : throw new ArgumentException("A base deve ser maior que zero.");
+    }
+
+    public float Area => Altura * Base;
+
+    public Retangulo(float altura, float @base)
+    {
+        Altura = altura;
+        Base = @base;
+    }
+
+    public override string ToString()
+    {
+        return $"Retângulo [Base: {Base} | Altura: {Altura} | Área: {Area}]";
     }
 }
 
@@ -23,13 +44,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        Retangulo ret1 = new Retangulo();
+        try 
+        {
+            Retangulo ret1 = new Retangulo(10, 10);
+            Console.WriteLine(ret1.ToString());
 
-        ret1.Altura = 10;
-        ret1.Base = 10;
-
-        ret1.CalculaArea();
-
-        Console.WriteLine("Área do retângulo: " + ret1.Area);
+            ret1.Base = 20;
+            Console.WriteLine($"Nova área após alteração: {ret1.Area}");
+        }
+        
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro: {ex.Message}");
+        }
     }
 }

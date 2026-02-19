@@ -7,10 +7,12 @@ class Titular(object):
         self.cpf = cpf
         self.nome = nome
         self.sobrenome = sobrenome
+    
     #------------------------------
 
     def get_cpf(self):
         return self.cpf
+    
     def set_cpf(self, n_self):
         self.cpf = n_self
 
@@ -18,6 +20,7 @@ class Titular(object):
 
     def get_nome(self):
         return self.nome
+    
     def set_nome(self,n_nome):
         self.nome = n_nome
 
@@ -25,6 +28,7 @@ class Titular(object):
 
     def get_sobrenome(self):
         return self.sobrenome
+    
     def set_sobrenome(self, n_sn):
         self.sobrenome = n_sn
 

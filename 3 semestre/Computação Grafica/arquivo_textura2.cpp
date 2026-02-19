@@ -5,8 +5,9 @@
 
 using namespace std;
 
-float lado = 20;
 GLuint texID[3];
+
+float lado = 20;
 
 double movx = 0;
 double movy = 0;
@@ -95,6 +96,7 @@ void carregarTextura(GLuint tex_id, string filepath) {
 		
 		stbi_image_free(imgData);
 	}
+	
     else {
 		cout<<"ERRO!No foi possvel carregar a imagem "<<filepath.c_str()<<endl;
 	}

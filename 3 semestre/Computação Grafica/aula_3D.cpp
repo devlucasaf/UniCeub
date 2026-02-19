@@ -94,9 +94,11 @@ void initLight() {
     glEnable(GL_LIGHT0);
 
     glEnable(GL_COLOR_MATERIAL); 
+
     float globalAmb[] = {
 		0.1f, 0.1f, 0.1f, 1
 	};
+
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmb);
 
     float light0[4][4] = {
@@ -106,10 +108,29 @@ void initLight() {
         {0,0,0,1}           
 	};
 
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &light0[0][0]);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &light0[1][0]);
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &light0[2][0]);
-    glLightfv(GL_LIGHT0, GL_POSITION, &light0[3][0]);
+    glLightfv(
+		GL_LIGHT0, 
+		GL_AMBIENT, 
+		&light0[0][0]
+	);
+
+    glLightfv(
+		GL_LIGHT0, 
+		GL_DIFFUSE, 
+		&light0[1][0]
+	);
+
+    glLightfv(
+		GL_LIGHT0, 
+		GL_SPECULAR, 
+		&light0[2][0]
+	);
+
+    glLightfv(
+		GL_LIGHT0,
+		GL_POSITION, 
+		&light0[3][0]
+	);
 
 	float luzAmbiente[4] = {
 		0.2,0.2,0.2,1.0
@@ -137,15 +158,46 @@ void initLight() {
 	
 	int especMaterial = 128;
 	
-	glMaterialfv(GL_FRONT, GL_SPECULAR,especularidade);
-	glMaterialf(GL_FRONT, GL_SHININESS,especMaterial);
+	glMaterialfv(
+		GL_FRONT, 
+		GL_SPECULAR, 
+		especularidade
+	);
+
+	glMaterialf(
+		GL_FRONT, 
+		GL_SHININESS, 
+		especMaterial
+	);
 	
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, luzAmbiente);
+	glLightModelfv(
+		GL_LIGHT_MODEL_AMBIENT, 
+		luzAmbiente
+	);
 	
-	glLightfv(GL_LIGHT0, GL_AMBIENT, luzAmbiente);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, luzDifusa);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, luzEspecular);
-	glLightfv(GL_LIGHT0, GL_POSITION, posicaoLuz0);
+	glLightfv(
+		GL_LIGHT0, 
+		GL_AMBIENT,
+		luzAmbiente
+	);
+
+	glLightfv(
+		GL_LIGHT0, 
+		GL_DIFFUSE, 
+		luzDifusa
+	);
+
+	glLightfv(
+		GL_LIGHT0, 
+		GL_SPECULAR, 
+		luzEspecular
+	);
+
+	glLightfv(
+		GL_LIGHT0, 
+		GL_POSITION, 
+		posicaoLuz0
+	);
 	
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_LIGHTING);

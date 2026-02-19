@@ -128,16 +128,20 @@ int main() {
                 biblioteca.adicionarLivro(titulo, autor);
                 break;
             }
-            case 2:
+
+            case 2: {
                 biblioteca.listarLivros();
                 break;
-            case 3: {
+            }
+            
+                case 3: {
                 string busca;
                 cout << "Digite o título: ";
                 getline(cin, busca);
                 biblioteca.buscarPorTitulo(busca);
                 break;
             }
+
             case 4: {
                 biblioteca.listarLivros();
                 int indice;
@@ -146,6 +150,7 @@ int main() {
                 biblioteca.emprestarLivro(indice - 1);
                 break;
             }
+
             case 5: {
                 biblioteca.listarLivros();
                 int indice;
@@ -154,13 +159,19 @@ int main() {
                 biblioteca.devolverLivro(indice - 1);
                 break;
             }
-            case 0:
+
+            case 0:{
                 cout << "Encerrando..." << endl;
                 break;
-            default:
+            }
+
+            default: {
                 cout << "Opção inválida." << endl;
+            }
         }
-    } while (opcao != 0);
+    } 
+    
+    while (opcao != 0);
 
     return 0;
 }

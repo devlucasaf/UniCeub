@@ -36,12 +36,15 @@ void Desenha(void) {
 
     // Círculo azul
     float theta, raio = 10;
+
     glColor3f(0,0,1);
     glBegin(GL_POLYGON);
-        for(int i = 0; i < 360; i++){
+
+        for(int i = 0; i < 360; i++) {
             theta = i * M_PI / 180;
             glVertex2f(raio * cos(theta), raio * sin(theta));
         }
+
     glEnd();
 
     glFlush();
@@ -65,6 +68,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     if (largura <= altura) {
         gluOrtho2D (-40.0f, 40.0f, -40.0f*altura/largura, 40.0f*altura/largura);
     }
+    
     else {
         gluOrtho2D (-40.0f*largura/altura, 40.0f*largura/altura, -40.0f, 40.0f);
     }

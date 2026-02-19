@@ -15,6 +15,7 @@ sf::VertexArray makeAxes(float length = 400.f) {
     axes[3].position = { 0.f,  length };
     axes[2].color = sf::Color::Green;
     axes[3].color = sf::Color::Green;
+
     return axes;
 }
 
@@ -24,6 +25,7 @@ sf::VertexArray makeLine() {
     line[1].position = {  50.f, 0.f };
     line[0].color = sf::Color::Cyan;
     line[1].color = sf::Color::Cyan;
+
     return line;
 }
 
@@ -35,6 +37,7 @@ sf::ConvexShape makeTriangle() {
     tri.setFillColor(sf::Color(255, 200, 50));
     tri.setOutlineColor(sf::Color::Black);
     tri.setOutlineThickness(2.f);
+
     return tri;
 }
 
@@ -44,6 +47,7 @@ sf::RectangleShape makeRectangle() {
     rect.setFillColor(sf::Color(120, 180, 255));
     rect.setOutlineColor(sf::Color::Black);
     rect.setOutlineThickness(2.f);
+
     return rect;
 }
 
@@ -63,10 +67,12 @@ int main() {
     rect.setOrigin(rect.getOrigin()); 
 
     sf::Vector2f position(0.f, 0.f);
+
     float rotation = 0.f;           
     float scale = 1.f;              
 
     sf::View view = window.getDefaultView();
+
     bool altView = false;           
 
     enum class Primitive { Triangle, Line, Rectangle } current = Primitive::Triangle;
@@ -162,6 +168,7 @@ int main() {
         window.draw(axes);
 
         sf::VertexArray localAxes(sf::Lines, 4);
+
         localAxes[0].position = model.transformPoint({-40.f, 0.f});
         localAxes[1].position = model.transformPoint({ 40.f, 0.f});
         localAxes[2].position = model.transformPoint({ 0.f,-40.f});
@@ -170,6 +177,7 @@ int main() {
         localAxes[1].color = sf::Color(200,80,80);
         localAxes[2].color = sf::Color(80,200,120);
         localAxes[3].color = sf::Color(80,200,120);
+
         window.draw(localAxes);
 
         switch (current) {
@@ -194,11 +202,14 @@ int main() {
 
         static sf::Font font;
         static bool fontLoaded = false;
+
         if (!fontLoaded) {
             fontLoaded = font.loadFromFile("C:/Windows/Fonts/arial.ttf");
         }
+
         if (fontLoaded) {
             sf::Text txt;
+            
             txt.setFont(font);
             txt.setCharacterSize(16);
             txt.setFillColor(sf::Color::White);
@@ -209,6 +220,7 @@ int main() {
                 "Sistema de referencia da camera: [V] alterna view\n"
                 "Reset [R]  |  Esc [Sair]"
             );
+
             window.draw(txt);
         }
 

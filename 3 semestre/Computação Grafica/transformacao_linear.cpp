@@ -15,6 +15,7 @@ OBJECT *object;
 
 OBJECT *create_object() {
     OBJECT *obj = (OBJECT *)malloc(sizeof(OBJECT));
+
     obj->nvertices = 6;
     obj->vertices = (VERTEX *)malloc(obj->nvertices * sizeof(VERTEX));
     obj->vertices[0].x = 10;   obj->vertices[0].y = 200;
@@ -23,20 +24,26 @@ OBJECT *create_object() {
     obj->vertices[3].x = 100;  obj->vertices[3].y = 50;
     obj->vertices[4].x = 100;  obj->vertices[4].y = 0;
     obj->vertices[5].x = 10;   obj->vertices[5].y = 0;
+
     return obj;
 }
 
 VERTEX calculate_centroid(OBJECT *obj) {
     int i;
+
     VERTEX cent;
+
     cent.x = 0;
     cent.y = 0;
+
     for (i = 0; i < obj->nvertices; i++) {
         cent.x += obj->vertices[i].x;
         cent.y += obj->vertices[i].y;
     }
+
     cent.x /= obj->nvertices;
     cent.y /= obj->nvertices;
+    
     return cent;
 }
 

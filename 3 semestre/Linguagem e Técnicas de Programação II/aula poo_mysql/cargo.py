@@ -22,6 +22,7 @@ class Cargo():
             sql = "select * from cargo"
             print(sql)
             lista = self.obj.executa_dql(sql)
+            
             for i in lista:
                 print(f"\nID cargo: {i[0]} | Nome: {i[1]}")
 

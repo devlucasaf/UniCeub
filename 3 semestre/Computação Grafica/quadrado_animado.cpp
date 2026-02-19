@@ -31,6 +31,7 @@ void Desenha() {
 
 void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     GLsizei largura, altura;
+
     if (h == 0) {
         h = 1;
     }
@@ -75,22 +76,31 @@ void timer(int) {
     cout << x_scale << '\t';
 
     switch (state) {
-        case 1:
+        case 1: {
             cout << "TESTE1" << '\t';
+
             if (x_position < 20) {
                 x_position += 0.3f;
             }
+
             else {
                 state = -1;
             }
+
             break;
-        case -1:
+        }
+
+        case -1: {
             if (x_position > -20) {
                 x_position -= 0.3f;
-            } else {
+            } 
+            
+            else {
                 state = 1;
             }
-            break;
+
+            break; 
+        }
     }
 }
 
@@ -108,5 +118,6 @@ int main(int argc, char** argv) {
 
     Inicializa();
     glutMainLoop();
+    
     return 0;
 }

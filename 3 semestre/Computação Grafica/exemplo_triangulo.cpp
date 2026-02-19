@@ -16,6 +16,7 @@ double areaTriangulo(Ponto a, Ponto b, Ponto c) {
     double bc = distancia(b, c);
     double ca = distancia(c, a);
     double s = (ab + bc + ca) / 2.0;
+    
     return sqrt(s * (s - ab) * (s - bc) * (s - ca));
 }
 

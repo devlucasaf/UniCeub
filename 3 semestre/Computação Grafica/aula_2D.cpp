@@ -38,6 +38,7 @@ void ajustar(int w, int h) {
 
 void teclado(unsigned char key, int x, int y) {
 	cout<<(int)key<<endl;
+
 	if(key == ESC) {
 		exit(0);
 	}
@@ -60,5 +61,6 @@ int main() {
 	glutKeyboardFunc(teclado);
 	glutTimerFunc(30,anima,1);	
 	glutMainLoop();
+	
 	return 0;
 }

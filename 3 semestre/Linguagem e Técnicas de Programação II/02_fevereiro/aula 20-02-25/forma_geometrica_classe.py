@@ -27,6 +27,7 @@ class Quadrado(FormaGeometrica):
 
     def get_lado(self):
         return self.lado
+    
     def set_lado(self, novo_l):
         self.lado = novo_l
 
@@ -46,6 +47,7 @@ class Circulo(FormaGeometrica):
 
     def get_raio(self):
         return self.raio
+    
     def set_raio(self, novo_r):
         self.raio = novo_r
 

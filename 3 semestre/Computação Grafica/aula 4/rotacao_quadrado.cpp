@@ -24,6 +24,7 @@ void desenharQuadrado() {
 
 void atualizar(int valor) {
     angulo -= 2.0f; 
+    
     if (angulo <= -360.0f) {
         angulo = 0.0f;
     }

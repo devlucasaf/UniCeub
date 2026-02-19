@@ -16,6 +16,7 @@ static GLuint compileShader(GLenum type, const char* src) {
 
     GLint ok = 0;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &ok);
+
     if (!ok) {
         GLint len = 0;
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &len);
@@ -23,6 +24,7 @@ static GLuint compileShader(GLenum type, const char* src) {
         glGetShaderInfoLog(shader, len, nullptr, log.data());
         std::cerr << log << "\n";
         glDeleteShader(shader);
+
         return 0;
     }
     return shader;
@@ -30,6 +32,7 @@ static GLuint compileShader(GLenum type, const char* src) {
 
 static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
     GLuint vs = compileShader(GL_VERTEX_SHADER, vsSrc);
+    
     if (!vs) {
         return 0;
     }
@@ -50,6 +53,7 @@ static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
 
     GLint ok = 0;
     glGetProgramiv(program, GL_LINK_STATUS, &ok);
+
     if (!ok) {
         GLint len = 0;
         glGetProgramiv(program, GL_INFO_LOG_LENGTH, &len);
@@ -57,8 +61,10 @@ static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
         glGetProgramInfoLog(program, len, nullptr, log.data());
         std::cerr << log << "\n";
         glDeleteProgram(program);
+
         return 0;
     }
+
     return program;
 }
 
@@ -179,5 +185,6 @@ int main() {
     glDeleteProgram(program);
     glfwDestroyWindow(window);
     glfwTerminate();
+    
     return 0;
 }

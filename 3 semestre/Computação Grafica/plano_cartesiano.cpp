@@ -29,11 +29,12 @@ int main() {
         scanf("%d", &escolha);
         
         switch (escolha) {
-            case 0: 
+            case 0: { 
                 printf("\n\tVocê escolheu (0) --> Sair\n");
                 break;
-                
-            case 1: 
+            }
+
+            case 1: {
                 printf("\nVocê escolheu (1) --> Imprime uma reta (Algoritmo DDA)\n");
 
                 printf("\nEscolha o valor do x inicial:");
@@ -55,9 +56,11 @@ int main() {
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
                 printf("\nDigita o valor aqui --> ");
                 scanf("%d", &escolha);
+
                 break;
-                
-            case 2: 
+            }
+
+            case 2: {
                 printf("\nVocê escolheu (2) --> Imprime uma reta (Algoritmo de Bresenham)\n");
                 
                 printf("\nEscolha o valor do x inicial: ");
@@ -79,9 +82,11 @@ int main() {
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = nao)");
                 printf("\nDigite o valor aqui --> ");
                 scanf("%d", &escolha);
+
                 break;
-                
-            case 3: 
+            }
+
+            case 3: {
                 printf("Voce digitou(3) Escolheu --> Imprime o traçado de um círculo (Algoritmo de Bresenham)\n");
                 printf("qual o raio?"); 
                 scanf("%d", &raio);
@@ -97,20 +102,25 @@ int main() {
                 printf("\nDigite o valor aqui --> ");
                 scanf("%d", &escolha);
                 break;
-                
-            default: 
+            }
+
+            default: {
                 printf("\((nVocê escolheu um valor que não existe))\n((Digite notamente))\n\n");
+            }
         }
     }
     
     printf("\nPrograma encerrado\n");
+
     return 0;
 }
 
 void irParaXY(int x, int y) {
     COORD coord; 
+
     coord.X = (short) x; 
     coord.Y = (short) y; 
+
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); 
 }
 
@@ -159,6 +169,7 @@ void dda(float *x1, float *y1, float *x2, float *y2) {
             y += m; 
         }
     } 
+
     else {
         float m = (*x2 - *x1) / (*y2 - *y1); 
         float x = *x1; 
@@ -197,10 +208,13 @@ void circulo(int *raio){
 
         if (p <= 0) {
             p = p + 2*x + 1; 
-        } else {
+        } 
+        
+        else {
             p = p + 2*x + 1 - 2*y; 
             y--; 
         }
+
         x++; 
     }
 }
@@ -219,7 +233,9 @@ void bresenham(float *x1, float *y1, float *x2, float *y2) {
         if (*x1 <= *x2) {
             x = *x1;
             y = *y1;
-        } else {
+        }
+        
+        else {
             x = *x2;
             y = *y2;
             *x2 = *x1;
@@ -232,7 +248,9 @@ void bresenham(float *x1, float *y1, float *x2, float *y2) {
 
             if (p <= 0) {
                 p = p + incE; 
-            } else {
+            } 
+            
+            else {
                 p = p + incNE; 
                 y = y + ((*y2 >= *y1) ? 1 : -1); 
             }
@@ -246,7 +264,9 @@ void bresenham(float *x1, float *y1, float *x2, float *y2) {
         if (*y1 <= *y2) {
             x = *x1;
             y = *y1;
-        } else {
+        } 
+        
+        else {
             x = *x2;
             y = *y2;
             *y2 = *y1;
@@ -259,10 +279,13 @@ void bresenham(float *x1, float *y1, float *x2, float *y2) {
 
             if (p <= 0) {
                 p = p + incE; 
-            } else {
+            } 
+            
+            else {
                 p = p + incNE; 
                 x = x + ((*x2 >= *x1) ? 1 : -1); 
             }
+
             y++; 
         }
     }
@@ -284,7 +307,9 @@ int animacao() {
             printf(" |"); 
             irParaXY(i, 2);
             printf("/ \\o"); 
-        } else {
+        } 
+        
+        else {
             irParaXY(i, 1);
             printf("-|-"); 
             irParaXY(i, 2);

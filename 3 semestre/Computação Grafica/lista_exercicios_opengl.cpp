@@ -40,6 +40,7 @@ void desenhaQuadradoVermelho() {
 
 void quadradoRoxoMovendo() {
     static float x = -1.0f;
+
     glColor3f(0.5f, 0.0f, 0.5f);
     glPushMatrix();
     glTranslatef(x, -0.5f, 0);
@@ -67,6 +68,7 @@ void circuloGirando() {
 
     for (int i = 0; i <= numSegments; i++) {
         float t = 2 * M_PI * i / numSegments;
+        
         glColor3f((sin(t) + 1)/2, (cos(t) + 1)/2, 0.5);
         glVertex2f(cos(t)*0.3f, sin(t)*0.3f);
     }

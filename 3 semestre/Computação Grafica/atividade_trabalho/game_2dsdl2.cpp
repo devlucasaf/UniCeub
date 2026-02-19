@@ -30,6 +30,7 @@ GLuint loadTexture(const char* filePath) {
 
     SDL_Surface* formatted = SDL_ConvertSurfaceFormat(surface, SDL_PIXELFORMAT_RGBA32, 0);
     SDL_FreeSurface(surface);
+
     if (!formatted) {
         std::cerr << "Erro convertendo textura para RGBA32\n";
         return 0;
@@ -81,7 +82,9 @@ public:
         if (useTexture) {
             glEnable(GL_TEXTURE_2D);
             glBindTexture(GL_TEXTURE_2D, textureID);
-        } else {
+        } 
+        
+        else {
             glDisable(GL_TEXTURE_2D);
             glColor3f(1.0f, 1.0f, 1.0f); 
         }
@@ -129,7 +132,9 @@ public:
     float vy;         
 
     GLuint textureID;
-    int frameCount;    
+
+    int frameCount;  
+
     int currentFrame;
     float frameTimer;  
     float frameTime;   
@@ -152,6 +157,7 @@ public:
 
     void updateAnimation(float dt) {
         frameTimer += dt;
+
         if (frameTimer >= frameTime) {
             frameTimer = 0.0f;
             currentFrame = (currentFrame + 1) % frameCount;
@@ -176,6 +182,7 @@ public:
     bool isOnGround() const {
         float halfH = h/2.0f;
         float bottom = y - halfH;
+
         return (bottom <= FLOOR_Y + 0.0001f);
     }
 
@@ -229,6 +236,7 @@ bool checkCollision(RetanguloTexturaAnimado &a, Retangulo &b) {
 
     bool overlapX = (la < rb) && (ra > lb);
     bool overlapY = (ba < tb) && (ta > bb);
+
     return overlapX && overlapY;
 }
 
@@ -355,7 +363,9 @@ int main(int argc, char* argv[]) {
 
         if (background.textureID != 0) {
             background.draw();
-        } else {
+        } 
+        
+        else {
             glDisable(GL_TEXTURE_2D);
             glColor3f(0.3f, 0.5f, 0.9f);
             glBegin(GL_QUADS);

@@ -39,9 +39,11 @@ void ajusta_tela() {
 
 void anima(int timer) {
     rotationAngle += 2; 
+
     if(rotationAngle > 360) {
         rotationAngle -= 360;
     }
+    
     glutPostRedisplay();    
     glutTimerFunc(30, anima, 1);
 }
@@ -60,5 +62,6 @@ int main(int argc, char** argv){
     glutTimerFunc(30, anima, 1);
 
     glutMainLoop();
+
     return 0;
 }
