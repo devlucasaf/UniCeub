@@ -5,17 +5,15 @@
 
 # **🎓Faculdade de Ciência da Computação**
 
-# 📚 UNICEUB
-
+## 📚 UNICEUB
 
 ◽️Neste repositório, estarei salvando todos os códigos desenvolvidos ao longo do curso de Ciência da Computação<br>
 ◽️Cursos do 1º, 2º, 3º, 4º e 5º semestres (Em desenvolvimento até a finalização do curso)<br>
-◽️Atualmente cursando o 5º semestre<br>
 ◽️Curso iniciado em 2024 e finalizará em 2027
 
-### 📁 **Estrutura**
+### 🗓️ **Semestres**
 
-```diff
+```bash
 1 Semestre 
 2 Semestre 
 3 Semestre 
