@@ -12,7 +12,12 @@ class Curso
   end
 
   def to_h
-    { codigo: @codigo, nome: @nome, creditos: @creditos, pre_requisitos: @pre_requisitos }
+    { 
+      codigo: @codigo, 
+      nome: @nome, 
+      creditos: @creditos, 
+      pre_requisitos: @pre_requisitos 
+    }
   end
 end
 
