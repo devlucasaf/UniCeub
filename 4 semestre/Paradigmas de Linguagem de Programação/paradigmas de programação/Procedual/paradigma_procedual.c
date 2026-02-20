@@ -87,6 +87,7 @@ void calcularMediaAluno() {
     for (int i = 0; i < 3; i++) {
         soma += a.notas[i];
     }
+    
     float media = soma / 3.0;
 
     printf("Média do aluno %s: %.2f\n\n", a.nome, media);
@@ -110,20 +111,29 @@ int main() {
         getchar(); 
 
         switch (opcao) {
-            case 1:
+            case 1: {
                 adicionarAluno();
                 break;
-            case 2:
+            }
+
+            case 2: {
                 listarAlunos();
                 break;
-            case 3:
+            }
+
+            case 3: {
                 calcularMediaAluno();
                 break;
-            case 4:
+            }
+
+            case 4: {
                 printf("Encerrando o programa...\n");
                 break;
-            default:
+            }
+
+            default: {
                 printf("Opção inválida!\n\n");
+            }
         }
     } 
     while (opcao != 4);
