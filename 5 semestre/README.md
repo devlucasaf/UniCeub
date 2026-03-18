@@ -42,6 +42,15 @@
     />
     <img
         align="center"
+        alt="dart"
+        tittle="Dart"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=dart"
+    />
+    <img
+        align="center"
         alt="python"
         tittle="Python"
         height="40"

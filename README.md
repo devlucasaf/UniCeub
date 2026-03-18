@@ -33,7 +33,7 @@
         alt="Python" 
         title="Python"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=python""
     />
@@ -46,12 +46,21 @@
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=java"
     />
+    <img
+        align="center"
+        alt="dart"
+        tittle="Dart"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=dart"
+    />
     <img 
         align="center" 
         alt="C" 
         title="C"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=c""
     />
@@ -60,7 +69,7 @@
         alt="C++" 
         title="C++"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cpp""
     />
@@ -69,7 +78,7 @@
         alt="C#" 
         title="C#"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cs"
     />
@@ -92,22 +101,13 @@
         src="https://skillicons.dev/icons?i=kotlin"
     />
     <img
-        align="center"
-        alt="DBSQLite"
-        tittle="DBSQLite"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=sqlite"
-    />
-    <img
         align="center" 
-        alt="SQL" 
-        title="SQL"
+        alt="Ruby" 
+        title="Ruby"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=mysql"
+        src="https://skillicons.dev/icons?i=ruby"
     />
     <img 
         align="center"
@@ -129,19 +129,19 @@
     />
     <img
         align="center"
-        alt="tyepscript"
+        alt="typescript"
         tittle="typescript"
         height="40"
         style="padding-right: 10px"
         href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=ts"
+        src="https://skillicons.dev/icons?i=typescript"
     />
     <img 
         align="center" 
         alt="HTML" 
         title="HTML"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=html"
     />
@@ -153,6 +153,24 @@
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=css"
+    />
+    <img
+        align="center"
+        alt="DBSQLite"
+        tittle="DBSQLite"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=sqlite"
+    />
+    <img
+        align="center" 
+        alt="SQL" 
+        title="SQL"
+        height="40" 
+        style="padding-right: 10px;"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=mysql"
     />
     <img 
         align="center" 
@@ -180,15 +198,6 @@
         style="padding-right: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=rust"
-    />
-    <img
-        align="center" 
-        alt="Ruby" 
-        title="Ruby"
-        height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=ruby"
     />
     <img
         align="center" 
@@ -227,7 +236,7 @@
         alt="Assembly" 
         title="Assembly"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
 </div>
@@ -260,7 +269,7 @@
         alt="github"
         tittle="GitHub"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
     />
@@ -269,7 +278,7 @@
         alt="VsCode"
         tittle="VsCode"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=vscode"
     />
@@ -304,7 +313,7 @@
         alt="Eclipse"
         tittle="Eclipse"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=eclipse"
     />
@@ -313,7 +322,7 @@
         alt="Intellij"
         tittle="Intellij"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
     <img
@@ -329,16 +338,8 @@
         alt="RubyMine"
         tittle="RubyMine"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
-    />
-    <img
-        align="center"
-        alt="Excel"
-        tittle="Excel"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png"
     />
 </div>
 

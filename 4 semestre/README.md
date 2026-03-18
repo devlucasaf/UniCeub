@@ -35,7 +35,7 @@
         alt="Python" 
         title="Python"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=python"
     />
@@ -44,7 +44,7 @@
         alt="Java"
         tittle="Java"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=java"
     />
@@ -53,7 +53,7 @@
         alt="C"
         tittle="C"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=c"
     />
@@ -62,7 +62,7 @@
         alt="C++"
         tittle="C++"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cpp"
     />
@@ -71,7 +71,7 @@
         alt="C#"
         tittle="C#"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=cs"
     />
@@ -80,7 +80,7 @@
         alt="Go"
         tittle="Go"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=go"
     />
@@ -89,7 +89,7 @@
         alt="Kotlin"
         tittle="Kotlin"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=kotlin"
     />
@@ -98,7 +98,7 @@
         alt="SQL" 
         title="SQL"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=mysql"
     />
@@ -116,7 +116,7 @@
         alt="django" 
         title="Django"
         height="40"
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=django" 
     />
@@ -125,7 +125,7 @@
         alt="JavaScript"
         tittle="JavaScript"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=javascript" 
     />
@@ -134,7 +134,7 @@
         alt="HTML" 
         title="HTML"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=html"
     />
@@ -143,7 +143,7 @@
         alt="CSS" 
         title="CSS"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=css"
     />
@@ -152,7 +152,7 @@
         alt="Tailwind" 
         title="Tailwind"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=tailwind"
     />
@@ -161,7 +161,7 @@
         alt="Bootstrap" 
         title="Bootstrap"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=bootstrap"
     />
@@ -170,7 +170,7 @@
         alt="Rust" 
         title="Rust"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=rust"
     />
@@ -179,7 +179,7 @@
         alt="Ruby" 
         title="Ruby"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=ruby"
     />
@@ -188,7 +188,7 @@
         alt="Prolog" 
         title="Prolog"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
     />
     <img
@@ -196,7 +196,7 @@
         alt="Haskell" 
         title="Haskell"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
     />
     <img
@@ -204,7 +204,7 @@
         alt="Scheme" 
         title="Scheme"
         height="40" 
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
     />
     <img
@@ -212,7 +212,7 @@
         alt="object pascal"
         tittle="Object Pascal"
         height="40"
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
     />
 </div>
@@ -236,7 +236,7 @@
         alt="git"
         tittle="Git"
         height="40"
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=git"
     />
@@ -245,7 +245,7 @@
         alt="github"
         tittle="GitHub"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=github"
     />
@@ -254,7 +254,7 @@
         alt="VsCode"
         tittle="VsCode"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         href="https://skillicons.dev"
         src="https://skillicons.dev/icons?i=vscode"
     />
@@ -281,7 +281,7 @@
         alt="Intellij" 
         title="Intellij"
         height="40" 
-        style="padding-right: 10px;" 
+        style="padding-right: 10px; margin-bottom: 10px;" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
     <img
@@ -289,7 +289,7 @@
         alt="pycharm"
         tittle="PyCharm"
         height="40"
-        style="padding-right: 10px;"
+        style="padding-right: 10px; margin-bottom: 10px;"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
     <img
@@ -299,14 +299,6 @@
         height="40"
         style="padding-right: 10px"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
-    />
-    <img
-        align="center"
-        alt="Excel"
-        tittle="Excel"
-        height="40" 
-        style="padding-right: 10px;" 
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png"
     />
 </div>
 
