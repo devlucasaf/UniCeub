@@ -6,7 +6,7 @@
 # 5º Semestre
 
 ◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
-◽️Códigos em Java, Python, JavaScript, TypeScript, HTML e CSS<br>
+◽️Códigos em Java, Dart, Python, JavaScript, TypeScript, HTML e CSS<br>
 ◽️Disciplinas:
 - Gerência de Projetos de TI<br>
 - Inteligência Artificial<br>

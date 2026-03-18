@@ -193,6 +193,14 @@
     />
     <img
         align="center" 
+        alt="Cobol" 
+        title="Cobol"
+        height="40" 
+        style="padding-right: 10px; margin-bottom: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg"
+    />
+    <img
+        align="center" 
         alt="Haskell" 
         title="Haskell"
         height="40" 
