@@ -38,7 +38,9 @@ class Livro {
             this._usuarioEmprestimo = usuario;
             console.log(`Livro "${this._titulo}" emprestado para ${usuario.nome}.`);
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`Livro "${this._titulo}" não está disponível no momento.`);
             return false;
         }
@@ -52,7 +54,9 @@ class Livro {
             this._dataEmprestimo = null;
             this._usuarioEmprestimo = null;
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`Livro "${this._titulo}" já está disponível.`);
             return false;
         }
@@ -91,7 +95,9 @@ class Usuario {
         if (this._livrosEmprestados.length < this.limiteEmprestimos()) {
             this._livrosEmprestados.push(livro);
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`${this._nome} atingiu o limite de empréstimos.`);
             return false;
         }
@@ -108,12 +114,17 @@ class Usuario {
 
     limiteEmprestimos() {
         switch (this._tipo) {
-            case 'Estudante': 
+            case 'Estudante': {
                 return 5;
-            case 'Professor':   
+            }
+
+            case 'Professor':  { 
                 return 10;
-            default:    
+            }
+
+            default: {    
                 return 3;
+            }
         }
     }
 
@@ -136,7 +147,9 @@ class Biblioteca {
             this._livros.push(livro);
             console.log(`Livro "${livro.titulo}" adicionado à biblioteca.`);
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`Livro com ISBN ${livro.isbn} já existe na biblioteca.`);
             return false;
         }
@@ -148,7 +161,9 @@ class Biblioteca {
             this._usuarios.push(usuario);
             console.log(`Usuário ${usuario.nome} registrado com sucesso.`);
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`Usuário com ID ${usuario.id} já está registrado.`);
             return false;
         }
@@ -175,8 +190,11 @@ class Biblioteca {
                 usuario: usuario.nome,
                 data: new Date()
             });
+            
             return true;
-        } else {
+        } 
+        
+        else {
             console.log(`Não foi possível emprestar o livro "${livro.titulo}".`);
             return false;
         }

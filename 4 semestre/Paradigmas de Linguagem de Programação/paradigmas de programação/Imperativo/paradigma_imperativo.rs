@@ -63,7 +63,9 @@ impl Store {
                     break;
                 }
                 current_total += product.price * (*qty as f64);
-            } else {
+            } 
+            
+            else {
                 valid_order = false;
                 break;
             }
@@ -108,15 +110,18 @@ impl Store {
         println!("--- Store Report ---");
         println!("Revenue: ${:.2}", self.revenue);
         println!("Inventory Status:");
+        
         for product in self.inventory.values() {
             println!("- {}: {} units (${:.2} each)", product.name, product.quantity, product.price);
         }
+
         println!("Orders processed: {}", self.orders.len());
         println!("--------------------");
     }
 
     fn apply_discount_to_all(&mut self, percentage: f64) {
         let factor = 1.0 - (percentage / 100.0);
+        
         for product in self.inventory.values_mut() {
             product.price *= factor;
         }
@@ -124,11 +129,13 @@ impl Store {
 
     fn clear_out_of_stock(&mut self) {
         let mut to_remove = Vec::new();
+        
         for (&id, product) in &self.inventory {
             if product.quantity == 0 {
                 to_remove.push(id);
             }
         }
+        
         for id in to_remove {
             self.inventory.remove(&id);
         }
@@ -146,6 +153,7 @@ fn main() {
     my_store.generate_report();
 
     let order_items = vec![(1, 2), (2, 5)];
+    
     if let Some(id) = my_store.create_order(order_items) {
         println!("Order #{} created successfully.", id);
         if my_store.process_payment(id) {
@@ -161,6 +169,7 @@ fn main() {
 
     let mut bulk_order = Vec::new();
     let mut i = 1;
+    
     while i <= 3 {
         bulk_order.push((i, 1));
         i += 1;
@@ -172,6 +181,7 @@ fn main() {
     }
 
     let mut stock_to_add = vec![(1, 5), (2, 10), (3, 15)];
+    
     for item in stock_to_add {
         my_store.update_stock(item.0, item.1 as i32);
     }
@@ -179,8 +189,10 @@ fn main() {
     my_store.generate_report();
 
     let final_orders_count = my_store.orders.len();
+    
     if final_orders_count > 0 {
         let mut total_items_sold = 0;
+        
         for order in &my_store.orders {
             for item in &order.items {
                 total_items_sold += item.1;

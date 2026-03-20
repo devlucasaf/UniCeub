@@ -44,12 +44,15 @@ int valida_intervalo(int inicioMin, int fimMin) {
     if (inicioMin < 0 || fimMin < 0) {
         return 0;
     }
+
     if (inicioMin >= 24 * 60 || fimMin > 24 * 60) {
         return 0;
     }
+
     if (inicioMin >= fimMin) {
         return 0;
     }
+
     return 1;
 }
 
@@ -57,15 +60,19 @@ int valida_data(int d, int m, int a) {
     if (a < 1900 || a > 2100) {
         return 0;
     }
+
     if (m < 1 || m > 12) {
         return 0;
     }
+
     if (d < 1 || d > 31) {
         return 0;
     }
+
     if ((m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
         return 0;
     }
+
     if (m == 2) {
         int bissexto = (a % 400 == 0) || (a % 4 == 0 && a % 100 != 0);
         if (d > (bissexto ? 29 : 28)) {
@@ -86,6 +93,7 @@ int str_vazia(const char *s) {
         }
         s++;
     }
+
     return 1;
 }
 
@@ -99,6 +107,7 @@ int ler_linha(char *buf, int tam) {
     if (len > 0 && buf[len - 1] == '\n') {
         buf[len - 1] = '\0';
     }
+
     return 1;
 }
 
@@ -106,6 +115,7 @@ int buscar_morador(Morador moradores[], int n, int id) {
     for (int i = 0; i < n; i++) if (moradores[i].id == id) {
         return i;
     }
+
     return -1;
 }
 
@@ -113,6 +123,7 @@ int buscar_espaco(Espaco espacos[], int n, int id) {
     for (int i = 0; i < n; i++) if (espacos[i].id == id) {
         return i;
     }
+
     return -1;
 }
 
@@ -123,9 +134,11 @@ int conflito_reserva(Reserva reservas[], int nRes, int espacoId, int d, int m, i
         if (r.espacoId != espacoId) {
             continue;
         }
+
         if (r.dia != d || r.mes != m || r.ano != a) {
             continue;
         }
+
         if (ini < r.fimMin && fim > r.inicioMin) {
             return 1;
         }
@@ -142,12 +155,15 @@ int politica_espaco(Espaco e, int inicioMin, int fimMin) {
         }
         return 1;
     }
+
     if (e.tipo == 2) {
         if (inicioMin < 18 * 60) {
             return 0;
         }
+
         return 1;
     }
+
     return 1;
 }
 
@@ -157,6 +173,7 @@ void listar_moradores(Morador moradores[], int n) {
     if (n == 0) { 
         printf("(vazio)\n"); return; 
     }
+
     for (int i = 0; i < n; i++) {
         printf("  [%d] %s (Ap: %s)\n", moradores[i].id, moradores[i].nome, moradores[i].apartamento);
     }
@@ -166,7 +183,8 @@ void listar_espacos(Espaco espacos[], int n) {
     printf("\nEspacos:\n");
 
     if (n == 0) { 
-        printf("(vazio)\n"); return; 
+        printf("(vazio)\n"); 
+        return; 
     }
 
     for (int i = 0; i < n; i++) {
@@ -178,7 +196,8 @@ void listar_espacos(Espaco espacos[], int n) {
 void listar_reservas(Reserva reservas[], int nRes, Morador moradores[], int nMor, Espaco espacos[], int nEsp) {
     printf("\nReservas:\n");
     if (nRes == 0) { 
-        printf("(vazio)\n"); return; 
+        printf("(vazio)\n"); 
+        return; 
     }
 
     for (int i = 0; i < nRes; i++) {
@@ -446,15 +465,19 @@ int main() {
                 printf("Falha ao cadastrar morador\n");
             }
         } 
+
         else if (op == 2) {
             if (!cadastrar_espaco(espacos, &nEsp, &nextEspId)) {
                 printf("Falha ao cadastrar espaco\n");
             }
         } 
+
         else if (op == 3) {
             if (nMor == 0 || nEsp == 0) {
                 printf("Cadastre ao menos 1 morador e 1 espaco antes\n");
-            } else {
+            } 
+            
+            else {
                 if (!criar_reserva(reservas, &nRes, &nextResId, moradores, nMor, espacos, nEsp)) {
                     printf("Falha ao criar reserva\n");
                 }
