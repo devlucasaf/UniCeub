@@ -314,7 +314,7 @@
         tittle="Android Studio"
         height="40"
         style="padding-right: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png"
+        src="https://skillicons.dev/icons?i=androidstudio"
     />
     <img
         align="center"
