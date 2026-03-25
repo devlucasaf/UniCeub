@@ -48,6 +48,15 @@
     />
     <img
         align="center"
+        alt="flutter"
+        tittle="Flutter"
+        height="40"
+        style="padding-right: 10px"
+        href="https://skillicons.dev"
+        src="https://skillicons.dev/icons?i=flutter"
+    />
+    <img
+        align="center"
         alt="dart"
         tittle="Dart"
         height="40"
@@ -209,14 +218,6 @@
     />
     <img
         align="center" 
-        alt="Cobol" 
-        title="Cobol"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg"
-    />
-    <img
-        align="center" 
         alt="Haskell" 
         title="Haskell"
         height="40" 
@@ -246,6 +247,14 @@
         height="40" 
         style="padding-right: 10px; margin-bottom: 10px;"
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
+    />
+    <img
+        align="center" 
+        alt="Cobol" 
+        title="Cobol"
+        height="40" 
+        style="padding-right: 10px; margin-bottom: 10px;"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg"
     />
 </div>
 

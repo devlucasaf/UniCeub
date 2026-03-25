@@ -42,15 +42,6 @@
     />
     <img
         align="center"
-        alt="flutter"
-        tittle="Flutter"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=flutter"
-    />
-    <img
-        align="center"
         alt="dart"
         tittle="Dart"
         height="40"
