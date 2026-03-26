@@ -5,311 +5,268 @@
 
 # 4º Semestre
 
-◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quarto semestre de curso de Ciência da Computação!<br>
-◽️Códigos em Python, Java, Prolog, Scheme, HTML, CSS, JavaScript, Rust, Ruby, C, C++, C#, GO, Kotlin, Haskell e Object Pascal<br>
-◽️Disciplinas:
-- Paradigmas de Linguagem de Programação<br>
-- Probabilidade e Estatística<br>
-- Programação para Web<br>
-- Sistemas Operacionais<br>
-- Teoria da Computação
+## 📚 Disciplinas
 
+<div align="center">
 
-## 📁 **Estrutura**
+| # | Disciplina |
+|:---:|:---|
+| 01 | 🧩 Paradigmas de Linguagem de Programação |
+| 02 | 📊 Probabilidade e Estatística |
+| 03 | 🌐 Programação para Web |
+| 04 | 🖥️ Sistemas Operacionais |
+| 05 | 🔬 Teoria da Computação |
 
-```diff
-1 Semestre 
-2 Semestre 
-3 Semestre 
-4 Semestre 
-.
-.
-.
-8 Semestre 
-```
-# 🚀 Linguagens
+</div>
 
-<div align="left"> 
+## 🚀 Linguagens Utilizadas
+
+### ⚙️ Backend
+
+<div align="left">
     <img 
-        align="center" 
         alt="Python" 
-        title="Python"
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=python"
     />
-    <img
-        align="center"
-        alt="Java"
-        tittle="Java"
+    <img 
+        alt="Java" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=java"
     />
-    <img
-        align="center"
-        alt="C"
-        tittle="C"
+    <img 
+        alt="C" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=c"
     />
-    <img
-        align="center"
-        alt="C++"
-        tittle="C++"
+    <img 
+        alt="C++" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=cpp"
     />
-    <img
-        align="center"
-        alt="C#"
-        tittle="C#"
+    <img 
+        alt="C#" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=cs"
     />
-    <img
-        align="center"
-        alt="Go"
-        tittle="Go"
+    <img 
+        alt="Go" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=go"
     />
-    <img
-        align="center"
-        alt="Kotlin"
-        tittle="Kotlin"
+    <img 
+        alt="Kotlin" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=kotlin"
     />
-    <img
-        align="center" 
-        alt="SQL" 
-        title="SQL"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=mysql"
-    />
-    <img
-        align="center"
-        alt="DBSQLite"
-        tittle="DBSQLite"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=sqlite"
-    />
     <img 
-        align="center"
-        alt="django" 
-        title="Django"
-        height="40"
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=django" 
-    />
-    <img 
-        align="center"
-        alt="JavaScript"
-        tittle="JavaScript"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=javascript" 
-    />
-    <img 
-        align="center" 
-        alt="HTML" 
-        title="HTML"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=html"
-    />
-    <img 
-        align="center" 
-        alt="CSS" 
-        title="CSS"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=css"
-    />
-    <img 
-        align="center" 
-        alt="Tailwind" 
-        title="Tailwind"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=tailwind"
-    />
-    <img 
-        align="center" 
-        alt="Bootstrap" 
-        title="Bootstrap"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=bootstrap"
-    />
-    <img
-        align="center" 
         alt="Rust" 
-        title="Rust"
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=rust"
     />
-    <img
-        align="center" 
+    <img 
         alt="Ruby" 
-        title="Ruby"
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=ruby"
-    />
-    <img
-        align="center" 
-        alt="Prolog" 
-        title="Prolog"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
-    />
-    <img
-        align="center" 
-        alt="Cobol" 
-        title="Cobol"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg"
-    />
-    <img
-        align="center" 
-        alt="Haskell" 
-        title="Haskell"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
-    />
-    <img
-        align="center" 
-        alt="Scheme" 
-        title="Scheme"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
-    />
-    <img
-        align="center"
-        alt="object pascal"
-        tittle="Object Pascal"
-        height="40"
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
     />
 </div>
 
 ---
 
-# 🛠️ Ferramentas
+### 🌐 Web
 
-<div align="left"> 
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
-    />
-    <img
-        align="center"
-        alt="git"
-        tittle="Git"
-        height="40"
-        style="padding-right: 10px; margin-bottom: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=git"
-    />
-    <img
-        align="center"
-        alt="github"
-        tittle="GitHub"
+<div align="left">
+    <img 
+        alt="HTML" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=github"
-    />
-    <img
-        align="center"
-        alt="VsCode"
-        tittle="VsCode"
-        height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=vscode"
-    />
-    <img
-        align="center"
-        alt="Visual Studio"
-        tittle="Visual Studio"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=visualstudio"
-    />
-    <img
-        align="center"
-        alt="PostegreSQL"
-        tittle="PostegreSQL"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=postgresql"
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=html"
     />
     <img 
-        align="center" 
-        alt="Intellij" 
-        title="Intellij"
+        alt="CSS" 
         height="40" 
-        style="padding-right: 10px; margin-bottom: 10px;" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=css"
     />
-    <img
-        align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="40"
-        style="padding-right: 10px; margin-bottom: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    <img 
+        alt="JavaScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=javascript"
     />
-    <img
-        align="center"
-        alt="RubyMine"
-        tittle="RubyMine"
-        height="40"
-        style="padding-right: 10px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
+    <img 
+        alt="Tailwind" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=tailwind"
+    />
+    <img 
+        alt="Bootstrap" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=bootstrap"
+    />
+    <img 
+        alt="Django" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=django"
     />
 </div>
 
+---
+
+### 🗄️ Banco de Dados
+
+<div align="left">
+    <img 
+        alt="MySQL" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=mysql"
+    />
+    <img 
+        alt="SQLite" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=sqlite"
+    />
+</div>
+
+---
+
+### 🧠 Paradigmas Especiais
+
+<div align="left">
+    <img 
+        alt="Prolog" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
+    />
+    <img 
+        alt="Haskell" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
+    />
+    <img 
+        alt="Cobol" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg"
+    />
+    <img 
+        alt="Scheme" 
+        height="40" 
+        style="margin:4px" 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lambda_lc.svg/250px-Lambda_lc.svg.png"
+    />
+    <img 
+        alt="Object Pascal" 
+        height="40" 
+        style="margin:4px" 
+        src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
+    />
+</div>
+
+## 🛠️ Ferramentas & Ambiente
+
+### 💻 IDEs & Editores
+
+<div align="left">
+    <img 
+        alt="VSCode" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img 
+        alt="Visual Studio" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=visualstudio"
+    />
+    <img 
+        alt="IntelliJ" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img 
+        alt="PyCharm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img 
+        alt="RubyMine" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
+    />
+    <img 
+        alt="PostgreSQL" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=postgresql"
+    />
+</div>
+
+---
+
+### 🗂️ Versionamento & Colaboração
+
+<div align="left">
+    <img 
+        alt="Git" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=git"
+    />
+    <img 
+        alt="GitHub" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=github"
+    />
+    <img 
+        alt="GitLab" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=gitlab"
+    />
+</div>
+
+---
+
+### 🖥️ Sistema Operacional
+
+<div align="left">
+    <img 
+        alt="Windows" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=windows"
+    />
+</div>
+
+<div align="center">
+
+---
+
+*4º Semestre • Ciência da Computação • UNICEUB* 🎓
+
+</div>
 
 <img 
     width=100% 

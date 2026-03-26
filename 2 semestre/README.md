@@ -5,150 +5,145 @@
 
 # 2º Semestre
 
-◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu segundo semestre de curso de Ciência da Computação!<br>
-◽️Códigos em Python, Java, SQL e Assembly<br>
-◽️Disciplinas:<br>
-- Álgebra e Geometria Analítica<br>
-- Banco de Dados I<br>
-- Estrutura de Dados<br>
-- Linguagem e Técnicas de Programação I<br>
-- Organização e Arquitetura de Computadores<br>
+## 📚 Disciplinas
 
-## 📁 **Estrutura**
+<div align="center">
 
-```diff
-1 Semestre 
-2 Semestre 
-.
-.
-.
-8 Semestre 
-```
+| # | Disciplina |
+|:---:|:---|
+| 01 | 📐 Álgebra e Geometria Analítica |
+| 02 | 🗄️ Banco de Dados I |
+| 03 | 🔗 Estrutura de Dados |
+| 04 | 💻 Linguagem e Técnicas de Programação I |
+| 05 | 🖥️ Organização e Arquitetura de Computadores |
 
-# 📊 Linguagens
+</div>
 
-<div align="left"> 
+## 🚀 Linguagens Utilizadas
+
+### ⚙️ Backend
+
+<div align="left">
     <img 
-        align="center" 
         alt="Python" 
-        title="Python"
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=python"
     />
     <img 
-        align="center" 
         alt="Java" 
-        title="Java"
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=java"
     />
     <img 
-        align="center" 
-        alt="MySQL" 
-        title="MySQL"
-        height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=mysql"
-    />
-    <img 
-        align="center" 
         alt="Assembly" 
-        title="Assembly"
         height="40" 
-        style="padding-right: 10px;" 
+        style="margin:4px" 
         src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg"
     />
 </div>
 
 ---
 
-# 🛠️ Software
+### 🗄️ Banco de Dados
 
 <div align="left">
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
-    />
-    <img
-        align="center"
-        alt="git"
-        tittle="Git"
-        height="40"
-        style="padding-right: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=git"
-    />
-    <img
-        align="center"
-        alt="github"
-        tittle="GitHub"
+    <img 
+        alt="MySQL" 
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=github"
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=mysql"
     />
-    <img
-        align="center"
-        alt="Eclipse"
-        tittle="Eclipse"
-        height="40"
-        style="padding-right: 10px;"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=eclipse"
-    />
-    <img
-        align="center"
-        alt="IntelliJ"
-        tittle="IntelliJ"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
-    />
-    <img
-        align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
-    <img
-        align="center"
-        alt="PostgreSQL"
-        tittle="PostgreSQL"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=postgresql"
-    />
-    <img
-        align="center"
-        alt="vscode"
-        tittle="VsCode"
+</div>
+
+## 🛠️ Ferramentas & Ambiente
+
+### 💻 IDEs & Editores
+
+<div align="left">
+    <img 
+        alt="VSCode" 
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=vscode"
     />
-    <img
-        align="center"
-        alt="visual studio"
-        tittle="visual studio"
+    <img 
+        alt="Visual Studio" 
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=visualstudio"
     />
+    <img 
+        alt="Eclipse" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=eclipse"
+    />
+    <img 
+        alt="IntelliJ" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img 
+        alt="PyCharm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img 
+        alt="PostgreSQL" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=postgresql"
+    />
+</div>
+
+---
+
+### 🗂️ Versionamento & Colaboração
+
+<div align="left">
+    <img 
+        alt="Git" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=git"
+    />
+    <img 
+        alt="GitHub" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=github"
+    />
+    <img 
+        alt="GitLab" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=gitlab"
+    />
+</div>
+
+---
+
+### 🖥️ Sistema Operacional
+
+<div align="left">
+    <img 
+        alt="Windows" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=windows"
+    />
+</div>
+
+<div align="center">
+
+---
+
+*2º Semestre • Ciência da Computação • UNICEUB* 🎓
+
 </div>
 
 <img 

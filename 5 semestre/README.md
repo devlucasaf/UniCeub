@@ -5,180 +5,157 @@
 
 # 5º Semestre
 
-◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu quinto semestre de curso de Ciência da Computação!<br>
-◽️Códigos em Java, Dart, Python, JavaScript, TypeScript, HTML e CSS<br>
-◽️Disciplinas:
-- Gerência de Projetos de TI<br>
-- Inteligência Artificial<br>
-- Interação Humano-Computador<br>
-- Programação para Dispositivos Móveis<br>
-- Projeto Integrador I<br>
+## 📚 Disciplinas
 
-### 📁 **Estrutura**
+<div align="center">
 
-```diff
-1 Semestre 
-2 Semestre 
-3 Semestre 
-4 Semestre 
-5 Semestre 
-.
-.
-.
-8 Semestre 
-```
+| # | Disciplina |
+|:---:|:---|
+| 01 | 📋 Gerência de Projetos de TI |
+| 02 | 🤖 Inteligência Artificial |
+| 03 | 🖱️ Interação Humano-Computador |
+| 04 | 📱 Programação para Dispositivos Móveis |
+| 05 | 🔗 Projeto Integrador I |
 
-# 🚀Linguagens 
+</div>
+
+## 🚀 Linguagens Utilizadas
+
+### ⚙️ Backend
 
 <div align="left">
-    <img
-        align="center"
-        alt="Java"
-        tittle="Java"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
+    <img 
+        alt="Java" 
+        height="40" 
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=java"
     />
-    <img
-        align="center"
-        alt="flutter"
-        tittle="Flutter"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=flutter"
-    />
-    <img
-        align="center"
-        alt="dart"
-        tittle="Dart"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=dart"
-    />
-    <img
-        align="center"
-        alt="python"
-        tittle="Python"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
+    <img 
+        alt="Python" 
+        height="40" 
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=python"
-    />
-    <img
-        align="center"
-        alt="javascript"
-        tittle="javascript"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=js"
-    />
-    <img
-        align="center"
-        alt="tyepscript"
-        tittle="typescript"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=ts"
-    />
-    <img
-        align="center"
-        alt="HTML5"
-        tittle="HTML5"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=html"
-    />
-    <img
-        align="center"
-        alt="Css3"
-        tittle="Css3"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=css"
     />
 </div>
 
 ---
 
-# 🛠️ Ferramentas
+### 🌐 Web & Mobile
 
 <div align="left">
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
-    />
-    <img
-        align="center"
-        alt="Git"
-        tittle="Git"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=git"
-    />
-    <img
-        align="center"
-        alt="GitHub"
-        tittle="GitHub"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=github"
-    />
-    <img
-        align="center"
-        alt="GitLab"
-        tittle="GitLab"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=gitlab"
-    />
-    <img
-        align="center"
-        alt="VsCode"
-        tittle="VsCode"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=vscode"
-    />
-    <img
-        align="center"
-        alt="android studio"
-        tittle="Android Studio"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png"
+    <img 
+        alt="HTML" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=html"
     />
     <img 
-        align="center" 
-        alt="Intellij" 
-        title="Intellij"
+        alt="CSS" 
         height="40" 
-        style="padding-right: 10px;" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=css"
+    />
+    <img 
+        alt="JavaScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=javascript"
+    />
+    <img 
+        alt="TypeScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=typescript"
+    />
+    <img 
+        alt="Flutter" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=flutter"
+    />
+    <img 
+        alt="Dart" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=dart"
+    />
+</div>
+
+## 🛠️ Ferramentas & Ambiente
+
+### 💻 IDEs & Editores
+
+<div align="left">
+    <img 
+        alt="VSCode" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img 
+        alt="Android Studio" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=androidstudio"
+    />
+    <img 
+        alt="IntelliJ" 
+        height="40" 
+        style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
     />
     <img 
-        align="center" 
         alt="PyCharm" 
-        title="PyCharm"
         height="40" 
-        style="padding-right: 10px;" 
+        style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
+</div>
+
+---
+
+### 🗂️ Versionamento & Colaboração
+
+<div align="left">
+    <img 
+        alt="Git" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=git"
+    />
+    <img 
+        alt="GitHub" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=github"
+    />
+    <img 
+        alt="GitLab" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=gitlab"
+    />
+</div>
+
+---
+
+### 🖥️ Sistema Operacional
+
+<div align="left">
+    <img 
+        alt="Windows" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=windows"
+    />
+</div>
+
+<div align="center">
+
+---
+
+*5º Semestre • Ciência da Computação • UNICEUB* 🎓
+
 </div>
 
 <img 

@@ -5,106 +5,108 @@
 
 # 1º Semestre
 
-◽️Nesta pasta, foram salvos os códigos aprendidos durante o meu primeiro semestre de curso<br>
-◽️Códigos em Python e C#<br>
-◽️Disciplinas:<br>
-- Administração e Sistemas de Informação<br>
-- Introdução à Ciência da Computação<br>
-- Lógica de Programação<br>
-- Matemática para Computação<br>
-- Sistemas Digitais<br>
+## 📚 Disciplinas
 
-### 📁 **Estrutura**
+<div align="center">
 
-```diff
-1 Semestre 
-.
-.
-.
-8 Semestre 
-```
+| # | Disciplina |
+|:---:|:---|
+| 01 | 💼 Administração e Sistemas de Informação |
+| 02 | 🖥️ Introdução à Ciência da Computação |
+| 03 | 🧠 Lógica de Programação |
+| 04 | 📐 Matemática para Computação |
+| 05 | ⚡ Sistemas Digitais |
 
-# 📊 Linguagens
+</div>
 
-<div align="left"> 
+## 🚀 Linguagens Utilizadas
+
+### ⚙️ Backend
+
+<div align="left">
     <img 
-        align="center" 
         alt="Python" 
-        title="Python"
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=python"
     />
     <img 
-        align="center" 
         alt="C#" 
-        title="C#"
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=cs"
+    />
+</div>
+
+## 🛠️ Ferramentas & Ambiente
+
+### 💻 IDEs & Editores
+
+<div align="left">
+    <img 
+        alt="VSCode" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img 
+        alt="Visual Studio" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=visualstudio"
+    />
+    <img 
+        alt="PyCharm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
 </div>
 
 ---
 
-# 🛠️ Software
+### 🗂️ Versionamento & Colaboração
 
-<div align="left"> 
-    <img
-        align="center"
-        alt="Windows"
-        tittle="Windows"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=windows"
-    />
-    <img
-        align="center"
-        alt="git"
-        tittle="Git"
-        height="40"
-        style="padding-right: 10px;"
-        href="https://skillicons.dev"
+<div align="left">
+    <img 
+        alt="Git" 
+        height="40" 
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=git"
     />
-    <img
-        align="center"
-        alt="github"
-        tittle="GitHub"
+    <img 
+        alt="GitHub" 
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
+        style="margin:4px" 
         src="https://skillicons.dev/icons?i=github"
     />
-    <img
-        align="center"
-        alt="VsCode"
-        tittle="VsCode"
+    <img 
+        alt="GitLab" 
         height="40" 
-        style="padding-right: 10px;" 
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=vscode"
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=gitlab"
     />
-    <img
-        align="center"
-        alt="Visual Studio"
-        tittle="Visual Studio"
-        height="40"
-        style="padding-right: 10px"
-        href="https://skillicons.dev"
-        src="https://skillicons.dev/icons?i=visualstudio"
+</div>
+
+---
+
+### 🖥️ Sistema Operacional
+
+<div align="left">
+    <img 
+        alt="Windows" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=windows"
     />
-    <img
-        align="center"
-        alt="pycharm"
-        tittle="PyCharm"
-        height="40"
-        style="padding-right: 10px;"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-    />
+</div>
+
+<div align="center">
+
+---
+
+*1º Semestre • Ciência da Computação • UNICEUB* 🎓
+
 </div>
 
 <img 
