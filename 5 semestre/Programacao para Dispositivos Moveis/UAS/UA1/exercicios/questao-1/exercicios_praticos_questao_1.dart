@@ -7,25 +7,25 @@ import 'dart:io';
 
 // Alternativa A
 void main() {
-    int palpite;
-    Random rand = new Random();
-    int resposta = rand.nextInt(100);
-    do {
-        print("Tente adivinhar o número:");
-        String temp = stdin.readLineSync();
-        palpite = int.parse(temp);
+  int palpite;
+  Random rand = new Random();
+  int resposta = rand.nextInt(100);
+  do {
+    print("Tente adivinhar o número:");
+    String temp = stdin.readLineSync();
+    palpite = int.parse(temp);
 
-        if (palpite < resposta) {
-            print("Valor muito baixo!");
-        } 
-        
-        else if (palpite > resposta) {
-            print("Valor muito alto!");
-        }
+    if (palpite < resposta) {
+      print("Valor muito baixo!");
     } 
     
-    while (palpite != resposta);
-        print("Acertou!");
+    else if (palpite > resposta) {
+      print("Valor muito alto!");
+    }
+  } 
+  
+  while (palpite != resposta);
+    print("Acertou!");
 }
 
 // Alternativa B
@@ -34,25 +34,25 @@ import 'dart:math';
 import 'dart:io'; 
 
 void main() { 
-    int palpite; 
+  int palpite; 
 
-    Random rand = new Random(); 
-    int resposta = rand.nextInt(100); 
-    print("Tente adivinhar o número:"); 
-    String temp = stdin.readLineSync(); 
-    palpite = int.parse(temp); 
+  Random rand = new Random(); 
+  int resposta = rand.nextInt(100); 
+  print("Tente adivinhar o número:"); 
+  String temp = stdin.readLineSync(); 
+  palpite = int.parse(temp); 
 
-    if (palpite < resposta) { 
-        print("Valor muito baixo!"); 
-    } 
-    
-    else if (palpite > resposta) { 
-        print("Valor muito alto!"); 
-    } 
+  if (palpite < resposta) { 
+    print("Valor muito baixo!"); 
+  } 
+  
+  else if (palpite > resposta) { 
+    print("Valor muito alto!"); 
+  } 
 
-    else {
-        print("Acertou!"); 
-    }
+  else {
+    print("Acertou!"); 
+  }
 }
 
 // Alternativa C
@@ -61,24 +61,24 @@ import 'dart:math';
 import 'dart:io';
 
 void main() {
-    int palpite;
+  int palpite;
 
-    Random rand = new Random();
+  Random rand = new Random();
 
-    int resposta = rand.nextInt(100);
+  int resposta = rand.nextInt(100);
 
-    do {
-        print("Tente adivinhar o número:");
-        String temp = stdin.readLineSync();
+  do {
+    print("Tente adivinhar o número:");
+    String temp = stdin.readLineSync();
 
-        palpite = int.parse(temp);
+    palpite = int.parse(temp);
 
-        if (palpite == resposta) {
-            print("Acertou!");
-        }
-
-        while (palpite != resposta);
+    if (palpite == resposta) {
+      print("Acertou!");
     }
+
+    while (palpite != resposta);
+  }
 }
 
 // Alternativa D
@@ -87,29 +87,29 @@ import 'dart:math';
 import 'dart:io'; 
 
 void main() { 
-    int palpite; 
+  int palpite; 
 
-    Random rand = new Random();
+  Random rand = new Random();
 
-    int resposta = rand.nextInt(100); 
-    print("Tente adivinhar o número:"); 
-    
-    String temp = stdin.readLineSync(); 
-    palpite = int.parse(temp); 
-    
-    do { 
-        if (palpite < resposta) { 
-            print("Valor muito baixo!"); 
-        } 
-        
-        else if (palpite > resposta) { 
-            print("Valor muito alto!"); 
-        } 
+  int resposta = rand.nextInt(100); 
+  print("Tente adivinhar o número:"); 
+  
+  String temp = stdin.readLineSync(); 
+  palpite = int.parse(temp); 
+  
+  do { 
+    if (palpite < resposta) { 
+      print("Valor muito baixo!"); 
     } 
     
-    while (palpite != resposta); 
-    
-    print("Acertou!"); 
+    else if (palpite > resposta) { 
+      print("Valor muito alto!"); 
+    } 
+  } 
+  
+  while (palpite != resposta); 
+  
+  print("Acertou!"); 
 }
 
 // Alternativa E
@@ -118,29 +118,29 @@ import 'dart:math';
 import 'dart:io'; 
 
 void main() { 
-    int resposta; 
-    int palpite; 
+  int resposta; 
+  int palpite; 
+  
+  do { 
+    Random rand = new Random(); 
     
-    do { 
-        Random rand = new Random(); 
-        
-        resposta = rand.nextInt(100); 
-        print("Tente adivinhar o número:"); 
-        
-        String temp = stdin.readLineSync(); 
-        
-        palpite = int.parse(temp); 
-        
-        if (palpite < resposta) { 
-            print("Valor muito baixo!"); 
-        } 
-        
-        else if (palpite > resposta) { 
-            print("Valor muito alto!"); 
-        } 
+    resposta = rand.nextInt(100); 
+    print("Tente adivinhar o número:"); 
+    
+    String temp = stdin.readLineSync(); 
+    
+    palpite = int.parse(temp); 
+    
+    if (palpite < resposta) { 
+      print("Valor muito baixo!"); 
     } 
     
-    while (palpite != resposta); 
-    
-    print("Acertou!"); 
+    else if (palpite > resposta) { 
+      print("Valor muito alto!"); 
+    } 
+  } 
+  
+  while (palpite != resposta); 
+  
+  print("Acertou!"); 
 }

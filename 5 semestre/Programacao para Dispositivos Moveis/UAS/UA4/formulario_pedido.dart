@@ -150,7 +150,6 @@ class _MyFormState extends State<MyForm> {
           ),
           const SizedBox(height: 20),
 
-          // ----- Region (DropdownButton) -----
           const Text(
             'Região:',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -171,7 +170,6 @@ class _MyFormState extends State<MyForm> {
           ),
           const SizedBox(height: 20),
 
-          // ----- Promotions (Checkbox) -----
           Row(
             children: [
               Checkbox(
@@ -189,7 +187,6 @@ class _MyFormState extends State<MyForm> {
           ),
           const SizedBox(height: 30),
 
-          // ----- Submit Button (TextButton) -----
           Center(
             child: TextButton(
               style: TextButton.styleFrom(
@@ -197,15 +194,17 @@ class _MyFormState extends State<MyForm> {
                 padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
               ),
               onPressed: () {
-                // Collect and print all data when button is pressed
                 final product = _productController.text.trim();
+
                 if (product.isEmpty) {
                   // Simple validation
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Por favor, informe o nome do produto')),
                   );
+
                   return;
                 }
+
                 if (_selectedDelivery == null) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Por favor, selecione o tipo de entrega')),
@@ -233,7 +232,6 @@ class _MyFormState extends State<MyForm> {
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is removed
     _productController.dispose();
     super.dispose();
   }

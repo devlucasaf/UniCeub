@@ -72,29 +72,29 @@ class _WidgetExampleState extends State<WidgetExample> {
                         // SWITCH
                         const Text('Switch (liga/desliga):'),
                             SwitchListTile(
-                            title: const Text('Wi-Fi'),
-                            value: wifiLigado,
-                            onChanged: (value) {
-                                setState(() {
-                                wifiLigado = value;
-                                });
-                            },
-                        ),
+                              title: const Text('Wi-Fi'),
+                              value: wifiLigado,
+                              onChanged: (value) {
+                                  setState(() {
+                                  wifiLigado = value;
+                                  });
+                              },
+                          ),
 
                         const Divider(),
 
                         // RADIO BUTTON
                         const Text('RadioButton (escolha única):'),
-                            RadioListTile(
-                            title: const Text('Opção A'),
-                            value: 'A',
-                            groupValue: escolha,
-                            onChanged: (value) {
-                                setState(() {
-                                escolha = value.toString();
-                                });
-                            },
-                        ),
+                              RadioListTile(
+                              title: const Text('Opção A'),
+                              value: 'A',
+                              groupValue: escolha,
+                              onChanged: (value) {
+                                  setState(() {
+                                  escolha = value.toString();
+                                  });
+                              },
+                          ),
                         RadioListTile(
                             title: const Text('Opção B'),
                             value: 'B',
