@@ -63,7 +63,10 @@ namespace ParadigmaOO
 
         public void AdicionarReserva(Reserva reserva)
         {
-            if (reserva == null) throw new ArgumentNullException(nameof(reserva));
+            if (reserva == null) 
+            {
+                throw new ArgumentNullException(nameof(reserva));
+            }
             _reservas.Add(reserva);
         }
 
@@ -113,12 +116,19 @@ namespace ParadigmaOO
             get => _nome;
             protected set
             {
-                if (string.IsNullOrWhiteSpace(value)) throw new ArgumentException("Nome invalido");
+                if (string.IsNullOrWhiteSpace(value)) 
+                {
+                    throw new ArgumentException("Nome invalido");
+                }
                 _nome = value.Trim();
             }
         }
 
-        public int Capacidade { get; protected set; }
+        public int Capacidade 
+        { 
+            get; 
+            protected set; 
+        }
 
         protected Espaco(string nome, int capacidade)
         {
