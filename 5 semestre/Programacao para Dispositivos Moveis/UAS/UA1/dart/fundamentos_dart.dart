@@ -73,7 +73,7 @@ double encontrarMaior(List<double> lista) {
         throw Exception('A lista não pode estar vazia.');
     }
 
-    double maior = lista[0];
+    double maior = lista[0];a
     int posicao = 1;
 
     while (posicao < lista.length) {
