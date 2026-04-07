@@ -79,6 +79,12 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=dart"
     />
+    <img 
+        alt="XML" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-original.svg"
+    />
 </div>
 
 ## 🛠️ Ferramentas & Ambiente
