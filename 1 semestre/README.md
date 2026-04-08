@@ -12,8 +12,8 @@
 | # | Disciplina |
 |:---:|:---|
 | 01 | 💼 Administração e Sistemas de Informação |
-| 02 | 🖥️ Introdução à Ciência da Computação |
-| 03 | 🧠 Lógica de Programação |
+| 02 | [🖥️ Introdução à Ciência da Computação ](https://github.com/devlucasaf/UniCeub/tree/main/1%20semestre/Introdu%C3%A7%C3%A3o%20a%20Ciencias%20da%20Computa%C3%A7%C3%A3o)|
+| 03 | [🧠 Lógica de Programação](https://github.com/devlucasaf/UniCeub/tree/main/1%20semestre/Logica%20de%20Programa%C3%A7%C3%A3o) |
 | 04 | 📐 Matemática para Computação |
 | 05 | ⚡ Sistemas Digitais |
 

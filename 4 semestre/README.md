@@ -11,10 +11,10 @@
 
 | # | Disciplina |
 |:---:|:---|
-| 01 | 🧩 Paradigmas de Linguagem de Programação |
-| 02 | 📊 Probabilidade e Estatística |
-| 03 | 🌐 Programação para Web |
-| 04 | 🖥️ Sistemas Operacionais |
+| 01 | 🧩 [Paradigmas de Linguagem de Programação](https://github.com/devlucasaf/UniCeub/tree/main/4%20semestre/Paradigmas%20de%20Linguagem%20de%20Programa%C3%A7%C3%A3o) |
+| 02 | 📊 [Probabilidade e Estatística](https://github.com/devlucasaf/UniCeub/tree/main/4%20semestre/Probabilidade%20e%20Estat%C3%ADstica) |
+| 03 | 🌐 [Programação para Web](https://github.com/devlucasaf/UniCeub/tree/main/4%20semestre/Programa%C3%A7%C3%A3o%20para%20Web) |
+| 04 | 🖥️ [Sistemas Operacionais](https://github.com/devlucasaf/UniCeub/tree/main/4%20semestre/Sistemas%20Operacionais) |
 | 05 | 🔬 Teoria da Computação |
 
 </div>
