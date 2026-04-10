@@ -210,16 +210,22 @@
         src="https://skillicons.dev/icons?i=visualstudio"
     />
     <img 
-        alt="RubyMine" 
+        alt="Jupyter" 
         height="40" 
         style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
     />
     <img 
         alt="PyCharm" 
         height="40" 
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+    />
+    <img 
+        alt="RubyMine" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
     <img 
         alt="IntelliJ" 

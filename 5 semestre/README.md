@@ -116,6 +116,12 @@
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
+    <img 
+        alt="Jupyter" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+    />
 </div>
 
 ---
