@@ -1,0 +1,4 @@
+train: /content/drive/MyDrive/academico/IA/YOLO/train
+val: /content/drive/MyDrive/academico/IA/YOLO/val
+nc: 16
+names: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '','Gumball']
