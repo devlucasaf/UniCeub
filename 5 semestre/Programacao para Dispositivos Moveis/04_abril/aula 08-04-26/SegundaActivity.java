@@ -36,7 +36,7 @@ public class SegundaActivity extends AppCompatActivity {
 
         //txtNome.setText(nome);
         //txtIdade.setText(String.valueOf(idade));
-
+        
         txtNome.setText(pessoa.getNome());
         txtIdade.setText(String.valueOf(pessoa.getIdade()));
     }

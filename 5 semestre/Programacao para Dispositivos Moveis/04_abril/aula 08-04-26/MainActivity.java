@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.enviodedadosviabundle.model.Pessoa;
+import com.example.enviodedadosviabundle.model.Usuario;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,16 +27,14 @@ public class MainActivity extends AppCompatActivity {
         btnEnviarDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intencao = new Intent(MainActivity.this, SegundaActivity.class);
-                //intencao.putExtra("nome", "Rafael Ribeiro");
-                //intencao.putExtra("idade",  67);
+                Intent intent = new Intent(MainActivity.this, SegundaActivity.class);
 
                 Pessoa pessoa = new Pessoa();
-                pessoa.setNome("Rafael Ribeiro");
-                pessoa.setIdade(25);
-                intencao.putExtra("meuObjeto", pessoa);
 
-                startActivity(intencao);
+                pessoa.setNome("Leanderson da Silva");
+                pessoa.setIdade(910);
+                intent.putExtra("meuObjeto", pessoa);
+                startActivity(intent);
             }
         });
     }

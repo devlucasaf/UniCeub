@@ -13,7 +13,8 @@
         android:theme="@style/Theme.EnvioDeDadosViaBundle">
         <activity
             android:name=".SegundaActivity"
-            android:exported="false" />
+            android:exported="false"
+        />
         <activity
             android:name=".MainActivity"
             android:exported="true">
