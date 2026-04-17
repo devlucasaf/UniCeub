@@ -37,6 +37,12 @@
         src="https://skillicons.dev/icons?i=java"
     />
     <img 
+        alt="JavaScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=javascript"
+    />
+    <img 
         alt="C" 
         height="40" 
         style="margin:4px" 
@@ -78,6 +84,18 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=ruby"
     />
+    <img 
+        alt="php" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=php"
+    />
+    <img 
+        alt="r" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=r"
+    />
 </div>
 
 ---
@@ -98,12 +116,6 @@
         src="https://skillicons.dev/icons?i=css"
     />
     <img 
-        alt="JavaScript" 
-        height="40" 
-        style="margin:4px" 
-        src="https://skillicons.dev/icons?i=javascript"
-    />
-    <img 
         alt="Tailwind" 
         height="40" 
         style="margin:4px" 
@@ -114,6 +126,12 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=bootstrap"
+    />
+    <img 
+        alt="JQuery" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=jquery" 
     />
     <img 
         alt="Django" 
@@ -152,12 +170,18 @@
         height="40" 
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
-    />
+    />    
     <img 
         alt="Haskell" 
         height="40" 
         style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
+        src="https://skillicons.dev/icons?i=haskell"
+    />
+    <img 
+        alt="Clojure" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=clojure" 
     />
     <img 
         alt="Cobol" 

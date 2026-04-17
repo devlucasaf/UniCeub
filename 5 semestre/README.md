@@ -36,6 +36,24 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=python"
     />
+    <img 
+        alt="JavaScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=javascript"
+    />
+    <img 
+        alt="TypeScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=typescript"
+    />
+    <img 
+        alt="Dart" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=dart"
+    />
 </div>
 
 ---
@@ -56,28 +74,10 @@
         src="https://skillicons.dev/icons?i=css"
     />
     <img 
-        alt="JavaScript" 
-        height="40" 
-        style="margin:4px" 
-        src="https://skillicons.dev/icons?i=javascript"
-    />
-    <img 
-        alt="TypeScript" 
-        height="40" 
-        style="margin:4px" 
-        src="https://skillicons.dev/icons?i=typescript"
-    />
-    <img 
         alt="Flutter" 
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=flutter"
-    />
-    <img 
-        alt="Dart" 
-        height="40" 
-        style="margin:4px" 
-        src="https://skillicons.dev/icons?i=dart"
     />
     <img 
         alt="XML" 
