@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Guia Virtual para Ricardo - Acessibilidade</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Guia de Navegação para Ricardo</h1>
+        <div class="status-area">
+            <div class="info" id="localAtual">Local atual: Em casa (sala)</div>
+            <div class="info" id="destinoInfo">Destino: nenhum</div>
+            <div class="instrucao">
+                🎤 <strong>Comandos de voz:</strong> "Navegar até padaria", "Onde estou?", "Parar navegação", "Obstáculo"
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button id="btnOndeEstou">Onde estou?</button>
+            <button id="btnPadaria">Navegar até Padaria</button>
+            <button id="btnFarmacia">Navegar até Farmácia</button>
+            <button id="btnParar">Parar navegação</button>
+            <button id="btnObstaculo">Simular obstáculo</button>
+        </div>
+
+        <label for="destinoTexto" class="instrucao" style="display: block; margin-top: 10px;">Ou digite um destino:</label>
+        <input type="text" id="destinoTexto" class="destino-input" placeholder="Ex: Mercado, Banco, Praça" aria-label="Digite o destino">
+        <button id="btnIrDestino" style="width: 100%;">Ir para este destino</button>
+
+        <div class="feedback" id="feedbackArea">
+            Sistema pronto. Clique nos botões ou use comandos de voz.
+        </div>
+        <div class="instrucao" style="margin-top: 15px;">
+            <em>O sistema emite áudio e simula vibração (dispositivos compatíveis).</em>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
