@@ -158,6 +158,12 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=sqlite"
     />
+    <img 
+        alt="SqlServer" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+    />
 </div>
 
 ---
@@ -182,6 +188,18 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=clojure" 
+    />
+    <img 
+        alt="Erlang" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/erlang/erlang-original.svg"
+    />
+    <img 
+        alt="Elm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elm/elm-original.svg"
     />
     <img 
         alt="Cobol" 
@@ -239,6 +257,12 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
     />
     <img 
+        alt="DataGrip" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg"
+    />
+    <img 
         alt="PostgreSQL" 
         height="40" 
         style="margin:4px" 
@@ -258,12 +282,24 @@
         src="https://skillicons.dev/icons?i=git"
     />
     <img 
+        alt="Git Actions" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+    />
+    <img 
+        alt="GitHub CodeSpaces" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg"
+    />
+    <img 
         alt="GitHub" 
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=github"
     />
-    <img 
+    <img    
         alt="GitLab" 
         height="40" 
         style="margin:4px" 
@@ -280,7 +316,7 @@
         alt="Windows" 
         height="40" 
         style="margin:4px" 
-        src="https://skillicons.dev/icons?i=windows"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg"
     />
 </div>
 

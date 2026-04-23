@@ -208,6 +208,12 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=sqlite"
     />
+    <img 
+        alt="SqlServer" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+    />
 </div>
 
 ---
@@ -237,6 +243,12 @@
         alt="PyCharm" 
         height="40" 
         style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg"
+    />
+    <img 
+        alt="PyCharm" 
+        height="40" 
+        style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
     <img 
@@ -261,13 +273,19 @@
         alt="Android Studio" 
         height="40" 
         style="margin:4px" 
-        src="https://skillicons.dev/icons?i=androidstudio"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
     />
     <img 
         alt="PostgreSQL" 
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=postgresql"
+    />
+    <img 
+        alt="DataGrip" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg"
     />
     <img 
         alt="Blender" 
@@ -287,6 +305,18 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=git"
+    />
+    <img 
+        alt="Git Actions" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+    />
+    <img 
+        alt="GitHub CodeSpaces" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg"
     />
     <img 
         alt="GitHub" 
@@ -332,6 +362,18 @@
         src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/pascal/9.9.0/1738545183646/Microsoft.VisualStudio.Services.Icons.Default"
     />
     <img 
+        alt="Erlang" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/erlang/erlang-original.svg"
+    />
+    <img 
+        alt="Elm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elm/elm-original.svg"
+    />
+    <img 
         alt="Cobol" 
         height="40" 
         style="margin:4px" 
@@ -360,7 +402,7 @@
         alt="Windows" 
         height="40" 
         style="margin:4px" 
-        src="https://skillicons.dev/icons?i=windows"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg"
     />
 </div>
 
