@@ -240,7 +240,7 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
     />
     <img 
-        alt="PyCharm" 
+        alt="JetBrains" 
         height="40" 
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg"
@@ -256,6 +256,12 @@
         height="40" 
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rubymine/rubymine-original.svg"
+    />
+    <img 
+        alt="DataGrip" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg"
     />
     <img 
         alt="IntelliJ" 
@@ -280,12 +286,6 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=postgresql"
-    />
-    <img 
-        alt="DataGrip" 
-        height="40" 
-        style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg"
     />
     <img 
         alt="Blender" 
