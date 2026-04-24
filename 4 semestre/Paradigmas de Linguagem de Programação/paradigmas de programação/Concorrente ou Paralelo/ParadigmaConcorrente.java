@@ -1,10 +1,26 @@
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CompletionService;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 class Task implements Callable<String> {
-    private final int id;
-    private final int duration;
+    private final int       id;
+    private final int       duration;
     private final Semaphore semaphore;
 
     public Task(int id, int duration, Semaphore semaphore) {
@@ -28,20 +44,14 @@ class Task implements Callable<String> {
                 throw new RuntimeException("Erro aleatório na tarefa " + id);
             }
 
-            return "✔ Tarefa " + id + " concluída em " + duration + " segundos";
+            return "Tarefa " + id + " concluída em " + duration + " segundos";
 
-        } 
-        
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            return "⚠ Tarefa " + id + " interrompida";
-        } 
-        
-        catch (Exception e) {
-            return "❌ Tarefa " + id + " falhou: " + e.getMessage();
-        } 
-        
-        finally {
+            return "Tarefa " + id + " interrompida";
+        } catch (Exception e) {
+            return "Tarefa " + id + " falhou: " + e.getMessage();
+        } finally {
             semaphore.release();
         }
     }
@@ -93,15 +103,13 @@ class Monitor implements Runnable {
                         " | Queue: " + executor.getQueue().size());
                 Thread.sleep(2000);
             }
-        } 
-        
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
 }
 
-public class ParadigmaConcorrenteAvancado {
+public class ParadigmaConcorrente {
 
     public static void main(String[] args) {
         int numWorkers = 4;
@@ -143,23 +151,15 @@ public class ParadigmaConcorrenteAvancado {
 
                 if (result.contains("✔")) {
                     metrics.incrementCompleted();
-                } 
-                
-                else if (result.contains("❌")) {
+                } else if (result.contains("❌")) {
                     metrics.incrementFailed();
-                } 
-                
-                else {
+                } else {
                     metrics.incrementCancelled();
                 }
 
-            } 
-            
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-            } 
-            
-            catch (ExecutionException e) {
+            } catch (ExecutionException e) {
                 metrics.incrementFailed();
                 System.out.println("Erro ao executar tarefa: " + e.getMessage());
             }
@@ -177,9 +177,7 @@ public class ParadigmaConcorrenteAvancado {
 
         try {
             monitorThread.join();
-        } 
-        
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
 
@@ -195,9 +193,7 @@ public class ParadigmaConcorrenteAvancado {
                 System.out.println("Forçando encerramento...");
                 executor.shutdownNow();
             }
-        } 
-        
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             executor.shutdownNow();
             Thread.currentThread().interrupt();
         }
@@ -222,9 +218,7 @@ public class ParadigmaConcorrenteAvancado {
                     System.out.println("[PRODUTOR] Produziu: " + i);
                     Thread.sleep(500);
                 }
-            } 
-            
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
         }
@@ -236,9 +230,7 @@ public class ParadigmaConcorrenteAvancado {
                     System.out.println("[CONSUMIDOR] Consumiu: " + value);
                     Thread.sleep(1000);
                 }
-            } 
-            
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
         }

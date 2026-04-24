@@ -464,39 +464,25 @@ int main() {
             if (!cadastrar_morador(moradores, &nMor, &nextMorId)) {
                 printf("Falha ao cadastrar morador\n");
             }
-        } 
-
-        else if (op == 2) {
+        } else if (op == 2) {
             if (!cadastrar_espaco(espacos, &nEsp, &nextEspId)) {
                 printf("Falha ao cadastrar espaco\n");
             }
-        } 
-
-        else if (op == 3) {
+        } else if (op == 3) {
             if (nMor == 0 || nEsp == 0) {
                 printf("Cadastre ao menos 1 morador e 1 espaco antes\n");
-            } 
-            
-            else {
+            } else {
                 if (!criar_reserva(reservas, &nRes, &nextResId, moradores, nMor, espacos, nEsp)) {
                     printf("Falha ao criar reserva\n");
                 }
             }
-        } 
-
-        else if (op == 4) {
+        } else if (op == 4) {
             listar_moradores(moradores, nMor);
-        } 
-
-        else if (op == 5) {
+        } else if (op == 5) {
             listar_espacos(espacos, nEsp);
-        } 
-
-        else if (op == 6) {
+        } else if (op == 6) {
             listar_reservas(reservas, nRes, moradores, nMor, espacos, nEsp);
-        } 
-        
-        else {
+        } else {
             printf("Opcao invalida\n");
         }
     }

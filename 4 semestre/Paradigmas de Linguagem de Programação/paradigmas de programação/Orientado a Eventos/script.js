@@ -14,9 +14,7 @@ botoes.forEach(botao => {
             if (novoNumero) {
                 display.textContent = valor;
                 novoNumero = false;
-            } 
-            
-            else {
+            } else {
                 display.textContent += valor;
             }
         } 
@@ -34,16 +32,12 @@ botoes.forEach(botao => {
             operador = valor;
             numero1 = parseFloat(display.textContent);
             novoNumero = true;
-        } 
-        
-        else if (valor === "=") {
+        } else if (valor === "=") {
             numero2 = parseFloat(display.textContent);
             let resultado = calcular();
             display.textContent = formatar(resultado);
             novoNumero = true;
-        } 
-        
-        else if (valor === "C") {
+        } else if (valor === "C") {
             display.textContent = "0";
             numero1 = 0;
             numero2 = 0;

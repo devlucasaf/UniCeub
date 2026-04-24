@@ -1,5 +1,13 @@
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
 
 public class OOPFaculdadeDemo {
     public static void main(String[] args) {
@@ -139,10 +147,10 @@ public class OOPFaculdadeDemo {
 }
 
 abstract class Person {
-    private final UUID id;
-    private String name;
-    private String email;
-    private LocalDate createdAt;
+    private final UUID  id;
+    private String      name;
+    private String      email;
+    private LocalDate   createdAt;
 
     protected Person(String name, String email) {
         this.id = UUID.randomUUID();
@@ -254,9 +262,9 @@ class Staff extends Person implements Payable {
 }
 
 class Professor extends Person implements Payable {
-    private final String professorId;
-    private double hourlyRate;
-    private int hoursThisMonth;
+    private final String    professorId;
+    private double          hourlyRate;
+    private int             hoursThisMonth;
 
     public Professor(String name, String email, String professorId, double hourlyRate) {
         super(name, email);
@@ -324,8 +332,8 @@ class Professor extends Person implements Payable {
 }
 
 class Student extends Person {
-    private final String studentId;
-    private final List<Enrollment> enrollments;
+    private final String            studentId;
+    private final List<Enrollment>  enrollments;
 
     public Student(String name, String email, String studentId) {
         super(name, email);

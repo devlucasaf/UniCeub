@@ -4,8 +4,8 @@ import java.awt.event.*;
 
 public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionListener {
 
-    private JTextField display;
-    private JPanel painelBotoes;
+    private JTextField  display;
+    private JPanel      painelBotoes;
 
     private String operador = "";
     private double numero1 = 0;
@@ -42,9 +42,7 @@ public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionLi
         for (String texto : botoes) {
             if (texto.equals("")) {
                 painelBotoes.add(new JLabel());
-            } 
-            
-            else {
+            } else {
                 JButton botao = new JButton(texto);
                 botao.setFont(new Font("Arial", Font.BOLD, 18));
                 botao.addActionListener(this);
@@ -63,38 +61,26 @@ public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionLi
             if (novoNumero) {
                 display.setText(comando);
                 novoNumero = false;
-            } 
-            
-            else {
+            } else {
                 display.setText(display.getText() + comando);
             }
-        } 
-        
-        else if (comando.equals(".")) {
+        } else if (comando.equals(".")) {
             if (novoNumero) {
                 display.setText("0.");
                 novoNumero = false;
-            } 
-            
-            else if (!display.getText().contains(".")) {
+            } else if (!display.getText().contains(".")) {
                 display.setText(display.getText() + ".");
             }
-        } 
-        
-        else if (comando.matches("[+\\-*/]")) {
+        } else if (comando.matches("[+\\-*/]")) {
             operador = comando;
             numero1 = Double.parseDouble(display.getText());
             novoNumero = true;
-        } 
-        
-        else if (comando.equals("=")) {
+        } else if (comando.equals("=")) {
             numero2 = Double.parseDouble(display.getText());
             double resultado = calcular();
             display.setText(formatarResultado(resultado));
             novoNumero = true;
-        } 
-        
-        else if (comando.equals("C")) {
+        } else if (comando.equals("C")) {
             display.setText("0");
             operador = "";
             numero1 = 0;
@@ -124,9 +110,7 @@ public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionLi
     private String formatarResultado(double resultado) {
         if (resultado == (long) resultado) {
             return String.valueOf((long) resultado);
-        } 
-        
-        else {
+        } else {
             return String.valueOf(resultado);
         }
     }
