@@ -1,0 +1,85 @@
+/* =============================================
+    RESET BÁSICO
+    Remove margens e paddings padrão do navegador
+============================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============================================
+    BODY
+    Define o visual geral da página
+============================================= */
+body {
+    background-color: #f0f0f0;   /* fundo cinza claro */
+    font-family: Arial, sans-serif;
+    display: flex;               /* centraliza conteúdo */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;           /* ocupa toda a altura da tela */
+}
+
+/* =============================================
+    CONTAINER
+    Caixa central que agrupa os elementos
+============================================= */
+.container {
+    background-color: #ffffff;   /* fundo branco */
+    border-radius: 12px;         /* bordas arredondadas */
+    padding: 40px;               /* espaçamento interno */
+    text-align: center;          /* centraliza textos */
+    max-width: 400px;            /* largura máxima */
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* sombra suave */
+}
+
+/* =============================================
+    FOTO DE PERFIL
+============================================= */
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;          /* torna a imagem circular */
+    border: 4px solid #4a90e2;   /* borda azul ao redor */
+    margin-bottom: 20px;
+}
+
+/* =============================================
+    NOME DO USUÁRIO
+============================================= */
+.nome {
+    font-size: 1.8rem;           /* tamanho grande */
+    color: #4a90e2;              /* azul de destaque */
+    margin-bottom: 12px;
+}
+
+/* =============================================
+    DESCRIÇÃO
+============================================= */
+.descricao {
+    font-size: 1rem;
+    color: #555555;              /* cinza médio */
+    line-height: 1.6;            /* espaçamento entre linhas */
+    margin-bottom: 24px;
+}
+
+/* =============================================
+    BOTÃO
+============================================= */
+.botao {
+    display: inline-block;
+    background-color: #4a90e2;   /* fundo azul */
+    color: #ffffff;              /* texto branco */
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;       /* remove sublinhado do link */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s; /* animação suave no hover */
+}
+
+.botao:hover {
+    background-color: #2c6dbf;   /* azul mais escuro ao passar o mouse */
+}

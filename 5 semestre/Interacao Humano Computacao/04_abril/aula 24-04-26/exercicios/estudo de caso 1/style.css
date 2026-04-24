@@ -1,0 +1,76 @@
+/* ARQUIVO BASE DE ESTILOS*/
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+*/
+
+/* Reset Básico - remove margens e paddings padrão do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define o visual geral da página */
+body {
+    font-family: Arial, sans-serif; /* fundo cinza claro */
+    background-color: #f0f0f0; 
+    display: flex; /* centraliza o conteúdo */
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Nome em destaque */
+.nome {
+    font-size: 36px;
+    color: #4A90E2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Foto com bordas arredondadas */
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Descrição confortável */
+.descricao {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+}
+
+/* Botão de destaque */
+.botao {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.botao:hover {
+    background-color: #357ABD;
+}
