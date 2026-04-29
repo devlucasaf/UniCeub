@@ -12,8 +12,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn2Activity, btn3Activity, btn4Activity, btn5Activity;
-
+    Button btnSecondActivity;
+    Button btnThirdActivity;
+    Button btnFourActivity;
+    Button btnFiveActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        btn2Activity = (Button) findViewById(R.id.cmdAbrir2Activity);
-        btn3Activity = (Button) findViewById(R.id.cmdAbrir3Activity);
-        btn4Activity = (Button) findViewById(R.id.cmdAbrir4Activity);
-        btn5Activity = (Button) findViewById(R.id.cmdAbrir5Activity);
+        btnSecondActivity   = (Button) findViewById(R.id.cmdAbrir2Activity);
+        btnThirdActivity    = (Button) findViewById(R.id.cmdAbrir3Activity);
+        btnFourActivity     = (Button) findViewById(R.id.cmdAbrir4Activity);
+        btnFiveActivity     = (Button) findViewById(R.id.cmdAbrir5Activity);
 
-        btn2Activity.setOnClickListener(new View.OnClickListener() {
+        btnSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intencao = new Intent(MainActivity.this, SegundaActivity.class);

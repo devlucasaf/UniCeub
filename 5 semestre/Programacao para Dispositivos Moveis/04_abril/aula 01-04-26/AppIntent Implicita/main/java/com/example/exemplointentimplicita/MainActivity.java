@@ -15,8 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edtURL, edtTelefone;
-    Button btnAbrirNavegador, btnLigar;
+    EditText    edtURL;
+    EditText    edtTelefone;
+    Button      btnAbrirNavegador;
+    Button      btnLigar;
 
 
     @Override
@@ -25,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        edtURL = (EditText) findViewById(R.id.txtUrl);
-        edtTelefone = (EditText) findViewById(R.id.txtPhone);
-        btnAbrirNavegador = (Button) findViewById(R.id.cmdAbrirNavegador);
-        btnLigar = (Button) findViewById(R.id.cmdLigar);
+        edtURL              = (EditText) findViewById(R.id.txtUrl);
+        edtTelefone         = (EditText) findViewById(R.id.txtPhone);
+        btnAbrirNavegador   = (Button) findViewById(R.id.cmdAbrirNavegador);
+        btnLigar            = (Button) findViewById(R.id.cmdLigar);
 
         btnAbrirNavegador.setOnClickListener(new View.OnClickListener() {
             @Override

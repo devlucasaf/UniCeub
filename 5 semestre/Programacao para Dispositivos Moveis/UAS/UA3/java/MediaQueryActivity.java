@@ -48,15 +48,18 @@ public class MediaQueryActivity extends AppCompatActivity {
                 "Densidade: %.2f\n" +
                 "Orientação: %s\n" +
                 "Escala de fonte: %.1f",
-                screenWidthPx, screenWidthDp, screenHeightPx, density, orientation, fontScale
+                screenWidthPx, 
+                screenWidthDp, 
+                screenHeightPx, 
+                density, 
+                orientation, 
+                fontScale
         ));
 
         int horizontalMarginDp;
         if (screenWidthDp >= 600) {
             horizontalMarginDp = 32;
-        } 
-        
-        else {
+        } else {
             horizontalMarginDp = 16;
         }
         int marginPx = (int) TypedValue.applyDimension(

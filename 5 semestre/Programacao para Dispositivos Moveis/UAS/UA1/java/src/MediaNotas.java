@@ -5,10 +5,10 @@ import java.awt.event.ActionListener;
 
 public class MediaNotas extends JFrame {
 
-    private JTextField inputN1;
-    private JTextField inputN2;
-    private JLabel resultado;
-    private JLabel status;
+    private JTextField  inputN1;
+    private JTextField  inputN2;
+    private JLabel      resultado;
+    private JLabel      status;
 
     public MediaNotas() {
         setTitle("Calculadora de Média");
@@ -165,20 +165,14 @@ public class MediaNotas extends JFrame {
             if (media >= 7.0) {
                 status.setText("Aprovado");
                 status.setForeground(new Color(0, 128, 0));
-            } 
-            
-            else if (media >= 5.0) {
+            } else if (media >= 5.0) {
                 status.setText("Recuperação");
                 status.setForeground(Color.ORANGE);
-            } 
-            
-            else {
+            } else {
                 status.setText("Reprovado");
                 status.setForeground(Color.RED);
             }
-        } 
-        
-        catch (NumberFormatException ex) {
+        } catch (NumberFormatException ex) {
             resultado.setText("Por favor, insira valores numéricos válidos!");
             resultado.setForeground(Color.RED);
             status.setText("");

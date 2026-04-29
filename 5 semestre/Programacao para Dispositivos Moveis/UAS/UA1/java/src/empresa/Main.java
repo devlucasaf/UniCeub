@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Empresa empresa = new Empresa("Tech Solutions Ltda", "12.345.678/0001-99");
 
         List<String> linguagensAna = new ArrayList<>();

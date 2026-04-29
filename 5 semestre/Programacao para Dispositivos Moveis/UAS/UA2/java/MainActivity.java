@@ -48,9 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
             txtResultado.setText(String.format("Média: %.2f", media));
             Toast.makeText(this, "Média calculada: " + String.format("%.2f", media), Toast.LENGTH_SHORT).show();
-        } 
-        
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             Toast.makeText(this, "Digite números válidos", Toast.LENGTH_SHORT).show();
         }
     }

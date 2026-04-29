@@ -10,7 +10,7 @@ public class FundamentosJava {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\n=== 1. Variáveis e Tipos ===");
+        System.out.println("\n=== Variáveis e Tipos ===");
 
         double n1 = 10.0;
         double n2 = 7.0;
@@ -28,7 +28,7 @@ public class FundamentosJava {
         String nomeNaoNullable = "João";
         System.out.println("Nome não nulo: " + nomeNaoNullable);
 
-        System.out.println("\n=== 2. Funções e Cálculos ===");
+        System.out.println("\n=== Funções e Cálculos ===");
 
         int numero = 5;
         System.out.println("Fatorial de " + numero + ": " + fatorial(numero));
@@ -40,7 +40,7 @@ public class FundamentosJava {
         double maiorValor = encontrarMaior(minhaLista);
         System.out.println("Maior valor na lista: " + maiorValor);
 
-        System.out.println("\n=== 3. Manipulação de Coleções ===");
+        System.out.println("\n=== Manipulação de Coleções ===");
 
         List<Double> maioresQue50 = new ArrayList<>();
         for (double valor : minhaLista) {
@@ -56,7 +56,7 @@ public class FundamentosJava {
         }
         System.out.println("Valores arredondados: " + valoresInteiros);
 
-        System.out.println("\n=== 4. Trabalhando com Classes ===");
+        System.out.println("\n=== Trabalhando com Classes ===");
 
         Aluno aluno1 = new Aluno("Ana", 8.5, 7.2);
         Aluno aluno2 = new Aluno("Bruno", 5.0, 6.5);
@@ -73,13 +73,13 @@ public class FundamentosJava {
             System.out.println(aluno);
         }
 
-        System.out.println("\n=== 5. Método auxiliar (equivalente à função aninhada) ===");
+        System.out.println("\n=== Método auxiliar (equivalente à função aninhada) ===");
 
         mostrarStatus(aluno1);
         mostrarStatus(aluno2);
         mostrarStatus(aluno3);
 
-        System.out.println("\n=== 6. Entrada/Saída (Console) ===");
+        System.out.println("\n=== Entrada/Saída (Console) ===");
         System.out.print("Digite um número inteiro para calcular o fatorial: ");
         String entrada = sc.nextLine();
 
@@ -87,24 +87,20 @@ public class FundamentosJava {
             try {
                 int valor = Integer.parseInt(entrada);
                 System.out.println("Fatorial de " + valor + ": " + fatorial(valor));
-            } 
-            
-            catch (NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Erro: você não digitou um número inteiro válido.");
             }
-        } 
-        
-        else {
+        } else {
             System.out.println("Nenhuma entrada fornecida.");
         }
 
-        System.out.println("\n=== 7. Inicialização tardia (equivalente prático) ===");
+        System.out.println("\n=== Inicialização tardia (equivalente prático) ===");
 
         System.out.println("O programa continua...");
         double valorCalculado = calcularValorCaro();
         System.out.println("Valor calculado: " + valorCalculado);
 
-        System.out.println("\n=== 8. Tratamento de null ===");
+        System.out.println("\n=== Tratamento de null ===");
 
         String textoNullable = null;
         String textoFinal = (textoNullable != null) ? textoNullable : "Valor padrão (coalescência)";
@@ -114,13 +110,11 @@ public class FundamentosJava {
 
         if (listaNullable != null) {
             listaNullable.add(10);
-        } 
-        
-        else {
+        } else {
             System.out.println("A lista é nula, não é possível adicionar.");
         }
 
-        System.out.println("\n=== 9. Outros Conceitos ===");
+        System.out.println("\n=== Outros Conceitos ===");
 
         System.out.println("Variável global: " + mensagemGlobal);
 
@@ -192,9 +186,7 @@ public class FundamentosJava {
         System.out.println("  > Executando cálculo caro...");
         try {
             Thread.sleep(1000);
-        } 
-        
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
         return 3.14159;

@@ -1,10 +1,10 @@
 public class Produto {
 
     // Atributos privados
-    private int codigo;
-    private String nome;
-    private double preco;
-    private int quantidade;
+    private int     codigo;
+    private String  nome;
+    private double  preco;
+    private int     quantidade;
 
     // Construtor
     public Produto(int codigo, String nome, double preco, int quantidade) {

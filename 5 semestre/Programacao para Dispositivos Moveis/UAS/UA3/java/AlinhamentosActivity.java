@@ -70,7 +70,13 @@ public class AlinhamentosActivity extends Activity {
         layout.setBackgroundColor(Color.LTGRAY);
         layout.setGravity(mainGravity | crossGravity);
 
-        int[] cores = {Color.BLUE, Color.rgb(255, 192, 203), Color.rgb(128, 0, 128), Color.GREEN, Color.rgb(255, 165, 0)};
+        int[] cores = {
+            Color.BLUE, 
+            Color.rgb(255, 192, 203), 
+            Color.rgb(128, 0, 128),
+            Color.GREEN, 
+            Color.rgb(255, 165, 0)
+        };
         
         for (int i = 0; i < cores.length; i++) {
             TextView quadrado = new TextView(this);
@@ -81,9 +87,7 @@ public class AlinhamentosActivity extends Activity {
             
             if (orientation == LinearLayout.HORIZONTAL) {
                 params.rightMargin = 10;
-            } 
-            
-            else {
+            } else {
                 params.bottomMargin = 10;
             }
             quadrado.setLayoutParams(params);
@@ -116,7 +120,13 @@ public class AlinhamentosActivity extends Activity {
 
         layout.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.FILL_VERTICAL);
 
-        int[] cores = {Color.BLUE, Color.rgb(255, 192, 203), Color.rgb(128, 0, 128), Color.GREEN, Color.rgb(255, 165, 0)};
+        int[] cores = {
+            Color.BLUE, 
+            Color.rgb(255, 192, 203), 
+            Color.rgb(128, 0, 128), 
+            Color.GREEN, 
+            Color.rgb(255, 165, 0)
+        };
         
         for (int i = 0; i < cores.length; i++) {
             TextView quadrado = new TextView(this);
@@ -153,7 +163,13 @@ public class AlinhamentosActivity extends Activity {
                 ViewGroup.LayoutParams.MATCH_PARENT, 120));
         layout.setBackgroundColor(Color.LTGRAY);
 
-        int[] cores = {Color.BLUE, Color.rgb(255, 192, 203), Color.rgb(128, 0, 128), Color.GREEN, Color.rgb(255, 165, 0)};
+        int[] cores = {
+            Color.BLUE, 
+            Color.rgb(255, 192, 203), 
+            Color.rgb(128, 0, 128), 
+            Color.GREEN, 
+            Color.rgb(255, 165, 0)
+        };
         
         for (int i = 0; i < cores.length; i++) {
             TextView quadrado = new TextView(this);
@@ -165,9 +181,7 @@ public class AlinhamentosActivity extends Activity {
             if (orientation == LinearLayout.HORIZONTAL) {
                 params.rightMargin = 5;
                 params.leftMargin = 5;
-            } 
-            
-            else {
+            } else {
                 params.bottomMargin = 5;
                 params.topMargin = 5;
             }

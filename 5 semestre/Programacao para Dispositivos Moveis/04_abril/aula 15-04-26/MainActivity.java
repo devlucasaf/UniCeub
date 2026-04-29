@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.loginbundle.model.Usuario;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnEnviarDados;
-    EditText edtEmail;
-    EditText edtSenha;
+    Button      btnEnviarDados;
+    EditText    edtEmail;
+    EditText    edtSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        edtEmail = (EditText) findViewById(R.id.txtEmail);
-        edtSenha = (EditText) findViewById(R.id.txtSenha);
-        btnEnviarDados = (Button) findViewById((R.id.cmdAutenticarDados));
+        edtEmail        = (EditText) findViewById(R.id.txtEmail);
+        edtSenha        = (EditText) findViewById(R.id.txtSenha);
+        btnEnviarDados  = (Button) findViewById((R.id.cmdAutenticarDados));
+        
         btnEnviarDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

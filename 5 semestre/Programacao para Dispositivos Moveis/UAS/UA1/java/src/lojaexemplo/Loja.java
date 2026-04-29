@@ -40,9 +40,7 @@ public class Loja {
         if (p != null) {
             produtos.remove(p);
             System.out.println("Produto removido.");
-        } 
-        
-        else {
+        } else {
             System.out.println("Produto não encontrado.");
         }
     }

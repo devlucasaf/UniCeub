@@ -22,11 +22,11 @@ import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
-    private static final int NOTIFICATION_PERMISSION_REQUEST_CODE = 101;
-    private TextView tvLocation;
-    private LocationManager locationManager;
-    private LocationListener locationListener;
+    private static final int    LOCATION_PERMISSION_REQUEST_CODE = 100;
+    private static final int    NOTIFICATION_PERMISSION_REQUEST_CODE = 101;
+    private TextView            tvLocation;
+    private LocationManager     locationManager;
+    private LocationListener    locationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStatusChanged(String provider, int status, Bundle extras) {}
+
             @Override
             public void onProviderEnabled(@NonNull String provider) {}
+
             @Override
             public void onProviderDisabled(@NonNull String provider) {
                 tvLocation.setText("GPS desabilitado. Habilite nas configurações.");
@@ -68,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     LOCATION_PERMISSION_REQUEST_CODE);
-        } 
-        
-        else {
+        } else {
             checkNotificationPermission();
         }
     }
@@ -82,14 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.POST_NOTIFICATIONS},
                         NOTIFICATION_PERMISSION_REQUEST_CODE);
-            } 
-            
-            else {
+            } else {
                 startLocationUpdates();
             }
-        } 
-        
-        else {
+        } else {
             startLocationUpdates();
         }
     }
@@ -130,19 +126,13 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 checkNotificationPermission();
-            } 
-            
-            else {
+            } else {
                 Toast.makeText(this, "Permissão de localização negada", Toast.LENGTH_SHORT).show();
             }
-        } 
-        
-        else if (requestCode == NOTIFICATION_PERMISSION_REQUEST_CODE) {
+        } else if (requestCode == NOTIFICATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startLocationUpdates();
-            } 
-            
-            else {
+            } else {
                 startLocationUpdates();
                 Toast.makeText(this, "Notificações não permitidas", Toast.LENGTH_SHORT).show();
             }

@@ -6,6 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 import com.bumptech.glide.Glide;
 
 public class PostPageActivity extends AppCompatActivity {
+    ImageView bannerImage;    
+    ImageView iconImage;      
+    TextView  titleText ;     
+    TextView  dateText;     
+    TextView  descriptionText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +21,11 @@ public class PostPageActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Post de Notícia");
 
-        ImageView bannerImage = findViewById(R.id.bannerImage);
-        ImageView iconImage = findViewById(R.id.iconImage);
-        TextView titleText = findViewById(R.id.titleText);
-        TextView dateText = findViewById(R.id.dateText);
-        TextView descriptionText = findViewById(R.id.descriptionText);
+        bannerImage     = findViewById(R.id.bannerImage);
+        iconImage       = findViewById(R.id.iconImage);
+        titleText       = findViewById(R.id.titleText);
+        dateText        = findViewById(R.id.dateText);
+        descriptionText = findViewById(R.id.descriptionText);
 
         Glide.with(this)
                 .load("https://images.unsplash.com/photo-1518770660439-4636190af475")

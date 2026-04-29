@@ -44,16 +44,14 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
                     ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
             contentLayout.addView(spaceView(20, false));
             contentLayout.addView(footerView());
-        } 
-        
-        else {
+        } else {
             contentLayout.addView(contentView(), new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f));
             contentLayout.addView(spaceView(20, true)); 
 
             LinearLayout rightColumn = new LinearLayout(this);
+
             rightColumn.setOrientation(LinearLayout.VERTICAL);
             rightColumn.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f));
-
             rightColumn.addView(headerView());
             rightColumn.addView(spaceView(20, false));
             rightColumn.addView(footerView());
@@ -77,13 +75,11 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
     }
 
     private View spaceView(int sizeDp, boolean horizontal) {
-        View space = new View(this);
-        int px = dpToPx(sizeDp);
+        View space  = new View(this);
+        int  px     = dpToPx(sizeDp);
         if (horizontal) {
             space.setLayoutParams(new LinearLayout.LayoutParams(px, ViewGroup.LayoutParams.MATCH_PARENT));
-        } 
-        
-        else {
+        } else {
             space.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, px));
         }
         space.setBackgroundColor(Color.TRANSPARENT);
@@ -92,6 +88,7 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
 
     private TextView headerView() {
         TextView header = new TextView(this);
+
         header.setText("Cabeçalho");
         header.setTextColor(Color.WHITE);
         header.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
@@ -100,11 +97,13 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
         header.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
+
         return header;
     }
 
     private TextView contentView() {
         TextView content = new TextView(this);
+
         content.setText("Conteúdo Principal");
         content.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         content.setGravity(Gravity.CENTER);
@@ -112,11 +111,13 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
         content.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
+
         return content;
     }
 
     private TextView footerView() {
         TextView footer = new TextView(this);
+
         footer.setText("Rodapé");
         footer.setTextColor(Color.WHITE);
         footer.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
@@ -125,6 +126,7 @@ public class ResponsiveLayoutExample extends AppCompatActivity {
         footer.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
+
         return footer;
     }
 

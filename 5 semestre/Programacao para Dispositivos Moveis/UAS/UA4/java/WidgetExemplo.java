@@ -15,32 +15,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WidgetExemplo extends AppCompatActivity {
 
-    private CheckBox checkBoxOpcao1;
-    private CheckBox checkBoxOpcao2;
-
-    private Switch switchWifi;
-
-    private RadioGroup radioGroupEscolha;
+    private CheckBox    checkBoxOpcao1;
+    private CheckBox    checkBoxOpcao2;
+    private Switch      switchWifi;
+    private RadioGroup  radioGroupEscolha;
     private RadioButton radioA;
     private RadioButton radioB;
+    private Spinner     spinnerPaises;
+    private String      paisSelecionado;
 
-    private Spinner spinnerPaises;
-    private String paisSelecionado;
-
-    private final String[] paises = {"Brasil", "Argentina", "Chile", "Uruguai"};
+    private final String[] paises = {
+        "Brasil", 
+        "Argentina", 
+        "Chile", 
+        "Uruguai"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_widget_exemplo);
 
-        checkBoxOpcao1 = findViewById(R.id.checkbox_opcao1);
-        checkBoxOpcao2 = findViewById(R.id.checkbox_opcao2);
-        switchWifi = findViewById(R.id.switch_wifi);
-        radioGroupEscolha = findViewById(R.id.radio_group_escolha);
-        radioA = findViewById(R.id.radio_opcao_a);
-        radioB = findViewById(R.id.radio_opcao_b);
-        spinnerPaises = findViewById(R.id.spinner_paises);
+        checkBoxOpcao1      = findViewById(R.id.checkbox_opcao1);
+        checkBoxOpcao2      = findViewById(R.id.checkbox_opcao2);
+        switchWifi          = findViewById(R.id.switch_wifi);
+        radioGroupEscolha   = findViewById(R.id.radio_group_escolha);
+        radioA              = findViewById(R.id.radio_opcao_a);
+        radioB              = findViewById(R.id.radio_opcao_b);
+        spinnerPaises       = findViewById(R.id.spinner_paises);
 
         checkBoxOpcao1.setOnCheckedChangeListener((buttonView, isChecked) -> { });
         checkBoxOpcao2.setOnCheckedChangeListener((buttonView, isChecked) -> { });
@@ -56,9 +58,7 @@ public class WidgetExemplo extends AppCompatActivity {
             String escolha;
             if (checkedId == R.id.radio_opcao_a) {
                 escolha = "A";
-            } 
-            
-            else {
+            } else {
                 escolha = "B";
             }
             Toast.makeText(WidgetExemplo.this, "Opção escolhida: " + escolha, Toast.LENGTH_SHORT).show();
@@ -91,12 +91,12 @@ public class WidgetExemplo extends AppCompatActivity {
     }
 
     private void exibirEstado() {
-        boolean opcao1 = checkBoxOpcao1.isChecked();
-        boolean opcao2 = checkBoxOpcao2.isChecked();
-        boolean wifi = switchWifi.isChecked();
-        int radioId = radioGroupEscolha.getCheckedRadioButtonId();
-        String escolha = (radioId == R.id.radio_opcao_a) ? "A" : "B";
-        String pais = paisSelecionado;
+        boolean opcao1  = checkBoxOpcao1.isChecked();
+        boolean opcao2  = checkBoxOpcao2.isChecked();
+        boolean wifi    = switchWifi.isChecked();
+        int     radioId = radioGroupEscolha.getCheckedRadioButtonId();
+        String  escolha = (radioId == R.id.radio_opcao_a) ? "A" : "B";
+        String  pais    = paisSelecionado;
 
         String estado = String.format("Op1:%b, Op2:%b, Wifi:%b, Escolha:%s, País:%s",
                 opcao1, opcao2, wifi, escolha, pais);

@@ -5,13 +5,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 public abstract class Funcionario implements Bonus {
-    protected String id;
-    protected String nome;
-    protected String cpf;
-    protected double salarioBase;
-    protected Departamento departamento;
-    protected LocalDate dataAdmissao;
-    protected boolean ativo;
+    protected String        id;
+    protected String        nome;
+    protected String        cpf;
+    protected double        salarioBase;
+    protected Departamento  departamento;
+    protected LocalDate     dataAdmissao;
+    protected boolean       ativo;
 
     public Funcionario(String nome, String cpf, double salarioBase, Departamento departamento, LocalDate dataAdmissao) {
         this.id = UUID.randomUUID().toString().substring(0, 8);
@@ -71,6 +71,13 @@ public abstract class Funcionario implements Bonus {
     public String toString() {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return String.format("%s | %s | %s | R$ %.2f | %s | Adm: %s | Ativo: %s",
-                id, nome, cpf, salarioBase, departamento, dataAdmissao.format(fmt), ativo);
+                id, 
+                nome, 
+                cpf, 
+                salarioBase, 
+                departamento, 
+                dataAdmissao.format(fmt), 
+                ativo
+        );
     }
 }

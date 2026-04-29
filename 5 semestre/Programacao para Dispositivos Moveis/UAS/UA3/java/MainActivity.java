@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LinearLayout imagesContainer;
-    private TextView titleTextView;
+    private LinearLayout    imagesContainer;
+    private TextView        titleTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imagesContainer = findViewById(R.id.imagesContainer);
-        titleTextView = findViewById(R.id.titleTextView);
+        titleTextView   = findViewById(R.id.titleTextView);
 
         ajustarLayoutPelaOrientacao();
 
@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
         int orientacao = getResources().getConfiguration().orientation;
         if (orientacao == Configuration.ORIENTATION_LANDSCAPE) {
             imagesContainer.setOrientation(LinearLayout.HORIZONTAL);
-        } 
-        
-        else {
+        } else {
             imagesContainer.setOrientation(LinearLayout.VERTICAL);
         }
     }

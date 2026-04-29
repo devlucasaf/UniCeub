@@ -15,9 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvFaixaEtaria;
-    EditText edtIdade;
-    Button btnVerificarFaixaEtaria;
+    TextView    tvFaixaEtaria;
+    EditText    edtIdade;
+    Button      btnVerificarFaixaEtaria;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

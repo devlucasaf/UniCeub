@@ -3,8 +3,8 @@ package empresa;
 import java.time.LocalDate;
 
 public class Estagiario extends Funcionario {
-    private int cargaHoraria;
-    private String supervisor;
+    private int     cargaHoraria;
+    private String  supervisor;
 
     public Estagiario(String nome, String cpf, double salarioBase, Departamento departamento,
                         LocalDate dataAdmissao, int cargaHoraria, String supervisor) {

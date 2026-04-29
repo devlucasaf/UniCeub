@@ -8,10 +8,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 class Empresa {
-    private String nome;
-    private String cnpj;
-    private List<Funcionario> funcionarios;
-    private FolhaPagamento folha;
+    private String              nome;
+    private String              cnpj;
+    private List<Funcionario>   funcionarios;
+    private FolhaPagamento      folha;
 
     public Empresa(String nome, String cnpj) {
         this.nome = nome;

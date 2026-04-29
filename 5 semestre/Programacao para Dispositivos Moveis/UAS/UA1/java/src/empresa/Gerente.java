@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Gerente extends Funcionario {
-    private List<Funcionario> equipe;
-    private double bonusGestao;
+    private List<Funcionario>   equipe;
+    private double              bonusGestao;
 
     public Gerente(String nome, String cpf, double salarioBase, Departamento departamento,
                     LocalDate dataAdmissao, double bonusGestao) {
