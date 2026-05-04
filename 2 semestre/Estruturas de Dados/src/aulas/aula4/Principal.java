@@ -29,10 +29,10 @@ public class Principal {
         // Apresenta o resultado da lista montada
         System.out.println("Lista completa: " + lista);
 
-        int soma = 0;
-        int pares = 0;
-        int indicesImpares = 0;
-        int elemento = 0;
+        int soma            = 0;
+        int pares           = 0;
+        int indicesImpares  = 0;
+        int elemento        = 0;
 
         for(int i = 0; i < lista.size(); i++) {
             elemento = lista.get(i);
