@@ -17,18 +17,14 @@ botoes.forEach(botao => {
             } else {
                 display.textContent += valor;
             }
-        } 
-        
-        else if (valor === ".") {
+        } else if (valor === ".") {
             if (novoNumero) {
                 display.textContent = "0.";
                 novoNumero = false;
             } else if (!display.textContent.includes(".")) {
                 display.textContent += ".";
             }
-        } 
-        
-        else if (valor === "+" || valor === "-" || valor === "*" || valor === "/") {
+        } else if (valor === "+" || valor === "-" || valor === "*" || valor === "/") {
             operador = valor;
             numero1 = parseFloat(display.textContent);
             novoNumero = true;

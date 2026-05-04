@@ -31,6 +31,12 @@
         src="https://skillicons.dev/icons?i=java"
     />
     <img 
+        alt="C#" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=cs"
+    />
+    <img 
         alt="Python" 
         height="40" 
         style="margin:4px" 
@@ -97,6 +103,12 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=vscode"
+    />
+    <img 
+        alt="Visual Studio" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=visualstudio"
     />
     <img 
         alt="Android Studio" 

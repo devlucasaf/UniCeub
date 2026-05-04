@@ -78,12 +78,10 @@ public:
             if (!livros[indice].isEmprestado()) {
                 livros[indice].emprestar();
                 cout << "Livro emprestado com sucesso." << endl;
-            } 
-            else {
+            }  else {
                 cout << "Livro já está emprestado." << endl;
             }
-        } 
-        else {
+        } else {
             cout << "Índice inválido." << endl;
         }
     }

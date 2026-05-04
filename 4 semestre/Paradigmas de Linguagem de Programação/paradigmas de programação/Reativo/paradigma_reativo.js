@@ -188,6 +188,7 @@ class ReactiveObject {
                 writable: false
             });
         }
+        
         if (!target.__signals.has(key)) {
             target.__signals.set(key, new Signal(Reflect.get(target, key)));
         }
@@ -442,9 +443,7 @@ let willThrowError = computed(() => {
 watchEffect(() => {
     try {
         console.log(`Safe computed: ${willThrowError.get()}`);
-    } 
-    
-    catch (e) {
+    } catch (e) {
         console.log(`Caught error: ${e.message}`);
     }
 });
