@@ -19,17 +19,17 @@ public class SharedCell {
 
 class ProduceInteger extends Thread {
     private HoldIntegerUnsynchronized pHold;
+
     public ProduceInteger(HoldIntegerUnsynchronized h) {
         super("ProduceInteger");
-        pHold=h;
+        pHold = h;
     }
 
     public void run() {
         for (int count=1;count<=10;count++) {
             try {
                 Thread.sleep( (int) (Math.random() * 3000));
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e.toString());
             }
             pHold.setSharedInt(count);
@@ -44,17 +44,19 @@ class ConsumeInteger extends Thread {
         super("ConsumeInteger");
         cHold = h;
     }
+
     public void run() {
-        int val, sum = 0;
+        int val;
+        int sum = 0;
         do {
             try {
                 Thread.sleep( (int) (Math.random() * 3000));
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e.toString());
             }
-            val=cHold.getSharedInt();
-            sum+=val;
+            
+            val = cHold.getSharedInt();
+            sum += val;
         }
         while (val !=10);
         System.out.println(getName()+" recuperandovalorestotais:"+sum+ "\n Terminando " + getName());
@@ -63,12 +65,16 @@ class ConsumeInteger extends Thread {
 
 class HoldIntegerUnsynchronized {
     private int sharedInt = -1;
-    public void setSharedInt(int val) {
-        System.out.println(Thread.currentThread().getName() + " setando sharedInt para " + val);
-        sharedInt = val;
-    }
+
     public int getSharedInt() {
         System.out.println(Thread.currentThread().getName() + " recuperando valor de sharedInt " + sharedInt);
         return sharedInt;
     }
+
+    public void setSharedInt(int val) {
+        System.out.println(Thread.currentThread().getName() + " setando sharedInt para " + val);
+        sharedInt = val;
+    }
+
+
 }

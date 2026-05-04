@@ -11,7 +11,7 @@ public class Emprestimo {
     private Exemplar    exemplar;
     private LocalDate   dataEmprestimo;
     private LocalDate   dataDevolucao;
-    private String status; 
+    private String      status; 
 
     public Emprestimo(int idEmprestimo, Usuario usuario, Exemplar exemplar) {
         this.idEmprestimo = idEmprestimo;

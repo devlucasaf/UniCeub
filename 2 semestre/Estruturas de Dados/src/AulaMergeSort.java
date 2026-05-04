@@ -39,9 +39,7 @@ public class AulaMergeSort {
             if (esquerda[i] <= direita[j]) {
                 array[k] = esquerda[i];
                 i++;
-            }
-
-            else {
+            } else {
                 array[k] = direita[j];
                 j++;
             }

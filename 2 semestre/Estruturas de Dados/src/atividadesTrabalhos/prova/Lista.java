@@ -19,18 +19,16 @@ public class Lista {
             lista.add(num);
         }
 
-        System.out.println("Números da lista: " + lista); //imprime a lista
-        System.out.println("Tamanho da lista: " + lista.size()); //tamanho da lista
+        System.out.println("Números da lista: " + lista); // imprime a lista
+        System.out.println("Tamanho da lista: " + lista.size()); // tamanho da lista
 
-        lista.remove(1); //removendo o número 20 pelo index
+        lista.remove(1); // removendo o número 20 pelo index
 
-        System.out.println("Lista Atualizada: " + lista); //lista sem o 20
+        System.out.println("Lista Atualizada: " + lista); // lista sem o 20
 
         if (lista.contains(40)) {
             System.out.println ("O número 40 foi encontrado na lista.");
-        }
-
-        else {
+        } else {
             System.out.println ("O número 40 não foi encontrado na lista.");
         }
 
@@ -38,7 +36,7 @@ public class Lista {
         int y = 5;
         int z = x + y;
 
-        System.out.println(z / (y +(z-y)));
+        System.out.println(z / (y + (z - y)));
     }
 }
 

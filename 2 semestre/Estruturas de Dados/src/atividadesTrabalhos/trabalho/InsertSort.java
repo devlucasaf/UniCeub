@@ -1,14 +1,14 @@
 package atividadesTrabalhos.trabalho;
 
 public class InsertSort {
-    /*função que organiza o array usando insertion */
+    // função que organiza o array usando insertion 
     void organizar(int lista[]) {
         int tamanho = lista.length;
         for (int i = 1; i < tamanho; ++i) {
             int chave = lista[i];
             int j = i - 1;
-            /*move os elementos do array lista, que são maiores que o valor chave
-             * para uma posição para frente da sua posição atual*/
+            // move os elementos do array lista, que são maiores que o valor chave
+            // para uma posição para frente da sua posição atual
             while (j >= 0 && lista[j] > chave) {
                 lista[j + 1] = lista[j];
                 j = j - 1;
@@ -18,8 +18,8 @@ public class InsertSort {
 
     }
 
-    /*literalmente e uma função pra dar o print com cada valor em uma linha */
-    static void printLista(int lista[]) {
+    // literalmente e uma função pra dar o print com cada valor em uma linha
+    public static void printLista(int lista[]) {
         int tamanho = lista.length;
         for (int i = 0; i < tamanho; ++i) {
             System.out.println(lista[i] + " ");
@@ -29,7 +29,7 @@ public class InsertSort {
     }
 
     public static void main(String args[]) {
-        /*variavel da lista com os valores que prof pediu*/
+        // variavel da lista com os valores que prof pediu
         int lista[] = {432, 809, 213, 725, 37, 960, 578, 63, 921, 145,
                 689, 281, 506, 955, 194, 374, 820, 62, 890, 485, 786, 911,
                 394, 178, 627, 902, 420, 579, 733, 96, 311, 654, 250, 771,

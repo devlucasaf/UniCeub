@@ -2,9 +2,9 @@ package atividadesTrabalhos.prova;
 
 public class ProvaMolina {
     public static void main(String[] args) {
-        int a =2;
-        int b =3;
-        int resultado = somar(a,b);
+        int a = 2;
+        int b = 3;
+        int resultado = somar(a, b);
 
         System.out.println("O resultado é:");
         System.out.print(resultado);
@@ -31,9 +31,7 @@ public class ProvaMolina {
     public static int calculo(int n) {
         if (n == 0 || n == 1) {
             return 1;
-        }
-
-        else {
+        } else {
             return n * calculo(n - 1);
         }
     }

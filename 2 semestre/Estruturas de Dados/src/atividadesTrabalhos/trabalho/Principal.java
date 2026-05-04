@@ -159,23 +159,15 @@ public class Principal {
         if (opcao.equals("1")) {
             mostrarPiorCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("2")) {
+        } else if (opcao.equals("2")) {
             mostrarMedioCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("3")) {
+        } else if (opcao.equals("3")) {
             mostrarMelhorCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("4")) {
+        } else if (opcao.equals("4")) {
             JOptionPane.showMessageDialog(null, "Saindo...");
-        }
-
-        else {
+        } else {
             JOptionPane.showMessageDialog(null, "Opção inválida!");
             mostraOpcoes();
         }

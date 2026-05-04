@@ -5,21 +5,25 @@ import java.util.HashMap;
 public class MyMapProvaMolina {
     public static void main(String[] args) {
         int i = 0;
-        HashMap<String, String> Mymap = new HashMap<>();
-        Mymap.put("Nome", "João");
-        Mymap.put("Idade", "24");
-        Mymap.put("Altura", "0,80");
-        Mymap.put("Endereço", "Brasilia");
 
-        System.out.println(Mymap);
+        HashMap<String, String> hashMap = new HashMap<>();
 
-        if (Mymap.size() != i) {
+        hashMap.put("Nome", "João");
+        hashMap.put("Idade", "24");
+        hashMap.put("Altura", "0,80");
+        hashMap.put("Endereço", "Brasilia");
+
+        System.out.println(hashMap);
+
+        if (hashMap.size() != i) {
             System.out.println("Deu bom oh");
         }
-        if (Mymap.size() == i) {
+
+        if (hashMap.size() == i) {
             System.out.println("Tem nada aq nn doidão");
         }
-        for (String p: Mymap.values()) {
+        
+        for (String p: hashMap.values()) {
             System.out.println(p);
         }
     }

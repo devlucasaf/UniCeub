@@ -61,11 +61,11 @@ class ImprimirThread extends Thread {
             for (int i=0; i<=5; i++) {
                 System.out.print(getName() + " valor de I: " + i);
             }
+
             for (int j=0; j<=10; j++) {
                 System.out.print(getName() + " valor de J: " + j);
             }
-        }
-        catch(InterruptedException exception) {
+        } catch(InterruptedException exception) {
             System.out.print(exception.toString());
         }
         // Imprime o nome da thread

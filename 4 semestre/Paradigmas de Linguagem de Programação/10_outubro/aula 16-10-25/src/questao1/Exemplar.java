@@ -22,9 +22,7 @@ public class Exemplar {
         if (status.equalsIgnoreCase("disponível")) {
             status = "emprestado";
             System.out.println("Exemplar emprestado com sucesso!");
-        }
-
-        else {
+        } else {
             System.out.println("Exemplar não está disponível.");
         }
     }

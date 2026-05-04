@@ -113,9 +113,7 @@ public class PrincipalNanoS {
             if (contador == 20) { // Quebra de linha a cada 20 elementos
                 sb.append("\n");
                 contador = 0;
-            }
-
-            else if (i != array.length - 1) {
+            } else if (i != array.length - 1) {
                 sb.append(", ");
             }
         }
@@ -127,32 +125,26 @@ public class PrincipalNanoS {
     ////////////////////////////////////////////////////////////////////////////
     // MENU
     public static void mostraOpcoes() {
-        String opcao = JOptionPane.showInputDialog("Digite um número para ordenar a lista: \n" +
-                "1 - Pior caso\n" +
-                "2 - Médio caso \n" +
-                "3 - Melhor caso \n" +
-                "4 - Sair");
+        String opcao = JOptionPane.showInputDialog(
+            "Digite um número para ordenar a lista: \n" +
+            "1 - Pior caso\n" +
+            "2 - Médio caso \n" +
+            "3 - Melhor caso \n" +
+            "4 - Sair"
+        );
 
         if (opcao.equals("1")) {
             mostrarPiorCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("2")) {
+        } else if (opcao.equals("2")) {
             mostrarMedioCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("3")) {
+        } else if (opcao.equals("3")) {
             mostrarMelhorCaso();
             mostraOpcoes();
-        }
-
-        else if (opcao.equals("4")) {
+        } else if (opcao.equals("4")) {
             JOptionPane.showMessageDialog(null, "Saindo...");
-        }
-
-        else {
+        } else {
             JOptionPane.showMessageDialog(null, "Opção inválida!");
             mostraOpcoes();
         }

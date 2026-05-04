@@ -52,34 +52,24 @@ public class Molina {
     public static void apresentaOpcoes() {
         String opcao = JOptionPane.showInputDialog(
                 " 1 - Preencher lista \n" +
-                        " 2 - Ordenar lista \n" +
-                        " 3 - Apresentar lista ordenda \n" +
-                        " 4 - Apresentar lista original \n" +
-                        " 5 - Sair \n" +
-                        " 6 - Tempo de execução do melhor caso \n"
+                " 2 - Ordenar lista \n" +
+                " 3 - Apresentar lista ordenda \n" +
+                " 4 - Apresentar lista original \n" +
+                " 5 - Sair \n" +
+                " 6 - Tempo de execução do melhor caso \n"
         );
 
-        if(opcao.equals("1")) {
+        if (opcao.equals("1")) {
             preencherLista();
-        }
-
-        else if (opcao.equals("2")) {
+        } else if (opcao.equals("2")) {
             ordenarLista();
-        }
-
-        else if (opcao.equals("3")) {
+        } else if (opcao.equals("3")) {
             apresentarListaOrdenada();
-        }
-
-        else if (opcao.equals("4")) {
+        } else if (opcao.equals("4")) {
             apresentarListaOriginal();
-        }
-
-        else if (opcao.equals("6")) {
+        } else if (opcao.equals("6")) {
             System.out.println("opção 6");
-        }
-
-        else {
+        } else {
             JOptionPane.showMessageDialog(null, "Opção inválida!");
         }
     }

@@ -22,8 +22,7 @@ class Controle {
     trigger(evento, ...args) {
         if (this.eventos[evento]) {
             this.eventos[evento](...args);
-        } 
-        else {
+        } else {
             console.log(`Nenhum manipulador para o evento '${evento}' em ${this.nome}`);
             }
     }

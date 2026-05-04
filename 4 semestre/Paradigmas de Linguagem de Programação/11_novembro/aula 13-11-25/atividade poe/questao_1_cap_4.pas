@@ -35,8 +35,8 @@ type
         lblNumero2: TLabel;
         edtNumero1: TEdit;
         edtNumero2: TEdit;
-        btnSomar: TButton;
-        btnLimpar: TButton;
+        btnSomar:   TButton;
+        btnLimpar:  TButton;
 
     procedure btnSomarClick(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
