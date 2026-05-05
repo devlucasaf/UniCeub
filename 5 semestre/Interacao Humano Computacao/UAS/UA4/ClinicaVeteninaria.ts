@@ -1,21 +1,21 @@
 enum Especie {
-    Cachorro = "Cachorro",
-    Gato = "Gato",
-    Passaro = "Pássaro",
-    Outro = "Outro"
+    Cachorro    = "Cachorro",
+    Gato        = "Gato",
+    Passaro     = "Pássaro",
+    Outro       = "Outro"
 }
 
 interface AnimalInterface {
-    nome: string;
-    idade: number; // em anos
-    especie: Especie;
-    emitirSom(): string;
+    nome:           string;
+    idade:          number; 
+    especie:        Especie;
+    emitirSom():    string;
 }
 
 class Animal implements AnimalInterface {
-    nome: string;
-    idade: number;
-    especie: Especie;
+    nome:               string;
+    idade:              number;
+    especie:            Especie;
     protected vacinado: boolean = false; 
 
     constructor(nome: string, idade: number, especie: Especie) {
@@ -24,24 +24,16 @@ class Animal implements AnimalInterface {
         this.especie = especie;
     }
 
-    // Método público
     emitirSom(): string {
         switch (this.especie) {
-            case Especie.Cachorro: {
+            case Especie.Cachorro: 
                 return "Au au!";
-            }
-
-            case Especie.Gato: {
+            case Especie.Gato: 
                 return "Miau!";
-            }
-
-            case Especie.Passaro: {
+            case Especie.Passaro: 
                 return "Piu piu!";
-            }
-
-            default: {
+            default: 
                 return "Som genérico de animal";
-            }
         }
     }
 
@@ -159,7 +151,6 @@ class Consulta {
     }
 }
 
-// 8. CLASSE para gerenciar a clínica
 class ClinicaVeterinaria {
     private nome: string;
     public animais: Animal[] = [];
@@ -227,17 +218,11 @@ class ClinicaVeterinaria {
         console.log("\n--- Processando dados externos (any) ---");
         if (typeof dados === "string") {
             console.log(`Dado recebido como string: ${dados}`);
-        } 
-        
-        else if (typeof dados === "number") {
+        } else if (typeof dados === "number") {
             console.log(`Dado recebido como número: ${dados}`);
-        } 
-        
-        else if (Array.isArray(dados)) {
+        } else if (Array.isArray(dados)) {
             console.log(`Array recebido com ${dados.length} elementos.`);
-        } 
-        
-        else {
+        } else {
             console.log("Tipo de dado desconhecido.");
         }
     }

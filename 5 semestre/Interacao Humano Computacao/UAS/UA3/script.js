@@ -101,15 +101,11 @@ function iniciarNavegacao(destinoKey) {
     if (!lugar && destinoKey.trim() !== "") {
         destinoAtual = destinoKey;
         lugar = { nome: destinoKey, distancia: "direção desconhecida. Peça ajuda ou use mapa sonoro." };
-    } 
-    
-    else if (!lugar) {
+    } else if (!lugar) {
         falar("Destino não reconhecido. Diga o nome de um lugar como padaria, farmácia, mercado.");
         adicionarFeedback("Destino inválido.");
         return;
-    } 
-    
-    else {
+    } else {
         destinoAtual = lugar.nome;
     }
 
@@ -135,14 +131,10 @@ function iniciarNavegacao(destinoKey) {
         if (passos === 3) {
             falar("Continue seguindo em frente, você está no caminho certo.");
             vibrar([50]);
-        } 
-        
-        else if (passos === 6) {
+        } else if (passos === 6) {
             falar("Atenção: próximo à travessia. Verifique o piso tátil.");
             vibrar([100, 100, 100]);
-        } 
-        
-        else if (passos > 8) {
+        } else if (passos > 8) {
             falar(`Você chegou próximo ao destino: ${lugar.nome}. Navegação concluída.`);
             vibrar([300]);
             pararNavegacao();
@@ -194,9 +186,7 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
-} 
-
-else {
+} else {
     adicionarFeedback("Reconhecimento de voz não suportado neste navegador. Use os botões.");
 }
 
@@ -228,28 +218,18 @@ if (recognition) {
 function processarComandoVoz(comando) {
     if (comando.includes("onde estou")) {
         ondeEstou();
-    } 
-    
-    else if (comando.includes("navegar até") || comando.includes("ir para")) {
+    } else if (comando.includes("navegar até") || comando.includes("ir para")) {
         let destino = comando.replace(/navegar até|ir para/g, '').trim();
         if (destino === "") {
             falar("Diga o nome do destino.");
-        } 
-        
-        else {
+        } else {
             iniciarNavegacao(destino);
         }
-    } 
-    
-    else if (comando.includes("parar navegação") || comando.includes("cancelar")) {
+    } else if (comando.includes("parar navegação") || comando.includes("cancelar")) {
         pararNavegacao();
-    } 
-    
-    else if (comando.includes("obstáculo")) {
+    } else if (comando.includes("obstáculo")) {
         simularObstaculo();
-    } 
-    
-    else {
+    } else {
         falar("Comando não reconhecido. Diga: onde estou, navegar até (lugar), parar navegação ou obstáculo.");
     }
 }

@@ -25,8 +25,8 @@ public class SegundaActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_segunda);
 
-        txtNome = (TextView)findViewById(R.id.lblNome);
-        txtIdade = (TextView)findViewById(R.id.lblIdade);
+        txtNome  = (TextView) findViewById(R.id.lblNome);
+        txtIdade = (TextView) findViewById(R.id.lblIdade);
 
         Bundle dados = getIntent().getExtras();
         //String nome = dados.getString("nome");

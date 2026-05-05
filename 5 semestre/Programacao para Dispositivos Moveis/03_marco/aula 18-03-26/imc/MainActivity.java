@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        edtDoublePeso = (EditText) findViewById(R.id.txtPeso);
-        edtDoubleAltura = (EditText) findViewById(R.id.txtAltura);
-        tvImc = (TextView) findViewById(R.id.lblIMC);
-        tvClassificacaoIMC = (TextView) findViewById(R.id.lblClassificacaoIMC);
-        btnClassificarIMC = (Button) findViewById(R.id.cmdClassificarIMC);
+        edtDoublePeso       = (EditText) findViewById(R.id.txtPeso);
+        edtDoubleAltura     = (EditText) findViewById(R.id.txtAltura);
+        tvImc               = (TextView) findViewById(R.id.lblIMC);
+        tvClassificacaoIMC  = (TextView) findViewById(R.id.lblClassificacaoIMC);
+        btnClassificarIMC   = (Button) findViewById(R.id.cmdClassificarIMC);
 
         btnClassificarIMC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,25 +45,15 @@ public class MainActivity extends AppCompatActivity {
 
                 if (imc < 18.5) {
                     mostrarIMC = "Você está abaixo do peso!";
-                }
-
-                else if (imc > 18.5 && imc <= 24.9) {
+                } else if (imc > 18.5 && imc <= 24.9) {
                     mostrarIMC = "O seu peso está normal!";
-                }
-
-                else if (imc > 24.9 && imc <= 29.9) {
+                } else if (imc > 24.9 && imc <= 29.9) {
                     mostrarIMC = "Você está com sobrepeso!";
-                }
-
-                else if (imc > 29.9 && imc <= 34.9) {
+                } else if (imc > 29.9 && imc <= 34.9) {
                     mostrarIMC = "Você está obeso! Seu grau de obesidade é I";
-                }
-
-                else if (imc > 34.9 && imc <= 39.9) {
+                } else if (imc > 34.9 && imc <= 39.9) {
                     mostrarIMC = "Você está obeso! Seu grau de obesidade é II";
-                }
-
-                else {
+                } else {
                     mostrarIMC = "Você está obeso! Seu grau de obesidade é III";
                 }
 

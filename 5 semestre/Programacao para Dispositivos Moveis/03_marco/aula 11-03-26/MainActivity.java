@@ -13,9 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvSaudacao;
-    EditText edtNome;
-    Button btnRealizarSaudacao;
+    TextView    tvSaudacao;
+    EditText    edtNome;
+    Button      btnRealizarSaudacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        tvSaudacao = (TextView) findViewById(R.id.lblSaudacao);
-        edtNome = (EditText) findViewById(R.id.txtNome);
-        btnRealizarSaudacao = (Button) findViewById(R.id.cmdSaudar);
+        tvSaudacao          = (TextView)    findViewById(R.id.lblSaudacao);
+        edtNome             = (EditText)    findViewById(R.id.txtNome);
+        btnRealizarSaudacao = (Button)      findViewById(R.id.cmdSaudar);
 
         btnRealizarSaudacao.setOnClickListener(new View.OnClickListener() {
             @Override

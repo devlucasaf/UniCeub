@@ -18,15 +18,16 @@ public class MainActivity extends AppCompatActivity {
     TextView    tvFaixaEtaria;
     EditText    edtIdade;
     Button      btnVerificarFaixaEtaria;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        tvFaixaEtaria = (TextView) findViewById(R.id.lblFaixaEtaria);
-        edtIdade = (EditText) findViewById(R.id.txtIdade);
-        btnVerificarFaixaEtaria = (Button) findViewById(R.id.cmdVerificarFaixaEtaria);
+        tvFaixaEtaria           = (TextView)    findViewById(R.id.lblFaixaEtaria);
+        edtIdade                = (EditText)    findViewById(R.id.txtIdade);
+        btnVerificarFaixaEtaria = (Button)      findViewById(R.id.cmdVerificarFaixaEtaria);
 
         btnVerificarFaixaEtaria.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,17 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if(idade > 0 && idade <= 12) {
                     faixaEtaria = "Essa infeliz é uma criança!";
-                }
-
-                else if (idade > 12 && idade <= 17) {
+                } else if (idade > 12 && idade <= 17) {
                     faixaEtaria = "Esse aurudo é adolescente";
-                }
-
-                else if (idade == 67) {
+                } else if (idade == 67) {
                     faixaEtaria = "Six Seven";
-                }
-
-                else {
+                } else {
                     faixaEtaria = "Esse sigma é um adulto";
                 }
 
