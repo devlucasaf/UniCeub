@@ -1,38 +1,9 @@
+package classesjava;
 /**
 Paradigmas de Linguagem de Programação
 Aula: 30-10-25
 II Atividade 3 (POO-Encapsulamento e Classes/Obejto)
 */
-
-class Carro {
-    void ligar() {
-        System.out.println("O carro está ligado.");
-    }
-
-    void acelerar() {
-        System.out.println("O carro está acelerando.");
-    }
-}
-
-class Animal {
-    void comer() {
-        System.out.println("O animal está comendo.");
-    }
-
-    void dormir() {
-        System.out.println("O animal está dormindo.");
-    }
-}
-
-class Livro {
-    void abrir() {
-        System.out.println("O livro foi aberto.");
-    }
-
-    void ler() {
-        System.out.println("Você está lendo o livro.");
-    }
-}
 
 public class ClassesJava {
     public static void main(String[] args) {
