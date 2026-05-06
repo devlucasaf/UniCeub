@@ -1,0 +1,93 @@
+/* BODY */
+body {
+    background-color: #fff3e0; /* Fundo quente (bege claro) para dar sensação aconchegante de restaurante */
+    font-family: Arial, sans-serif; /* Fonte simples e legível */
+    padding: 20px; /* Espaçamento geral da página */
+}
+
+/* HEADER */
+header {
+    text-align: center; /* Centraliza todo o conteúdo do topo */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffe0b2; /* Cor suave para diferenciar do fundo */
+    margin-bottom: 20px; /* Espaço inferior para separar do cardápio */
+    border-radius: 10px; /* Bordas levemente arredondadas para estética */
+}
+
+.titulo-restaurante {
+    font-size: 36px; /* Título grande para destaque principal */
+    color: #3e2723; /* Cor escura para contraste e leitura */
+}
+
+.subtitulo {
+    font-size: 18px; /* Texto menor para complementar */
+    color: #6d4c41; /* Cor mais suave */
+    font-style: italic; /* Itálico para dar estilo */
+    margin-top: 5px; /* Espaçamento superior */
+}
+
+/* CARDÁPIO (grade de itens) */
+.cardapio {
+    display: flex; /* Uso de flex para organizar em linhas */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 20px; /* Espaçamento entre os cartões */
+    justify-content: center; /* Centraliza os itens */
+}
+
+/* CARTÃO DE CADA ITEM */
+.item-cardapio {
+    background-color: white; /* Fundo branco para destacar do fundo */
+    border-radius: 12px; /* Bordas arredondadas para design moderno */
+    padding: 15px; /* Espaçamento interno */
+    width: 250px; /* Largura fixa para padronizar os cartões */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve para dar efeito de cartão */
+    transition: all 0.3s ease; /* Animação suave no hover */
+}
+
+.item-cardapio:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Sombra maior ao passar o mouse para simular elevação */
+    transform: translateY(-5px); /* Pequena elevação visual */
+}
+
+/* NOME DO PRATO */
+.nome-prato {
+    font-weight: bold; /* Negrito para destaque */
+    color: #d84315; /* Cor de destaque (laranja escuro) */
+    margin-bottom: 8px;
+}
+
+/* DESCRIÇÃO */
+.descricao-prato {
+    color: #555; /* Cor cinza para não competir com o título */
+    font-size: 14px; /* Texto menor */
+    line-height: 1.5; /* Melhor leitura */
+    margin-bottom: 10px;
+}
+
+/* PREÇO */
+.preco {
+    display: block; /* Faz ocupar linha inteira */
+    text-align: right; /* Alinha à direita */
+    color: #2e7d32; /* Verde para indicar valor/preço */
+    font-weight: bold; /* Destaque */
+}
+
+/* DESAFIO EXTRA - PRATO EM DESTAQUE */
+.destaque {
+    background-color: #fff8e1; /* Fundo levemente amarelo para chamar atenção */
+    border: 2px solid #ff9800; /* Borda destacada */
+    position: relative; /* Destaque adicional */
+}
+
+/* Etiqueta visual */
+.destaque::before {
+    content: "Prato do dia";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}

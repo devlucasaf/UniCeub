@@ -1,0 +1,23 @@
+p {
+    color: blue;    /* COR DO TEXTO*/
+    font-size: 16px;  /* TAMANHO DA FONTE */
+    background: yellow; /* COR DE FUNDO */
+    margin: 10px; /* ESPAÇAMENTO EXTERNO */
+    padding: 10px; /* ESPAÇAMENTO INTERNO */
+}
+
+h1 {
+    color: red; 
+}
+
+.square#one {
+    flex: 2 1 300px;
+}
+
+.square#two {
+    flex: 1 2 300px;
+}
+
+#container {
+    width: 640px;
+}

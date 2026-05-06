@@ -1,0 +1,136 @@
+/* Estilos com alto contraste e foco visível para baixa visão */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #ffdd00;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #111;
+    border: 3px solid #ffdd00;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(255, 221, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.status-area {
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 8px solid #ffdd00;
+}
+
+.info {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+button {
+    background: #ffdd00;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 8px 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+button:focus {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+    background: #ffcc00;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.destino-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background: #222;
+    color: #ffdd00;
+    border: 2px solid #ffdd00;
+    border-radius: 40px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.destino-input:focus {
+    outline: none;
+    background: #333;
+}
+
+.feedback {
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #ccc;
+    word-break: break-word;
+}
+
+.instrucao {
+    font-size: 1rem;
+    background: #333;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .vibrar-simulado {
+        animation: shake 0.2s ease-in-out 0s 2;
+    }
+}
+
+@keyframes shake {
+    0% { 
+        transform: translateX(0); 
+    }
+
+    25% { 
+        transform: translateX(-3px); 
+    }
+
+    75% { 
+        transform: translateX(3px); 
+    }
+
+    100% { 
+        transform: translateX(0); 
+    }
+}

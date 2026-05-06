@@ -1,0 +1,55 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  /* TODO: definir cor de fundo quente, fonte e padding geral */
+}
+
+/* HEADER */
+header {
+    /* TODO: centralizar conteúdo, adicionar padding e cor de fundo */
+}
+
+.titulo-restaurante {
+    /* TODO: tamanho grande, cor escura */
+}
+
+.subtitulo {
+    /* TODO: tamanho menor, cor suave, itálico */
+}
+
+/* CARDÁPIO (grade de itens) */
+.cardapio {
+    /* TODO: usar display flex ou grid para organizar os cartões */
+    /* sugestão: flex com wrap e gap entre os itens */
+}
+
+/* CARTÃO DE CADA ITEM */
+.item-cardapio {
+    /* TODO: fundo branco, bordas arredondadas, sombra, padding */
+    /* TODO: transition para o hover */
+}
+
+.item-cardapio:hover {
+    /* TODO: sombra maior para efeito de elevação */
+}
+
+/* NOME DO PRATO */
+.nome-prato {
+    /* TODO: negrito, cor de destaque (vermelho, laranja ou marrom) */
+}
+
+/* DESCRIÇÃO */
+.descricao-prato {
+    /* TODO: cor cinza, tamanho menor, espaçamento entre linhas */
+}
+
+/* PREÇO */
+.preco {
+    /* TODO: display block, alinhado à direita, cor verde, negrito */
+}

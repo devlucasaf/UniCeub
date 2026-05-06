@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MeuAppMaui.ViewModels"
+             x:Class="MeuAppMaui.Views.MainPage"
+             Title="Início">
+
+    <VerticalStackLayout Padding="30,25" Spacing="10">
+        <Label Text="Bem‑vindo ao .NET MAUI!" Style="{StaticResource PageTitle}"/>
+        <Label Text="{Binding Mensagem}" FontSize="18" HorizontalOptions="Center"/>
+        <Button Text="Clique aqui" Command="{Binding IncrementarCommand}" HorizontalOptions="Center"/>
+        <Button Text="Carregar Item" Command="{Binding CarregarItemCommand}" HorizontalOptions="Center"/>
+        <Label Text="{Binding ItemAtual.Nome, StringFormat='Item: {0}'}" FontSize="16" HorizontalOptions="Center" IsVisible="{Binding ItemAtual, Converter={StaticResource IsNotNullConverter}}"/>
+    </VerticalStackLayout>
+</ContentPage>
