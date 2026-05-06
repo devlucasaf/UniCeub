@@ -64,7 +64,7 @@ public class AulaMergeSort {
 
     // Demonstração básica do MergeSort
 
-    public static void AulaMergeSort() {
+    public static void aulaMergeSort() {
 
         int[] numeros = {8, 3, 9, 1, 5, 2};
 
@@ -79,7 +79,7 @@ public class AulaMergeSort {
 
     // Demonstração com vetor maior
 
-    public static void MergeSortGrande() {
+    public static void mergeSortGrande() {
 
         int[] valores = {12, 5, 7, 3, 18, 1, 4, 9, 2, 14};
 
@@ -94,7 +94,7 @@ public class AulaMergeSort {
 
     // Exercício:
 
-    public static void Exercicio() {
+    public static void exercicio() {
 
         System.out.println("===== EXERCÍCIO MERGESORT =====");
 
@@ -131,8 +131,8 @@ public class AulaMergeSort {
 
     public static void main(String[] args) {
 
-        AulaMergeSort();      // Demonstração simples
-        MergeSortGrande();    // Exemplo com vetor maior
-        Exercicio();          // Exercício final
+        aulaMergeSort();      // Demonstração simples
+        mergeSortGrande();    // Exemplo com vetor maior
+        exercicio();          // Exercício final
     }
 }

@@ -49,7 +49,7 @@ public class AulaQuickSort {
 
     // Demonstração básica do funcionamento
 
-    public static void AulaQuickSort() {
+    public static void aulaQuickSort() {
 
         int[] numeros = {9, 4, 7, 3, 10, 2};
 
@@ -64,7 +64,7 @@ public class AulaQuickSort {
 
     // Exemplo com vetor maior
 
-    public static void QuickSortGrande() {
+    public static void quickSortGrande() {
 
         int[] valores = {15, 3, 8, 22, 1, 9, 12, 7, 19, 6};
 
@@ -79,7 +79,7 @@ public class AulaQuickSort {
 
     // Exercício
 
-    public static void Exercicio() {
+    public static void exercicio() {
 
         System.out.println("= EXERCÍCIO QUICKSORT =");
 
@@ -117,8 +117,8 @@ public class AulaQuickSort {
 
     public static void main(String[] args) {
 
-        AulaQuickSort();     // Demonstração simples
-        QuickSortGrande();   // Exemplo com vetor maior
-        Exercicio();         // Exercício final
+        aulaQuickSort();     // Demonstração simples
+        quickSortGrande();   // Exemplo com vetor maior
+        exercicio();         // Exercício final
     }
 }

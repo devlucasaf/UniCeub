@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class AulaBubbleSort {
 
     // Método que demonstra o funcionamento básico do BubbleSort
-    public static void BubbleSortAula() {
+    public static void bubbleSortAula() {
 
         // Vetor de exemplo
         int[] numeros = {5, 1, 4, 2, 8};
@@ -31,7 +31,7 @@ public class AulaBubbleSort {
     }
 
     // Método que demonstra BubbleSort em ordem decrescente
-    public static void BubbleSortDecrescente() {
+    public static void bubbleSortDecrescente() {
 
         int[] valores = {10, 3, 6, 2, 9};
 
@@ -53,7 +53,7 @@ public class AulaBubbleSort {
     }
 
     // Método que verifica quantas trocas foram feitas no BubbleSort
-    public static void BubbleSortTrocas() {
+    public static void bubbleSortTrocas() {
 
         int[] numeros = {9, 1, 5, 3, 7};
         int trocas = 0;
@@ -77,7 +77,7 @@ public class AulaBubbleSort {
     }
 
     // Exercício
-    public static void Exercicio() {
+    public static void exercicio() {
 
         System.out.println(">>> EXERCÍCIO BUBBLESORT <<<");
 
@@ -122,9 +122,9 @@ public class AulaBubbleSort {
     // Método principal que executa todos os outros
     public static void main(String[] args) {
 
-        BubbleSortAula();        // Demonstração do algoritmo básico
-        BubbleSortDecrescente(); // BubbleSort em ordem decrescente
-        BubbleSortTrocas();      // Contando o número de trocas
-        Exercicio();             // Exercício no estilo do professor
+        bubbleSortAula();        // Demonstração do algoritmo básico
+        bubbleSortDecrescente(); // BubbleSort em ordem decrescente
+        bubbleSortTrocas();      // Contando o número de trocas
+        exercicio();             // Exercício no estilo do professor
     }
 }
