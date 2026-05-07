@@ -31,10 +31,24 @@ INSERT INTO funcionario (cpf, nome_f, fk_dnr) VALUES
 
 π nome_f, nome_d (funcionario ⋈ funcionario.fk_dnr = departamento.dnr departamento) 
 
+SELECT f.nome_f, d.nome_d
+FROM funcionario f
+JOIN departamento d ON f.fk_dnr = d.dnr;
+
 -- questão 2
 
 π nome_d (σ nome_f = 'JOANA' (funcionario ⋈ funcionario.fk_dnr = departamento.dnr departamento)) 
 
+SELECT d.nome_d
+FROM funcionario f
+JOIN departamento d ON f.fk_dnr = d.dnr
+WHERE f.nome_f = 'JOANA';
+
 -- questão 3
 
 π cpf (σ nome_d = 'C. COMP' (funcionario ⋈ funcionario.fk_dnr = departamento.dnr departamento)) 
+
+SELECT f.cpf
+FROM funcionario f
+JOIN departamento d ON f.fk_dnr = d.dnr
+WHERE d.nome_d = 'C. COMP';
