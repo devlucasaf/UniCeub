@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormularioApp.Views.WidgetsPage"
+             Title="Exemplo de Widgets">
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="20">
+            
+            <!-- CheckBox (múltipla escolha) -->
+            <Label Text="Checkbox (múltipla escolha):" 
+                   FontAttributes="Bold"/>
+            <CheckBox x:Name="CheckOpcao1"/>
+            <Label Text="Opção 1" Margin="30,-20,0,0"/>
+            
+            <CheckBox x:Name="CheckOpcao2"/>
+            <Label Text="Opção 2" Margin="30,-20,0,0"/>
+            
+            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10"/>
+            
+            <!-- Switch -->
+            <Label Text="Switch (liga/desliga):" 
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0"/>
+            <Switch x:Name="SwitchWifi" Margin="0,5"/>
+            <Label Text="Wi-Fi" Margin="50,-20,0,0"/>
+            
+            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10"/>
+            
+            <!-- RadioButton (escolha única) -->
+            <Label Text="RadioButton (escolha única):" 
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0"/>
+            <RadioButton x:Name="RadioOpcaoA" 
+                         Content="Opção A" 
+                         GroupName="Escolha"
+                         CheckedChanged="OnRadioChanged"/>
+            <RadioButton x:Name="RadioOpcaoB" 
+                         Content="Opção B" 
+                         GroupName="Escolha"
+                         CheckedChanged="OnRadioChanged"/>
+            
+            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10"/>
+            
+            <!-- Dropdown (Picker) -->
+            <Label Text="Dropdown (lista):" 
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0"/>
+            <Picker x:Name="SpinnerPaises" 
+                    Title="Selecione um país">
+                <Picker.Items>
+                    <x:String>Brasil</x:String>
+                    <x:String>Argentina</x:String>
+                    <x:String>Chile</x:String>
+                    <x:String>Uruguai</x:String>
+                </Picker.Items>
+            </Picker>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

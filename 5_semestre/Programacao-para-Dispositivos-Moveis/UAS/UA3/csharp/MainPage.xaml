@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MobileAlinhamentos.MainPage"
+                Title="Galeria de Imagens">
+    
+    <Grid RowDefinitions="Auto,*,Auto"
+            Padding="16"
+            RowSpacing="8">
+        
+        <!-- Título -->
+        <Label x:Name="TitleLabel"
+                Grid.Row="0"
+                Text="Galeria de Imagens"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+        
+        <!-- Container de Imagens -->
+        <FlexLayout x:Name="ImagesContainer"
+                    Grid.Row="1"
+                    Wrap="NoWrap"
+                    AlignItems="Center"
+                    JustifyContent="Center"
+                    BackgroundColor="#F0F0F0"
+                    Padding="16">
+            
+            <Image x:Name="Image1"
+                    Source="dotnet_bot.png"
+                    HeightRequest="120"
+                    Margin="8">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped1"/>
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image x:Name="Image2"
+                    Source="dotnet_bot.png"
+                    HeightRequest="120"
+                    Margin="8">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped2"/>
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image x:Name="Image3"
+                    Source="dotnet_bot.png"
+                    HeightRequest="120"
+                    Margin="8">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped3"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </FlexLayout>
+        
+        <!-- Rodapé -->
+        <Label Grid.Row="2"
+                Text="Toque na imagem para detalhes"
+                BackgroundColor="#E0E0E0"
+                Padding="16"
+                HorizontalTextAlignment="Center"/>
+    </Grid>
+</ContentPage>

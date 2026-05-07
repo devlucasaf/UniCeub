@@ -190,10 +190,10 @@
         src="https://skillicons.dev/icons?i=clojure" 
     />
     <img 
-        alt="Erlang" 
+        alt="Visual Basic" 
         height="40" 
         style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/erlang/erlang-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg"
     />
     <img 
         alt="Elm" 

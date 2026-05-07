@@ -356,6 +356,12 @@
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prolog/prolog-original.svg"
     />
     <img 
+        alt="Visual Basic" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg"
+    />
+    <img 
         alt="Object Pascal" 
         height="40" 
         style="margin:4px" 

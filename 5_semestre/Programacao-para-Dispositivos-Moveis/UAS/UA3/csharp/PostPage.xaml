@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MobileAlinhamentos.PostPage">
+    
+    <VerticalStackLayout>
+        
+        <!-- Banner -->
+        <Image x:Name="BannerImage"
+                Source="banner_placeholder.png"
+                Aspect="AspectFill"
+                HeightRequest="200"/>
+            
+        <!-- Conteúdo -->
+        <VerticalStackLayout Padding="16" Spacing="10">
+            
+            <!-- Row com ícone + título -->
+            <HorizontalStackLayout>
+                <Image x:Name="IconImage"
+                        Source="icon_placeholder.png"
+                        HeightRequest="40"
+                        WidthRequest="40"/>
+                <Label x:Name="TitleText"
+                        Text="Leiautes criativos com Flutter"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            
+            <!-- Data -->
+            <Label x:Name="DateText"
+                    Text="04/08/2021 — 17:55"
+                    TextColor="Gray"
+                    FontSize="14"/>
+            
+            <!-- Descrição -->
+            <Label x:Name="DescriptionText"
+                    Text="Conheça o Flutter, um framework para desenvolvimento mobile, web e desktop."
+                    FontSize="16"/>
+            
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ScrollView>

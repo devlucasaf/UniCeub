@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormularioApp.Views.UsuarioPage"
+             Title="Cadastro de Usuário">
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="20">
+            
+            <Entry x:Name="NomeEditText" 
+                   Placeholder="Nome"
+                   FontSize="16"/>
+            
+            <CheckBox x:Name="AceitaTermosCheckBox"/>
+            <Label Text="Aceito os termos" Margin="30,-20,0,0"/>
+            
+            <Label Text="Gênero:" FontAttributes="Bold" Margin="0,10,0,0"/>
+            <RadioButton x:Name="MasculinoRadio" 
+                         Content="Masculino" 
+                         GroupName="Genero"
+                         IsChecked="True"/>
+            <RadioButton x:Name="FemininoRadio" 
+                         Content="Feminino" 
+                         GroupName="Genero"/>
+            
+            <Label Text="Cidade:" FontAttributes="Bold" Margin="0,10,0,0"/>
+            <Picker x:Name="CidadeSpinner" Title="Selecione uma cidade">
+                <Picker.Items>
+                    <x:String>São Paulo</x:String>
+                    <x:String>Rio de Janeiro</x:String>
+                    <x:String>Belo Horizonte</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Button x:Name="EnviarButton" 
+                    Text="Enviar" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    Clicked="OnEnviarClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

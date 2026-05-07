@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormularioApp.Views.PedidoPage"
+             Title="Cadastro de Pedido">
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="20">
+            
+            <!-- Nome do Produto -->
+            <Label Text="Nome do produto:" 
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+            
+            <Entry x:Name="EditProductName" 
+                   Placeholder="Ex: Hambúrguer artesanal"/>
+            
+            <!-- Quantidade (Slider) -->
+            <Label Text="Quantidade:" 
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   Margin="0,10,0,0"/>
+            
+            <HorizontalStackLayout Spacing="10">
+                <Slider x:Name="SeekBarQuantity" 
+                        Minimum="1" 
+                        Maximum="10" 
+                        Value="1"
+                        WidthRequest="200"/>
+                <Label x:Name="TextQuantityValue" 
+                       Text="1" 
+                       VerticalOptions="Center"
+                       WidthRequest="40"/>
+            </HorizontalStackLayout>
+            
+            <!-- Tipo de Entrega -->
+            <Label Text="Tipo de entrega:" 
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   Margin="0,10,0,0"/>
+            
+            <RadioButton x:Name="RadioPickup" 
+                         Content="Retirar na loja" 
+                         GroupName="Delivery"/>
+            <RadioButton x:Name="RadioDelivery" 
+                         Content="Entregar no local" 
+                         GroupName="Delivery"/>
+            <RadioButton x:Name="RadioMail" 
+                         Content="Correios" 
+                         GroupName="Delivery"/>
+            
+            <!-- Região (Picker) -->
+            <Label Text="Região:" 
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   Margin="0,10,0,0"/>
+            
+            <Picker x:Name="SpinnerRegion" 
+                    Title="Selecione uma região">
+                <Picker.Items>
+                    <x:String>Centro</x:String>
+                    <x:String>Norte</x:String>
+                    <x:String>Sul</x:String>
+                    <x:String>Leste</x:String>
+                    <x:String>Oeste</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <!-- Promoções -->
+            <CheckBox x:Name="CheckPromotions" 
+                      Margin="0,10,0,0"/>
+            <Label Text="Desejo receber promoções por e-mail" 
+                   Margin="30,-20,0,0"/>
+            
+            <!-- Botão Cadastrar -->
+            <Button x:Name="ButtonSubmit" 
+                    Text="Cadastrar" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    Margin="0,30,0,0"
+                    Clicked="OnSubmitClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

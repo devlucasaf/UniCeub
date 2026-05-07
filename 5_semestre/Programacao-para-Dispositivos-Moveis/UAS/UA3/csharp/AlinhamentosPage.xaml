@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MobileAlinhamentos.AlinhamentosPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="20">
+        
+        <!-- Exemplo Start -->
+        <ExemploAlinhamento Titulo="MainAxisAlignment.start (horizontal)">
+            <HorizontalStackLayout Spacing="5">
+                <BoxView Color="Blue" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Pink" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Purple" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Green" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Orange" WidthRequest="60" HeightRequest="60"/>
+            </HorizontalStackLayout>
+        </ExemploAlinhamento>
+        
+        <!-- Exemplo Center -->
+        <ExemploAlinhamento Titulo="MainAxisAlignment.center">
+            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                <BoxView Color="Blue" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Pink" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Purple" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Green" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Orange" WidthRequest="60" HeightRequest="60"/>
+            </HorizontalStackLayout>
+        </ExemploAlinhamento>
+        
+        <!-- Exemplo End -->
+        <ExemploAlinhamento Titulo="MainAxisAlignment.end">
+            <HorizontalStackLayout Spacing="5" HorizontalOptions="End">
+                <BoxView Color="Blue" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Pink" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Purple" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Green" WidthRequest="60" HeightRequest="60"/>
+                <BoxView Color="Orange" WidthRequest="60" HeightRequest="60"/>
+            </HorizontalStackLayout>
+        </ExemploAlinhamento>
+        
+        <!-- Exemplo Stretch -->
+        <ExemploAlinhamento Titulo="CrossAxisAlignment.stretch">
+            <HorizontalStackLayout Spacing="5" HeightRequest="150">
+                <BoxView Color="Blue" WidthRequest="60" VerticalOptions="Fill"/>
+                <BoxView Color="Pink" WidthRequest="60" VerticalOptions="Fill"/>
+                <BoxView Color="Purple" WidthRequest="60" VerticalOptions="Fill"/>
+                <BoxView Color="Green" WidthRequest="60" VerticalOptions="Fill"/>
+                <BoxView Color="Orange" WidthRequest="60" VerticalOptions="Fill"/>
+            </HorizontalStackLayout>
+        </ExemploAlinhamento>
+        
+        <!-- Exemplo SpaceBetween -->
+        <ExemploAlinhamento Titulo="MainAxisAlignment.spaceBetween">
+            <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="5">
+                <BoxView Color="Blue" HeightRequest="60" Grid.Column="0"/>
+                <BoxView Color="Pink" HeightRequest="60" Grid.Column="1"/>
+                <BoxView Color="Purple" HeightRequest="60" Grid.Column="2"/>
+                <BoxView Color="Green" HeightRequest="60" Grid.Column="3"/>
+                <BoxView Color="Orange" HeightRequest="60" Grid.Column="4"/>
+            </Grid>
+        </ExemploAlinhamento>
+        
+        <!-- Exemplo Column Center -->
+        <ExemploAlinhamento Titulo="Column - MainAxisAlignment.center">
+            <VerticalStackLayout Spacing="5" VerticalOptions="Center" HeightRequest="300">
+                <BoxView Color="Blue" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"/>
+                <BoxView Color="Pink" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"/>
+                <BoxView Color="Purple" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"/>
+                <BoxView Color="Green" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"/>
+                <BoxView Color="Orange" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ExemploAlinhamento>
+        
+    </VerticalStackLayout>
+</ScrollView>
