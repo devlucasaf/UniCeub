@@ -11,11 +11,11 @@
 
 | # | Disciplina |
 |:---:|:---|
-| 01 | 🗄️ [Banco de Dados II](https://github.com/devlucasaf/UniCeub/tree/main/3%20semestre/Banco%20de%20Dados%20II) |
+| 01 | 🗄️ [Banco de Dados II](https://github.com/devlucasaf/UniCeub/tree/main/3_semestre/Banco-de-Dados-II) |
 | 02 | 📐 Cálculo Diferencial e Integral |
-| 03 | 🎨 [Computação Gráfica](https://github.com/devlucasaf/UniCeub/tree/main/3%20semestre/Computa%C3%A7%C3%A3o%20Grafica) |
+| 03 | 🎨 [Computação Gráfica](https://github.com/devlucasaf/UniCeub/tree/main/3_semestre/Computacao-Grafica) |
 | 04 | 🧩 Engenharia de Software |
-| 05 | 💻 [Linguagem e Técnicas de Programação II](https://github.com/devlucasaf/UniCeub/tree/main/3%20semestre/Linguagem%20e%20T%C3%A9cnicas%20de%20Programa%C3%A7%C3%A3o%20II) |
+| 05 | 💻 [Linguagem e Técnicas de Programação II](https://github.com/devlucasaf/UniCeub/tree/main/3_semestre/Linguagem-e-Tecnicas-de-Programacao-II) |
 
 </div>
 

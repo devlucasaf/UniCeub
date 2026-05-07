@@ -12,10 +12,10 @@
 | # | Disciplina |
 |:---:|:---|
 | 01 | 📐 Álgebra e Geometria Analítica |
-| 02 | 🗄️ [Banco de Dados I](https://github.com/devlucasaf/UniCeub/tree/main/2%20semestre/Banco%20de%20Dados%20I) |
-| 03 | 🔗 [Estrutura de Dados](https://github.com/devlucasaf/UniCeub/tree/main/2%20semestre/Estruturas%20de%20Dados) |
-| 04 | 💻 [Linguagem e Técnicas de Programação I](https://github.com/devlucasaf/UniCeub/tree/main/2%20semestre/linguagem%20e%20tecnicas%20de%20programa%C3%A7%C3%A3o%20I) |
-| 05 | 🖥️ [Organização e Arquitetura de Computadores](https://github.com/devlucasaf/UniCeub/tree/main/2%20semestre/organiza%C3%A7%C3%A3o%20e%20arquiteturas%20de%20computadores) |
+| 02 | 🗄️ [Banco de Dados I](https://github.com/devlucasaf/UniCeub/tree/main/2_semestre/Banco-de-Dados-I) |
+| 03 | 🔗 [Estrutura de Dados](https://github.com/devlucasaf/UniCeub/tree/main/2_semestre/Estruturas-de-Dados) |
+| 04 | 💻 [Linguagem e Técnicas de Programação I](https://github.com/devlucasaf/UniCeub/tree/main/2_semestre/Linguagem-e-Tecnicas-de-Programacao-I) |
+| 05 | 🖥️ [Organização e Arquitetura de Computadores](https://github.com/devlucasaf/UniCeub/tree/main/2_semestre/Organizacao-e-Arquiteturas-de-Computadores) |
 
 </div>
 

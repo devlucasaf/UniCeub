@@ -12,9 +12,9 @@
 | # | Disciplina |
 |:---:|:---|
 | 01 | 📋 Gerência de Projetos de TI |
-| 02 | 🤖 [Inteligência Artificial](https://github.com/devlucasaf/UniCeub/tree/main/5%20semestre/Inteligencia%20Artificial) |
-| 03 | 🖱️ [Interação Humano-Computador](https://github.com/devlucasaf/UniCeub/tree/main/5%20semestre/Interacao%20Humano%20Computacao) |
-| 04 | 📱 [Programação para Dispositivos Móveis](https://github.com/devlucasaf/UniCeub/tree/main/5%20semestre/Programacao%20para%20Dispositivos%20Moveis) |
+| 02 | 🤖 [Inteligência Artificial](https://github.com/devlucasaf/UniCeub/tree/main/5_semestre/Inteligencia-Artificial) |
+| 03 | 🖱️ [Interação Humano-Computador](https://github.com/devlucasaf/UniCeub/tree/main/5_semestre/Interacao-Humano-Computacao) |
+| 04 | 📱 [Programação para Dispositivos Móveis](https://github.com/devlucasaf/UniCeub/tree/main/5_semestre/Programacao-para-Dispositivos-Moveis) |
 | 05 | 🔗 Projeto Integrador I |
 
 </div>
