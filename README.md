@@ -166,6 +166,12 @@
         src="https://skillicons.dev/icons?i=bootstrap" 
     />
     <img 
+        alt="NodeJS" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=nodejs"
+    />
+    <img 
         alt="JQuery" 
         height="40" 
         style="margin:4px" 

@@ -80,6 +80,12 @@
         src="https://skillicons.dev/icons?i=css"
     />
     <img 
+        alt="NodeJS" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=nodejs"
+    />
+    <img 
         alt="Flutter" 
         height="40" 
         style="margin:4px" 
