@@ -1,97 +1,128 @@
-# pacmanAgents.py
-# ---------------
-# Licensing Information:  You are free to use or extend these projects for
-# educational purposes provided that (1) you do not distribute or publish
-# solutions, (2) you retain this notice, and (3) you provide clear
-# attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-#
-# Attribution Information: The Pacman AI projects were developed at UC Berkeley.
-# The core projects and autograders were primarily created by John DeNero
-# (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# Student side autograding was added by Brad Miller, Nick Hay, and
-# Pieter Abbeel (pabbeel@cs.berkeley.edu).
+Nenhum selecionado
 
+Pular para o conteúdo
+Como usar o Gmail com leitores de tela
+Ativar as notificações na área de trabalho para o Gmail.
+   OK  Agora não(a)
 
-from pacman import Directions
+Você pode perder o acesso ao seu histórico de 3 anos do Gmail
+Adicionar um telefone e e-mail de recuperação pode ajudar você a fazer login e manter sua conta segura
+Conversas
+4% de 15 GB usados
+Termos · Privacidade · Regulamentos do programa
+Última atividade da conta: há 0 minuto
+Aberta em um outro local · Detalhes
+from util import manhattanDistance
+from game import Directions
+import random, util
+
 from game import Agent
-import random
-import game
-import util
+from pacman import GameState
+from multiAgents import MultiAgentSearchAgent
 
-class QLearningAgent(Agent):
-    def __init__(self, epsilon=0.1, alpha=0.5, discount=0.9):
-        super().__init__()
-        self.epsilon = epsilon    
-        self.alpha = alpha       
-        self.discount = discount 
-        self.q_values = {}   
 
-    def getQValue(self, state, action):
-        
-        return self.q_values.get((state, action), 0.0)
+class MinimaxAgent(MultiAgentSearchAgent):
 
-    def update(self, state, action, next_state, reward):
-        best_next_q = max([self.getQValue(next_state, a) for a in self.getLegalActions(next_state)], default=0)
-        self.q_values[(state, action)] = (1 - self.alpha) * self.getQValue(state, action) + \
-                                         self.alpha * (reward + self.discount * best_next_q)
+    def getAction(self, gameState: GameState):
+        def minimax(state, depth, agentIndex):
 
-    def getLegalActions(self, state):
-        return state.getLegalPacmanActions()
+            # Condição de parada
+            if state.isWin() or state.isLose() or depth == self.depth:
+                return self.evaluationFunction(state)
 
-    def chooseAction(self, state):
-        legal_actions = self.getLegalActions(state)
-        if not legal_actions:
-            return None
+            numAgents = state.getNumAgents()
 
-        if util.flipCoin(self.epsilon):
-            return random.choice(legal_actions)
+            # Próximo agente
+            nextAgent = (agentIndex + 1) % numAgents
+            nextDepth = depth + 1 if nextAgent == 0 else depth
+            actions = state.getLegalActions(agentIndex)
+
+            # Remoção do Stop para evitar paradas
+            if Directions.STOP in actions:
+                actions.remove(Directions.STOP)
+
+            if len(actions) == 0:
+                return self.evaluationFunction(state)
+
+            if agentIndex == 0:
+                maxValue = -float("inf")
+                bestActions = []
+
+                for action in actions:
+                    successor = state.generateSuccessor(agentIndex, action)
+                    value = minimax(
+                        successor,
+                        nextDepth,
+                        nextAgent
+                    )
+
+                    if value > maxValue:
+                        maxValue = value
+                        bestActions = [action]
+
+                    elif value == maxValue:
+                        bestActions.append(action)
+
+                if depth == 0:
+                    return random.choice(bestActions)
+
+                return maxValue
+            else:
+
+                minValue = float("inf")
+                for action in actions:
+                    successor = state.generateSuccessor(agentIndex, action)
+                    value = minimax(
+                        successor,
+                        nextDepth,
+                        nextAgent
+                    )
+
+                    minValue = min(minValue, value)
+                return minValue
+
+        return minimax(gameState, 0, 0)
+
+def betterEvaluationFunction(currentGameState: GameState):
+
+    pos = currentGameState.getPacmanPosition()
+    foodList = currentGameState.getFood().asList()
+    ghostStates = currentGameState.getGhostStates()
+    score = currentGameState.getScore()
+
+    if foodList:
+        foodDistances = [
+            manhattanDistance(pos, food)
+            for food in foodList
+        ]
+
+        # Incentivos para buscar comida
+        score += 30 / min(foodDistances) 
+        score -= 120 * len(foodList)
+
+        # Pressão pra finalizar o 
+        score -= 0.3 * sum(foodDistances)
+
+        if len(foodList) <= 5:
+            score -= 15 * min(foodDistances)
+
+    for ghost in ghostStates:
+        ghostPos = ghost.getPosition()
+        ghostDist = manhattanDistance(pos, ghostPos)
+
+        # Incentivo para comer fantasmas assutados
+        if ghost.scaredTimer > 0:
+
+            score += 25.0 / (ghostDist + 1)
+
         else:
-            q_values = [(self.getQValue(state, action), action) for action in legal_actions]
-            max_q_value = max(q_values, key=lambda x: x[0])[0]
-            best_actions = [action for q, action in q_values if q == max_q_value]
-            return random.choice(best_actions)
+            # Fantasmas sem medo pertos demais to Pacman são perigosos
+            if ghostDist < 2:
+                score -= 1000
 
+    return score
 
-
-class LeftTurnAgent(game.Agent):
-    "An agent that turns left at every opportunity"
-
-    def getAction(self, state):
-        legal = state.getLegalPacmanActions()
-        current = state.getPacmanState().configuration.direction
-        if current == Directions.STOP:
-            current = Directions.NORTH
-        left = Directions.LEFT[current]
-        if left in legal:
-            return left
-        if current in legal:
-            return current
-        if Directions.RIGHT[current] in legal:
-            return Directions.RIGHT[current]
-        if Directions.LEFT[left] in legal:
-            return Directions.LEFT[left]
-        return Directions.STOP
-
-
-class GreedyAgent(Agent):
-    def __init__(self, evalFn="scoreEvaluation"):
-        self.evaluationFunction = util.lookup(evalFn, globals())
-        assert self.evaluationFunction != None
-
-    def getAction(self, state):
-        # Generate candidate actions
-        legal = state.getLegalPacmanActions()
-        if Directions.STOP in legal:
-            legal.remove(Directions.STOP)
-
-        successors = [(state.generateSuccessor(0, action), action)
-                      for action in legal]
-        scored = [(self.evaluationFunction(state), action)
-                  for state, action in successors]
-        bestScore = max(scored)[0]
-        bestActions = [pair[1] for pair in scored if pair[0] == bestScore]
-        return random.choice(bestActions)
-
-
-def scoreEvaluation(state):
-    return state.getScore()
+# Abbreviation
+better = betterEvaluationFunction
+seuPacManAgents (2).py
+Exibindo seuPacManAgents (2).py.
