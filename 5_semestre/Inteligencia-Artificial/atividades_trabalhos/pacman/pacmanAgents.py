@@ -1,17 +1,3 @@
-Nenhum selecionado
-
-Pular para o conteúdo
-Como usar o Gmail com leitores de tela
-Ativar as notificações na área de trabalho para o Gmail.
-   OK  Agora não(a)
-
-Você pode perder o acesso ao seu histórico de 3 anos do Gmail
-Adicionar um telefone e e-mail de recuperação pode ajudar você a fazer login e manter sua conta segura
-Conversas
-4% de 15 GB usados
-Termos · Privacidade · Regulamentos do programa
-Última atividade da conta: há 0 minuto
-Aberta em um outro local · Detalhes
 from util import manhattanDistance
 from game import Directions
 import random, util
