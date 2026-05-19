@@ -110,5 +110,3 @@ def betterEvaluationFunction(currentGameState: GameState):
 
 # Abbreviation
 better = betterEvaluationFunction
-seuPacManAgents (2).py
-Exibindo seuPacManAgents (2).py.

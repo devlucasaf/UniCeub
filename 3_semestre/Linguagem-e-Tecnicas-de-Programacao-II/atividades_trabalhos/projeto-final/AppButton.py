@@ -1,4 +1,3 @@
-Teste a IA diretamente nos seus apps favoritos … Use o Gemini para criar rascunhos e editar conteúdo e acesse o Gemini Pro com a IA de última geração do Google
 import customtkinter
 
 
