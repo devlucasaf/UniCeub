@@ -1,4 +1,4 @@
-package com.example.exemploseekbar;
+package com.example.seekbar;
 
 import android.os.Bundle;
 import android.widget.EditText;

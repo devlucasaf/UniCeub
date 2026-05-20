@@ -1,4 +1,4 @@
-package com.example.exemploratingbar;
+package com.example.ratingbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     RatingBar   ratingAvaliacao;
     TextView    tvAvaliacao;
-    Button  btnEnviarAvaliacao;
+    Button      btnEnviarAvaliacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvAvaliacao         = (TextView)    findViewById(R.id.ldlAvaliacao);
         ratingAvaliacao     = (RatingBar)   findViewById(R.id.rbAvaliacao);
-        btnEnviarAvaliacao  = (Button)      findViewById(R.id.cmdAvalicao);
+        btnEnviarAvaliacao  = (Button)      findViewById(R.id.cmdAvaliacao);
 
         btnEnviarAvaliacao.setOnClickListener(new View.OnClickListener() {
             @Override
