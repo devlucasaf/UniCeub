@@ -1,9 +1,8 @@
 class CatalogoTelefonico:
     def __init__(self):
-        self.contatos = {}  # Dicionário para armazenar os contatos
+        self.contatos = {}  
     
     def adicionar_contato(self, nome, telefone):
-        """Adiciona um novo colaborador ao catálogo"""
         if nome in self.contatos:
             print(f"Colaborador {nome} já existe no catálogo.")
         else:
@@ -11,14 +10,12 @@ class CatalogoTelefonico:
             print(f"Colaborador {nome} adicionado com sucesso!")
     
     def buscar_telefone(self, nome):
-        """Busca o número de telefone de um colaborador"""
         if nome in self.contatos:
             print(f"Telefone de {nome}: {self.contatos[nome]}")
         else:
             print(f"Colaborador {nome} não encontrado no catálogo.")
     
     def atualizar_telefone(self, nome, novo_telefone):
-        """Atualiza o número de telefone de um colaborador"""
         if nome in self.contatos:
             self.contatos[nome] = novo_telefone
             print(f"Telefone de {nome} atualizado para {novo_telefone}")
@@ -26,7 +23,6 @@ class CatalogoTelefonico:
             print(f"Colaborador {nome} não encontrado. Não foi possível atualizar.")
     
     def remover_contato(self, nome):
-        """Remove um colaborador do catálogo"""
         if nome in self.contatos:
             del self.contatos[nome]
             print(f"Colaborador {nome} removido com sucesso!")
@@ -34,7 +30,6 @@ class CatalogoTelefonico:
             print(f"Colaborador {nome} não encontrado. Não foi possível remover.")
     
     def listar_contatos(self):
-        """Lista todos os colaboradores e seus telefones"""
         if not self.contatos:
             print("O catálogo telefônico está vazio.")
         else:
@@ -44,7 +39,6 @@ class CatalogoTelefonico:
             print("--------------------------")
 
 
-# Função para exibir o menu
 def exibir_menu():
     print("\n--- Sistema de Catálogo Telefônico ---")
     print("1. Adicionar colaborador")
@@ -55,7 +49,6 @@ def exibir_menu():
     print("6. Sair")
 
 
-# Exemplo de uso do sistema
 if __name__ == "__main__":
     catalogo = CatalogoTelefonico()
     

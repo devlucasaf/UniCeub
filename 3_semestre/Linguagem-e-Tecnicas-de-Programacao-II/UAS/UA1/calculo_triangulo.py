@@ -22,10 +22,17 @@ def calc_medidas_do_triangulo(x1, y1, x2, y2, x3, y3):
     return perimetro, area
 
 # Caso de teste
-x1, y1 = 1, 1
-x2, y2 = 4, 4
-x3, y3 = 2, 2
+x1 = 1
+y1 = 1
 
-perimetro, area = calc_medidas_do_triangulo(x1, y1, x2, y2, x3, y3)
+x2 = 4
+y2 = 4
+
+x3 = 2
+y3 = 2
+
+perimetro = calc_medidas_do_triangulo(x1, y1, x2, y2, x3, y3)
+area = calc_medidas_do_triangulo(x1, y1, x2, y2, x3, y3)
+
 print(f"Perímetro do triângulo: {perimetro}")
 print(f"Área do triângulo: {area}")
