@@ -57,14 +57,12 @@ body {
     margin-top: 0.2rem;
 }
 
-/* ===== FORMULÁRIO ===== */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
 }
 
-/* grupos de input */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -93,7 +91,6 @@ body {
     font-weight: 500;
 }
 
-/* campo data: ajuste visual */
 .input-group input[type="date"] {
     font-family: 'Inter', system-ui;
     color-scheme: light;

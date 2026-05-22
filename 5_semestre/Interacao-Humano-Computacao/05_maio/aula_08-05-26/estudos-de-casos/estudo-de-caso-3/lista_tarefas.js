@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const inputTarefa = document.getElementById("novaTarefa");
+    const inputTarefa  = document.getElementById("novaTarefa");
     const btnAdicionar = document.getElementById("btnAdicionar");
     const listaTarefas = document.getElementById("listaTarefas");
 
@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
         listaTarefas.innerHTML = "";
 
         tarefas.forEach((tarefa, index) => {
-            const li = document.createElement("li");
-            
-            const span = document.createElement("span");
+            const li    = document.createElement("li");
+            const span  = document.createElement("span");
+
             span.textContent = tarefa.texto;
             
             if (tarefa.concluida) {
@@ -45,7 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnAdicionar.addEventListener("click", () => {
         const texto = inputTarefa.value.trim();
         if (texto !== "") {
-            tarefas.push({ texto: texto, concluida: false });
+            tarefas.push({ 
+                texto: texto,
+                concluida: false 
+            });
             inputTarefa.value = ""; 
             salvarTarefas();
             renderizarTarefas();

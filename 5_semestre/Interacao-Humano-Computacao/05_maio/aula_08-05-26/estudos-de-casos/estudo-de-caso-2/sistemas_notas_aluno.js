@@ -9,6 +9,7 @@ function classificarSituacao(media) {
     if (media >= 7) {
         return "APROVADO";
     }
+
     if (media >= 5) {
         return "RECUPERACAO";
     }
@@ -20,7 +21,10 @@ function validarNota(nota) {
 }
 
 async function executarSistemaNotas() {
-    const rl = readline.createInterface({ input, output });
+    const rl = readline.createInterface({ 
+        input, 
+        output 
+    });
 
     const nomeAluno = (await rl.question("Digite o nome do aluno: ")).trim();
 

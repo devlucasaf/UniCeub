@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 
 function calcularDesconto() {    
-    let valorProduto = parseFloat(prompt("Digite o valor do produto: "));
+    let valorProduto        = parseFloat(prompt("Digite o valor do produto: "));
     let porcentagemDesconto = parseFloat(prompt("Digite a porcentagem de desconto (ex: 10 para 10%): "));
     
     if (isNaN(valorProduto) || isNaN(porcentagemDesconto)) {
@@ -19,8 +19,8 @@ function calcularDesconto() {
         return;
     }
     
-    let valorDesconto = valorProduto * (porcentagemDesconto / 100);
-    let valorFinal = valorProduto - valorDesconto;
+    let valorDesconto   = valorProduto * (porcentagemDesconto / 100);
+    let valorFinal      = valorProduto - valorDesconto;
     
     console.log("\nRESULTADO DO CÁLCULO");
     console.log(`Valor original: R$ ${valorProduto.toFixed(2)}`);
