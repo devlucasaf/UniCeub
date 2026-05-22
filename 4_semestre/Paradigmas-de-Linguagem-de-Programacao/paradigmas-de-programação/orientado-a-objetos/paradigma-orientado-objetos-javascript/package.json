@@ -1,0 +1,12 @@
+{
+    "name": "paradigma-orientado-objetos",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Sistema de biblioteca com POO em JavaScript",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "author": "",
+    "license": "ISC"
+}
