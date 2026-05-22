@@ -1,8 +1,6 @@
 """
 Aula prática de Probabilidade e Estatística
 Probabilidade e Estatística
-Lucas Freitas
-Professora: Ingrid Maria Dittert
 Aula: 20-08-25
 """
 
