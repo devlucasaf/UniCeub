@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Login Acadêmico | Acesso do Aluno</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login-wrapper">
+            <div class="login-card">
+                <div class="card-header">
+                    <div class="logo-icon"></div>
+                    <h1>LOGIN</h1>
+                    <p class="subhead">Acesso ao ambiente acadêmico</p>
+                </div>
+
+                <form id="academicForm" class="login-form" novalidate>
+                    <div class="input-group">
+                        <label for="nomeAluno">Nome do aluno</label>
+                        <input type="text" id="nomeAluno" name="nomeAluno" placeholder="Digite seu nome completo" autocomplete="off" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="matricula">Matrícula</label>
+                        <input type="text" id="matricula" name="matricula" inputmode="numeric" placeholder="Número de matrícula" autocomplete="off" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="disciplina">Disciplina</label>
+                        <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Matemática, História, etc." autocomplete="off" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="dataAula">Data</label>
+                        <input type="date" id="dataAula" name="dataAula" required>
+                    </div>
+
+                    <button type="submit" class="btn-entrar">
+                        <span>Entrar</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="footer-note">
+                    <span>Ambiente seguro · Dados acadêmicos</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
