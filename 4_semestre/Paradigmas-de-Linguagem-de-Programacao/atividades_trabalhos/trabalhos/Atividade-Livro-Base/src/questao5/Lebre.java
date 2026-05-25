@@ -1,5 +1,7 @@
 package questao5;
 
+import java.util.Random;
+
 public class Lebre implements Runnable {
     private final String    nome;
     private final String    corHexadecimal;
