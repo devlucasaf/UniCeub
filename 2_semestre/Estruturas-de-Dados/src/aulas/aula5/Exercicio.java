@@ -12,9 +12,7 @@ public class Exercicio {
 
         if (myMap.containsValue("João")) {
             System.out.println("A lista contémm o nome João.");
-        }
-
-        else {
+        } else {
             System.out.println("A lista NÃO contém o nome João.");
         }
 
@@ -33,9 +31,7 @@ public class Exercicio {
 
         if (myMap.size() == 0){
             System.out.println("Está vazia.");
-        }
-
-        else {
+        } else {
             System.out.println("Não está vazia.");
         }
 

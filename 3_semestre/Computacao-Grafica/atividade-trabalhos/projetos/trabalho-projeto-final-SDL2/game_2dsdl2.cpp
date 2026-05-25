@@ -363,9 +363,7 @@ int main(int argc, char* argv[]) {
 
         if (background.textureID != 0) {
             background.draw();
-        } 
-        
-        else {
+        } else {
             glDisable(GL_TEXTURE_2D);
             glColor3f(0.3f, 0.5f, 0.9f);
             glBegin(GL_QUADS);

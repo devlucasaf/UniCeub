@@ -9,7 +9,7 @@ import java.util.*;
 public class AulaArrayList {
 
     // Método principal que demonstra operações básicas com ArrayList
-    public static void Principal() {
+    public static void principal() {
         // Cria um ArrayList de Strings para armazenar carros
         ArrayList<String> cars = new ArrayList<String>();
         // Adiciona elementos ao ArrayList
@@ -30,7 +30,7 @@ public class AulaArrayList {
     }
 
     // Método que demonstra como percorrer um ArrayList usando loop for tradicional
-    public static void LoopThroughArrayList() {
+    public static void loopThroughArrayList() {
         ArrayList<String> cars = new ArrayList<String>();
         cars.add("Volvo");
         cars.add("BMW");
@@ -44,7 +44,7 @@ public class AulaArrayList {
     }
 
     // Método que demonstra como percorrer um ArrayList usando for-each
-    public static void LoopThroughArrayListForEach() {
+    public static void loopThroughArrayListForEach() {
         ArrayList<String> cars = new ArrayList<String>();
         cars.add("Volvo");
         cars.add("BMW");
@@ -58,7 +58,7 @@ public class AulaArrayList {
     }
 
     // Método que demonstra o uso de ArrayList com outros tipos (Integer)
-    public static void OtherTypes() {
+    public static void otherTypes() {
         // Cria um ArrayList de Integers
         ArrayList<Integer> myNumbers = new ArrayList<Integer>();
         myNumbers.add(10);
@@ -73,7 +73,7 @@ public class AulaArrayList {
     }
 
     // Método que demonstra como ordenar um ArrayList de Strings
-    public static void SortArrayListString() {
+    public static void sortArrayListString() {
         ArrayList<String> cars = new ArrayList<String>();
         cars.add("Volvo");
         cars.add("BMW");
@@ -90,7 +90,7 @@ public class AulaArrayList {
     }
 
     // Método que demonstra como ordenar um ArrayList de Integers
-    public static void SortArrayListInt() {
+    public static void sortArrayListInt() {
         ArrayList<Integer> myNumbers = new ArrayList<Integer>();
         myNumbers.add(33);
         myNumbers.add(15);
@@ -109,7 +109,7 @@ public class AulaArrayList {
     }
 
     // Método que testa todos os exercícios implementados
-    public static void Exercicio() {
+    public static void exercicio() {
         // Teste dos exercícios
         System.out.println("=== Exercício 1 ===");
         exercicio1();
@@ -299,12 +299,12 @@ public class AulaArrayList {
     // Método main - ponto de entrada do programa
     public static void main(String[] args) {
         // Executa todos os métodos de demonstração
-        Principal();
-        LoopThroughArrayList();
-        LoopThroughArrayListForEach();
-        OtherTypes();
-        SortArrayListString();
-        SortArrayListInt();
-        Exercicio(); // Executa os exercícios
+        principal();
+        loopThroughArrayList();
+        loopThroughArrayListForEach();
+        otherTypes();
+        sortArrayListString();
+        sortArrayListInt();
+        exercicio(); // Executa os exercícios
     }
 }

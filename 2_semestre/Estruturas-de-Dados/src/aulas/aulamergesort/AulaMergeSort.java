@@ -1,3 +1,5 @@
+package aulas.aulamergesort;
+
 // Aula: Java MergeSort
 // Estrutura de Dados
 // Segundo Semestre

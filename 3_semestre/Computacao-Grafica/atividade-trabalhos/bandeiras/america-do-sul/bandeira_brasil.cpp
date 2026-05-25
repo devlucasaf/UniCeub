@@ -40,7 +40,7 @@ void Desenha(void) {
     glColor3f(0,0,1);
     glBegin(GL_POLYGON);
 
-        for(int i = 0; i < 360; i++) {
+        for (int i = 0; i < 360; i++) {
             theta = i * M_PI / 180;
             glVertex2f(raio * cos(theta), raio * sin(theta));
         }
@@ -53,7 +53,7 @@ void Desenha(void) {
 void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
     GLsizei largura, altura;
 
-    if(h == 0) {
+    if (h == 0) {
         h = 1;
     }
 
@@ -67,9 +67,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
 
     if (largura <= altura) {
         gluOrtho2D (-40.0f, 40.0f, -40.0f*altura/largura, 40.0f*altura/largura);
-    }
-    
-    else {
+    } else {
         gluOrtho2D (-40.0f*largura/altura, 40.0f*largura/altura, -40.0f, 40.0f);
     }
 }

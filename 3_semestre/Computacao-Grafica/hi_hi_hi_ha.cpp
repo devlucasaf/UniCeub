@@ -38,7 +38,7 @@ void ajusta_tela() {
 void anima(int timer) {
     rotationAngle += 2.0f; 
 
-    if(rotationAngle > 360) {
+    if (rotationAngle > 360) {
         rotationAngle -= 360;
     }
     

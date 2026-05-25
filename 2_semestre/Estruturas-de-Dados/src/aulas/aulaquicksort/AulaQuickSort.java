@@ -1,3 +1,5 @@
+package aulas.aulaquicksort;
+
 // Aula: Java QuickSort
 // Estrutura de Dados
 

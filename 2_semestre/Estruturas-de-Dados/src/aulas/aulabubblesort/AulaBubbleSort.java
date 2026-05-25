@@ -1,3 +1,5 @@
+package aulas.aulabubblesort;
+
 // Aula: Java BubbleSort
 // Estrutura de Dados
 // Segundo Semestre
