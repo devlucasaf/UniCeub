@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuSalvar"
+        android:icon="@drawable/salvar_imagem"
+        android:title="Salvar" />
+    <item
+        android:id="@+id/menuExcluir"
+        android:icon="@drawable/excluir_imagem"
+        android:title="Excluir"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuPesquisar"
+        android:icon="@drawable/pesquisar_imagem"
+        android:title="Pesquisar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuSair"
+        android:icon="@drawable/sair_imagem"
+        android:title="Sair" />
+</menu>
