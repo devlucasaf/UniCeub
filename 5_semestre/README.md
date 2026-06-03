@@ -99,6 +99,17 @@
     />
 </div>
 
+### 🗄️ Banco de Dados
+
+<div align="left">
+    <img 
+        alt="SQLite" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=sqlite"
+    />
+</div>
+
 ## 🛠️ Ferramentas & Ambiente
 
 ### 💻 IDEs & Editores
@@ -176,7 +187,7 @@
         alt="Windows" 
         height="40" 
         style="margin:4px" 
-        src="https://skillicons.dev/icons?i=windows"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg"
     />
 </div>
 
