@@ -21,7 +21,7 @@ def extrair_inteligente(texto_bruto):
         {"TEXT": "%", "OP": "?"},                                            
         {"LOWER": "em"},                                                     
         {"LOWER": {"IN": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", 
-                            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]}}
+                          "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]}}
     ]
 
     matcher.add("METRICA_MENSAL", [padrao_metrica])
