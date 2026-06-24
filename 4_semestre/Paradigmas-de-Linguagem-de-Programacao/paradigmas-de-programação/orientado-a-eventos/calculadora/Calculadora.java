@@ -1,8 +1,10 @@
+package calculadora;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionListener {
+public class Calculadora extends JFrame implements ActionListener {
 
     private JTextField  display;
     private JPanel      painelBotoes;
@@ -12,7 +14,7 @@ public class CalculadoraSwingOrientadoEventos extends JFrame implements ActionLi
     private double numero2 = 0;
     private boolean novoNumero = true;
 
-    public CalculadoraSwingOrientadoEventos() {
+    public Calculadora() {
         setTitle("Calculadora");
         setSize(350, 450);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

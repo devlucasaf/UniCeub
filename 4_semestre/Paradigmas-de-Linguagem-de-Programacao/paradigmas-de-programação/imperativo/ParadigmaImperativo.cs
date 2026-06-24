@@ -2,7 +2,7 @@ using System;
 
 namespace ParadigmaImperativo
 {
-    class Program
+    class ParadigmaImperativo
     {
         static void Main(string[] args)
         {

@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 
 namespace ParadigmaConcorrente
 {
-    // Classe que representa uma tarefa de processamento
     class Processador
     {
         public int      Id { get; set; }

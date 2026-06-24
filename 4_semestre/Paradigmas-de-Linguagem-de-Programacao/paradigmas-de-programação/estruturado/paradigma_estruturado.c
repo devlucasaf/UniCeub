@@ -305,9 +305,15 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
         return 0;
     }
 
-    int moradorId, espacoId;
-    int d, m, a;
-    int hi, mi, hf, mf;
+    int moradorId;
+    int espacoId;
+    int d;
+    int m;
+    int a;
+    int hi;
+    int mi;
+    int hf;
+    int mf;
 
     listar_moradores(moradores, nMor);
     printf("\nID do morador: ");
@@ -384,6 +390,7 @@ int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
     }
 
     Reserva r;
+
     r.id = (*nextId)++;
     r.moradorId = moradorId;
     r.espacoId = espacoId;
@@ -448,8 +455,12 @@ int main() {
     Espaco espacos[MAX_ESPACOS];
     Reserva reservas[MAX_RESERVAS];
 
-    int nMor = 0, nEsp = 0, nRes = 0;
-    int nextMorId = 1, nextEspId = 1, nextResId = 1;
+    int nMor = 0;
+    int nEsp = 0;
+    int nRes = 0;
+    int nextMorId = 1
+    int nextEspId = 1;
+    int nextResId = 1;
 
     seed(moradores, &nMor, &nextMorId, espacos, &nEsp, &nextEspId);
 
