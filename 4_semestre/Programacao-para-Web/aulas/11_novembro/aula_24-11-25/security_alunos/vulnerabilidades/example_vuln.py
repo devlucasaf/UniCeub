@@ -2,16 +2,16 @@ import sqlite3
 from flask import Flask, request, session, redirect, url_for, render_template_string
 
 app = Flask(__name__)
-app.secret_key = 'chave_super_secreta_insegura'
+app.secret_key = "chave_super_secreta_insegura"
 
 # Configuração do Banco de Dados (Recriado a cada execução para limpeza)
 def init_db():
-    conn = sqlite3.connect('vulnerable.db')
+    conn = sqlite3.connect("vulnerable.db")
     c = conn.cursor()
-    c.execute('DROP TABLE IF EXISTS users')
-    c.execute('DROP TABLE IF EXISTS messages')
-    c.execute('CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, balance INTEGER)')
-    c.execute('CREATE TABLE messages (id INTEGER PRIMARY KEY, user_id INTEGER, content TEXT)')
+    c.execute("DROP TABLE IF EXISTS users")
+    c.execute("DROP TABLE IF EXISTS messages")
+    c.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, balance INTEGER)")
+    c.execute("CREATE TABLE messages (id INTEGER PRIMARY KEY, user_id INTEGER, content TEXT)")
     
     # Dados iniciais
     c.execute("INSERT INTO users (username, password, balance) VALUES ('admin', 'admin123', 10000)")
@@ -23,14 +23,14 @@ def init_db():
     conn.close()
 
 # --- VULNERABILIDADE 1: SQL INJECTION ---
-@app.route('/', methods=['GET', 'POST'])
+@app.route("/", methods=["GET", "POST"])
 def login():
     error = None
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
         
-        conn = sqlite3.connect('vulnerable.db')
+        conn = sqlite3.connect("vulnerable.db")
         c = conn.cursor()
         
         # ERRO GRAVE: Concatenação direta de strings na query
@@ -41,9 +41,9 @@ def login():
             c.execute(query)
             user = c.fetchone()
             if user:
-                session['user_id'] = user[0]
-                session['username'] = user[1]
-                return redirect(url_for('dashboard'))
+                session["user_id"] = user[0]
+                session["username"] = user[1]
+                return redirect(url_for("dashboard"))
             else:
                 error = "Credenciais inválidas"
         except Exception as e:
@@ -51,7 +51,7 @@ def login():
         finally:
             conn.close()
             
-    return render_template_string('''
+    return render_template_string("""
         <h1>Login Vulnerável</h1>
         <p style="color:red">{{ error }}</p>
         <form method="post">
@@ -59,20 +59,20 @@ def login():
             Senha: <input type="password" name="password"><br>
             <input type="submit" value="Entrar">
         </form>
-    ''', error=error)
+    """, error=error)
     
 
-@app.route('/dashboard')
+@app.route("/dashboard")
 def dashboard():
-    if 'user_id' not in session: return redirect(url_for('login'))
+    if "user_id" not in session: return redirect(url_for("login"))
     
     # --- VULNERABILIDADE 2: XSS REFLETIDO ---
-    search = request.args.get('q', '')
+    search = request.args.get("q", "")
     
     # ERRO GRAVE: Renderizando input do usuário sem escape (usando |safe ou format)
-    template = f'''
-        <h1>Bem-vindo, {session['username']}!</h1>
-        <p>Seu ID de sessão: {session['user_id']}</p>
+    template = f"""
+        <h1>Bem-vindo, {session["username"]}!</h1>
+        <p>Seu ID de sessão: {session["user_id"]}</p>
         <hr>
         <h3>Busca de Usuários</h3>
         <form>
@@ -86,15 +86,15 @@ def dashboard():
         <a href="/message/2">Ler mensagem #2</a>
         <br><br>
         <a href="/logout">Sair</a>
-    '''
+    """
     return render_template_string(template)
 
 # --- VULNERABILIDADE 3: IDOR (Insecure Direct Object Reference) ---
-@app.route('/message/<int:msg_id>')
+@app.route("/message/<int:msg_id>")
 def view_message(msg_id):
-    if 'user_id' not in session: return redirect(url_for('login'))
+    if "user_id" not in session: return redirect(url_for("login"))
     
-    conn = sqlite3.connect('vulnerable.db')
+    conn = sqlite3.connect("vulnerable.db")
     c = conn.cursor()
     
     # ERRO GRAVE: Busca a mensagem pelo ID sem verificar se pertence ao usuário logado
@@ -106,11 +106,11 @@ def view_message(msg_id):
         return f"<h1>Mensagem Confidencial #{msg_id}</h1><p>{msg[0]}</p><a href='/dashboard'>Voltar</a>"
     return "Mensagem não encontrada"
 
-@app.route('/logout')
+@app.route("/logout")
 def logout():
     session.clear()
-    return redirect(url_for('login'))
+    return redirect(url_for("login"))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     init_db()
     app.run(debug=True, port=5000)

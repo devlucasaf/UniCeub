@@ -3,19 +3,19 @@
 class PedidoService {
     public function gerarResumo(Pedido $pedido) {
         $dados = [];
-        $dados['usuario'] = $pedido->getUsuario()->getNome();
-        $dados['status'] = $pedido->getStatus();
-        $dados['itens'] = [];
+        $dados["usuario"] = $pedido->getUsuario()->getNome();
+        $dados["status"] = $pedido->getStatus();
+        $dados["itens"] = [];
 
         foreach ($pedido->getItens() as $item) {
-            $dados['itens'][] = [
-                'produto' => $item->getProduto()->getNome(),
-                'quantidade' => $item->getQuantidade(),
-                'subtotal' => $item->getSubtotal()
+            $dados["itens"][] = [
+                "produto" => $item->getProduto()->getNome(),
+                "quantidade" => $item->getQuantidade(),
+                "subtotal" => $item->getSubtotal()
             ];
         }
 
-        $dados['total'] = $pedido->calcularTotal();
+        $dados["total"] = $pedido->calcularTotal();
 
         return $dados;
     }

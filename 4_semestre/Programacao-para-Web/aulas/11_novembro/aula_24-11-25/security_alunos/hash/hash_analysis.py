@@ -9,8 +9,8 @@ def md5_hash(password):
 
 # --- CENÁRIO 2: O jeito SEGURO (Bcrypt) ---
 def secure_hash(password):
-    # O bcrypt gera um 'salt' aleatório e o inclui no hash final automaticamente.
-    # O parâmetro 'rounds' (work factor) determina a lentidão. 
+    # O bcrypt gera um "salt" aleatório e o inclui no hash final automaticamente.
+    # O parâmetro "rounds" (work factor) determina a lentidão. 
     # 12 é um bom padrão atual (2^12 iterações).
     salt = bcrypt.gensalt(rounds=12)
     hashed = bcrypt.hashpw(password.encode(), salt)
@@ -19,17 +19,17 @@ def secure_hash(password):
 # --- SIMULAÇÃO DE ARMAZENAMENTO (Banco de Dados) ---
 # Imagine que vazaram o banco de dados da empresa!
 leaked_db_md5 = [
-    {'user': 'admin', 'hash': 'e10adc3949ba59abbe56e057f20f883e'}, # 123456
-    {'user': 'alice', 'hash': 'e10adc3949ba59abbe56e057f20f883e'}, # 123456 (Hash idêntico!)
-    {'user': 'bob',   'hash': '5f4dcc3b5aa765d61d8327deb882cf99'}  # password
+    {"user": "admin", "hash": "e10adc3949ba59abbe56e057f20f883e"}, # 123456
+    {"user": "alice", "hash": "e10adc3949ba59abbe56e057f20f883e"}, # 123456 (Hash idêntico!)
+    {"user": "bob",   "hash": "5f4dcc3b5aa765d61d8327deb882cf99"}  # password
 ]
 
 # Tabela Rainbow simplificada (Dicionário de hashes pré-calculados)
 # Hackers baixam isso pronto com bilhões de entradas.
 rainbow_table = {
-    'e10adc3949ba59abbe56e057f20f883e': '123456',
-    '5f4dcc3b5aa765d61d8327deb882cf99': 'password',
-    '098f6bcd4621d373cade4e832627b4f6': 'test'
+    "e10adc3949ba59abbe56e057f20f883e": "123456",
+    "5f4dcc3b5aa765d61d8327deb882cf99": "password",
+    "098f6bcd4621d373cade4e832627b4f6": "test"
 }
 
 def demo_rainbow_attack():
@@ -37,14 +37,14 @@ def demo_rainbow_attack():
     print("Analisando banco de dados vazado...")
     
     for user in leaked_db_md5:
-        h = user['hash']
+        h = user["hash"]
         # O ataque é O(1) - busca instantânea
         cracked_pass = rainbow_table.get(h)
         
         if cracked_pass:
-            print(f"[CRITICAL] Senha de '{user['user']}' QUEBRADA! Hash: {h[:10]}... -> Senha: '{cracked_pass}'")
+            print(f"[CRITICAL] Senha de '{user["user"]}' QUEBRADA! Hash: {h[:10]}... -> Senha: '{cracked_pass}'")
         else:
-            print(f"[INFO] Senha de '{user['user']}' não encontrada na tabela.")
+            print(f"[INFO] Senha de '{user["user"]}' não encontrada na tabela.")
     
     print("\nOBS: Note que Alice e Admin tinham hashes idênticos. Quebrando um, quebrou ambos.")
 

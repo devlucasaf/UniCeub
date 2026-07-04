@@ -40,7 +40,7 @@ void adicionarAluno() {
         scanf("%f", &novo.notas[i]);
     }
 
-    getchar(); // limpar buffer
+    getchar(); 
     alunos[totalAlunos] = novo;
     totalAlunos++;
 
@@ -111,29 +111,21 @@ int main() {
         getchar(); 
 
         switch (opcao) {
-            case 1: {
+            case 1: 
                 adicionarAluno();
                 break;
-            }
-
-            case 2: {
+            case 2: 
                 listarAlunos();
                 break;
-            }
-
-            case 3: {
+            case 3: 
                 calcularMediaAluno();
                 break;
-            }
-
-            case 4: {
+            case 4: 
                 printf("Encerrando o programa...\n");
                 break;
-            }
-
-            default: {
+            default: 
                 printf("Opção inválida!\n\n");
-            }
+            
         }
     } 
     while (opcao != 4);

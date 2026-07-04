@@ -1,74 +1,74 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página Demo - Loja</title>
-  <link rel="stylesheet" href="style_exercicio.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página Demo - Loja</title>
+    <link rel="stylesheet" href="style_exercicio.css" />
+  </head>
+  <body>
 
-<header>
-  <!-- Problema: sem atributo lang no html; heading mal utilizado -->
-  <h4>Minha Loja</h4>
-  <div class="nav">
-    <a href="#">Home</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contato</a>
-  </div>
-</header>
+  <header>
+    <!-- Problema: sem atributo lang no html; heading mal utilizado -->
+    <h4>Minha Loja</h4>
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+  </header>
 
-<!-- Problema: imagem sem alt; decorative? não indicado -->
-<div class="banner" role="img"></div>
+  <!-- Problema: imagem sem alt; decorative? não indicado -->
+  <div class="banner" role="img"></div>
 
-<main>
-  <!-- Problema: tabela usada para layout -->
-  <table class="layout">
-    <tr>
-      <td style="width:70%">
-        <!-- Problema: formulário sem labels, placeholders como rótulo -->
-        <form action="/comprar" method="post">
-          <input type="text" name="nome" placeholder="Seu nome"><br>
-          <input type="email" name="email" placeholder="email"><br>
-          <input type="text" name="cc" placeholder="Número do cartão"><br>
-          <input type="submit" value="Enviar" class="btn">
-        </form>
+  <main>
+    <!-- Problema: tabela usada para layout -->
+    <table class="layout">
+      <tr>
+        <td style="width:70%">
+          <!-- Problema: formulário sem labels, placeholders como rótulo -->
+          <form action="/comprar" method="post">
+            <input type="text" name="nome" placeholder="Seu nome"><br>
+            <input type="email" name="email" placeholder="email"><br>
+            <input type="text" name="cc" placeholder="Número do cartão"><br>
+            <input type="submit" value="Enviar" class="btn">
+          </form>
 
-        <!-- Problema: link "clique aqui" e sem indicação do destino -->
-        <p class="small">Para promoções <a href="#">clique aqui</a>.</p>
+          <!-- Problema: link "clique aqui" e sem indicação do destino -->
+          <p class="small">Para promoções <a href="#">clique aqui</a>.</p>
 
-        <!-- Problema: vídeo que autoplay sem controle e sem legendas -->
-        <video src="ad.mp4" autoplay loop></video>
-      </td>
-      <td style="width:30%">
-        <h3>Produtos</h3>
-        <!-- Problema: imagens pequenas sem descrições; uso de divs clicáveis em vez de botões/links -->
-        <div class="product" onclick="openProduct(1)" tabindex="0">
-          <img src="p1.jpg">
-          <p>Produto 1</p>
-        </div>
-        <div class="product" onclick="openProduct(2)">
-          <img src="p2.jpg">
-          <p>Produto 2</p>
-        </div>
-      </td>
-    </tr>
-  </table>
+          <!-- Problema: vídeo que autoplay sem controle e sem legendas -->
+          <video src="ad.mp4" autoplay loop></video>
+        </td>
+        <td style="width:30%">
+          <h3>Produtos</h3>
+          <!-- Problema: imagens pequenas sem descrições; uso de divs clicáveis em vez de botões/links -->
+          <div class="product" onclick="openProduct(1)" tabindex="0">
+            <img src="p1.jpg">
+            <p>Produto 1</p>
+          </div>
+          <div class="product" onclick="openProduct(2)">
+            <img src="p2.jpg">
+            <p>Produto 2</p>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-  <!-- Problema: uso de cor para transmitir informação sem alternativa textual -->
-  <p>Status do pedido: <span style="color: green">OK</span></p>
+    <!-- Problema: uso de cor para transmitir informação sem alternativa textual -->
+    <p>Status do pedido: <span style="color: green">OK</span></p>
 
-  <!-- Problema: links abrem em nova aba sem aviso -->
-  <p><a href="https://externo.ex" target="_blank">Saiba mais</a></p>
+    <!-- Problema: links abrem em nova aba sem aviso -->
+    <p><a href="https://externo.ex" target="_blank">Saiba mais</a></p>
 
-  <!-- Problema: falta de skip link -->
-</main>
+    <!-- Problema: falta de skip link -->
+  </main>
 
-<footer>
-  <!-- Problema: contraste baixo no footer, texto pequeno -->
-  <p class="small">© 2025 Minha Loja - todos os direitos reservados</p>
-</footer>
+  <footer>
+    <!-- Problema: contraste baixo no footer, texto pequeno -->
+    <p class="small">© 2025 Minha Loja - todos os direitos reservados</p>
+  </footer>
 
-<script src="script_exercicio.js"></script>
-</body>
+  <script src="script_exercicio.js"></script>
+  </body>
 </html>

@@ -31,7 +31,6 @@ namespace ParadigmaImperativo
                     soma = a + b;
                     Console.WriteLine("Resultado: " + soma);
                 }
-
                 else if (opcao == 2)
                 {
                     int numero;
@@ -42,13 +41,11 @@ namespace ParadigmaImperativo
                     {
                         Console.WriteLine("Número par");
                     }
-
                     else
                     {
                         Console.WriteLine("Número ímpar");
                     }
                 }
-
                 else if (opcao == 3)
                 {
                     int n, fatorial = 1;
@@ -62,7 +59,6 @@ namespace ParadigmaImperativo
 
                     Console.WriteLine("Fatorial: " + fatorial);
                 }
-
                 else if (opcao == 4)
                 {
                     int numero;
@@ -74,7 +70,6 @@ namespace ParadigmaImperativo
                         Console.WriteLine(numero + " x " + i + " = " + (numero * i));
                     }
                 }
-
                 else if (opcao == 5)
                 {
                     int tamanho;
@@ -109,12 +104,10 @@ namespace ParadigmaImperativo
                     }
                     Console.WriteLine();
                 }
-
                 else if (opcao == 6)
                 {
                     Console.WriteLine("Encerrando...");
                 }
-
                 else
                 {
                     Console.WriteLine("Opção inválida");
@@ -202,7 +195,6 @@ namespace ParadigmaImperativo
             {
                 Console.WriteLine("Número encontrado");
             }
-
             else
             {
                 Console.WriteLine("Número não encontrado");

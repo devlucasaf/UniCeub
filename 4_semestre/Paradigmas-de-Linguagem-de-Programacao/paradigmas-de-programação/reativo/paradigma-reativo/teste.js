@@ -1,9 +1,9 @@
-import { reativo, referencia, computado, observarEfeito, lote } from './index.js';
-import { Sinal } from './sinal.js';
+import { reativo, referencia, computado, observarEfeito, lote } from "./index.js";
+import { Sinal } from "./sinal.js";
 
-let contador    = referencia(0);
-let dobro       = computado(() => contador.valor * 2);
-let quadruplo   = computado(() => dobro.obter() * 2);
+let contador = referencia(0);
+let dobro = computado(() => contador.valor * 2);
+let quadruplo = computado(() => dobro.obter() * 2);
 
 observarEfeito(() => {
     console.log(`Contador: ${contador.valor}, Dobro: ${dobro.obter()}, Quadruplo: ${quadruplo.obter()}`);
@@ -14,7 +14,7 @@ contador.valor = 2;
 contador.valor = 3;
 
 let pessoa = reativo({ 
-    nome: 'Alice', 
+    nome: "Alice", 
     idade: 30 
 });
 let anoNascimento = computado(() => new Date().getFullYear() - pessoa.idade);
@@ -24,15 +24,15 @@ observarEfeito(() => {
 });
 
 pessoa.idade = 31;
-pessoa.nome = 'Bob';
+pessoa.nome = "Bob";
 
 let tarefas = reativo([
     { 
-        texto: 'Aprender Reatividade', 
+        texto: "Aprender Reatividade", 
         concluida: false 
     },
     { 
-        texto: 'Construir um projeto', 
+        texto: "Construir um projeto", 
         concluida: false 
     }
 ]);
@@ -46,13 +46,13 @@ observarEfeito(() => {
 
 tarefas[0].concluida = true;
 tarefas.push({ 
-    texto: 'Escrever documentação', 
+    texto: "Escrever documentação", 
     concluida: false 
 });
 
-let a       = referencia(10);
-let b       = referencia(20);
-let soma    = computado(() => a.valor + b.valor);
+let a = referencia(10);
+let b = referencia(20);
+let soma = computado(() => a.valor + b.valor);
 let produto = computado(() => a.valor * b.valor);
 
 observarEfeito(() => {
@@ -65,9 +65,9 @@ b.valor = 25;
 let estadoProfundo = reativo({
     usuario: {
         perfil: {
-            nome: 'João',
+            nome: "João",
             configuracoes: { 
-                tema: 'escuro' 
+                tema: "escuro" 
             }
         }
     }
@@ -77,7 +77,7 @@ observarEfeito(() => {
     console.log(`Tema: ${estadoProfundo.usuario.perfil.configuracoes.tema}`);
 });
 
-estadoProfundo.usuario.perfil.configuracoes.tema = 'claro';
+estadoProfundo.usuario.perfil.configuracoes.tema = "claro";
 
 function limpezaManual() {
     let parar = observarEfeito(() => {
@@ -85,7 +85,7 @@ function limpezaManual() {
     });
     setTimeout(() => {
         parar.limpar();
-        console.log('Efeito interrompido');
+        console.log("Efeito interrompido");
     }, 1000);
 }
 limpezaManual();
@@ -101,20 +101,21 @@ observarEfeito(async () => {
     if (carregando.valor) {
         return;
     }
+
     carregando.valor = true;
-    console.log('Buscando dados...');
+    console.log("Buscando dados...");
     await new Promise(r => setTimeout(r, 1000));
 
     dadosAssincronos.valor = { 
-        dados: 'Dados de exemplo', 
+        dados: "Dados de exemplo", 
         timestamp: Date.now() 
     };
     carregando.valor = false;
-    console.log('Dados obtidos:', dadosAssincronos.valor);
+    console.log("Dados obtidos:", dadosAssincronos.valor);
 });
 
 let condicao = referencia(true);
-let valorCondicional = computado(() => condicao.valor ? 'Sim' : 'Não');
+let valorCondicional = computado(() => condicao.valor ? "Sim" : "Não");
 
 observarEfeito(() => {
     console.log(`Condição é: ${valorCondicional.obter()}`);
@@ -125,7 +126,7 @@ let lista = reativo([1, 2, 3]);
 let somaLista = computado(() => lista.reduce((acc, val) => acc + val, 0));
 
 observarEfeito(() => {
-    console.log(`Lista: ${lista.join(', ')}, Soma: ${somaLista.obter()}`);
+    console.log(`Lista: ${lista.join(", ")}, Soma: ${somaLista.obter()}`);
 });
 
 lista.push(4);
@@ -146,13 +147,13 @@ observarEfeito(() => {
 
 objetoAninhado.aninhado.profundo.valor = 100;
 
-let mapaExemplo = reativo(new Map([['chave1', 'valor1'], ['chave2', 'valor2']]));
+let mapaExemplo = reativo(new Map([["chave1", "valor1"], ["chave2", "valor2"]]));
 observarEfeito(() => {
-    console.log(`Tamanho do mapa: ${mapaExemplo.size}, chave1: ${mapaExemplo.get('chave1')}`);
+    console.log(`Tamanho do mapa: ${mapaExemplo.size}, chave1: ${mapaExemplo.get("chave1")}`);
 });
 
-mapaExemplo.set('chave3', 'valor3');
-mapaExemplo.set('chave1', 'novo valor');
+mapaExemplo.set("chave3", "valor3");
+mapaExemplo.set("chave1", "novo valor");
 
 let conjuntoExemplo = reativo(new Set([1, 2, 3]));
 observarEfeito(() => {
@@ -191,7 +192,7 @@ pessoa.idade = 35;
 
 let lancaraErro = computado(() => {
     if (contador.valor < 0) {
-        throw new Error('Contador não pode ser negativo');
+        throw new Error("Contador não pode ser negativo");
     }
     return contador.valor * 10;
 });
@@ -219,7 +220,7 @@ lote(() => {
 
 let efeitoLimpo = observarEfeito(() => {
     console.log(`Teste de limpeza: ${contador.valor}`);
-    return () => console.log('Efeito limpo');
+    return () => console.log("Efeito limpo");
 });
 efeitoLimpo.limpar();
 
@@ -284,18 +285,18 @@ observarEfeito(() => {
 });
 contador.valor = 4;
 
-let arrayReativo    = reativo([{ val: 1 }, { val: 2 }]);
-let arrayComputado  = computado(() => arrayReativo.map(item => item.val * 2));
+let arrayReativo = reativo([{ val: 1 }, { val: 2 }]);
+let arrayComputado = computado(() => arrayReativo.map(item => item.val * 2));
 
 observarEfeito(() => {
-    console.log(`Array computado: ${arrayComputado.obter().join(', ')}`);
+    console.log(`Array computado: ${arrayComputado.obter().join(", ")}`);
 });
 
 arrayReativo[0].val = 10;
 arrayReativo.push({ val: 3 });
 
 let computadoPreguicoso = computado(() => {
-    console.log('Computado preguiçoso recalculado');
+    console.log("Computado preguiçoso recalculado");
     return contador.valor * 100;
 });
 
@@ -326,4 +327,4 @@ observarEfeito(() => {
     console.log(`Sinal com verificação de igualdade: ${sinalComIgualdade.obter()}`);
 });
 
-console.log('Sistema de reatividade totalmente operacional');
+console.log("Sistema de reatividade totalmente operacional");

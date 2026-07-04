@@ -63,9 +63,7 @@ impl Store {
                     break;
                 }
                 current_total += product.price * (*qty as f64);
-            } 
-            
-            else {
+            } else {
                 valid_order = false;
                 break;
             }

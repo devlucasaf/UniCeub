@@ -59,9 +59,7 @@ function vibrar(padrao = [100, 50, 100]) {
 
     if (window.navigator && window.navigator.vibrate) {
         window.navigator.vibrate(padrao);
-    } 
-    
-    else {
+    } else {
         adicionarFeedback("(simulação tátil - dispositivo sem vibração)");
     }
 }
@@ -78,9 +76,7 @@ function atualizarInterface() {
     localAtualSpan.textContent = `Local atual: ${localAtual}`;
     if (navegacaoAtiva && destinoAtual) {
         destinoInfoSpan.textContent = `Navegando para: ${destinoAtual}`;
-    } 
-    
-    else {
+    } else {
         destinoInfoSpan.textContent = `Destino: nenhum`;
     }
 }
@@ -100,7 +96,10 @@ function iniciarNavegacao(destinoKey) {
 
     if (!lugar && destinoKey.trim() !== "") {
         destinoAtual = destinoKey;
-        lugar = { nome: destinoKey, distancia: "direção desconhecida. Peça ajuda ou use mapa sonoro." };
+        lugar = {
+            nome: destinoKey, 
+            distancia: "direção desconhecida. Peça ajuda ou use mapa sonoro." 
+        };
     } else if (!lugar) {
         falar("Destino não reconhecido. Diga o nome de um lugar como padaria, farmácia, mercado.");
         adicionarFeedback("Destino inválido.");
@@ -179,6 +178,7 @@ function simularObstaculo() {
 }
 
 let recognition = null;
+
 if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     recognition = new SpeechRecognition();

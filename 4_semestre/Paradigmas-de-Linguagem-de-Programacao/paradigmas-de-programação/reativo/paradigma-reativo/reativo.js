@@ -56,6 +56,7 @@ class ObjetoReativo {
                 writable:       false
             });
         }
+        
         if (!alvo.__sinais.has(chave)) {
             alvo.__sinais.set(chave, new Sinal(Reflect.get(alvo, chave)));
         }

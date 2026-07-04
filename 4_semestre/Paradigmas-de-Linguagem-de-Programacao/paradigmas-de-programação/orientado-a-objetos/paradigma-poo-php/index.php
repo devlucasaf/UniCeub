@@ -1,6 +1,5 @@
 <?php
 
-// Autoloader simples para carregar as classes do mesmo diretório
 spl_autoload_register(function ($class) {
     $file = __DIR__ . '/' . $class . '.php';
     if (file_exists($file)) {
@@ -8,7 +7,6 @@ spl_autoload_register(function ($class) {
     }
 });
 
-// Demonstração do fluxo original
 $usuario = new Usuario(1, "Lucas", "lucas@email.com");
 
 $produto1 = new Produto(1, "Notebook", 3000);
