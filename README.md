@@ -38,7 +38,7 @@
 | [3º Semestre](https://github.com/devlucasaf/UniCeub/tree/main/3_semestre) | ✅ Concluído | 2025/1 |
 | [4º Semestre](https://github.com/devlucasaf/UniCeub/tree/main/4_semestre) | ✅ Concluído | 2025/2 |
 | [5º Semestre](https://github.com/devlucasaf/UniCeub/tree/main/5_semestre) | 🔄 Em andamento | 2026/1 |
-| 6º Semestre | ⏳ Aguardando | 2026/2 |
+| [6º Semestre](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre)| ⏳ Aguardando | 2026/2 |
 | 7º Semestre | ⏳ Aguardando | 2027/1 |
 | 8º Semestre | ⏳ Aguardando | 2027/2 |
 
