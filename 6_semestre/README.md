@@ -14,7 +14,7 @@
 | 01 | 📈 [Pesquisa Operacional](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre/Pesquisa-Operacional) |
 | 02 | 🔗 Projeto Integrador II |
 | 03 | 🌐 Redes de Computadores |
-| 04 | 🕸️ Teoria de Grafos |
+| 04 | 🕸️ [Teoria de Grafos](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre/Teoria-de-Grafos) |
 
 </div>
 
@@ -28,6 +28,12 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=java"
+    />
+    <img 
+        alt="C" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=c"
     />
 </div>
 
