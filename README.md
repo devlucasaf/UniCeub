@@ -299,6 +299,12 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=blender"
     />
+    <img 
+        alt="Azure" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+    />
 </div>
 
 ---

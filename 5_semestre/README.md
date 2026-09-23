@@ -151,6 +151,12 @@
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
     />
+    <img 
+        alt="Azure" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+    />
 </div>
 
 ---
