@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MoodTrack — Diário de Humor</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="aplicativo">
+            <header class="cabecalho">
+                <h1>MoodTrack</h1>
+                <p class="subtitulo">Registre como você está se sentindo hoje</p>
+            </header>
+
+            <main>
+                <section class="cartao registro-diario" aria-labelledby="titulo-registro">
+                    <h2 id="titulo-registro">Como você está hoje?</h2>
+
+                    <div class="opcoes-humor" role="radiogroup" aria-labelledby="titulo-registro">
+                        <button class="botao-humor" data-humor="5" data-rotulo="Ótimo" role="radio" aria-checked="false">
+                            <span class="icone-humor" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="8.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <path d="M6.5 13.5c1.5 3 3.5 4 5.5 4s4-1 5.5-4"></path>
+                                </svg>
+                            </span>
+                            <span class="rotulo-humor">Ótimo</span>
+                        </button>
+                        <button class="botao-humor" data-humor="4" data-rotulo="Bem" role="radio" aria-checked="false">
+                            <span class="icone-humor" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="8.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <path d="M8 14c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3"></path>
+                                </svg>
+                            </span>
+                            <span class="rotulo-humor">Bem</span>
+                        </button>
+                        <button class="botao-humor" data-humor="3" data-rotulo="Neutro" role="radio" aria-checked="false">
+                            <span class="icone-humor" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="8.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <path d="M8 15h8"></path>
+                                </svg>
+                            </span>
+                            <span class="rotulo-humor">Neutro</span>
+                        </button>
+                        <button class="botao-humor" data-humor="2" data-rotulo="Mal" role="radio" aria-checked="false">
+                            <span class="icone-humor" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="8.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <path d="M8 16c1-1.5 2.5-2.3 4-2.3s3 0.8 4 2.3"></path>
+                                </svg>
+                            </span>
+                            <span class="rotulo-humor">Mal</span>
+                        </button>
+                        <button class="botao-humor" data-humor="1" data-rotulo="Péssimo" role="radio" aria-checked="false">
+                            <span class="icone-humor" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M7 7.5l2.5 1.5"></path>
+                                    <path d="M17 7.5l-2.5 1.5"></path>
+                                    <circle cx="8.5" cy="10.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <circle cx="15.5" cy="10.5" r="1" fill="currentColor" stroke="none"></circle>
+                                    <path d="M7 16.5c1.5-3 3.5-4 5-4s3.5 1 5 4"></path>
+                                </svg>
+                            </span>
+                            <span class="rotulo-humor">Péssimo</span>
+                        </button>
+                    </div>
+
+                    <div class="campo-nota">
+                        <label for="nota">Alguma nota sobre o dia? (opcional)</label>
+                        <textarea id="nota" rows="3" maxlength="280" placeholder="Ex.: dia corrido, mas terminei o trabalho..."></textarea>
+                    </div>
+
+                    <button id="botao-salvar" class="botao-salvar" type="button" disabled>Salvar check-in de hoje</button>
+                    <p id="mensagem-feedback" class="mensagem-feedback" role="status" aria-live="polite"></p>
+                </section>
+
+                <!-- Estatísticas rápidas -->
+                <section class="cartao estatisticas" aria-labelledby="titulo-estatisticas">
+                    <h2 id="titulo-estatisticas">Resumo</h2>
+                    <div class="grade-estatisticas">
+                        <div class="estatistica">
+                            <span class="valor-estatistica" id="estatistica-sequencia">0</span>
+                            <span class="rotulo-estatistica">dias seguidos</span>
+                        </div>
+                        <div class="estatistica">
+                            <span class="valor-estatistica" id="estatistica-media">–</span>
+                            <span class="rotulo-estatistica">média (7 dias)</span>
+                        </div>
+                        <div class="estatistica">
+                            <span class="valor-estatistica" id="estatistica-total">0</span>
+                            <span class="rotulo-estatistica">registros</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gráfico -->
+                <section class="cartao secao-grafico" aria-labelledby="titulo-grafico">
+                    <h2 id="titulo-grafico">Últimos 14 dias</h2>
+                    <canvas id="grafico-humor" width="600" height="220" role="img" aria-label="Gráfico de humor dos últimos 14 dias"></canvas>
+                    <p id="grafico-vazio" class="mensagem-vazia">Nenhum registro ainda. Faça seu primeiro check-in!</p>
+                </section>
+
+                <!-- Histórico -->
+                <section class="cartao historico" aria-labelledby="titulo-historico">
+                    <div class="cabecalho-historico">
+                        <h2 id="titulo-historico">Histórico</h2>
+                        <button id="botao-limpar" class="botao-limpar" type="button">Limpar tudo</button>
+                    </div>
+                    <ul id="lista-historico" class="lista-historico"></ul>
+                </section>
+            </main>
+
+            <footer class="rodape">
+                <p>Projeto acadêmico — Interação Humano-Computador</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
