@@ -30,6 +30,12 @@
         src="https://skillicons.dev/icons?i=java"
     />
     <img 
+        alt="Python" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=python"
+    />
+    <img 
         alt="C" 
         height="40" 
         style="margin:4px" 
@@ -39,15 +45,6 @@
 
 ---
 
-### 🌐 Web & Mobile
-
-<div align="left">
-</div>
-
-### 🗄️ Banco de Dados
-
-<div align="left">
-</div>
 
 ## 🛠️ Ferramentas & Ambiente
 
@@ -65,6 +62,12 @@
         height="40" 
         style="margin:4px" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+    />
+    <img 
+        alt="PyCharm" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     />
 </div>
 
