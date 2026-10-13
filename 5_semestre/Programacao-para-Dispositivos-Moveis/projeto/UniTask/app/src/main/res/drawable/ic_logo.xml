@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_logo.xml - Logo placeholder usando vetor -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path
+        android:fillColor="#6C5CE7"
+        android:pathData="M50,5 C25.1,5 5,25.1 5,50 C5,74.9 25.1,95 50,95 C74.9,95 95,74.9 95,50 C95,25.1 74.9,5 50,5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,30 L35,70 L45,70 L45,55 L55,70 L67,70 L52,50 L65,30 L53,30 L45,44 L45,30 Z" />
+    <path
+        android:fillColor="#A89BF0"
+        android:pathData="M60,55 L65,55 L65,70 L60,70 Z" />
+</vector>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniTask</string>
+
+    <!-- Auth -->
+    <string name="title_login">Entrar</string>
+    <string name="title_cadastro">Criar Conta</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_confirmar_senha">Confirmar Senha</string>
+    <string name="hint_nome">Nome completo</string>
+    <string name="hint_curso">Curso (opcional)</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_criar_conta">Criar Conta</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_ja_tenho_conta">Já tenho conta</string>
+    <string name="link_cadastro">Não tem conta? <b>Cadastre-se</b></string>
+
+    <!-- Erros de validação -->
+    <string name="erro_campo_obrigatorio">Campo obrigatório</string>
+    <string name="erro_email_invalido">E-mail inválido</string>
+    <string name="erro_email_cadastrado">E-mail já cadastrado</string>
+    <string name="erro_senha_curta">Senha deve ter no mínimo 6 caracteres</string>
+    <string name="erro_senhas_diferentes">As senhas não coincidem</string>
+    <string name="erro_nome_invalido">Nome deve ter pelo menos 2 caracteres</string>
+    <string name="erro_credenciais">E-mail ou senha incorretos</string>
+    <string name="erro_cadastro">Erro ao criar conta. Tente novamente.</string>
+    <string name="erro_periodo_invalido">Período inválido (1–20)</string>
+    <string name="erro_selecione_disciplina">Selecione uma disciplina</string>
+    <string name="erro_disciplina_nao_encontrada">Disciplina não encontrada</string>
+    <string name="erro_atividade_nao_encontrada">Atividade não encontrada</string>
+
+    <!-- Sucesso -->
+    <string name="sucesso_cadastro">Conta criada com sucesso!</string>
+    <string name="sucesso_disciplina_criada">Disciplina criada com sucesso!</string>
+    <string name="sucesso_disciplina_atualizada">Disciplina atualizada com sucesso!</string>
+    <string name="sucesso_disciplina_excluida">Disciplina excluída</string>
+    <string name="sucesso_atividade_criada">Atividade criada com sucesso!</string>
+    <string name="sucesso_atividade_atualizada">Atividade atualizada com sucesso!</string>
+    <string name="sucesso_atividade_excluida">Atividade excluída</string>
+
+    <!-- Tela inicial -->
+    <string name="ola_usuario">Olá, %s! 👋</string>
+    <string name="subtitle_dashboard">Aqui está seu resumo acadêmico</string>
+    <string name="label_total">Total</string>
+    <string name="label_pendentes">Pendentes</string>
+    <string name="label_concluidas">Concluídas</string>
+    <string name="label_atrasadas">Atrasadas</string>
+    <string name="title_proximas_atividades">Próximas Atividades</string>
+    <string name="title_ver_todas">Ver todas</string>
+    <string name="sem_atividades">Nenhuma atividade cadastrada.\nClique no + para adicionar!</string>
+    <string name="sem_disciplinas">Nenhuma disciplina cadastrada.\nClique no + para adicionar!</string>
+
+    <!-- Disciplinas -->
+    <string name="title_disciplinas">Disciplinas</string>
+    <string name="title_nova_disciplina">Nova Disciplina</string>
+    <string name="title_editar_disciplina">Editar Disciplina</string>
+    <string name="hint_nome_disciplina">Nome da disciplina</string>
+    <string name="hint_professor">Professor(a)</string>
+    <string name="hint_periodo">Período (ex: 5)</string>
+    <string name="hint_cor">Cor (ex: #6C5CE7)</string>
+    <string name="label_escolha_cor">Escolha uma cor:</string>
+    <string name="sem_professor">Sem professor</string>
+    <string name="sem_periodo">Sem período</string>
+    <string name="periodo_numero">%dº Período</string>
+
+    <!-- Atividades -->
+    <string name="title_atividades">Atividades</string>
+    <string name="title_nova_atividade">Nova Atividade</string>
+    <string name="title_editar_atividade">Editar Atividade</string>
+    <string name="hint_titulo">Título da atividade</string>
+    <string name="hint_descricao">Descrição (opcional)</string>
+    <string name="hint_data_entrega">Data e hora de entrega</string>
+    <string name="hint_disciplina">Disciplina</string>
+    <string name="hint_tipo">Tipo de atividade</string>
+    <string name="hint_prioridade">Prioridade</string>
+    <string name="hint_situacao">Situação</string>
+
+    <!-- Tipos -->
+    <string name="tipo_trabalho">📝 Trabalho</string>
+    <string name="tipo_prova">📚 Prova</string>
+    <string name="tipo_exercicio">✏️ Exercício</string>
+    <string name="tipo_seminario">🎤 Seminário</string>
+    <string name="tipo_projeto">💻 Projeto</string>
+
+    <!-- Prioridades -->
+    <string name="prioridade_baixa">🟢 Baixa</string>
+    <string name="prioridade_media">🟡 Média</string>
+    <string name="prioridade_alta">🔴 Alta</string>
+
+    <!-- Situações -->
+    <string name="situacao_pendente">⏳ Pendente</string>
+    <string name="situacao_concluida">✅ Concluída</string>
+
+    <!-- Filtros -->
+    <string name="filtro_todas">Todas</string>
+    <string name="label_filtrar_por_disciplina">Disciplina</string>
+    <string name="label_filtrar_por_prioridade">Prioridade</string>
+    <string name="label_filtrar_por_situacao">Situação</string>
+
+    <!-- Menu / Ações -->
+    <string name="action_logout">Sair</string>
+    <string name="title_logout">Sair do UniTask</string>
+    <string name="msg_logout">Tem certeza que deseja sair?</string>
+    <string name="btn_sair">Sair</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_excluir">Excluir</string>
+
+    <!-- Confirmações de exclusão -->
+    <string name="title_excluir_disciplina">Excluir Disciplina</string>
+    <string name="msg_excluir_disciplina">Deseja excluir a disciplina \'%s\'? Todas as atividadesComDisciplina vinculadas serão excluídas.</string>
+    <string name="title_excluir_atividade">Excluir Atividade</string>
+    <string name="msg_excluir_atividade">Deseja excluir a atividade \'%s\'?</string>
+
+    <!-- Cards do dashboard -->
+    <string name="card_disciplinas">Minhas Disciplinas</string>
+    <string name="card_atividades">Todas as Atividades</string>
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.UniTask.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="40dp"
+            android:paddingTop="8dp">
+
+            <!-- Nome -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNome"
+                style="@style/Widget.UniTask.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_nome_disciplina"
+                app:startIconDrawable="@drawable/ic_book"
+                app:startIconTint="@color/text_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/text_primary"
+                    android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Professor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilProfessor"
+                style="@style/Widget.UniTask.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_professor"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@color/text_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProfessor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/text_primary"
+                    android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Período -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPeriodo"
+                style="@style/Widget.UniTask.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_periodo"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:startIconTint="@color/text_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPeriodo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/text_primary"
+                    android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Cor de identificação -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_escolha_cor"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Paleta de cores -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <View android:id="@+id/cor0" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor1" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor2" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor3" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor4" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor5" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor6" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor7" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor8" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+                <View android:id="@+id/cor9" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp" android:background="@drawable/shape_cor_circle" />
+            </LinearLayout>
+
+            <!-- Preview da cor + campo manual -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:id="@+id/viewPreviewCor"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_cor_circle" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCor"
+                    style="@style/Widget.UniTask.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_cor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/text_primary"
+                        android:imeOptions="actionDone"
+                        android:maxLength="7" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Botão Salvar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvar"
+                style="@style/Widget.UniTask.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/btn_salvar"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
