@@ -30,9 +30,11 @@ public class ProblemaTransporte {
         int nRes = nf + nd;
 
         double[] c = new double[nVar];
-        for (int i = 0; i < nf; i++)
-            for (int j = 0; j < nd; j++)
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nd; j++) {
                 c[indice(i, j)] = custo[i][j];
+            }
+        }
 
         double[][] a = new double[nRes][nVar];
         Tipo[] tipos = new Tipo[nRes];
@@ -78,7 +80,9 @@ public class ProblemaTransporte {
     // --- FÓRMULA B18:B21 → =SOMA(H3:H5) ---
     public double totalRecebido(int destino) {
         double soma = 0;
-        for (int i = 0; i < fabricas.length; i++) soma += x[i][destino];
+        for (int i = 0; i < fabricas.length; i++) {
+            soma += x[i][destino];
+        }
         return soma;
     }
 
@@ -98,6 +102,7 @@ public class ProblemaTransporte {
         for (String d : destinos) {
             System.out.printf("%10s", d);
         }
+        
         System.out.println();
         for (int i = 0; i < fabricas.length; i++) {
             System.out.printf("%-6s", fabricas[i]);
@@ -112,6 +117,7 @@ public class ProblemaTransporte {
         for (int i = 0; i < fabricas.length; i++) {
             System.out.printf("%-6s%10s  <=  %10s%n", fabricas[i], num(totalEnviado(i)), num(producaoMaxima[i]));
         }
+        
         for (int j = 0; j < destinos.length; j++) {
             System.out.printf("%-6s%10s   =  %10s%n", destinos[j], num(totalRecebido(j)), num(demanda[j]));
         }
