@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ParadigmaConcorrente
 {
-    class Gerenciador
+    public class Gerenciador
     {
         private List<Processador> processadores;
         private object locker = new object();
@@ -106,9 +106,9 @@ namespace ParadigmaConcorrente
 
             for (int i = 0; i < 5; i++)
             {
-                Thread t = new Thread(IncrementarContador);
-                threads.Add(t);
-                t.Start();
+                Thread thread = new Thread(IncrementarContador);
+                threads.Add(thread);
+                thread.Start();
             }
 
             foreach (var t in threads)
@@ -141,13 +141,13 @@ namespace ParadigmaConcorrente
         {
             Console.WriteLine("\n========== TASK COM CANCELAMENTO ==========\n");
 
-            CancellationTokenSource cts = new CancellationTokenSource();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
             Task tarefa = Task.Run(async () =>
             {
                 for (int i = 1; i <= 20; i++)
                 {
-                    if (cts.Token.IsCancellationRequested)
+                    if (cancellationTokenSource.Token.IsCancellationRequested)
                     {
                         Console.WriteLine("Tarefa cancelada.");
                         return;
@@ -157,12 +157,12 @@ namespace ParadigmaConcorrente
                     await Task.Delay(200);
                 }
 
-            }, cts.Token);
+            }, cancellationTokenSource.Token);
 
             await Task.Delay(1500);
 
             Console.WriteLine("Solicitando cancelamento...");
-            cts.Cancel();
+            cancellationTokenSource.Cancel();
 
             await tarefa;
 
@@ -170,3 +170,4 @@ namespace ParadigmaConcorrente
         }
     }
 }
+

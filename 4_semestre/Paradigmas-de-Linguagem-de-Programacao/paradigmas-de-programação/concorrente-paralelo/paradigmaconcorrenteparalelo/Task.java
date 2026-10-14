@@ -2,8 +2,9 @@ package paradigmaconcorrenteparalelo;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.Callable;
 
-public class Task implements java.util.concurrent.Callable<String> {
+public class Task implements Callable<String> {
     private final int       id;
     private final int       duration;
     private final Semaphore semaphore;
@@ -45,3 +46,4 @@ public class Task implements java.util.concurrent.Callable<String> {
         System.out.println("[" + Thread.currentThread().getName() + "] " + msg);
     }
 }
+

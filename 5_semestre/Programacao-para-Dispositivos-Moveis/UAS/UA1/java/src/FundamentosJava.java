@@ -8,7 +8,7 @@ public class FundamentosJava {
     static String mensagemGlobal = "Esta é uma variável global.";
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n=== Variáveis e Tipos ===");
 
@@ -81,7 +81,7 @@ public class FundamentosJava {
 
         System.out.println("\n=== Entrada/Saída (Console) ===");
         System.out.print("Digite um número inteiro para calcular o fatorial: ");
-        String entrada = sc.nextLine();
+        String entrada = scanner.nextLine();
 
         if (entrada != null && !entrada.isEmpty()) {
             try {
@@ -127,7 +127,7 @@ public class FundamentosJava {
 
         System.out.println("\n=== Fim do programa ===");
 
-        sc.close();
+        scanner.close();
     }
 
     public static int fatorial(int n) {

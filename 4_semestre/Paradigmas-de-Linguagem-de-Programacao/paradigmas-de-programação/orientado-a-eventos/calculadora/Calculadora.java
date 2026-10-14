@@ -9,9 +9,9 @@ public class Calculadora extends JFrame implements ActionListener {
     private JTextField  display;
     private JPanel      painelBotoes;
 
-    private String operador = "";
-    private double numero1 = 0;
-    private double numero2 = 0;
+    private String  operador = "";
+    private double  numero1 = 0;
+    private double  numero2 = 0;
     private boolean novoNumero = true;
 
     public Calculadora() {

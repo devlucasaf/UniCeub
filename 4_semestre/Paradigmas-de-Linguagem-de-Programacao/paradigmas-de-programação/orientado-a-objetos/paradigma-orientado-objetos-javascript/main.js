@@ -1,6 +1,6 @@
-import { Livro }        from './src/Livro.js';
-import { Usuario }      from './src/Usuario.js';
-import { Biblioteca }   from './src/Biblioteca.js';
+import { Livro }        from "./src/Livro.js";
+import { Usuario }      from "./src/Usuario.js";
+import { Biblioteca }   from "./src/Biblioteca.js";
 
 // --- INSTÂNCIA DA BIBLIOTECA ---
 const bibliotecaMunicipal = new Biblioteca("Biblioteca Municipal Digital");

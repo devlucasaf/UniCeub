@@ -34,13 +34,15 @@ int min_from_hm(int h, int m) {
     return h * 60 + m; 
 }
 
-void print_hm(int totalMin) {
+void print_hm(int totalMin) 
+{
     int h = totalMin / 60;
     int m = totalMin % 60;
     printf("%02d:%02d", h, m);
 }
 
-int valida_intervalo(int inicioMin, int fimMin) {
+int valida_intervalo(int inicioMin, int fimMin) 
+{
     if (inicioMin < 0 || fimMin < 0) {
         return 0;
     }
@@ -56,7 +58,8 @@ int valida_intervalo(int inicioMin, int fimMin) {
     return 1;
 }
 
-int valida_data(int d, int m, int a) {
+int valida_data(int d, int m, int a) 
+{
     if (a < 1900 || a > 2100) {
         return 0;
     }
@@ -82,7 +85,8 @@ int valida_data(int d, int m, int a) {
     return 1;
 }
 
-int str_vazia(const char *s) {
+int str_vazia(const char *s) 
+{
     if (!s) {
         return 1;
     }
@@ -97,7 +101,8 @@ int str_vazia(const char *s) {
     return 1;
 }
 
-int ler_linha(char *buf, int tam) {
+int ler_linha(char *buf, int tam) 
+{
     if (!fgets(buf, tam, stdin)) {
         return 0;
     }
@@ -111,19 +116,22 @@ int ler_linha(char *buf, int tam) {
     return 1;
 }
 
-int buscar_morador(Morador moradores[], int n, int id) {
-    for (int i = 0; i < n; i++) if (moradores[i].id == id) {
-        return i;
+int buscar_morador(Morador moradores[], int n, int id) 
+{
+    for (int i = 0; i < n; i++) {
+        if (moradores[i].id == id) {
+            return i;
+        }
     }
-
     return -1;
 }
 
 int buscar_espaco(Espaco espacos[], int n, int id) {
-    for (int i = 0; i < n; i++) if (espacos[i].id == id) {
-        return i;
+    for (int i = 0; i < n; i++) {
+        if (espacos[i].id == id) {
+            return i;
+        }
     }
-
     return -1;
 }
 
@@ -175,7 +183,7 @@ void listar_moradores(Morador moradores[], int n) {
     }
 
     for (int i = 0; i < n; i++) {
-        printf("  [%d] %s (Ap: %s)\n", moradores[i].id, moradores[i].nome, moradores[i].apartamento);
+        printf("[%d] %s (Ap: %s)\n", moradores[i].id, moradores[i].nome, moradores[i].apartamento);
     }
 }
 
@@ -188,8 +196,8 @@ void listar_espacos(Espaco espacos[], int n) {
     }
 
     for (int i = 0; i < n; i++) {
-        const char *tipo = (espacos[i].tipo == 1) ? "Churrasqueira" : (espacos[i].tipo == 2) ? "Salao" : "Generico";
-        printf("  [%d] %s | cap=%d | %s\n", espacos[i].id, espacos[i].nome, espacos[i].capacidade, tipo);
+        const char * tipo = (espacos[i].tipo == 1) ? "Churrasqueira" : (espacos[i].tipo == 2) ? "Salao" : "Generico";
+        printf("[%d] %s | cap=%d | %s\n", espacos[i].id, espacos[i].nome, espacos[i].capacidade, tipo);
     }
 }
 
@@ -300,7 +308,7 @@ int cadastrar_espaco(Espaco espacos[], int *nEsp, int *nextId) {
 }
 
 int criar_reserva(Reserva reservas[], int *nRes, int *nextId,
-                Morador moradores[], int nMor, Espaco espacos[], int nEsp) {
+        Morador moradores[], int nMor, Espaco espacos[], int nEsp) {
     if (*nRes >= MAX_RESERVAS) {
         return 0;
     }

@@ -23,7 +23,10 @@ namespace ParadigmaImperativo
 
                 if (opcao == 1)
                 {
-                    int a, b, soma;
+                    int a;
+                    int b;
+                    int soma;
+
                     Console.Write("Digite o primeiro número: ");
                     a = int.Parse(Console.ReadLine());
                     Console.Write("Digite o segundo número: ");
@@ -269,3 +272,4 @@ namespace ParadigmaImperativo
         }
     }
 }
+

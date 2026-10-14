@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Empresa;
 
-class Program
+public class Program
 {
     static void Main()
     {

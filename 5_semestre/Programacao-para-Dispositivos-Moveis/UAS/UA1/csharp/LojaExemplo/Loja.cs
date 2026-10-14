@@ -63,7 +63,10 @@ namespace LojaExemplo
 
         public Produto ProdutoMaisCaro()
         {
-            if (produtos.Count == 0) return null;
+            if (produtos.Count == 0) 
+            {
+                return null;
+            }
 
             Produto maisCaro = produtos[0];
             foreach (var p in produtos)
@@ -77,4 +80,3 @@ namespace LojaExemplo
         }
     }
 }
-``

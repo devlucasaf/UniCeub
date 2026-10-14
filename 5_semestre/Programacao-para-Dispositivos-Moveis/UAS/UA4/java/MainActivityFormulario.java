@@ -18,13 +18,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editProductName;
-    private SeekBar seekBarQuantity;
-    private TextView textQuantityValue;
-    private RadioGroup radioGroupDelivery;
-    private Spinner spinnerRegion;
-    private CheckBox checkPromotions;
-    private Button buttonSubmit;
+    private EditText    editProductName;
+    private SeekBar     seekBarQuantity;
+    private TextView    textQuantityValue;
+    private RadioGroup  radioGroupDelivery;
+    private Spinner     spinnerRegion;
+    private CheckBox    checkPromotions;
+    private Button      buttonSubmit;
 
     private final String[] regions = {"Centro", "Norte", "Sul", "Leste", "Oeste"};
 
@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editProductName = findViewById(R.id.editProductName);
-        seekBarQuantity = findViewById(R.id.seekBarQuantity);
-        textQuantityValue = findViewById(R.id.textQuantityValue);
-        radioGroupDelivery = findViewById(R.id.radioGroupDelivery);
-        spinnerRegion = findViewById(R.id.spinnerRegion);
-        checkPromotions = findViewById(R.id.checkPromotions);
-        buttonSubmit = findViewById(R.id.buttonSubmit);
+        editProductName     = findViewById(R.id.editProductName);
+        seekBarQuantity     = findViewById(R.id.seekBarQuantity);
+        textQuantityValue   = findViewById(R.id.textQuantityValue);
+        radioGroupDelivery  = findViewById(R.id.radioGroupDelivery);
+        spinnerRegion       = findViewById(R.id.spinnerRegion);
+        checkPromotions     = findViewById(R.id.checkPromotions);
+        buttonSubmit        = findViewById(R.id.buttonSubmit);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, regions);

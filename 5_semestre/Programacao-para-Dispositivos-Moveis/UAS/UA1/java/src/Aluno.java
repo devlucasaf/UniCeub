@@ -1,4 +1,4 @@
-class Aluno {
+public class Aluno {
     private String nome;
     private double nota1;
     private double nota2;
@@ -30,9 +30,7 @@ class Aluno {
     public void setNota1(double valor) {
         if (valor >= 0 && valor <= 10) {
             this.nota1 = valor;
-        } 
-        
-        else {
+        } else {
             System.out.println("Nota inválida: " + valor + ". Deve estar entre 0 e 10.");
         }
     }
@@ -40,9 +38,7 @@ class Aluno {
     public void setNota2(double valor) {
         if (valor >= 0 && valor <= 10) {
             this.nota2 = valor;
-        } 
-        
-        else {
+        } else {
             System.out.println("Nota inválida: " + valor + ". Deve estar entre 0 e 10.");
         }
     }

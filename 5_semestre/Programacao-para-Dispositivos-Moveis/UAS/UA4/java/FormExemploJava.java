@@ -9,23 +9,25 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class FormExemploJava extends AppCompatActivity {
 
-    private EditText nomeEditText;
-    private CheckBox aceitaTermosCheckBox;
-    private RadioGroup generoRadioGroup;
-    private Spinner cidadeSpinner;
-    private Button enviarButton;
+    private EditText    nomeEditText;
+    private CheckBox    aceitaTermosCheckBox;
+    private RadioGroup  generoRadioGroup;
+    private Spinner     cidadeSpinner;
+    private Button      enviarButton;
 
-    private String generoSelecionado = "Masculino";
-    private String cidadeSelecionada = "São Paulo";
+    private String  generoSelecionado = "Masculino";
+    private String  cidadeSelecionada = "São Paulo";
     private boolean aceitaTermos = false;
 
     private final List<String> cidades = new ArrayList<String>() {{

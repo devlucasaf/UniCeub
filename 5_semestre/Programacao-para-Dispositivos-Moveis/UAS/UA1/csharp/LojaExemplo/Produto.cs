@@ -2,10 +2,10 @@ namespace LojaExemplo
 {
     public class Produto
     {
-        public int Codigo { get; set; }
-        public string Nome { get; set; }
-        public double Preco { get; set; }
-        public int Quantidade { get; set; }
+        public int      Codigo      { get; set; }
+        public string   Nome        { get; set; }
+        public double   Preco       { get; set; }
+        public int      Quantidade  { get; set; }
 
         public Produto(int codigo, string nome, double preco, int quantidade)
         {
@@ -23,9 +23,9 @@ namespace LojaExemplo
         public override string ToString()
         {
             return $"({Codigo}) {Nome}\n" +
-                   $"Preço: {Preco}\n" +
-                   $"Quantidade: {Quantidade}\n" +
-                   $"Total: {CalcularTotal()}";
+                    $"Preço: {Preco}\n" +
+                    $"Quantidade: {Quantidade}\n" +
+                    $"Total: {CalcularTotal()}";
         }
     }
 }

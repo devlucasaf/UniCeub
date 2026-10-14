@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ParadigmaConcorrente
 {
-    class Processador
+    public class Processador
     {
         public int      Id { get; set; }
         public string   Nome { get; set; }

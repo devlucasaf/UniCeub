@@ -10,9 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editNota1, editNota2;
-    private Button btnCalcularMedia;
-    private TextView txtResultado;
+    private EditText    editNota1;
+    private EditText    editNota2;
+    private Button      btnCalcularMedia;
+    private TextView    txtResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

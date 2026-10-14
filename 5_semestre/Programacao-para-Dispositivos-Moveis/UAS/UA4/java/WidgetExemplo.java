@@ -1,4 +1,4 @@
-package com.example.widgetexemplo; // Ajuste o pacote conforme seu projeto
+package com.example.widgetexemplo; 
 
 import android.os.Bundle;
 import android.view.View;

@@ -1,6 +1,6 @@
 package empresa;
 
-enum NivelExperiencia {
+public enum NivelExperiencia {
     ESTAGIARIO, 
     JUNIOR, 
     PLENO, 

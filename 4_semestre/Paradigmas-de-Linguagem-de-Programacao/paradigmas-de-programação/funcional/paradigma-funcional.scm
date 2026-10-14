@@ -56,25 +56,42 @@
 ;; Demonstração prática
 (define numeros '(1 2 3 4 5 6 7 8 9 10))
 
-(display "Lista original: ") (display numeros) (newline)
+(display "Lista original: ") 
+(display numeros) 
+(newline)
 
-(display "Quadrados: ") (display (mapear quadrado numeros)) (newline)
+(display "Quadrados: ") 
+(display (mapear quadrado numeros)) 
+(newline)
 
-(display "Cubos: ") (display (mapear cubo numeros)) (newline)
+(display "Cubos: ") 
+(display (mapear cubo numeros)) 
+(newline)
 
-(display "Números pares: ") (display (filtrar even? numeros)) (newline)
+(display "Números pares: ") 
+(display (filtrar even? numeros)) 
+(newline)
 
-(display "Soma dos números: ") (display (somar numeros)) (newline)
+(display "Soma dos números: ") 
+(display (somar numeros)) 
+(newline)
 
 (display "Produto dos números (reduzir): ")
-(display (reduzir * 1 numeros)) (newline)
+(display (reduzir * 1 numeros)) 
+(newline)
 
 (display "Quadrado do cubo de 2: ")
-(display ((quadrado-do-cubo) 2)) (newline)
+(display ((quadrado-do-cubo) 2)) 
+(newline)
 
 (display "Cubo do quadrado de 2: ")
-(display ((cubo-do-quadrado) 2)) (newline)
+(display ((cubo-do-quadrado) 2)) 
+(newline)
 
-(display "Fatorial de 5: ") (display (fatorial 5)) (newline)
+(display "Fatorial de 5: ") 
+(display (fatorial 5)) 
+(newline)
 
-(display "Fibonacci de 10: ") (display (fibonacci 10)) (newline)
+(display "Fibonacci de 10: ") 
+(display (fibonacci 10)) 
+(newline)

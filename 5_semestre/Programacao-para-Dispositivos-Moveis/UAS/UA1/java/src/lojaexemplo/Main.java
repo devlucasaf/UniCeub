@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Loja loja = new Loja();
 
         int opcao;
@@ -22,36 +22,34 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.print("Escolha: ");
 
-            opcao = sc.nextInt();
+            opcao = scanner.nextInt();
 
             switch (opcao) {
 
                 case 1:
                     System.out.print("Código: ");
-                    int codigo = sc.nextInt();
+                    int codigo = scanner.nextInt();
 
-                    sc.nextLine();
+                    scanner.nextLine();
 
                     System.out.print("Nome: ");
-                    String nome = sc.nextLine();
+                    String nome = scanner.nextLine();
 
                     System.out.print("Preço: ");
-                    double preco = sc.nextDouble();
+                    double preco = scanner.nextDouble();
 
                     System.out.print("Quantidade: ");
-                    int quantidade = sc.nextInt();
+                    int quantidade = scanner.nextInt();
 
                     Produto p = new Produto(codigo, nome, preco, quantidade);
                     loja.adicionarProduto(p);
                     break;
-
                 case 2:
                     loja.listarProdutos();
                     break;
-
                 case 3:
                     System.out.print("Código do produto: ");
-                    int codBusca = sc.nextInt();
+                    int codBusca = scanner.nextInt();
 
                     Produto encontrado = loja.buscarProduto(codBusca);
 
@@ -61,17 +59,14 @@ public class Main {
                         System.out.println("Produto não encontrado.");
                     }
                     break;
-
                 case 4:
                     System.out.print("Código para remover: ");
-                    int codRemove = sc.nextInt();
+                    int codRemove = scanner.nextInt();
                     loja.removerProduto(codRemove);
                     break;
-
                 case 5:
                     System.out.println("Total em estoque: " + loja.calcularValorTotalEstoque());
                     break;
-
                 case 6:
                     Produto maisCaro = loja.produtoMaisCaro();
                     if (maisCaro != null) {
@@ -79,17 +74,15 @@ public class Main {
                         System.out.println(maisCaro);
                     }
                     break;
-
                 case 0:
                     System.out.println("Encerrando...");
                     break;
-
                 default:
                     System.out.println("Opção inválida!");
             }
 
         } while (opcao != 0);
 
-        sc.close();
+        scanner.close();
     }
 }

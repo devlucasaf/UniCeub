@@ -4,11 +4,36 @@
 
 (def produtos
     [
-        {:id 1 :nome "Notebook" :categoria "Eletrônicos"    :preco 3500}
-        {:id 2 :nome "Mouse"    :categoria "Periféricos"    :preco 120}
-        {:id 3 :nome "Teclado"  :categoria "Periféricos"    :preco 250}
-        {:id 4 :nome "Monitor"  :categoria "Eletrônicos"    :preco 900}
-        {:id 5 :nome "Headset"  :categoria "Áudio"          :preco 300}
+        {
+            :id 1 
+            :nome "Notebook" 
+            :categoria "Eletrônicos"    
+            :preco 3500
+        }
+        {
+            :id 2 
+            :nome "Mouse"    
+            :categoria "Periféricos"    
+            :preco 120
+        }
+        {
+            :id 3 
+            :nome "Teclado"  
+            :categoria "Periféricos"    
+            :preco 250
+        }
+        {
+            :id 4 
+            :nome "Monitor"  
+            :categoria "Eletrônicos"    
+            :preco 900
+        }
+        {
+            :id 5 
+            :nome "Headset"  
+            :categoria "Áudio"          
+            :preco 300
+        }
     ]
 )
 

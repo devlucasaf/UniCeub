@@ -63,7 +63,6 @@ namespace CalculadoraApp
                     {
                         painel.Controls.Add(new Label(), j, i);
                     }
-
                     else
                     {
                         Button btn = new Button();
@@ -90,13 +89,11 @@ namespace CalculadoraApp
                     display.Text = comando;
                     novoNumero = false;
                 }
-
                 else
                 {
                     display.Text += comando;
                 }
             }
-
             else if (comando == ".")
             {
                 if (novoNumero)
@@ -104,20 +101,17 @@ namespace CalculadoraApp
                     display.Text = "0.";
                     novoNumero = false;
                 }
-
                 else if (!display.Text.Contains("."))
                 {
                     display.Text += ".";
                 }
             }
-
             else if (comando == "+" || comando == "-" || comando == "*" || comando == "/")
             {
                 operador = comando;
                 numero1 = double.Parse(display.Text);
                 novoNumero = true;
             }
-
             else if (comando == "=")
             {
                 numero2 = double.Parse(display.Text);
@@ -125,7 +119,6 @@ namespace CalculadoraApp
                 display.Text = Formatar(resultado);
                 novoNumero = true;
             }
-            
             else if (comando == "C")
             {
                 display.Text = "0";

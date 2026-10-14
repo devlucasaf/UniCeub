@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Desenvolvedor extends Funcionario {
-    private NivelExperiencia nivel;
-    private List<String> linguagens;
+    private NivelExperiencia    nivel;
+    private List<String>        linguagens;
 
     public Desenvolvedor(String nome, String cpf, double salarioBase, Departamento departamento,
-                        LocalDate dataAdmissao, NivelExperiencia nivel, List<String> linguagens) {
+            LocalDate dataAdmissao, NivelExperiencia nivel, List<String> linguagens) {
         super(nome, cpf, salarioBase, departamento, dataAdmissao);
         this.nivel = nivel;
         this.linguagens = new ArrayList<>(linguagens);

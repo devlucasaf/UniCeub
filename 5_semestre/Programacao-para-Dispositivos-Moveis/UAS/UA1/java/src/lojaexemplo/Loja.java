@@ -54,7 +54,9 @@ public class Loja {
     }
 
     public Produto produtoMaisCaro() {
-        if (produtos.isEmpty()) return null;
+        if (produtos.isEmpty()) {
+            return null;
+        }
 
         Produto maisCaro = produtos.get(0);
 

@@ -2,7 +2,7 @@ using System;
 
 namespace LojaExemplo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -38,35 +38,34 @@ namespace LojaExemplo
                         Console.Write("Quantidade: ");
                         int quantidade = int.Parse(Console.ReadLine());
 
-                        Produto p = new Produto(codigo, nome, preco, quantidade);
-                        loja.AdicionarProduto(p);
+                        Produto produto = new Produto(codigo, nome, preco, quantidade);
+                        loja.AdicionarProduto(produto);
                         break;
-
                     case 2:
                         loja.ListarProdutos();
                         break;
-
                     case 3:
                         Console.Write("Código do produto: ");
                         int codBusca = int.Parse(Console.ReadLine());
 
                         Produto encontrado = loja.BuscarProduto(codBusca);
                         if (encontrado != null)
+                        {
                             Console.WriteLine(encontrado);
+                        }
                         else
+                        {
                             Console.WriteLine("Produto não encontrado.");
+                        }
                         break;
-
                     case 4:
                         Console.Write("Código para remover: ");
                         int codRemove = int.Parse(Console.ReadLine());
                         loja.RemoverProduto(codRemove);
                         break;
-
                     case 5:
                         Console.WriteLine("Total em estoque: " + loja.CalcularValorTotalEstoque());
                         break;
-
                     case 6:
                         Produto maisCaro = loja.ProdutoMaisCaro();
                         if (maisCaro != null)
@@ -75,11 +74,9 @@ namespace LojaExemplo
                             Console.WriteLine(maisCaro);
                         }
                         break;
-
                     case 0:
                         Console.WriteLine("Encerrando...");
                         break;
-
                     default:
                         Console.WriteLine("Opção inválida!");
                         break;

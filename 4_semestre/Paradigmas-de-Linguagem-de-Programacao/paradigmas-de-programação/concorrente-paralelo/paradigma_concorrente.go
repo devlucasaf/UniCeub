@@ -18,7 +18,7 @@ func worker(id int, tasks <-chan Task, results chan<- string, wg *sync.WaitGroup
     defer wg.Done()
     for task := range tasks {
         fmt.Printf("Worker %d iniciou tarefa %d\n", id, task.ID)
-        time.Sleep(task.Duration) // simula tempo de execução
+        time.Sleep(task.Duration) 
         result := fmt.Sprintf("Worker %d concluiu tarefa %d em %v", id, task.ID, task.Duration)
         results <- result
     }
