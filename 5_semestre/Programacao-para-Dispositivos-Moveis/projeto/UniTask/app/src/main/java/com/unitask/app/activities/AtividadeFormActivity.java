@@ -215,6 +215,7 @@ public class AtividadeFormActivity extends AppCompatActivity {
             getString(R.string.tipo_seminario),
             getString(R.string.tipo_projeto)
         };
+        
         for (int i = 0; i < TIPOS.length; i++) {
             if (TIPOS[i].equals(atividadeEditando.getTipo())) {
                 spinnerTipo.setText(tiposExibicao[i], false);
@@ -238,6 +239,7 @@ public class AtividadeFormActivity extends AppCompatActivity {
             getString(R.string.situacao_pendente),
             getString(R.string.situacao_concluida)
         };
+        
         for (int i = 0; i < SITUACOES.length; i++) {
             if (SITUACOES[i].equals(atividadeEditando.getSituacao())) {
                 spinnerSituacao.setText(situacoesExibicao[i], false);
@@ -320,7 +322,6 @@ public class AtividadeFormActivity extends AppCompatActivity {
             }
         }
 
-        // Resolver situação
         String[] situacoesExibicao = {
             getString(R.string.situacao_pendente),
             getString(R.string.situacao_concluida)
