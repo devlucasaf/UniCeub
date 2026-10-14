@@ -51,11 +51,7 @@ fn main() {
 
             let resultado = numero * 2;
 
-            println!(
-                "Resultado do processamento do número {} = {}",
-                numero,
-                resultado
-            );
+            println!("Resultado do processamento do número {} = {}",numero,resultado);
         });
 
         handles_soma.push(handle);
