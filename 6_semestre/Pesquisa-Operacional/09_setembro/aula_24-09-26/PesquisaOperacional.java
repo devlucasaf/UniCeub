@@ -9,16 +9,16 @@ import java.util.Locale;
 // --- XA..XD:    xa, xb, xc, xd >= 1000 ---
 public class PesquisaOperacional {
 
-    private static final String[] VARIAVEIS   = {"xa", "xb", "xc", "xd"};
-    private static final double[] COEF_Z      = {1, 1, 2, 2};
-    private static final String[] RESTRICOES  = {"IMPRESSÃO", "CORTE", "DOBRAR"};
-    private static final double[][] A         = {
+    private static final String[] VARIAVEIS = {"xa", "xb", "xc", "xd"};
+    private static final double[] COEF_Z = {1, 1, 2, 2};
+    private static final String[] RESTRICOES = {"IMPRESSÃO", "CORTE", "DOBRAR"};
+    private static final double[][] A = {
             {1, 2, 3, 3},
             {2, 4, 1, 3},
             {3, 2, 5, 3}
     };
-    private static final double[] LIMITE      = {15000, 20000, 20000};
-    private static final double[] MINIMO      = {1000, 1000, 1000, 1000};
+    private static final double[] LIMITE = {15000, 20000, 20000};
+    private static final double[] MINIMO = {1000, 1000, 1000, 1000};
 
     private static final double[] VALORES_PLANILHA = {1500, 1000, 1000, 2833};
 
