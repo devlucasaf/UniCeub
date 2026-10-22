@@ -238,6 +238,24 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=visualstudio"
     />
+    <img
+        alt="SSMS"
+        height="40"
+        style="margin:4px" 
+        src="https://datamodel.com/wp-content/uploads/2025/05/ssms_21.png"
+    />
+    <img
+        alt="Antigravity"
+        height="40"
+        style="margin:4px" 
+        src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png"
+    />
+    <img 
+        alt="JetBrains" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg"
+    />
     <img 
         alt="IntelliJ" 
         height="40" 

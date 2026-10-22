@@ -74,6 +74,18 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=visualstudio"
     />
+    <img
+        alt="Antigravity"
+        height="40"
+        style="margin:4px" 
+        src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png"
+    />
+    <img 
+        alt="JetBrains" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg"
+    />
     <img 
         alt="PyCharm" 
         height="40" 

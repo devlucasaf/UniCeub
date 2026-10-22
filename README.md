@@ -239,6 +239,30 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=visualstudio"
     />
+    <img
+        alt="SSMS"
+        height="40"
+        style="margin:4px" 
+        src="https://datamodel.com/wp-content/uploads/2025/05/ssms_21.png"
+    />
+    <img 
+        alt="Azure" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+    />
+    <img
+        alt="Antigravity"
+        height="40"
+        style="margin:4px" 
+        src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png"
+    />
+    <img 
+        alt="Android Studio" 
+        height="40" 
+        style="margin:4px" 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+    />
     <img 
         alt="Jupyter" 
         height="40" 
@@ -279,13 +303,7 @@
         alt="Eclipse" 
         height="40" 
         style="margin:4px" 
-        src="https://skillicons.dev/icons?i=eclipse"
-    />
-    <img 
-        alt="Android Studio" 
-        height="40" 
-        style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
     />
     <img 
         alt="PostgreSQL" 
@@ -298,12 +316,6 @@
         height="40" 
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=blender"
-    />
-    <img 
-        alt="Azure" 
-        height="40" 
-        style="margin:4px" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
     />
 </div>
 
