@@ -9,7 +9,6 @@ public class ProblemaTransporte {
     private final double[]      producaoMaxima;
     private final double[]      demanda;
     private final double[][]    custo;
-
     private double[][]          x;
     private SolverSimplex       solver;
 
@@ -50,7 +49,9 @@ public class ProblemaTransporte {
 
         for (int j = 0; j < nd; j++) {
             int r = nf + j;
-            for (int i = 0; i < nf; i++) a[r][indice(i, j)] = 1;
+            for (int i = 0; i < nf; i++) {
+                a[r][indice(i, j)] = 1;
+            }
             tipos[r] = Tipo.IGUAL;
             b[r] = demanda[j];
         }
