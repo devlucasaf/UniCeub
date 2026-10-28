@@ -281,10 +281,6 @@ void exibirVisitados(int visitados[], char vertices[], int quantidadeVertices) {
     printf("]\n");
 }
 
-// ========================
-// PRIM
-// ========================
-
 // --- EXECUTA O ALGORITMO DE PRIM PASSO A PASSO ---
 void primPassoAPasso(ListaAdjacencia grafo[], char vertices[], int quantidadeVertices, int inicio) {
     printf("ALGORITMO DE PRIM\n\n");
@@ -324,7 +320,6 @@ void primPassoAPasso(ListaAdjacencia grafo[], char vertices[], int quantidadeVer
             );
         } else {
             printf("\nMenor aresta disponivel:\n");
-
             printf("%c -- %c (peso = %d)\n", vertices[origem], vertices[atual], peso);
         }
 
