@@ -1,5 +1,5 @@
 body {
-  background-color: yellow; /* contraste ruim */
+    background-color: yellow; /* contraste ruim */
     font-family: Arial, sans-serif;
 }
 
@@ -15,5 +15,5 @@ body {
 }
 
 .importante {
-  color: lightgray; /* contraste muito baixo */
+    color: lightgray; /* contraste muito baixo */
 }

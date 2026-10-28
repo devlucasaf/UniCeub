@@ -8,6 +8,7 @@ app.secret_key = "chave_super_secreta_insegura"
 def init_db():
     conn = sqlite3.connect("vulnerable.db")
     c = conn.cursor()
+
     c.execute("DROP TABLE IF EXISTS users")
     c.execute("DROP TABLE IF EXISTS messages")
     c.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, balance INTEGER)")
@@ -92,7 +93,8 @@ def dashboard():
 # --- VULNERABILIDADE 3: IDOR (Insecure Direct Object Reference) ---
 @app.route("/message/<int:msg_id>")
 def view_message(msg_id):
-    if "user_id" not in session: return redirect(url_for("login"))
+    if "user_id" not in session: 
+        return redirect(url_for("login"))
     
     conn = sqlite3.connect("vulnerable.db")
     c = conn.cursor()

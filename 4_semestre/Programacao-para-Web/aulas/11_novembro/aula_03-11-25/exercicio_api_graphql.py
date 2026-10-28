@@ -2,15 +2,36 @@ import graphene
 
 # Dados simulados
 livros_data = [
-    {"id": 1, "titulo": "Livro A", "autor_id": 1},
-    {"id": 2, "titulo": "Livro B", "autor_id": 1},
-    {"id": 3, "titulo": "Livro C", "autor_id": 2},
+    {
+        "id": 1,
+        "titulo": "Livro A",
+        "autor_id": 1
+    },
+    {
+        "id": 2,
+        "titulo": "Livro B",
+        "autor_id": 1
+    },
+    {
+        "id": 3,
+        "titulo": "Livro C",
+        "autor_id": 2
+    },
 ]
 
 autores_data = [
-    {"id": 1, "nome": "Ana"},
-    {"id": 2, "nome": "André"},
-    {"id": 3, "nome": "Bruno"},
+    {
+        "id": 1, 
+        "nome": "Ana"
+    },
+    {
+        "id": 2, 
+        "nome": "André"
+    },
+    {
+        "id": 3, 
+        "nome": "Bruno"
+    },
 ]
 
 # Tipos GraphQL

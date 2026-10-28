@@ -12,9 +12,21 @@ from strawberry.fastapi import GraphQLRouter
 # --- "Banco de Dados" em memória ---
 
 db_livros = [
-    {"id": 1, "titulo": "O Senhor dos Anéis", "autor": "J.R.R. Tolkien"},
-    {"id": 2, "titulo": "Fundação", "autor": "Isaac Asimov"},
-    {"id": 3, "titulo": "Duna", "autor": "Frank Herbert"},
+    {
+        "id": 1, 
+        "titulo": "O Senhor dos Anéis", 
+        "autor": "J.R.R. Tolkien"
+    },
+    {
+        "id": 2, 
+        "titulo": "Fundação", 
+        "autor": "Isaac Asimov"
+    },
+    {
+        "id": 3, 
+        "titulo": "Duna", 
+        "autor": "Frank Herbert"
+    },
 ]
 
 # --- Definição dos Tipos GraphQL com Strawberry ---

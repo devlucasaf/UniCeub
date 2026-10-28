@@ -7,6 +7,7 @@ app.secret_key = "chave_super_fixa_ainda_insegura" # Em produção, isso deveria
 def init_db():
     conn = sqlite3.connect("bank_v2.db")
     c = conn.cursor()
+    
     c.execute("DROP TABLE IF EXISTS users")
     c.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, balance INTEGER)")
     
@@ -50,7 +51,8 @@ def login():
 
 @app.route("/dashboard")
 def dashboard():
-    if "user_id" not in session: return redirect(url_for("login"))
+    if "user_id" not in session: 
+        return redirect(url_for("login"))
     
     # Atualiza saldo para exibição
     conn = sqlite3.connect("bank_v2.db")
@@ -75,7 +77,8 @@ def dashboard():
 
 @app.route("/transfer", methods=["POST"])
 def transfer():
-    if "user_id" not in session: return redirect(url_for("login"))
+    if "user_id" not in session: 
+        return redirect(url_for("login"))
     
     print("OI------------")
     
