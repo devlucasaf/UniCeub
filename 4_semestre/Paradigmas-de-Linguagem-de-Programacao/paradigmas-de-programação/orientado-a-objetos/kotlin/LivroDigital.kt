@@ -7,7 +7,7 @@ class LivroDigital(
     override val anoPublicacao: Int,
     override val formato:       String,
     override val tamanhoMB:     Double,
-    val numero Paginas:         Int,
+    val numeroPaginas:         Int,
     val ISBN:                   String,
     var copiasDisponiveis:      Int
 ) : ItemBiblioteca(id, titulo, autor, anoPublicacao), Digitalizavel {

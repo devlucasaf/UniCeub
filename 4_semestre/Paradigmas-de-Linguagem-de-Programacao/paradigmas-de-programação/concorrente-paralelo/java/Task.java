@@ -31,7 +31,6 @@ public class Task implements Callable<String> {
             }
 
             return "Tarefa " + id + " concluída em " + duration + " segundos";
-
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             return "Tarefa " + id + " interrompida";

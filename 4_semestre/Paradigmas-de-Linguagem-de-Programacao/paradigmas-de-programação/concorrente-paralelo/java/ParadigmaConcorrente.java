@@ -58,7 +58,6 @@ public class ParadigmaConcorrente {
                 } else {
                     metrics.incrementCancelled();
                 }
-
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             } catch (ExecutionException e) {

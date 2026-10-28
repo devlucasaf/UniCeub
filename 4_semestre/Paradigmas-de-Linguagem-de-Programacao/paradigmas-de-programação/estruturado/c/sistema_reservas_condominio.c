@@ -196,7 +196,14 @@ void listar_espacos(Espaco espacos[], int n) {
     }
 
     for (int i = 0; i < n; i++) {
-        const char * tipo = (espacos[i].tipo == 1) ? "Churrasqueira" : (espacos[i].tipo == 2) ? "Salao" : "Generico";
+        const char *tipo;
+        if (espacos[i].tipo == 1) {
+            tipo = "Churrasqueira";
+        } else if (espacos[i].tipo == 2) {
+            tipo = "Salao";
+        } else {
+            tipo = "Generico";
+        }
         printf("[%d] %s | cap=%d | %s\n", espacos[i].id, espacos[i].nome, espacos[i].capacidade, tipo);
     }
 }

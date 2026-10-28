@@ -4,8 +4,8 @@ namespace ParadigmaReativoExemplo
 {
     public class Jogador
     {
-        public string Nome { get; set; }
-        public int Pontos { get; set; }
+        public string   Nome    { get; set; }
+        public int      Pontos  { get; set; }
 
         public Jogador(string nome)
         {

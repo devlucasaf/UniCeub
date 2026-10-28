@@ -12,7 +12,8 @@
 #define MAX_ALUNOS 100
 #define MAX_NOME 50
 
-typedef struct {
+typedef struct 
+{
     char nome[MAX_NOME];
     int idade;
     float notas[3];
@@ -21,7 +22,8 @@ typedef struct {
 Aluno alunos[MAX_ALUNOS];
 int totalAlunos = 0;
 
-void adicionarAluno() {
+void adicionarAluno() 
+{
     if (totalAlunos >= MAX_ALUNOS) {
         printf("Limite de alunos atingido!\n");
         return;
@@ -47,7 +49,8 @@ void adicionarAluno() {
     printf("Aluno adicionado com sucesso!\n\n");
 }
 
-void listarAlunos() {
+void listarAlunos() 
+{
     if (totalAlunos == 0) {
         printf("Nenhum aluno cadastrado.\n\n");
         return;
@@ -65,7 +68,8 @@ void listarAlunos() {
     }
 }
 
-void calcularMediaAluno() {
+void calcularMediaAluno() 
+{
     if (totalAlunos == 0) {
         printf("Nenhum aluno cadastrado.\n\n");
         return;
@@ -93,7 +97,8 @@ void calcularMediaAluno() {
     printf("Média do aluno %s: %.2f\n\n", a.nome, media);
 }
 
-void mostrarMenu() {
+void mostrarMenu() 
+{
     printf("=== Sistema de Alunos ===\n");
     printf("1. Adicionar aluno\n");
     printf("2. Listar alunos\n");
@@ -102,7 +107,8 @@ void mostrarMenu() {
     printf("Escolha uma opção: ");
 }
 
-int main() {
+int main() 
+{
     int opcao;
 
     do {

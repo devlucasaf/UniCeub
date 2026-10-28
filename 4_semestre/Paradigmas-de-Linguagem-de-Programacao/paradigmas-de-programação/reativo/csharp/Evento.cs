@@ -4,8 +4,8 @@ namespace ParadigmaReativoExemplo
 {
     public class Evento
     {
-        public string Tipo { get; set; }
-        public int Valor { get; set; }
+        public string   Tipo    { get; set; }
+        public int      Valor   { get; set; }
 
         public Evento(string tipo, int valor)
         {
