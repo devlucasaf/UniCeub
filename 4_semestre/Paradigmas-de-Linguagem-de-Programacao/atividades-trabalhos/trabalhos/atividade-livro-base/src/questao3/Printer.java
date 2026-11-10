@@ -1,8 +1,8 @@
 package questao3;
 
 public class Printer {
-    private                 int                 turn = 0;
-    private static final    int                 ITERATIONS = 15;
+    private int turn = 0;
+    private static final int ITERATIONS = 15;
 
     public synchronized void printA() throws InterruptedException {
         while (turn != 0) {
