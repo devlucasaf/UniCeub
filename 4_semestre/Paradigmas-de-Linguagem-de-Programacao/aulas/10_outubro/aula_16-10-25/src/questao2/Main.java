@@ -1,6 +1,7 @@
-package questao2; /**
-Paradigmas de Linguagens de Programação
-Data: 16-10-25
+package questao2; 
+/**
+    Paradigmas de Linguagens de Programação
+    Data: 16-10-25
 */
 
 import java.util.*;
