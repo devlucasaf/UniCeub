@@ -14,11 +14,7 @@ public class ResultadoFolha {
     public ResultadoFolha() {
     }
 
-    public ResultadoFolha(String matricula,
-                        double salarioBruto,
-                        double descontos,
-                        double salarioLiquido) {
-
+    public ResultadoFolha(String matricula, double salarioBruto, double descontos, double salarioLiquido) {
         this.matricula = matricula;
         this.salarioBruto = salarioBruto;
         this.descontos = descontos;
