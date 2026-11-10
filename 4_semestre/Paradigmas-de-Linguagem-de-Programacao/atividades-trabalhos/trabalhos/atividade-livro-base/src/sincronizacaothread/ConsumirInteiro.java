@@ -12,7 +12,8 @@ public class ConsumirInteiro extends Thread {
     @Override
     public void run() {
 
-        int val, sum = 0;
+        int val;
+        int sum = 0;
 
         do {
             try {
