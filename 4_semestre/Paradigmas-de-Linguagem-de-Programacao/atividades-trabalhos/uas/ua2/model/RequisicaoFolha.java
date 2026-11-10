@@ -1,4 +1,4 @@
-package UA2.model;
+package ua2.model;
 
 import jakarta.xml.bind.annotation.*;
 
