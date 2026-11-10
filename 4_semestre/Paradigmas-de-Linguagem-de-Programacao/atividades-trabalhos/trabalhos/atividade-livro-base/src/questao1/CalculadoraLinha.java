@@ -10,6 +10,7 @@ public class CalculadoraLinha implements Runnable {
         this.indiceLinha = indiceLinha;
         this.somaLinha = 0;
     }
+    
     @Override
     public void run() {
         System.out.println("Thread iniciada para a linha " + indiceLinha + "...");
