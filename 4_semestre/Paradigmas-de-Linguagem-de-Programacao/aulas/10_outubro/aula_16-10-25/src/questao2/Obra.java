@@ -1,6 +1,7 @@
-package questao2; /**
-Paradigmas de Linguagens de Programação
-Data: 16-10-25
+package questao2; 
+/**
+    Paradigmas de Linguagens de Programação
+    Data: 16-10-25
 */
 
 import java.util.List;
@@ -14,7 +15,8 @@ public class Obra {
     private int         anoPublicacao;
     private int         edicao;
 
-    public Obra(String titulo, String categoria, String idioma, List<Autor> autores, Editora editora, int anoPublicacao, int edicao) {
+    public Obra(String titulo, String categoria, String idioma, List<Autor> autores, 
+                    Editora editora, int anoPublicacao, int edicao) {
         this.titulo = titulo;
         this.categoria = categoria;
         this.idioma = idioma;
