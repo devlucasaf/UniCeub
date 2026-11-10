@@ -1,4 +1,4 @@
-package UA2;
+package ua2;
 
 import UA2.model.RespostaFolha;
 import UA2.service.FolhaPagamentoService;
@@ -10,12 +10,9 @@ public class Main {
     public static void main(String[] args) {
 
         try {
+            FolhaPagamentoService service = new FolhaPagamentoService();
 
-            FolhaPagamentoService service =
-                    new FolhaPagamentoService();
-
-            RespostaFolha resultado =
-                    service.processarFolha(
+            RespostaFolha resultado = service.processarFolha(
                             new File("funcionarios.xml"),
                             "https://api.exemplo.com/calcula_folha"
                     );
@@ -28,9 +25,7 @@ public class Main {
                 System.out.println("Descontos: R$ " + r.getDescontos());
                 System.out.println("Salário Líquido: R$ " + r.getSalarioLiquido());
             });
-
         } catch (Exception e) {
-
             System.out.println("Erro ao processar folha:");
             e.printStackTrace();
         }
