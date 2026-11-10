@@ -1,7 +1,7 @@
 package ua2;
 
-import UA2.model.RespostaFolha;
-import UA2.service.FolhaPagamentoService;
+import ua2.model.RespostaFolha;
+import ua2.service.FolhaPagamentoService;
 
 import java.io.File;
 
