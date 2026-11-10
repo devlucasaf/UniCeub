@@ -46,9 +46,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
 
     if (largura <= altura) {
         gluOrtho2D(-40.0f, 40.0f, -40.0f * altura / largura, 40.0f * altura / largura);
-    }
-
-    else {
+    } else {
         gluOrtho2D(-40.0f * largura / altura, 40.0f * largura / altura, -40.0f, 40.0f);
     }
 }
@@ -76,31 +74,22 @@ void timer(int) {
     cout << x_scale << '\t';
 
     switch (state) {
-        case 1: {
+        case 1: 
             cout << "TESTE1" << '\t';
 
             if (x_position < 20) {
                 x_position += 0.3f;
-            }
-
-            else {
+            } else {
                 state = -1;
             }
-
             break;
-        }
-
-        case -1: {
+        case -1: 
             if (x_position > -20) {
                 x_position -= 0.3f;
-            } 
-            
-            else {
+            } else {
                 state = 1;
             }
-
             break; 
-        }
     }
 }
 

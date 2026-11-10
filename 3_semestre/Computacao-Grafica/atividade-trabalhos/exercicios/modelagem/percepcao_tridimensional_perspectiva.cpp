@@ -1,3 +1,6 @@
+// --- COMPUTAÇÃO GRÁFICA ---
+// --- CUBO 3D EM ROTAÇÃO COM PROJEÇÃO EM PERSPECTIVA ---
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -5,60 +8,70 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
-const char* vertexShaderSource = R"(
+// --- SHADER DE VÉRTICE ---
+const char* codigoFonteShaderVertice = R"(
     #version 330 core
-    layout (location = 0) in vec3 aPos;
+    layout (location = 0) in vec3 aPosicaoVertice;
 
-    uniform mat4 model;
-    uniform mat4 view;
-    uniform mat4 projection;
+    uniform mat4 uMatrizModelo;
+    uniform mat4 uMatrizVisao;
+    uniform mat4 uMatrizProjecao;
 
     void main()
     {
-        gl_Position = projection * view * model * vec4(aPos, 1.0);
+        gl_Position = uMatrizProjecao * uMatrizVisao * uMatrizModelo * vec4(aPosicaoVertice, 1.0);
     }
 )";
 
-const char* fragmentShaderSource = R"(
+// --- SHADER DE FRAGMENTO ---
+const char* codigoFonteShaderFragmento = R"(
     #version 330 core
-    out vec4 FragColor;
+    out vec4 corFragmento;
 
     void main()
     {
-        FragColor = vec4(0.3, 0.8, 1.0, 1.0);
+        corFragmento = vec4(0.3, 0.8, 1.0, 1.0);
     }
 )";
 
-float cubeVertices[] = {
-    -0.5f,-0.5f,-0.5f,  0.5f,-0.5f,-0.5f,  0.5f, 0.5f,-0.5f,
-    0.5f, 0.5f,-0.5f, -0.5f, 0.5f,-0.5f, -0.5f,-0.5f,-0.5f,
+// --- VÉRTICES DO CUBO ---
+float verticesCubo[] = {
+    // --- FACE TRASEIRA ---
+    -0.5f, -0.5f, -0.5f,   0.5f, -0.5f, -0.5f,   0.5f,  0.5f, -0.5f,
+    0.5f,  0.5f, -0.5f,  -0.5f,  0.5f, -0.5f,  -0.5f, -0.5f, -0.5f,
 
-    -0.5f,-0.5f, 0.5f,  0.5f,-0.5f, 0.5f,  0.5f, 0.5f, 0.5f,
-    0.5f, 0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f,-0.5f, 0.5f,
+    // --- FACE FRONTAL ---
+    -0.5f, -0.5f,  0.5f,   0.5f, -0.5f,  0.5f,   0.5f,  0.5f,  0.5f,
+    0.5f,  0.5f,  0.5f,  -0.5f,  0.5f,  0.5f,  -0.5f, -0.5f,  0.5f,
 
-    -0.5f, 0.5f, 0.5f, -0.5f, 0.5f,-0.5f, -0.5f,-0.5f,-0.5f,
-    -0.5f,-0.5f,-0.5f, -0.5f,-0.5f, 0.5f, -0.5f, 0.5f, 0.5f,
+    // --- FACE ESQUERDA ---
+    -0.5f,  0.5f,  0.5f,  -0.5f,  0.5f, -0.5f,  -0.5f, -0.5f, -0.5f,
+    -0.5f, -0.5f, -0.5f,  -0.5f, -0.5f,  0.5f,  -0.5f,  0.5f,  0.5f,
 
-    0.5f, 0.5f, 0.5f,  0.5f, 0.5f,-0.5f,  0.5f,-0.5f,-0.5f,
-    0.5f,-0.5f,-0.5f,  0.5f,-0.5f, 0.5f,  0.5f, 0.5f, 0.5f,
+    // --- FACE DIREITA ---
+    0.5f,  0.5f,  0.5f,   0.5f,  0.5f, -0.5f,   0.5f, -0.5f, -0.5f,
+    0.5f, -0.5f, -0.5f,   0.5f, -0.5f,  0.5f,   0.5f,  0.5f,  0.5f,
 
-    -0.5f,-0.5f,-0.5f,  0.5f,-0.5f,-0.5f,  0.5f,-0.5f, 0.5f,
-    0.5f,-0.5f, 0.5f, -0.5f,-0.5f, 0.5f, -0.5f,-0.5f,-0.5f,
+    // --- FACE INFERIOR ---
+    -0.5f, -0.5f, -0.5f,   0.5f, -0.5f, -0.5f,   0.5f, -0.5f,  0.5f,
+    0.5f, -0.5f,  0.5f,  -0.5f, -0.5f,  0.5f,  -0.5f, -0.5f, -0.5f,
 
-    -0.5f, 0.5f,-0.5f,  0.5f, 0.5f,-0.5f,  0.5f, 0.5f, 0.5f,
-    0.5f, 0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f,-0.5f
+    // --- FACE SUPERIOR ---
+    -0.5f,  0.5f, -0.5f,   0.5f,  0.5f, -0.5f,   0.5f,  0.5f,  0.5f,
+    0.5f,  0.5f,  0.5f,  -0.5f,  0.5f,  0.5f,  -0.5f,  0.5f, -0.5f
 };
 
-
-void processInput(GLFWwindow* window) {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window, true);
+// --- TRATAMENTO DO TECLADO ---
+void processarEntradaTeclado(GLFWwindow* janela) {
+    if (glfwGetKey(janela, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        glfwSetWindowShouldClose(janela, true);
     }
 }
 
 int main() {
+    // --- INICIALIZAÇÃO DO GLFW ---
     if (!glfwInit()) {
-        std::cerr << "Erro ao inicializar GLFW\n";
+        std::cerr << "Erro ao inicializar o GLFW\n";
         return -1;
     }
 
@@ -66,108 +79,144 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "3D Perspectiva em C++", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Erro ao criar janela GLFW\n";
+    GLFWwindow* janela = glfwCreateWindow(800, 600, "Perspectiva 3D em C++", nullptr, nullptr);
+
+    if (!janela) {
+        std::cerr << "Erro ao criar a janela GLFW\n";
         glfwTerminate();
         return -1;
     }
-    glfwMakeContextCurrent(window);
 
+    glfwMakeContextCurrent(janela);
+
+    // --- CARREGAMENTO DAS FUNÇÕES OPENGL (GLAD) ---
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cerr << "Erro ao inicializar GLAD\n";
+        std::cerr << "Erro ao inicializar o GLAD\n";
+        glfwDestroyWindow(janela);
+        glfwTerminate();
         return -1;
     }
 
-    unsigned int vShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vShader);
+    int operacaoBemSucedida;
+    char registroErro[512];
 
-    int success;
-    char infoLog[512];
+    // --- COMPILAÇÃO DO SHADER DE VÉRTICE ---
+    unsigned int shaderVertice = glCreateShader(GL_VERTEX_SHADER);
 
-    glGetShaderiv(vShader, GL_COMPILE_STATUS, &success);
+    glShaderSource(shaderVertice, 1, &codigoFonteShaderVertice, NULL);
+    glCompileShader(shaderVertice);
+    glGetShaderiv(shaderVertice, GL_COMPILE_STATUS, &operacaoBemSucedida);
 
-    if (!success) {
-        glGetShaderInfoLog(vShader, 512, NULL, infoLog);
-        std::cerr << "Erro no Vertex Shader:\n" << infoLog << std::endl;
+    if (!operacaoBemSucedida) {
+        glGetShaderInfoLog(shaderVertice, 512, NULL, registroErro);
+        std::cerr << "Erro no shader de vértice:\n" << registroErro << std::endl;
     }
 
-    unsigned int fShader = glCreateShader(GL_FRAGMENT_SHADER);
+    // --- COMPILAÇÃO DO SHADER DE FRAGMENTO ---
+    unsigned int shaderFragmento = glCreateShader(GL_FRAGMENT_SHADER);
 
-    glShaderSource(fShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fShader);
-    glGetShaderiv(fShader, GL_COMPILE_STATUS, &success);
+    glShaderSource(shaderFragmento, 1, &codigoFonteShaderFragmento, NULL);
+    glCompileShader(shaderFragmento);
+    glGetShaderiv(shaderFragmento, GL_COMPILE_STATUS, &operacaoBemSucedida);
 
-    if (!success) {
-        glGetShaderInfoLog(fShader, 512, NULL, infoLog);
-        std::cerr << "Erro no Fragment Shader:\n" << infoLog << std::endl;
+    if (!operacaoBemSucedida) {
+        glGetShaderInfoLog(shaderFragmento, 512, NULL, registroErro);
+        std::cerr << "Erro no shader de fragmento:\n" << registroErro << std::endl;
     }
 
-    unsigned int shaderProgram = glCreateProgram();
+    // --- LIGAÇÃO DO PROGRAMA DE SHADERS ---
+    unsigned int programaShaders = glCreateProgram();
 
-    glAttachShader(shaderProgram, vShader);
-    glAttachShader(shaderProgram, fShader);
-    glLinkProgram(shaderProgram);
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    
-    if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cerr << "Erro ao linkar programa:\n" << infoLog << std::endl;
+    glAttachShader(programaShaders, shaderVertice);
+    glAttachShader(programaShaders, shaderFragmento);
+    glLinkProgram(programaShaders);
+    glGetProgramiv(programaShaders, GL_LINK_STATUS, &operacaoBemSucedida);
+
+    if (!operacaoBemSucedida) {
+        glGetProgramInfoLog(programaShaders, 512, NULL, registroErro);
+        std::cerr << "Erro ao ligar o programa de shaders:\n" << registroErro << std::endl;
     }
 
-    glDeleteShader(vShader);
-    glDeleteShader(fShader);
+    glDeleteShader(shaderVertice);
+    glDeleteShader(shaderFragmento);
 
-    unsigned int VBO, VAO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
+    // --- OBJETO DE ARRAY DE VÉRTICES E OBJETO DE BUFFER DE VÉRTICES ---
+    unsigned int objetoBufferVertices;
+    unsigned int objetoArrayVertices;
 
-    glBindVertexArray(VAO);
+    glGenVertexArrays(1, &objetoArrayVertices);
+    glGenBuffers(1, &objetoBufferVertices);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
+    glBindVertexArray(objetoArrayVertices);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glBindBuffer(GL_ARRAY_BUFFER, objetoBufferVertices);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(verticesCubo), verticesCubo, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(
+        0,                  
+        3,                  
+        GL_FLOAT,           
+        GL_FALSE,           
+        3 * sizeof(float),  
+        (void*)0            
+    );
+
     glEnableVertexAttribArray(0);
 
+    // --- TESTE DE PROFUNDIDADE ---
     glEnable(GL_DEPTH_TEST);
 
-    while (!glfwWindowShouldClose(window)) {
-        processInput(window);
+    // --- LAÇO DE RENDERIZAÇÃO ---
+    while (!glfwWindowShouldClose(janela)) {
+        processarEntradaTeclado(janela);
 
         glClearColor(0.1f, 0.12f, 0.15f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        glUseProgram(shaderProgram);
+        glUseProgram(programaShaders);
 
-        glm::mat4 model = glm::rotate(glm::mat4(1.0f),
-                        (float)glfwGetTime(),
-                        glm::vec3(0.5f, 1.0f, 0.0f));
+        // --- MATRIZ DE MODELO: ROTAÇÃO DO CUBO AO LONGO DO TEMPO ---
+        glm::mat4 matrizModelo = glm::rotate(
+            glm::mat4(1.0f),
+            (float)glfwGetTime(),
+            glm::vec3(0.5f, 1.0f, 0.0f)
+        );
 
-        glm::mat4 view = glm::translate(glm::mat4(1.0f),
-                        glm::vec3(0.0f, 0.0f, -3.0f));
+        // --- MATRIZ DE VISÃO: CÂMERA AFASTADA 3 UNIDADES ---
+        glm::mat4 matrizVisao = glm::translate(
+            glm::mat4(1.0f),
+            glm::vec3(0.0f, 0.0f, -3.0f)
+        );
 
-        glm::mat4 projection =
-            glm::perspective(glm::radians(60.0f), 800.f/600.f, 0.1f, 100.0f);
+        // --- MATRIZ DE PROJEÇÃO: PERSPECTIVA COM CAMPO DE VISÃO DE 60 GRAUS ---
+        glm::mat4 matrizProjecao = glm::perspective(
+            glm::radians(60.0f),
+            800.0f / 600.0f,
+            0.1f,
+            100.0f
+        );
 
-        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"),
-                            1, GL_FALSE, glm::value_ptr(model));
-        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"),
-                            1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"),
-                            1, GL_FALSE, glm::value_ptr(projection));
+        glUniformMatrix4fv(glGetUniformLocation(programaShaders, "uMatrizModelo"),
+                            1, GL_FALSE, glm::value_ptr(matrizModelo));
+        glUniformMatrix4fv(glGetUniformLocation(programaShaders, "uMatrizVisao"),
+                            1, GL_FALSE, glm::value_ptr(matrizVisao));
+        glUniformMatrix4fv(glGetUniformLocation(programaShaders, "uMatrizProjecao"),
+                            1, GL_FALSE, glm::value_ptr(matrizProjecao));
 
-        glBindVertexArray(VAO);
+        glBindVertexArray(objetoArrayVertices);
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(janela);
         glfwPollEvents();
     }
 
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
+    // --- LIBERAÇÃO DE RECURSOS ---
+    glDeleteVertexArrays(1, &objetoArrayVertices);
+    glDeleteBuffers(1, &objetoBufferVertices);
+    glDeleteProgram(programaShaders);
 
+    glfwDestroyWindow(janela);
     glfwTerminate();
+
     return 0;
 }

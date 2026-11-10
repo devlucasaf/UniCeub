@@ -1,230 +1,250 @@
-// Computação Gráfica
-// Aula: Primitivas gráficas, sistemas de referência e transformações gráficas
+// --- COMPUTAÇÃO GRÁFICA ---
+// --- AULA: PRIMITIVAS GRÁFICAS, SISTEMAS DE REFERÊNCIA E TRANSFORMAÇÕES GRÁFICAS ---
 
 #include <SFML/Graphics.hpp>
 #include <cmath>
 
-sf::VertexArray makeAxes(float length = 400.f) {
-    sf::VertexArray axes(sf::Lines, 4);
-    axes[0].position = { -length, 0.f };
-    axes[1].position = {  length, 0.f };
-    axes[0].color = sf::Color::Red;
-    axes[1].color = sf::Color::Red;
+// --- EIXOS DO SISTEMA DE REFERÊNCIA DO MUNDO ---
+sf::VertexArray criarEixosGlobais(float comprimento = 400.f) {
+    sf::VertexArray eixosGlobais(sf::Lines, 4);
 
-    axes[2].position = { 0.f, -length };
-    axes[3].position = { 0.f,  length };
-    axes[2].color = sf::Color::Green;
-    axes[3].color = sf::Color::Green;
+    eixosGlobais[0].position = { -comprimento, 0.f };
+    eixosGlobais[1].position = {  comprimento, 0.f };
+    eixosGlobais[0].color = sf::Color::Red;
+    eixosGlobais[1].color = sf::Color::Red;
 
-    return axes;
+    eixosGlobais[2].position = { 0.f, -comprimento };
+    eixosGlobais[3].position = { 0.f,  comprimento };
+    eixosGlobais[2].color = sf::Color::Green;
+    eixosGlobais[3].color = sf::Color::Green;
+
+    return eixosGlobais;
 }
 
-sf::VertexArray makeLine() {
-    sf::VertexArray line(sf::Lines, 2);
-    line[0].position = { -50.f, 0.f };
-    line[1].position = {  50.f, 0.f };
-    line[0].color = sf::Color::Cyan;
-    line[1].color = sf::Color::Cyan;
+// --- PRIMITIVA: LINHA ---
+sf::VertexArray criarLinha() {
+    sf::VertexArray linha(sf::Lines, 2);
 
-    return line;
+    linha[0].position = { -50.f, 0.f };
+    linha[1].position = {  50.f, 0.f };
+    linha[0].color = sf::Color::Cyan;
+    linha[1].color = sf::Color::Cyan;
+
+    return linha;
 }
 
-sf::ConvexShape makeTriangle() {
-    sf::ConvexShape tri(3);
-    tri.setPoint(0, { 0.f, -60.f });
-    tri.setPoint(1, { 60.f, 60.f });
-    tri.setPoint(2, { -60.f, 60.f });
-    tri.setFillColor(sf::Color(255, 200, 50));
-    tri.setOutlineColor(sf::Color::Black);
-    tri.setOutlineThickness(2.f);
+// --- PRIMITIVA: TRIÂNGULO ---
+sf::ConvexShape criarTriangulo() {
+    sf::ConvexShape triangulo(3);
 
-    return tri;
+    triangulo.setPoint(0, { 0.f, -60.f });
+    triangulo.setPoint(1, { 60.f, 60.f });
+    triangulo.setPoint(2, { -60.f, 60.f });
+    triangulo.setFillColor(sf::Color(255, 200, 50));
+    triangulo.setOutlineColor(sf::Color::Black);
+    triangulo.setOutlineThickness(2.f);
+
+    return triangulo;
 }
 
-sf::RectangleShape makeRectangle() {
-    sf::RectangleShape rect({ 140.f, 90.f });
-    rect.setOrigin(rect.getSize() / 2.f);
-    rect.setFillColor(sf::Color(120, 180, 255));
-    rect.setOutlineColor(sf::Color::Black);
-    rect.setOutlineThickness(2.f);
+// --- PRIMITIVA: RETÂNGULO ---
+sf::RectangleShape criarRetangulo() {
+    sf::RectangleShape retangulo({ 140.f, 90.f });
 
-    return rect;
+    retangulo.setOrigin(retangulo.getSize() / 2.f);
+    retangulo.setFillColor(sf::Color(120, 180, 255));
+    retangulo.setOutlineColor(sf::Color::Black);
+    retangulo.setOutlineThickness(2.f);
+
+    return retangulo;
 }
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1000, 700), "CG em C++ (SFML): Primitivas, Referencias e Transformacoes");
-    window.setFramerateLimit(120);
+    sf::RenderWindow janela(sf::VideoMode(1000, 700), L"CG em C++ (SFML): Primitivas, Referências e Transformações");
+    janela.setFramerateLimit(120);
 
-    auto axes = makeAxes();
+    auto eixosGlobais = criarEixosGlobais();
+    auto linha = criarLinha();
+    auto triangulo = criarTriangulo();
+    auto retangulo = criarRetangulo();
 
-    auto line = makeLine();
-    auto tri  = makeTriangle();
-    auto rect = makeRectangle();
+    sf::Transform transformacaoModeloLinha = sf::Transform::Identity;
 
-    sf::Transform lineModel = sf::Transform::Identity;
+    triangulo.setOrigin(0.f, 0.f);
+    retangulo.setOrigin(retangulo.getOrigin());
 
-    tri.setOrigin(0.f, 0.f);       
-    rect.setOrigin(rect.getOrigin()); 
+    // --- ESTADO DAS TRANSFORMAÇÕES ---
+    sf::Vector2f posicao(0.f, 0.f);
 
-    sf::Vector2f position(0.f, 0.f);
+    float anguloRotacao = 0.f;
+    float fatorEscala   = 1.f;
 
-    float rotation = 0.f;           
-    float scale = 1.f;              
+    // --- SISTEMA DE REFERÊNCIA DA CÂMERA ---
+    sf::View camera = janela.getDefaultView();
 
-    sf::View view = window.getDefaultView();
+    bool cameraAlternativaAtiva = false;
 
-    bool altView = false;           
+    enum class Primitiva { Triangulo, Linha, Retangulo } primitivaAtual = Primitiva::Triangulo;
 
-    enum class Primitive { Triangle, Line, Rectangle } current = Primitive::Triangle;
-
-    while (window.isOpen()) {
-        sf::Event ev{};
-        while (window.pollEvent(ev)) {
-            if (ev.type == sf::Event::Closed) {
-                window.close();
+    while (janela.isOpen()) {
+        // --- TRATAMENTO DE EVENTOS ---
+        sf::Event evento{};
+        while (janela.pollEvent(evento)) {
+            if (evento.type == sf::Event::Closed) {
+                janela.close();
             }
-            if (ev.type == sf::Event::KeyPressed) {
-                if (ev.key.code == sf::Keyboard::Escape) {
-                    window.close();
+
+            if (evento.type == sf::Event::KeyPressed) {
+                if (evento.key.code == sf::Keyboard::Escape) {
+                    janela.close();
                 }
 
-                if (ev.key.code == sf::Keyboard::Num1) {
-                    current = Primitive::Triangle;
+                if (evento.key.code == sf::Keyboard::Num1) {
+                    primitivaAtual = Primitiva::Triangulo;
                 }
 
-                if (ev.key.code == sf::Keyboard::Num2) {
-                    current = Primitive::Line;
+                if (evento.key.code == sf::Keyboard::Num2) {
+                    primitivaAtual = Primitiva::Linha;
                 }
 
-                if (ev.key.code == sf::Keyboard::Num3) {
-                    current = Primitive::Rectangle;
+                if (evento.key.code == sf::Keyboard::Num3) {
+                    primitivaAtual = Primitiva::Retangulo;
                 }
 
-                if (ev.key.code == sf::Keyboard::V) {
-                    altView = !altView;
-                    if (altView) {
-                        view = window.getDefaultView();
-                        view.zoom(0.7f);          
-                        view.move({ 120.f, -60.f }); 
+                if (evento.key.code == sf::Keyboard::V) {
+                    cameraAlternativaAtiva = !cameraAlternativaAtiva;
+                    if (cameraAlternativaAtiva) {
+                        camera = janela.getDefaultView();
+                        camera.zoom(0.7f);
+                        camera.move({ 120.f, -60.f });
+                    } else {
+                        camera = janela.getDefaultView();
                     }
-                    else {
-                        view = window.getDefaultView();
-                    }
-                    window.setView(view);
+                    janela.setView(camera);
                 }
 
-                if (ev.key.code == sf::Keyboard::R) {
-                    position = {0.f, 0.f};
-                    rotation = 0.f;
-                    scale    = 1.f;
-                    lineModel = sf::Transform::Identity;
+                if (evento.key.code == sf::Keyboard::R) {
+                    posicao = { 0.f, 0.f };
+                    anguloRotacao = 0.f;
+                    fatorEscala = 1.f;
+                    transformacaoModeloLinha = sf::Transform::Identity;
                 }
             }
         }
 
-        float move = 200.f * (1.f / 120.f); 
-        float rot  = 90.f  * (1.f / 120.f); 
-        float scl  = 1.0f  + 0.5f * (1.f / 120.f);
+        // --- VELOCIDADES POR QUADRO ---
+        float deslocamentoPorQuadro = 200.f * (1.f / 120.f);
+        float rotacaoPorQuadro = 90.f  * (1.f / 120.f);
+        float escalaPorQuadro = 1.0f  + 0.5f * (1.f / 120.f);
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))  {
-            position.x -= move;
+        // --- TRANSLAÇÃO ---
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            posicao.x -= deslocamentoPorQuadro;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            position.x += move;
+            posicao.x += deslocamentoPorQuadro;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            position.y -= move;
+            posicao.y -= deslocamentoPorQuadro;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            position.y += move;
+            posicao.y += deslocamentoPorQuadro;
         }
 
+        // --- ROTAÇÃO ---
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-            rotation -= rot;
+            anguloRotacao -= rotacaoPorQuadro;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
-            rotation += rot;
+            anguloRotacao += rotacaoPorQuadro;
         }
 
+        // --- ESCALA ---
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
-            scale /= scl;
+            fatorEscala /= escalaPorQuadro;
         }
-        
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
-            scale *= scl;
+            fatorEscala *= escalaPorQuadro;
         }
 
-        sf::Transform model = sf::Transform::Identity;
-        model.translate(position);
-        model.rotate(rotation);
-        model.scale(scale, scale);
+        // --- MATRIZ DE MODELO (LOCAL -> MUNDO) ---
+        sf::Transform transformacaoModelo = sf::Transform::Identity;
+        transformacaoModelo.translate(posicao);
+        transformacaoModelo.rotate(anguloRotacao);
+        transformacaoModelo.scale(fatorEscala, fatorEscala);
 
-        window.clear(sf::Color(30, 30, 40));
+        janela.clear(sf::Color(30, 30, 40));
 
-        window.draw(axes);
+        janela.draw(eixosGlobais);
 
-        sf::VertexArray localAxes(sf::Lines, 4);
+        // --- EIXOS DO SISTEMA DE REFERÊNCIA LOCAL ---
+        sf::VertexArray eixosLocais(sf::Lines, 4);
 
-        localAxes[0].position = model.transformPoint({-40.f, 0.f});
-        localAxes[1].position = model.transformPoint({ 40.f, 0.f});
-        localAxes[2].position = model.transformPoint({ 0.f,-40.f});
-        localAxes[3].position = model.transformPoint({ 0.f, 40.f});
-        localAxes[0].color = sf::Color(200,80,80);
-        localAxes[1].color = sf::Color(200,80,80);
-        localAxes[2].color = sf::Color(80,200,120);
-        localAxes[3].color = sf::Color(80,200,120);
+        eixosLocais[0].position = transformacaoModelo.transformPoint({ -40.f, 0.f });
+        eixosLocais[1].position = transformacaoModelo.transformPoint({  40.f, 0.f });
+        eixosLocais[2].position = transformacaoModelo.transformPoint({ 0.f, -40.f });
+        eixosLocais[3].position = transformacaoModelo.transformPoint({ 0.f,  40.f });
+        eixosLocais[0].color = sf::Color(200, 80, 80);
+        eixosLocais[1].color = sf::Color(200, 80, 80);
+        eixosLocais[2].color = sf::Color(80, 200, 120);
+        eixosLocais[3].color = sf::Color(80, 200, 120);
 
-        window.draw(localAxes);
+        janela.draw(eixosLocais);
 
-        switch (current) {
-            case Primitive::Triangle: {
-                sf::RenderStates rs; rs.transform = model;
-                window.draw(tri, rs);
+        // --- DESENHO DA PRIMITIVA SELECIONADA ---
+        switch (primitivaAtual) {
+            case Primitiva::Triangulo: {
+                sf::RenderStates estadosRenderizacao;
+                estadosRenderizacao.transform = transformacaoModelo;
+                janela.draw(triangulo, estadosRenderizacao);
                 break;
             }
-            case Primitive::Line: {
-                sf::RenderStates rs; rs.transform = model;
-                window.draw(line, rs);
+            case Primitiva::Linha: {
+                sf::RenderStates estadosRenderizacao;
+                estadosRenderizacao.transform = transformacaoModelo;
+                janela.draw(linha, estadosRenderizacao);
                 break;
             }
-            case Primitive::Rectangle: {
-                rect.setPosition(position);
-                rect.setRotation(rotation);
-                rect.setScale(scale, scale);
-                window.draw(rect);
+            case Primitiva::Retangulo: {
+                retangulo.setPosition(posicao);
+                retangulo.setRotation(anguloRotacao);
+                retangulo.setScale(fatorEscala, fatorEscala);
+                janela.draw(retangulo);
                 break;
             }
         }
 
-        static sf::Font font;
-        static bool fontLoaded = false;
+        // --- TEXTO DE AJUDA ---
+        static sf::Font fonte;
+        static bool fonteCarregada = false;
 
-        if (!fontLoaded) {
-            fontLoaded = font.loadFromFile("C:/Windows/Fonts/arial.ttf");
+        if (!fonteCarregada) {
+            fonteCarregada = fonte.loadFromFile("C:/Windows/Fonts/arial.ttf");
         }
 
-        if (fontLoaded) {
-            sf::Text txt;
-            
-            txt.setFont(font);
-            txt.setCharacterSize(16);
-            txt.setFillColor(sf::Color::White);
-            txt.setPosition(10.f, 10.f);
-            txt.setString(
-                "Primitivas: [1] Triangulo  [2] Linha  [3] Retangulo\n"
-                "Transformacoes (Local->Mundo): Setas, Q/E (rot), Z/X (escala)\n"
-                "Sistema de referencia da camera: [V] alterna view\n"
-                "Reset [R]  |  Esc [Sair]"
+        if (fonteCarregada) {
+            sf::Text textoAjuda;
+
+            textoAjuda.setFont(fonte);
+            textoAjuda.setCharacterSize(16);
+            textoAjuda.setFillColor(sf::Color::White);
+            textoAjuda.setPosition(10.f, 10.f);
+            textoAjuda.setString(
+                L"Primitivas: [1] Triângulo  [2] Linha  [3] Retângulo\n"
+                L"Transformações (Local -> Mundo): Setas (translação), Q/E (rotação), Z/X (escala)\n"
+                L"Sistema de referência da câmera: [V] alterna a visão\n"
+                L"Reiniciar [R]  |  Sair [Esc]"
             );
 
-            window.draw(txt);
+            janela.draw(textoAjuda);
         }
 
-        window.display();
+        janela.display();
     }
 
     return 0;

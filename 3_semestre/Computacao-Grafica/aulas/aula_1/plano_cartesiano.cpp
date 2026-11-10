@@ -1,333 +1,379 @@
-#include<math.h>                                                        
-#include<stdio.h>                                                       
-#include<windows.h>                                                     
-#include <locale.h>                                                     
+// --- COMPUTAÇÃO GRÁFICA ---
+// --- ALGORITMOS DE RASTERIZAÇÃO: RETA E CÍRCULO ---
 
-void irParaXY(int x, int y);                                            
-int setX(int x);                                                        
-int setY(int y);                                                        
-void planoCartesiano(void);                                             
-void dda(float *x1, float *y1, float *x2, float *y2);                   
-void bresenham(float *x1, float *y1, float *x2, float *y2);             
-void circulo(int *raio);                                                
-int animacao();                                                         
+#include <math.h>
+#include <stdio.h>
+#include <windows.h>
+#include <locale.h>
+
+// --- PROTÓTIPOS ---
+void irParaCoordenadaXY(int x, int y);
+int converterXParaColunaTela(int x);
+int converterYParaLinhaTela(int y);
+void desenharPlanoCartesiano(void);
+void desenharRetaAnalisadorDiferencialDigital(float *xInicial, float *yInicial, float *xFinal, float *yFinal);
+void desenharRetaBresenham(float *xInicial, float *yInicial, float *xFinal, float *yFinal);
+void desenharCirculoBresenham(int *raio);
+void exibirAnimacao(void);
 
 int main() {
-    setlocale(LC_ALL, "Portuguese");                                  
+    setlocale(LC_ALL, "Portuguese");
 
-    int escolha = 1; 
+    int opcaoEscolhida = 1;
     int raio;
-    float xi, xf, yi, yf; 
+    float xInicial;
+    float xFinal;
+    float yInicial;
+    float yFinal;
 
-    while (escolha != 0) {
+    while (opcaoEscolhida != 0) {
         printf("\n\nEscolha o número referente ao desafio desejado:\n");
         printf("(0) - Sair\n");
-        printf("(1) - Imprime uma reta (Algoritmo DDA)\n");
+        printf("(1) - Imprime uma reta (Algoritmo DDA - Analisador Diferencial Digital)\n");
         printf("(2) - Imprime uma reta (Algoritmo de Bresenham)\n");
         printf("(3) - Imprime o traçado de um círculo (Algoritmo de Bresenham)\n");
         printf("Opção escolhida:\n");
-        scanf("%d", &escolha);
-        
-        switch (escolha) {
-            case 0: { 
+        scanf("%d", &opcaoEscolhida);
+
+        switch (opcaoEscolhida) {
+            case 0: {
                 printf("\n\tVocê escolheu (0) --> Sair\n");
                 break;
             }
 
+            // --- RETA: ANALISADOR DIFERENCIAL DIGITAL ---
             case 1: {
-                printf("\nVocê escolheu (1) --> Imprime uma reta (Algoritmo DDA)\n");
+                printf("\nVocê escolheu (1) --> Imprime uma reta (Algoritmo DDA - Analisador Diferencial Digital)\n");
 
-                printf("\nEscolha o valor do x inicial:");
-                scanf("%f", &xi);
-                printf("Escolha o valor do y inicial:");
-                scanf("%f", &yi);
-                printf("Escolha o valor do x final:");
-                scanf("%f", &xf);
-                printf("Escolha o valor do y final:");
-                scanf("%f", &yf);
+                printf("\nEscolha o valor do x inicial: ");
+                scanf("%f", &xInicial);
+                printf("Escolha o valor do y inicial: ");
+                scanf("%f", &yInicial);
+                printf("Escolha o valor do x final: ");
+                scanf("%f", &xFinal);
+                printf("Escolha o valor do y final: ");
+                scanf("%f", &yFinal);
 
-                system("cls");                                              
-                animacao();                                                 
-                system("cls");                                              
-                planoCartesiano();                                          
-                dda(&xi, &yi, &xf, &yf);                                    
-                irParaXY(0, 0);                                             
+                system("cls");
+                exibirAnimacao();
+                system("cls");
+                desenharPlanoCartesiano();
+                desenharRetaAnalisadorDiferencialDigital(&xInicial, &yInicial, &xFinal, &yFinal);
+                irParaCoordenadaXY(0, 0);
 
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
-                printf("\nDigita o valor aqui --> ");
-                scanf("%d", &escolha);
+                printf("\nDigite o valor aqui --> ");
+                scanf("%d", &opcaoEscolhida);
 
                 break;
             }
 
+            // --- RETA: BRESENHAM ---
             case 2: {
                 printf("\nVocê escolheu (2) --> Imprime uma reta (Algoritmo de Bresenham)\n");
-                
+
                 printf("\nEscolha o valor do x inicial: ");
-                scanf("%f", &xi);
+                scanf("%f", &xInicial);
                 printf("Escolha o valor do y inicial: ");
-                scanf("%f", &yi);
+                scanf("%f", &yInicial);
                 printf("Escolha o valor do x final: ");
-                scanf("%f", &xf);
+                scanf("%f", &xFinal);
                 printf("Escolha o valor do y final: ");
-                scanf("%f", &yf);
-                
+                scanf("%f", &yFinal);
+
                 system("cls");
-                animacao();
+                exibirAnimacao();
                 system("cls");
-                planoCartesiano();
-                bresenham(&xi, &yi, &xf, &yf); 
-                irParaXY(0, 0);
-                
-                printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = nao)");
+                desenharPlanoCartesiano();
+                desenharRetaBresenham(&xInicial, &yInicial, &xFinal, &yFinal);
+                irParaCoordenadaXY(0, 0);
+
+                printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
                 printf("\nDigite o valor aqui --> ");
-                scanf("%d", &escolha);
+                scanf("%d", &opcaoEscolhida);
 
                 break;
             }
 
+            // --- CÍRCULO: BRESENHAM ---
             case 3: {
-                printf("Voce digitou(3) Escolheu --> Imprime o traçado de um círculo (Algoritmo de Bresenham)\n");
-                printf("qual o raio?"); 
+                printf("\nVocê escolheu (3) --> Imprime o traçado de um círculo (Algoritmo de Bresenham)\n");
+
+                printf("\nEscolha o valor do raio: ");
                 scanf("%d", &raio);
-                
+
                 system("cls");
-                animacao();
+                exibirAnimacao();
                 system("cls");
-                planoCartesiano();
-                circulo(&raio); 
-                irParaXY(0, 0);
-                
+                desenharPlanoCartesiano();
+                desenharCirculoBresenham(&raio);
+                irParaCoordenadaXY(0, 0);
+
                 printf("\nDeseja desenhar outro plano cartesiano? (1 = sim, 0 = não)");
                 printf("\nDigite o valor aqui --> ");
-                scanf("%d", &escolha);
+                scanf("%d", &opcaoEscolhida);
+
                 break;
             }
 
             default: {
-                printf("\((nVocê escolheu um valor que não existe))\n((Digite notamente))\n\n");
+                printf("\n((Você escolheu um valor que não existe))\n((Digite novamente))\n\n");
             }
         }
     }
-    
+
     printf("\nPrograma encerrado\n");
 
     return 0;
 }
 
-void irParaXY(int x, int y) {
-    COORD coord; 
+// --- POSICIONA O CURSOR DO CONSOLE ---
+void irParaCoordenadaXY(int x, int y) {
+    COORD coordenada;
 
-    coord.X = (short) x; 
-    coord.Y = (short) y; 
+    coordenada.X = (short) x;
+    coordenada.Y = (short) y;
 
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); 
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordenada);
 }
 
-int setX(int x) {
-    return (x + 118); 
+// --- CONVERSÃO: SISTEMA CARTESIANO -> SISTEMA DA TELA ---
+int converterXParaColunaTela(int x) {
+    return (x + 118);
 }
 
-int setY(int y) {
-    return (34 - y); 
+int converterYParaLinhaTela(int y) {
+    return (34 - y);
 }
 
-void planoCartesiano(void) {
-    int vertical, horizontal;
+// --- PLANO CARTESIANO ---
+void desenharPlanoCartesiano(void) {
+    int linhaVertical;
+    int colunaHorizontal;
 
-    for (vertical = 14; vertical < 55; vertical++) {
-        irParaXY(118, vertical); 
+    for (linhaVertical = 14; linhaVertical < 55; linhaVertical++) {
+        irParaCoordenadaXY(118, linhaVertical);
         printf("|");
     }
 
-    for (horizontal = 18; horizontal < 219; horizontal++) {
-        irParaXY(horizontal, 34); 
-        printf("-"); 
+    for (colunaHorizontal = 18; colunaHorizontal < 219; colunaHorizontal++) {
+        irParaCoordenadaXY(colunaHorizontal, 34);
+        printf("-");
     }
 
-    irParaXY(118, 34);
-    printf("X"); 
+    irParaCoordenadaXY(118, 34);
+    printf("X");
 }
 
-void dda(float *x1, float *y1, float *x2, float *y2) {
-    if (fabs(*x2 - *x1) >= fabs(*y2 - *y1)) {
-        float m = (*y2 - *y1) / (*x2 - *x1); 
-        float y = *y1; 
+// --- RETA: ANALISADOR DIFERENCIAL DIGITAL ---
+void desenharRetaAnalisadorDiferencialDigital(float *xInicial, float *yInicial, float *xFinal, float *yFinal) {
+    if (fabs(*xFinal - *xInicial) >= fabs(*yFinal - *yInicial)) {
+        float coeficienteAngular = (*yFinal - *yInicial) / (*xFinal - *xInicial);
+        float y = *yInicial;
         int x;
 
-        if (*x1 > *x2) {
-            float b = *x1;
+        if (*xInicial > *xFinal) {
+            float valorAuxiliarTroca = *xInicial;
 
-            *x1 = *x2;
-            *x2 = b;
-            y = *y2;
+            *xInicial = *xFinal;
+            *xFinal = valorAuxiliarTroca;
+            y = *yFinal;
         }
 
-        for (x = *x1; x <= *x2; x++) {
-            irParaXY(setX(x), setY(round(y))); 
-            printf("*"); 
-            y += m; 
+        for (x = *xInicial; x <= *xFinal; x++) {
+            irParaCoordenadaXY(converterXParaColunaTela(x), converterYParaLinhaTela(round(y)));
+            printf("*");
+            y += coeficienteAngular;
         }
-    } 
-
-    else {
-        float m = (*x2 - *x1) / (*y2 - *y1); 
-        float x = *x1; 
+    } else {
+        float coeficienteAngularInverso = (*xFinal - *xInicial) / (*yFinal - *yInicial);
+        float x = *xInicial;
         int y;
 
-        if (*y1 > *y2) {
-            float b = *y1;
-            *y1 = *y2;
-            *y2 = b;
-            x = *x2; 
+        if (*yInicial > *yFinal) {
+            float valorAuxiliarTroca = *yInicial;
+
+            *yInicial = *yFinal;
+            *yFinal = valorAuxiliarTroca;
+            x = *xFinal;
         }
-        
-        for (y = *y1; y <= *y2; y++) {
-            irParaXY(setX(round(x)), setY(y)); 
-            printf("*"); 
-            x += m; 
+
+        for (y = *yInicial; y <= *yFinal; y++) {
+            irParaCoordenadaXY(converterXParaColunaTela(round(x)), converterYParaLinhaTela(y));
+            printf("*");
+            x += coeficienteAngularInverso;
         }
     }
 }
 
-void circulo(int *raio){
-    int x, y, p; 
-    x = 0; 
+// --- CÍRCULO: BRESENHAM ---
+void desenharCirculoBresenham(int *raio) {
+    int x;
+    int y;
+    int parametroDecisao;
+
+    x = 0;
     y = *raio;
-    p = 1 - *raio; 
+    parametroDecisao = 1 - *raio;
 
     while (x <= y) {
-        irParaXY(setX(+x), setY(+y)); printf("o"); 
-        irParaXY(setX(+x), setY(-y)); printf("o"); 
-        irParaXY(setX(-x), setY(+y)); printf("o"); 
-        irParaXY(setX(-x), setY(-y)); printf("o"); 
-        irParaXY(setX(+y), setY(+x)); printf("o"); 
-        irParaXY(setX(+y), setY(-x)); printf("o"); 
-        irParaXY(setX(-y), setY(+x)); printf("o"); 
-        irParaXY(setX(-y), setY(-x)); printf("o"); 
+        irParaCoordenadaXY(converterXParaColunaTela(+x), converterYParaLinhaTela(+y)); 
+        printf("o");
 
-        if (p <= 0) {
-            p = p + 2*x + 1; 
-        } 
-        
-        else {
-            p = p + 2*x + 1 - 2*y; 
-            y--; 
+        irParaCoordenadaXY(converterXParaColunaTela(+x), converterYParaLinhaTela(-y)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(-x), converterYParaLinhaTela(+y)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(-x), converterYParaLinhaTela(-y)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(+y), converterYParaLinhaTela(+x)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(+y), converterYParaLinhaTela(-x)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(-y), converterYParaLinhaTela(+x)); 
+        printf("o");
+
+        irParaCoordenadaXY(converterXParaColunaTela(-y), converterYParaLinhaTela(-x)); 
+        printf("o");
+
+
+        if (parametroDecisao <= 0) {
+            parametroDecisao = parametroDecisao + 2 * x + 1;
+        } else {
+            parametroDecisao = parametroDecisao + 2 * x + 1 - 2 * y;
+            y--;
         }
 
-        x++; 
+        x++;
     }
 }
 
-void bresenham(float *x1, float *y1, float *x2, float *y2) {
-    float d_x, d_y, p, incE, incNE, x, y;
+// --- RETA: BRESENHAM ---
+void desenharRetaBresenham(float *xInicial, float *yInicial, float *xFinal, float *yFinal) {
+    float diferencaX;
+    float diferencaY;
+    float parametroDecisao;
+    float incrementoLeste;
+    float incrementoNordeste;
+    float x;
+    float y;
+    float xLimite;
+    float yLimite;
+    int sentidoPasso;
 
-    d_x = fabs(*x2 - *x1); 
-    d_y = fabs(*y2 - *y1); 
-    p = 2 * d_y - d_x; 
-    
-    if (d_y <= d_x) {
-        incE = 2 * d_y; 
-        incNE = 2 * d_y - 2 * d_x; 
+    diferencaX = fabs(*xFinal - *xInicial);
+    diferencaY = fabs(*yFinal - *yInicial);
 
-        if (*x1 <= *x2) {
-            x = *x1;
-            y = *y1;
+    // --- RETA MAIS HORIZONTAL: PERCORRE O EIXO X ---
+    if (diferencaY <= diferencaX) {
+        parametroDecisao   = 2 * diferencaY - diferencaX;
+        incrementoLeste    = 2 * diferencaY;
+        incrementoNordeste = 2 * diferencaY - 2 * diferencaX;
+
+        if (*xInicial <= *xFinal) {
+            x = *xInicial;
+            y = *yInicial;
+            xLimite = *xFinal;
+            yLimite = *yFinal;
+        } else {
+            x = *xFinal;
+            y = *yFinal;
+            xLimite = *xInicial;
+            yLimite = *yInicial;
         }
-        
-        else {
-            x = *x2;
-            y = *y2;
-            *x2 = *x1;
-            *y2 = *y1;
-        }
 
-        while (x <= *x2) {
-            irParaXY(setX(x), setY(y));
+        sentidoPasso = (yLimite >= y) ? 1 : -1;
+
+        while (x <= xLimite) {
+            irParaCoordenadaXY(converterXParaColunaTela(round(x)), converterYParaLinhaTela(round(y)));
             printf("*");
 
-            if (p <= 0) {
-                p = p + incE; 
-            } 
-            
-            else {
-                p = p + incNE; 
-                y = y + ((*y2 >= *y1) ? 1 : -1); 
-            }
-            x++; 
-        }
-    } 
-    else {
-        incE = 2 * d_x; 
-        incNE = 2 * d_x - 2 * d_y; 
-
-        if (*y1 <= *y2) {
-            x = *x1;
-            y = *y1;
-        } 
-        
-        else {
-            x = *x2;
-            y = *y2;
-            *y2 = *y1;
-            *x2 = *x1;
-        }
-
-        while (y <= *y2) {
-            irParaXY(setX(round(x)), setY(round(y)));
-            printf("°"); 
-
-            if (p <= 0) {
-                p = p + incE; 
-            } 
-            
-            else {
-                p = p + incNE; 
-                x = x + ((*x2 >= *x1) ? 1 : -1); 
+            if (parametroDecisao <= 0) {
+                parametroDecisao = parametroDecisao + incrementoLeste;
+            } else {
+                parametroDecisao = parametroDecisao + incrementoNordeste;
+                y = y + sentidoPasso;
             }
 
-            y++; 
+            x++;
+        }
+    // --- RETA MAIS VERTICAL: PERCORRE O EIXO Y ---
+    } else {
+        parametroDecisao = 2 * diferencaX - diferencaY;
+        incrementoLeste = 2 * diferencaX;
+        incrementoNordeste = 2 * diferencaX - 2 * diferencaY;
+
+        if (*yInicial <= *yFinal) {
+            x = *xInicial;
+            y = *yInicial;
+            xLimite = *xFinal;
+            yLimite = *yFinal;
+        } else {
+            x = *xFinal;
+            y = *yFinal;
+            xLimite = *xInicial;
+            yLimite = *yInicial;
+        }
+
+        sentidoPasso = (xLimite >= x) ? 1 : -1;
+
+        while (y <= yLimite) {
+            irParaCoordenadaXY(converterXParaColunaTela(round(x)), converterYParaLinhaTela(round(y)));
+            printf("*");
+
+            if (parametroDecisao <= 0) {
+                parametroDecisao = parametroDecisao + incrementoLeste;
+            } else {
+                parametroDecisao = parametroDecisao + incrementoNordeste;
+                x = x + sentidoPasso;
+            }
+
+            y++;
         }
     }
 }
 
-int animacao() {
-    int i = 0;
-    
-    while (i++ < 18){
-        irParaXY(i, 0);
-        printf(" o"); 
+// --- ANIMAÇÃO DE ABERTURA ---
+void exibirAnimacao(void) {
+    int quadroAtual = 0;
+
+    while (quadroAtual++ < 18) {
+        irParaCoordenadaXY(quadroAtual, 0);
+        printf(" o");
         printf("\n");
-        irParaXY(i, 20 - i);
-        printf(" X"); 
+        irParaCoordenadaXY(quadroAtual, 20 - quadroAtual);
+        printf(" X");
         printf("\n");
-        
-        if (i % 2 == 0) {
-            irParaXY(i, 1);
-            printf(" |"); 
-            irParaXY(i, 2);
-            printf("/ \\o"); 
-        } 
-        
-        else {
-            irParaXY(i, 1);
-            printf("-|-"); 
-            irParaXY(i, 2);
-            printf(" | o"); 
+
+        if (quadroAtual % 2 == 0) {
+            irParaCoordenadaXY(quadroAtual, 1);
+            printf(" |");
+            irParaCoordenadaXY(quadroAtual, 2);
+            printf("/ \\o");
+        } else {
+            irParaCoordenadaXY(quadroAtual, 1);
+            printf("-|-");
+            irParaCoordenadaXY(quadroAtual, 2);
+            printf(" | o");
         }
-        
-        sleep(0, 0001); 
-        system("cls"); 
+
+        Sleep(100);
+        system("cls");
     }
 
-    irParaXY(18, 1);
-    printf("  --o"); 
-    irParaXY(18, 2);
-    printf("_/ \\"); 
-    sleep(0, 5); 
-    system("cls"); 
-    
-    irParaXY(18, 2);
-    printf(">->o"); 
-    sleep(1); 
+    irParaCoordenadaXY(18, 1);
+    printf("  --o");
+    irParaCoordenadaXY(18, 2);
+    printf("_/ \\");
+    Sleep(500);
+    system("cls");
+
+    irParaCoordenadaXY(18, 2);
+    printf(">->o");
+    Sleep(1000);
 }

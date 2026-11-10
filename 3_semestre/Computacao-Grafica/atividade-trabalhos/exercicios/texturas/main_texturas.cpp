@@ -20,7 +20,7 @@ void desenho() {
 }
 
 void ajuste(int w, int h) {
-    if(h == 0) {
+    if (h == 0) {
         h = 1;
     }
     

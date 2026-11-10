@@ -11,7 +11,9 @@ using namespace std;
 int main() {
     int numDePontos;
     double teta;
-    vector<double> pontoRotacao(N), vet(N), vetResultado(N);
+    vector<double> pontoRotacao(N);
+    vector<double> vet(N);
+    vector<double> vetResultado(N);
 
     cout << fixed << setprecision(2);
 

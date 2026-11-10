@@ -45,7 +45,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
 }
 
 void Inicializa(void) {   
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // fundo branco (não será visto, pois as faixas cobrem tudo)
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); 
 }
 
 int main(int argc, char** argv) {

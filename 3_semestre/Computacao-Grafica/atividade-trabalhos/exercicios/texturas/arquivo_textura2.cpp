@@ -77,7 +77,9 @@ void ajuste(int w, int h) {
 
 void carregarTextura(GLuint tex_id, string filepath) {
 	unsigned char* imgData;
-	int largura, altura, canais;
+	int largura;
+	int altura;
+	int canais;
 	
 	stbi_set_flip_vertically_on_load(true);
 	

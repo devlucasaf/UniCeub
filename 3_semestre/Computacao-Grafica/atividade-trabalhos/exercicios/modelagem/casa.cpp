@@ -1,96 +1,117 @@
+// --- COMPUTAÇÃO GRÁFICA ---
+// --- DESENHO DE UMA CASA COM LINHAS ---
+
 #include <iostream>
 #include <string>
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-static void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    (void)window;
-    glViewport(0, 0, width, height);
+// --- AJUSTA A ÁREA DE DESENHO AO REDIMENSIONAR A JANELA ---
+static void aoRedimensionarFramebuffer(GLFWwindow* janela, int largura, int altura) {
+    (void)janela;
+    glViewport(0, 0, largura, altura);
 }
 
-static GLuint compileShader(GLenum type, const char* src) {
-    GLuint shader = glCreateShader(type);
-    glShaderSource(shader, 1, &src, nullptr);
+// --- COMPILAÇÃO DE SHADER ---
+static GLuint compilarShader(GLenum tipoShader, const char* codigoFonte) {
+    GLuint shader = glCreateShader(tipoShader);
+    glShaderSource(shader, 1, &codigoFonte, nullptr);
     glCompileShader(shader);
 
-    GLint ok = 0;
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &ok);
+    GLint compilacaoBemSucedida = 0;
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &compilacaoBemSucedida);
 
-    if (!ok) {
-        GLint len = 0;
-        glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &len);
-        std::string log(len, '\0');
-        glGetShaderInfoLog(shader, len, nullptr, log.data());
-        std::cerr << log << "\n";
+    if (!compilacaoBemSucedida) {
+        GLint tamanhoRegistro = 0;
+        glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &tamanhoRegistro);
+        std::string registroErro(tamanhoRegistro, '\0');
+        glGetShaderInfoLog(shader, tamanhoRegistro, nullptr, registroErro.data());
+        std::cerr << "Erro ao compilar o shader: " << registroErro << "\n";
         glDeleteShader(shader);
 
         return 0;
     }
+
     return shader;
 }
 
-static GLuint createProgram(const char* vsSrc, const char* fsSrc) {
-    GLuint vs = compileShader(GL_VERTEX_SHADER, vsSrc);
-    
-    if (!vs) {
+// --- CRIAÇÃO E LIGAÇÃO DO PROGRAMA DE SHADERS ---
+static GLuint criarProgramaShaders(const char* codigoFonteVertice, const char* codigoFonteFragmento) {
+    GLuint shaderVertice = compilarShader(GL_VERTEX_SHADER, codigoFonteVertice);
+
+    if (!shaderVertice) {
         return 0;
     }
 
-    GLuint fs = compileShader(GL_FRAGMENT_SHADER, fsSrc);
-    if (!fs) {
-        glDeleteShader(vs);
+    GLuint shaderFragmento = compilarShader(GL_FRAGMENT_SHADER, codigoFonteFragmento);
+
+    if (!shaderFragmento) {
+        glDeleteShader(shaderVertice);
         return 0;
     }
 
-    GLuint program = glCreateProgram();
-    glAttachShader(program, vs);
-    glAttachShader(program, fs);
-    glLinkProgram(program);
+    GLuint programaShaders = glCreateProgram();
+    glAttachShader(programaShaders, shaderVertice);
+    glAttachShader(programaShaders, shaderFragmento);
+    glLinkProgram(programaShaders);
 
-    glDeleteShader(vs);
-    glDeleteShader(fs);
+    glDeleteShader(shaderVertice);
+    glDeleteShader(shaderFragmento);
 
-    GLint ok = 0;
-    glGetProgramiv(program, GL_LINK_STATUS, &ok);
+    GLint ligacaoBemSucedida = 0;
+    glGetProgramiv(programaShaders, GL_LINK_STATUS, &ligacaoBemSucedida);
 
-    if (!ok) {
-        GLint len = 0;
-        glGetProgramiv(program, GL_INFO_LOG_LENGTH, &len);
-        std::string log(len, '\0');
-        glGetProgramInfoLog(program, len, nullptr, log.data());
-        std::cerr << log << "\n";
-        glDeleteProgram(program);
+    if (!ligacaoBemSucedida) {
+        GLint tamanhoRegistro = 0;
+        glGetProgramiv(programaShaders, GL_INFO_LOG_LENGTH, &tamanhoRegistro);
+        std::string registroErro(tamanhoRegistro, '\0');
+        glGetProgramInfoLog(programaShaders, tamanhoRegistro, nullptr, registroErro.data());
+        std::cerr << "Erro ao ligar o programa de shaders: " << registroErro << "\n";
+        glDeleteProgram(programaShaders);
 
         return 0;
     }
 
-    return program;
+    return programaShaders;
 }
 
-static void createShape(GLuint program, const float* vertices, int vertexCount) {
-    GLuint vao = 0, vbo = 0;
-    glGenVertexArrays(1, &vao);
-    glGenBuffers(1, &vbo);
+// --- DESENHA UMA FORMA COMO SEQUÊNCIA DE LINHAS CONECTADAS ---
+static void desenharForma(GLuint programaShaders, const float* vertices, int quantidadeVertices) {
+    GLuint objetoArrayVertices = 0;
+    GLuint objetoBufferVertices = 0;
 
-    glBindVertexArray(vao);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, (size_t)vertexCount * 2 * sizeof(float), vertices, GL_STATIC_DRAW);
+    glGenVertexArrays(1, &objetoArrayVertices);
+    glGenBuffers(1, &objetoBufferVertices);
 
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glBindVertexArray(objetoArrayVertices);
+    glBindBuffer(GL_ARRAY_BUFFER, objetoBufferVertices);
+    glBufferData(GL_ARRAY_BUFFER, (size_t)quantidadeVertices * 2 * sizeof(float), vertices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(
+        0,                  
+        2,                  
+        GL_FLOAT,           
+        GL_FALSE,           
+        2 * sizeof(float),  
+        (void*)0            
+    );
+
     glEnableVertexAttribArray(0);
 
-    glUseProgram(program);
-    glBindVertexArray(vao);
-    glDrawArrays(GL_LINE_STRIP, 0, vertexCount);
+    glUseProgram(programaShaders);
+    glBindVertexArray(objetoArrayVertices);
+    glDrawArrays(GL_LINE_STRIP, 0, quantidadeVertices);
 
     glBindVertexArray(0);
-    glDeleteBuffers(1, &vbo);
-    glDeleteVertexArrays(1, &vao);
+    glDeleteBuffers(1, &objetoBufferVertices);
+    glDeleteVertexArrays(1, &objetoArrayVertices);
 }
 
 int main() {
+    // --- INICIALIZAÇÃO DO GLFW ---
     if (!glfwInit()) {
+        std::cerr << "Falha ao inicializar o GLFW.\n";
         return 1;
     }
 
@@ -98,51 +119,62 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(400, 400, "Formas em OpenGL", nullptr, nullptr);
-    if (!window) {
+    GLFWwindow* janela = glfwCreateWindow(400, 400, "Formas em OpenGL", nullptr, nullptr);
+
+    if (!janela) {
+        std::cerr << "Falha ao criar a janela.\n";
         glfwTerminate();
         return 1;
     }
 
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwMakeContextCurrent(janela);
+    glfwSetFramebufferSizeCallback(janela, aoRedimensionarFramebuffer);
 
+    // --- CARREGAMENTO DAS FUNÇÕES OPENGL (GLAD) ---
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        glfwDestroyWindow(window);
+        std::cerr << "Falha ao inicializar o GLAD.\n";
+        glfwDestroyWindow(janela);
         glfwTerminate();
         return 1;
     }
 
-    const char* vsSource = R"(
+    // --- SHADER DE VÉRTICE ---
+    const char* codigoFonteShaderVertice = R"(
         #version 330 core
-        layout(location = 0) in vec2 coordinates;
+        layout(location = 0) in vec2 aCoordenadas;
+
         void main() {
-            gl_Position = vec4(coordinates, 0.0, 1.0);
+            gl_Position = vec4(aCoordenadas, 0.0, 1.0);
         }
     )";
 
-    const char* fsSource = R"(
+    // --- SHADER DE FRAGMENTO ---
+    const char* codigoFonteShaderFragmento = R"(
         #version 330 core
-        out vec4 FragColor;
+        out vec4 corFragmento;
+
         void main() {
-            FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+            corFragmento = vec4(0.0, 0.0, 0.0, 1.0);
         }
     )";
 
-    GLuint program = createProgram(vsSource, fsSource);
-    if (!program) {
-        glfwDestroyWindow(window);
+    GLuint programaShaders = criarProgramaShaders(codigoFonteShaderVertice, codigoFonteShaderFragmento);
+
+    if (!programaShaders) {
+        glfwDestroyWindow(janela);
         glfwTerminate();
         return 1;
     }
 
-    float triangleVertices[] = {
+    // --- TELHADO ---
+    float verticesTelhado[] = {
         0.6f, -0.47f,
         0.0f,  0.0f,
         -0.6f, -0.47f
     };
 
-    float squareVertices[] = {
+    // --- PAREDES COM PORTA ---
+    float verticesParedesComPorta[] = {
         0.5f, -0.5f,
         0.5f, -1.0f,
         0.1f, -1.0f,
@@ -153,7 +185,8 @@ int main() {
         -0.5f, -0.5f
     };
 
-    float verticesJanela[] = {
+    // --- JANELA DA DIREITA ---
+    float verticesJanelaDireita[] = {
         0.2f, -0.6f,
         0.4f, -0.6f,
         0.4f, -0.8f,
@@ -161,7 +194,8 @@ int main() {
         0.2f, -0.6f
     };
 
-    float verticesJanela2[] = {
+    // --- JANELA DA ESQUERDA ---
+    float verticesJanelaEsquerda[] = {
         -0.2f, -0.6f,
         -0.4f, -0.6f,
         -0.4f, -0.8f,
@@ -169,22 +203,24 @@ int main() {
         -0.2f, -0.6f
     };
 
-    while (!glfwWindowShouldClose(window)) {
+    // --- LAÇO DE RENDERIZAÇÃO ---
+    while (!glfwWindowShouldClose(janela)) {
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        createShape(program, triangleVertices, 3);
-        createShape(program, squareVertices, 8);
-        createShape(program, verticesJanela, 5);
-        createShape(program, verticesJanela2, 5);
+        desenharForma(programaShaders, verticesTelhado, 3);
+        desenharForma(programaShaders, verticesParedesComPorta, 8);
+        desenharForma(programaShaders, verticesJanelaDireita, 5);
+        desenharForma(programaShaders, verticesJanelaEsquerda, 5);
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(janela);
         glfwPollEvents();
     }
 
-    glDeleteProgram(program);
-    glfwDestroyWindow(window);
+    // --- LIBERAÇÃO DE RECURSOS ---
+    glDeleteProgram(programaShaders);
+    glfwDestroyWindow(janela);
     glfwTerminate();
-    
+
     return 0;
 }

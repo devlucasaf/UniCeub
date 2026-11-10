@@ -4,7 +4,8 @@
 using namespace std;
 
 struct Ponto {
-    double x, y;
+    double x;
+    double y;
 };
 
 double distancia(Ponto a, Ponto b) {
@@ -43,19 +44,17 @@ void mostrarInformacoes(Ponto a, Ponto b, Ponto c) {
 
     if (fabs(ab - bc) < 1e-6 && fabs(bc - ca) < 1e-6) {
         cout << "Tipo: Equilátero\n";
-    }
-
-    else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6) {
+    } else if (fabs(ab - bc) < 1e-6 || fabs(bc - ca) < 1e-6 || fabs(ab - ca) < 1e-6) {
         cout << "Tipo: Isósceles\n";
-    }
-
-    else {
+    } else {
         cout << "Tipo: Escaleno\n";
     }
 }
 
 int main() {
-    Ponto a, b, c;
+    Ponto a;
+    Ponto b;
+    Ponto c;
 
     cout << "Digite as coordenadas dos três pontos do triângulo:\n";
     cout << "Ponto A (x y): ";
