@@ -1,4 +1,4 @@
-package UA2.service;
+package ua2.service;
 
 import jakarta.ws.rs.client.*;
 import jakarta.ws.rs.core.MediaType;
@@ -13,14 +13,9 @@ import java.io.StringReader;
 public class FolhaPagamentoService {
 
     public RespostaFolha processarFolha(File xmlEntrada, String wsUrl) throws Exception {
-        JAXBContext context = JAXBContext.newInstance(
-                RequisicaoFolha.class,
-                RespostaFolha.class
-        );
+        JAXBContext context = JAXBContext.newInstance(RequisicaoFolha.class, RespostaFolha.class);
 
-        RequisicaoFolha requisicao =
-                (RequisicaoFolha) context.createUnmarshaller()
-                        .unmarshal(xmlEntrada);
+        RequisicaoFolha requisicao = (RequisicaoFolha) context.createUnmarshaller().unmarshal(xmlEntrada);
 
         Client client = ClientBuilder.newClient();
 
@@ -28,9 +23,7 @@ public class FolhaPagamentoService {
                 .request(MediaType.APPLICATION_XML)
                 .post(Entity.xml(requisicao), String.class);
 
-        RespostaFolha resposta =
-                (RespostaFolha) context.createUnmarshaller()
-                        .unmarshal(new StringReader(xmlResposta));
+        RespostaFolha resposta = (RespostaFolha) context.createUnmarshaller().unmarshal(new StringReader(xmlResposta));
 
         return resposta;
     }
