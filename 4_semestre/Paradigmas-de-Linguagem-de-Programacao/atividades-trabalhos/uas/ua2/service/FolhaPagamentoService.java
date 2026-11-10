@@ -4,8 +4,8 @@ import jakarta.ws.rs.client.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.xml.bind.JAXBContext;
 
-import UA2.model.RequisicaoFolha;
-import UA2.model.RespostaFolha;
+import ua2.model.RequisicaoFolha;
+import ua2.model.RespostaFolha;
 
 import java.io.File;
 import java.io.StringReader;
