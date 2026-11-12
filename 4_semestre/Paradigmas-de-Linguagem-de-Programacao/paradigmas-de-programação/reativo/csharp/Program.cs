@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace ParadigmaReativoExemplo
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var jogadores = new List<Jogador>
             {

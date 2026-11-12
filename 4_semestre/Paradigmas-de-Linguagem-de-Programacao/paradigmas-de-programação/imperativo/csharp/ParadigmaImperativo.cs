@@ -2,9 +2,9 @@ using System;
 
 namespace ParadigmaImperativo
 {
-    class ParadigmaImperativo
+    public class ParadigmaImperativo
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int opcao = 0;
 
