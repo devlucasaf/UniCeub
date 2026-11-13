@@ -1,0 +1,16 @@
+Algoritmo 1: Clarke & Wright Savings [Clarke and Wright 1964]
+
+Entrada: Conjunto de vértices V e conjunto de arestas E, capacidade
+         máxima Q dos veículos
+Saída:   Conjunto de rotas
+
+1  routes <- create_initial_routes(V);
+2  savings_list = compute_savings_list(V);
+3  foreach i, j ∈ savings_list do
+4  |   if feasible_merge(i, j, Q) then
+5  |   |   routes.add(merge_routes(i, j));
+6  |   end
+7  end
+8  return routes
+
+Economia (savings):  S_ij = C(i,0) + C(0,j) - C(i,j)
