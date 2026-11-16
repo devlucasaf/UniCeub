@@ -8,7 +8,7 @@ import java.util.Iterator;     // Importa a classe Iterator
 public class AulaHashSetDois {
 
     // Método que demonstra operações básicas com HashSet
-    public static void AulaHashSet() {
+    public static void aulaHashSet() {
         // Cria um HashSet de Strings para armazenar carros
         HashSet<String> cars = new HashSet<String>();
 
@@ -30,7 +30,7 @@ public class AulaHashSetDois {
     }
 
     // Método principal que demonstra uso do contains() para verificar elementos
-    public static void Principal() {
+    public static void principal() {
         // Cria um HashSet de Integers
         HashSet<Integer> numbers = new HashSet<Integer>();
 
@@ -40,7 +40,7 @@ public class AulaHashSetDois {
         numbers.add(8);
 
         // Verifica quais números entre 1 e 10 estão no conjunto
-        for(int i = 1; i <=10; i++) {
+        for (int i = 1; i <=10; i++) {
             if (numbers.contains(i)) {
                 System.out.println(i + " was found in the set.");
             } else {
@@ -50,7 +50,7 @@ public class AulaHashSetDois {
     }
 
     // Método que demonstra o uso de HashSet com outros tipos (Integer)
-    public static void OtherTypes() {
+    public static void otherTypes() {
         // Cria um HashSet chamado "numbers" para armazenar inteiros
         HashSet<Integer> numbers = new HashSet<Integer>();
 
@@ -60,8 +60,8 @@ public class AulaHashSetDois {
         numbers.add(8);
 
         // Mostra quais números entre 1 e 10 estão no conjunto
-        for(int i = 1; i <= 10; i++) {
-            if(numbers.contains(i)) {
+        for (int i = 1; i <= 10; i++) {
+            if (numbers.contains(i)) {
                 System.out.println(i + " was found in the set.");
             } else {
                 System.out.println(i + " was not found in the set.");
@@ -70,7 +70,7 @@ public class AulaHashSetDois {
     }
 
     // Método que implementa exercícios práticos com HashSet
-    public static void Exercicio() {
+    public static void exercicio() {
         // Crie um HashSet vazio chamado "mySet" para inteiros
         HashSet<Integer> mySet = new HashSet<>();
 
@@ -96,6 +96,7 @@ public class AulaHashSetDois {
 
         // Crie outro HashSet chamado "otherSet" e adicione os números 4, 5, 6 e 7
         HashSet<Integer> otherSet = new HashSet<>();
+
         otherSet.add(4);
         otherSet.add(5);
         otherSet.add(6);
@@ -136,9 +137,9 @@ public class AulaHashSetDois {
     // Método main - ponto de entrada do programa
     public static void main(String[] args) {
         // Executa todos os métodos de demonstração
-        AulaHashSet();      // Operações básicas com HashSet
-        Principal();        // Verificação de elementos com contains()
-        OtherTypes();       // Uso com tipos Integer
-        Exercicio();        // Exercícios práticos
+        aulaHashSet();      // Operações básicas com HashSet
+        principal();        // Verificação de elementos com contains()
+        otherTypes();       // Uso com tipos Integer
+        exercicio();        // Exercícios práticos
     }
 }

@@ -7,7 +7,7 @@ package aulas.aulamergesort;
 import java.util.Arrays;
 
 public class AulaMergeSort {
-    // Método Principal do MergeSort
+    // Método principal do MergeSort
 
     public static void mergeSort(int[] array) {
 

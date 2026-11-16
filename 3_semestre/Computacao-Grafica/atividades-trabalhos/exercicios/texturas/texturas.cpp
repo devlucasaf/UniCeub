@@ -5,8 +5,8 @@
 
 float lado = 20;
 double movx = 0;
-double movy=0;
-double movz=200;
+double movy = 0;
+double movz = 200;
 double velocidadeCamera = 5.0f;
 
 GLuint texID[3];

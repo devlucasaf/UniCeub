@@ -8,7 +8,7 @@ public class Atividade {
 
         //cria a lista
         ArrayList<Integer> lista = new ArrayList<Integer>();
-        String nrElementos = JOptionPane.showInputDialog("Quantos nrs a lista vai ter?");
+        String nrElementos = JOptionPane.showInputDialog("Quantos números a lista vai ter?");
         int nElementos = Integer.valueOf(nrElementos);
 
         //Repetição respónsavel por capturar os valores digitados pelo usuario e adicioná los na lista

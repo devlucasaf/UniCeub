@@ -1,8 +1,8 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 public class InsertSort {
     // função que organiza o array usando insertion 
-    void organizar(int lista[]) {
+    public void organizar(int lista[]) {
         int tamanho = lista.length;
         for (int i = 1; i < tamanho; ++i) {
             int chave = lista[i];

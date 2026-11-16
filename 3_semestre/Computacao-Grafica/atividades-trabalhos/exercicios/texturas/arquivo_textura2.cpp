@@ -11,7 +11,7 @@ float lado = 20;
 
 double movx = 0;
 double movy = 0;
-double movz =200;
+double movz = 200;
 double velocidadeCamera = 5.0f;
 
 void quadrado(float SIZE, GLuint texid) {
@@ -97,9 +97,7 @@ void carregarTextura(GLuint tex_id, string filepath) {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 		
 		stbi_image_free(imgData);
-	}
-	
-    else {
+	} else {
 		cout<<"ERRO!No foi possvel carregar a imagem "<<filepath.c_str()<<endl;
 	}
 }
@@ -160,9 +158,7 @@ void teclado(unsigned char key, int x, int  y) {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
-	gluLookAt(0,movy,movz,
-			movx,0,0,
-			0,1,0);
+	gluLookAt(0,movy,movz, movx,0,0, 0,1,0);
 		
 }
 

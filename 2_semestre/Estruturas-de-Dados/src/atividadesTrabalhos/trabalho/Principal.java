@@ -1,4 +1,4 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 import javax.swing.JOptionPane;
 import java.util.Arrays;
@@ -92,13 +92,13 @@ public class Principal {
             }
         }
 
-        long tempoI = System.currentTimeMillis();   //Formula pra calcular o tempo de execução (ms)
-        int[] listaOrd = selectionSort(lista.clone()); //ordenando a lista original com selection sort
-        long tempoF = System.currentTimeMillis();
+        long tempoExecucao = System.currentTimeMillis();   //Formula pra calcular o tempo de execução (ms)
+        int[] listaOrdenada = selectionSort(lista.clone()); //ordenando a lista original com selection sort
+        long tempoFinal = System.currentTimeMillis();
 
         StringBuilder ordenada = new StringBuilder();
-        for (int i = 0; i < listaOrd.length; i++) {
-            ordenada.append(listaOrd[i]).append(" ");
+        for (int i = 0; i < listaOrdenada.length; i++) {
+            ordenada.append(listaOrdenada[i]).append(" ");
 
             if ((i + 1) % 20 == 0) {         //organizar a tabela de números
                 ordenada.append("\n");
@@ -107,7 +107,7 @@ public class Principal {
 
         JOptionPane.showMessageDialog(null, "Lista original (médio caso):\n" + original +  //saída
                 "\n\nLista ordenada (com selection sort):\n" + ordenada +
-                "\n\nTempo de execução: " + (tempoF - tempoI) + " ms");
+                "\n\nTempo de execução: " + (tempoFinal - tempoExecucao) + " ms");
     }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -127,13 +127,13 @@ public class Principal {
             }
         }
 
-        long tempoI = System.currentTimeMillis();     //Formula pra calcular o tempo de execução (ms)
-        int[] listaOrd = selectionSort(listaCopia);   //Ordenando a lista crescente com selection sort (não vai fazer diferença)
-        long tempoF = System.currentTimeMillis();
+        long tempoExecucao = System.currentTimeMillis();     //Formula pra calcular o tempo de execução (ms)
+        int[] listaOrdenada = selectionSort(listaCopia);   //Ordenando a lista crescente com selection sort (não vai fazer diferença)
+        long tempoFinal = System.currentTimeMillis();
 
         StringBuilder listaOrd_2 = new StringBuilder();
-        for (int i = 0; i < listaOrd.length; i++) {
-            listaOrd_2.append(listaOrd[i]).append(" ");
+        for (int i = 0; i < listaOrdenada.length; i++) {
+            listaOrd_2.append(listaOrdenada[i]).append(" ");
 
             if ((i + 1) % 20 == 0) {                    //organizar a tabela de números
                 listaOrd_2.append("\n");
@@ -142,7 +142,7 @@ public class Principal {
 
         JOptionPane.showMessageDialog(null, "Lista crescente(melhor caso):\n" + listaCrsc +  //saída
                 "\n\nLista ordenada (com selection sort):\n" + listaOrd_2 +
-                "\n\nTempo de execução: " + (tempoF - tempoI) + " ms");
+                "\n\nTempo de execução: " + (tempoFinal - tempoExecucao) + " ms");
     }
 
 ////////////////////////////////////////////////////////////////////////////

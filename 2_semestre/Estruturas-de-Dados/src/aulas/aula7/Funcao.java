@@ -10,6 +10,7 @@ public class Funcao {
         int resultado =  soma(a,b);
         System.out.println(resultado);
     }
+
     public static int soma(int a, int b) {
         int resultado = a + b;
         return resultado;

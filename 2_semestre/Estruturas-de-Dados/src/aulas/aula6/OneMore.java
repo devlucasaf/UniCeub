@@ -6,10 +6,10 @@ import javax.swing.JOptionPane;
 
 public class OneMore {
     public static void main(String[] args) {
-        String nrElementos = JOptionPane.showInputDialog("Quantos nrs a lista vai ter?");
+        String nrElementos = JOptionPane.showInputDialog("Quantos números a lista vai ter?");
         int nElementos = Integer.valueOf(nrElementos);
         ArrayList lista = new ArrayList();
-        for(int i = 0; i< nElementos; i++) {
+        for (int i = 0; i< nElementos; i++) {
             String valor =
                     JOptionPane.showInputDialog("Informe o valor " + i);
             lista.add(valor);

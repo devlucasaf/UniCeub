@@ -1,4 +1,4 @@
-package atividadesTrabalhos.exercicios;
+package atividadestrabalhos.exercicios;
 
 public class Principal {
 	

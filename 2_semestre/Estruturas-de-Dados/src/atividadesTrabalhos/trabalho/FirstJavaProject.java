@@ -1,33 +1,33 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class FirstJavaProject {
     public static void main(String[] args) {
-        ArrayList<String> cars = new ArrayList<String> ();
+        ArrayList<String> carro = new ArrayList<String> ();
 
-        cars.add("Chevrolet");
-        cars.add("Creta");
-        cars.add("Hilux");
+        carro.add("Chevrolet");
+        carro.add("Creta");
+        carro.add("Hilux");
 
-        ArrayList<Integer> num = new ArrayList<Integer> ();
+        ArrayList<Integer> numero = new ArrayList<Integer> ();
 
-        num.add(1);
-        num.add(2);
-        num.add(8);
-        num.add(2);
-        num.add(5);
-        num.add(6);
-        num.add(4);
+        numero.add(1);
+        numero.add(2);
+        numero.add(8);
+        numero.add(2);
+        numero.add(5);
+        numero.add(6);
+        numero.add(4);
 
-        String element = cars.get(1);
-        Integer numelem = num.get(0);
+        String element = carro.get(1);
+        Integer numelem = numero.get(0);
 
-        Collections.sort(num);
+        Collections.sort(numero);
         
         System.out.println(element);
-        System.out.println(num);
+        System.out.println(numero);
         System.out.print(numelem);
     }
 }

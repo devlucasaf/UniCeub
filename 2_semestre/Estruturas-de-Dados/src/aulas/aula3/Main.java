@@ -3,7 +3,7 @@ package aulas.aula3;
 public class Main {
 
     public static void main(String[] args) {
-        int valores[] = {2,3,5,8,1,4};
+        int valores[] = {2, 3, 5, 8, 1, 4};
         int todos = 0;
         int impares = 0;
         int pares = 0;

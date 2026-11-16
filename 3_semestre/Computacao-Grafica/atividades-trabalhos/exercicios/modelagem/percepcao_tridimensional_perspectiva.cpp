@@ -89,7 +89,7 @@ int main() {
 
     glfwMakeContextCurrent(janela);
 
-    // --- CARREGAMENTO DAS FUNÇÕES OPENGL (GLAD) ---
+    // --- CARREGAMENTO DAS FUNÇÕES OPENGL ---
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cerr << "Erro ao inicializar o GLAD\n";
         glfwDestroyWindow(janela);

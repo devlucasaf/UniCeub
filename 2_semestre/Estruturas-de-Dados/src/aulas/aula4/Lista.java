@@ -6,14 +6,13 @@ import java.util.ArrayList;
 public class Lista {
     public static void main(String[] args) {
 
-        String nrElementos = JOptionPane.showInputDialog("Quantoss numeros a lista vai ter? ");
+        String qntdNumeroElementosLista = JOptionPane.showInputDialog("Quantos numeros a lista vai ter? ");
 
-        int nElementos = Integer.valueOf(nrElementos);
+        int numeroElementos = Integer.valueOf(qntdNumeroElementosLista);
 
         ArrayList<Integer> lista = new ArrayList<Integer>();
 
-        for (int i = 0; i < nElementos; i++){
-
+        for (int i = 0; i < numeroElementos; i++) {
             String valor = JOptionPane.showInputDialog("Informe o valor: " + i);
 
             Integer aaa = Integer.valueOf(valor);

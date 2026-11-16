@@ -1,4 +1,4 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 import java.util.Arrays;
 import javax.swing.JOptionPane;
@@ -25,9 +25,9 @@ public class Main {
             );
 
             if (opcao.equals("1")) {
-                show_original_array();
+                showOriginalArray();
             } else if (opcao.equals("2")) {
-                show_sorted_array();
+                showSortedArray();
             } else if (opcao.equals("3")) {
                 System.out.println("Sair");
                 break;
@@ -37,12 +37,11 @@ public class Main {
         }
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static void main(String[] args) {
         apresentaOpcoes();
     }
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public static void show_original_array() {
+
+    public static void showOriginalArray() {
         StringBuilder arrayOriginal = new StringBuilder("Array Original:\n");
         for (int i = 0; i < vetor.length; i++) {
             arrayOriginal.append(vetor[i]).append(" ");
@@ -55,8 +54,7 @@ public class Main {
         JOptionPane.showMessageDialog(null, arrayOriginal);
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public static void show_sorted_array() {
+    public static void showSortedArray() {
         // Heap Sort
         long start = System.nanoTime();
         int[] sortedArray = Arrays.copyOf(vetor, vetor.length);
@@ -90,12 +88,10 @@ public class Main {
         JOptionPane.showMessageDialog(null, arrayOrdenado+ "\n" + "Tempo para a execução: " + duration + " NanoSec");
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////
-
     private static void aplicarHeap(int[] vetor, int n, int i){
         int raiz = i;
-        int esquerda = 2*i + 1;
-        int direita = 2*i + 2;
+        int esquerda = 2 * i + 1;
+        int direita = 2 * i + 2;
 
         if (esquerda < n && vetor[esquerda] > vetor[raiz]) {
             raiz = esquerda;
@@ -104,6 +100,7 @@ public class Main {
         if (direita < n && vetor[direita] > vetor[raiz]) {
             raiz = direita;
         }
+
         // troca
         if (raiz != i) {
             int aux = vetor[i];
@@ -113,6 +110,4 @@ public class Main {
             aplicarHeap(vetor, n, raiz);
         }
     }
-
 }
-

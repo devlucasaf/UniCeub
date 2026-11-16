@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         HashMap<String, String> capitais = new HashMap<>();
+
         capitais.put("Inglaterra", "Londres");
         capitais.put("Brasil", "Brasília");
         capitais.put("Argentina", "Bueno Aires");
-
         capitais.put("Brasil", "Salvador");
         capitais.remove("Brasil");
 

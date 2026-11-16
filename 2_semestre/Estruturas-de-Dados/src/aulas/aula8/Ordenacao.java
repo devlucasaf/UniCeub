@@ -13,6 +13,7 @@ public class Ordenacao {
         long tempoFinal = System.currentTimeMillis();
         System.out.println("Executado em = " + (tempoFinal - tempoInicial) + " ms");
     }
+
     public static void insertionSort(int[] vetor) {
         int j;
         int key;

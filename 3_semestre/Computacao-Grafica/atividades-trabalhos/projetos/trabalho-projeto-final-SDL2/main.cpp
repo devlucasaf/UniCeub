@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
     bool jogoEmExecucao = true;
     bool fimDeJogo = false;
 
-    Uint64 contadorAnterior   = SDL_GetPerformanceCounter();
+    Uint64 contadorAnterior = SDL_GetPerformanceCounter();
     Uint64 frequenciaContador = SDL_GetPerformanceFrequency();
 
     // --- LAÇO PRINCIPAL ---

@@ -1,22 +1,23 @@
-package atividadesTrabalhos.prova;
+package atividadestrabalhos.prova;
 
 import java.util.ArrayList;
 
 public class ArrayProvaMolina {
     public static void main(String[] args) {
 
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+        ArrayList<String> carro = new ArrayList<String>();
+
+        carro.add("Volvo");
+        carro.add("BMW");
+        carro.add("Ford");
+        carro.add("Mazda");
         
-        System.out.println(cars);
+        System.out.println(carro);
         
-        //cars.get(0); (Access item)
-        //cars.set(0, "Opel"); (change item)
-        //cars.remove(0); (remove an item)
-        //cars.clear(); (remove all)
-        //cars.size(); (array size)
+        //carro.get(0); (Access item)
+        //carro.set(0, "Opel"); (change item)
+        //carro.remove(0); (remove an item)
+        //carro.clear(); (remove all)
+        //carro.size(); (array size)
     }
 }

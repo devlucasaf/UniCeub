@@ -1,4 +1,4 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 import javax.swing.JOptionPane;
 import java.util.Arrays;

@@ -16,9 +16,11 @@ public class MyMap {
 		if (Mymap.size() != i) {
 			System.out.println("Deu bom oh");
 		}
+
 		if (Mymap.size() == i) {
 			System.out.println("Tem nada aq nn doidão");
-			}
+		}
+
 		for (String p: Mymap.values()) {
 			System.out.println(p);
 		}

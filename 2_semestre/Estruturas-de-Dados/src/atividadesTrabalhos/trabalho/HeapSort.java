@@ -1,4 +1,4 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 public class HeapSort {
     public static void main(String args[]) {
@@ -8,11 +8,12 @@ public class HeapSort {
                 712, 135, 505, 884, 445, 688, 77, 912, 721, 390, 538, 893, 470, 679, 1, 869, 302, 946,
                 561, 144, 790, 422, 769, 57, 899, 308, 687, 469, 237, 630, 961, 36, 578, 799, 180, 628,
                 886, 298, 835, 62, 974, 214, 518, 746, 132, 899, 243, 511, 798, 235, 681, 61, 918, 375,
-                692, 993, 183, 553, 846, 24, 954, 286, 647, 129};
-        Heap h = new Heap(arr);
+                692, 993, 183, 553, 846, 24, 954, 286, 647, 129
+        };
+        Heap heap = new Heap(arr);
 
-        while(h.getSize()>0) {
-            System.out.print(h.extractRoot()+", ");
+        while (heap.getSize() > 0) {
+            System.out.print(heap.extractRoot()+", ");
         }
     }
 }

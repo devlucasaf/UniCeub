@@ -1,4 +1,4 @@
-package atividadesTrabalhos.trabalho;
+package atividadestrabalhos.trabalho;
 
 public class Heap {
     int arr[];
@@ -11,42 +11,42 @@ public class Heap {
         buildHeap();
     }
 
-    void buildHeap() {
-        for(int i=this.size/2-1; i>=0; i--) {
+    public void buildHeap() {
+        for (int i=this.size/2-1; i>=0; i--) {
             heapify(i);
         }
     }
 
-    void heapify(int root_index) {
-        int max_index = root_index;
-        int child = root_index * 2 + 1;
+    public void heapify(int rootIndex) {
+        int maxIndex = rootIndex;
+        int child = rootIndex * 2 + 1;
         // size is not the same as arr.length .... size will change if elements
         // are taken out of the heap
-        if(child<size) {
-            if(arr[child] > arr[max_index]) {
-                max_index = child;
+        if (child<size) {
+            if (arr[child] > arr[maxIndex]) {
+                maxIndex = child;
             }
         }
 
-        if(child+1<size) {
-            if(arr[child+1]>arr[max_index]) {
-                max_index = child+1;
+        if (child+1<size) {
+            if (arr[child+1]>arr[maxIndex]) {
+                maxIndex = child+1;
             }
         }
 
-        swap(arr, root_index, max_index);
-        if(root_index!=max_index) {
-            heapify(max_index);
+        swap(arr, rootIndex, maxIndex);
+        if (rootIndex != maxIndex) {
+            heapify(maxIndex);
         }
     }
 
-    void swap(int arr[], int a, int b) {
+    public void swap(int arr[], int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
 
-    int extractRoot() {
+    public int extractRoot() {
         int max = arr[0];
         arr[0] = arr[--size];
         heapify(0);
@@ -54,7 +54,7 @@ public class Heap {
         return max;
     }
 
-    int getSize() {
+    public int getSize() {
         return size;
     }
 }

@@ -9,7 +9,7 @@ public class Fatorial {
         System.out.println("");
         System.out.println("==============");
         
-        for(int i = 1; i <= numero; i++) {
+        for (int i = 1; i <= numero; i++) {
             fatorial = fatorial * i;
             System.out.println(i + "! = " + fatorial);
         }
@@ -19,7 +19,7 @@ public class Fatorial {
         fatorial = 1;
         System.out.println("==============");
         
-        for(int i = numero; i >= 1; i--) {
+        for (int i = numero; i >= 1; i--) {
             fatorial = fatorial * i;
         }
         System.out.println(fatorial);

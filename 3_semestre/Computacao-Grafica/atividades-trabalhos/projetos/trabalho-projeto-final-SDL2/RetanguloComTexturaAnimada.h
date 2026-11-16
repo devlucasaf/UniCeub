@@ -42,6 +42,6 @@ public:
 
     void desenhar();
 
-    // --- CAIXA DELIMITADORA ALINHADA AOS EIXOS (AABB) ---
+    // --- CAIXA DELIMITADORA ALINHADA AOS EIXOS ---
     void obterCaixaDelimitadora(float &esquerda, float &direita, float &inferior, float &superior);
 };

@@ -29,7 +29,7 @@
 
 ;; Função que calcula o produto de todos os elementos da lista
 (define (produto-lista lista)
-  (apply * lista))
+    (apply * lista))
 
 ;; Avaliação
 (display "3️⃣ Produto da lista: ")

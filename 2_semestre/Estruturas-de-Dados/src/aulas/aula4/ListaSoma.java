@@ -7,10 +7,10 @@ public class ListaSoma {
 
     public static void main(String[] args) {
 
-        int soma            = 0;
-        int somaPar         = 0;
-        int somaEnderecoI   = 0;
-        int total           = 0;
+        int soma = 0;
+        int somaPar = 0;
+        int somaEnderecoI = 0;
+        int total = 0;
 
         String nrElementos = JOptionPane.showInputDialog("Quantoss numeros a lista vai ter? ");
 
@@ -34,7 +34,7 @@ public class ListaSoma {
                 somaPar = somaPar + lista.get(i);
             }
 
-            if(i % 2 != 0) {
+            if (i % 2 != 0) {
                 somaEnderecoI = somaEnderecoI + lista.get(i);
 
             }

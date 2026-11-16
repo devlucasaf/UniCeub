@@ -126,10 +126,10 @@ public class ArvoreBinaria {
             return -1;
         }
 
-        int esq = alturaRec(atual.esquerda);
-        int dir = alturaRec(atual.direita);
+        int esquerda = alturaRec(atual.esquerda);
+        int direita = alturaRec(atual.direita);
 
-        return Math.max(esq, dir) + 1;
+        return Math.max(esquerda, direita) + 1;
     }
 
     public int contarNos() {

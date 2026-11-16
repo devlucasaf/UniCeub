@@ -1,4 +1,4 @@
-package atividadesTrabalhos.prova;
+package atividadestrabalhos.prova;
 
 import java.util.HashMap;
 

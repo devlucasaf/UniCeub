@@ -11,48 +11,48 @@ public class AulaArrayList {
     // Método principal que demonstra operações básicas com ArrayList
     public static void principal() {
         // Cria um ArrayList de Strings para armazenar carros
-        ArrayList<String> cars = new ArrayList<String>();
+        ArrayList<String> carros = new ArrayList<String>();
         // Adiciona elementos ao ArrayList
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+        carros.add("Volvo");
+        carros.add("BMW");
+        carros.add("Ford");
+        carros.add("Mazda");
 
         // Imprime todo o ArrayList
-        System.out.println(cars);
+        System.out.println(carros);
 
         // Operações comentadas que podem ser utilizadas:
-        // cars.get(0);                // Acessa o item na posição 0
-        // cars.set(0, "Opel");        // Altera um item na posição 0
-        // cars.remove(0);             // Remove um item na posição 0
-        // cars.clear();               // Remove todos os itens
-        // cars.size();                // Verifica o tamanho da lista
+        // carros.get(0);                // Acessa o item na posição 0
+        // carros.set(0, "Opel");        // Altera um item na posição 0
+        // carros.remove(0);             // Remove um item na posição 0
+        // carros.clear();               // Remove todos os itens
+        // carros.size();                // Verifica o tamanho da lista
     }
 
     // Método que demonstra como percorrer um ArrayList usando loop for tradicional
     public static void loopThroughArrayList() {
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+        ArrayList<String> carros = new ArrayList<String>();
+        carros.add("Volvo");
+        carros.add("BMW");
+        carros.add("Ford");
+        carros.add("Mazda");
 
         // Percorre o ArrayList usando índice
-        for (int i = 0; i < cars.size(); i++) {
-            System.out.println(cars.get(i)); // Acessa cada elemento pelo índice
+        for (int i = 0; i < carros.size(); i++) {
+            System.out.println(carros.get(i)); // Acessa cada elemento pelo índice
         }
     }
 
     // Método que demonstra como percorrer um ArrayList usando for-each
     public static void loopThroughArrayListForEach() {
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+        ArrayList<String> carros = new ArrayList<String>();
+        carros.add("Volvo");
+        carros.add("BMW");
+        carros.add("Ford");
+        carros.add("Mazda");
 
         // Percorre o ArrayList usando for-each (mais simplificado)
-        for (String i: cars)  {
+        for (String i: carros)  {
             System.out.println(i);
         }
     }
@@ -60,50 +60,50 @@ public class AulaArrayList {
     // Método que demonstra o uso de ArrayList com outros tipos (Integer)
     public static void otherTypes() {
         // Cria um ArrayList de Integers
-        ArrayList<Integer> myNumbers = new ArrayList<Integer>();
-        myNumbers.add(10);
-        myNumbers.add(15);
-        myNumbers.add(20);
-        myNumbers.add(25);
+        ArrayList<Integer> meusNumeros = new ArrayList<Integer>();
+        meusNumeros.add(10);
+        meusNumeros.add(15);
+        meusNumeros.add(20);
+        meusNumeros.add(25);
 
         // Percorre o ArrayList de números usando for-each
-        for (int i: myNumbers)  {
+        for (int i: meusNumeros)  {
             System.out.println(i);
         }
     }
 
     // Método que demonstra como ordenar um ArrayList de Strings
     public static void sortArrayListString() {
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+        ArrayList<String> carros = new ArrayList<String>();
+        carros.add("Volvo");
+        carros.add("BMW");
+        carros.add("Ford");
+        carros.add("Mazda");
 
         // Ordena o ArrayList em ordem alfabética
-        Collections.sort(cars);
+        Collections.sort(carros);
 
         // Imprime a lista ordenada
-        for (String i: cars)  {
+        for (String i: carros)  {
             System.out.println(i);
         }
     }
 
     // Método que demonstra como ordenar um ArrayList de Integers
     public static void sortArrayListInt() {
-        ArrayList<Integer> myNumbers = new ArrayList<Integer>();
-        myNumbers.add(33);
-        myNumbers.add(15);
-        myNumbers.add(20);
-        myNumbers.add(34);
-        myNumbers.add(8);
-        myNumbers.add(12);
+        ArrayList<Integer> meusNumeros = new ArrayList<Integer>();
+        meusNumeros.add(33);
+        meusNumeros.add(15);
+        meusNumeros.add(20);
+        meusNumeros.add(34);
+        meusNumeros.add(8);
+        meusNumeros.add(12);
 
         // Ordena o ArrayList em ordem crescente
-        Collections.sort(myNumbers);
+        Collections.sort(meusNumeros);
 
         // Imprime a lista ordenada
-        for (int i: myNumbers)  {
+        for (int i: meusNumeros)  {
             System.out.println(i);
         }
     }
@@ -138,10 +138,12 @@ public class AulaArrayList {
 
         System.out.println("\n=== Exercício 7 ===");
         ArrayList<Pessoa> pessoas = new ArrayList<>();
+
         pessoas.add(new Pessoa("João", 25));
         pessoas.add(new Pessoa("Maria", 30));
         pessoas.add(new Pessoa("Pedro", 20));
         ordenarPorIdade(pessoas);
+
         System.out.println("Pessoas ordenadas por idade: " + pessoas);
 
         System.out.println("\n=== Exercício 8 ===");
@@ -160,6 +162,7 @@ public class AulaArrayList {
     // Exercício 1: Demonstra operações básicas de ArrayList
     public static void exercicio1() {
         ArrayList<String> lista = new ArrayList<>();
+
         lista.add("Java");
         lista.add("Python");
         lista.add("C++");
@@ -270,30 +273,6 @@ public class AulaArrayList {
             resultado.add(lista.get(i)); // Adiciona elementos na ordem inversa
         }
         return resultado;
-    }
-
-    // Classe auxiliar para o exercício 7 - representa uma pessoa com nome e idade
-    static class Pessoa {
-        private String  nome;
-        private int     idade;
-
-        public Pessoa(String nome, int idade) {
-            this.nome = nome;
-            this.idade = idade;
-        }
-
-        public String getNome() {
-            return nome;
-        }
-
-        public int getIdade() {
-            return idade;
-        }
-
-        @Override
-        public String toString() {
-            return nome + "(" + idade + ")"; // Formata a saída para exibição
-        }
     }
 
     // Método main - ponto de entrada do programa

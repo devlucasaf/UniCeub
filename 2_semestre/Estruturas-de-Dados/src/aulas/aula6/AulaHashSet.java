@@ -11,7 +11,7 @@ import java.util.Iterator;     // Importa a classe Iterator
 public class AulaHashSet {
 
     // Método que demonstra operações básicas com HashSet
-    public static void AulaHashSet() {
+    public static void aulaHashSet() {
         // Cria um HashSet de Strings para armazenar carros
         HashSet<String> cars = new HashSet<String>();
 
@@ -33,7 +33,7 @@ public class AulaHashSet {
     }
 
     // Método principal que demonstra uso do contains() para verificar elementos
-    public static void Principal() {
+    public static void principal() {
         // Cria um HashSet de Integers
         HashSet<Integer> numbers = new HashSet<Integer>();
 
@@ -53,7 +53,7 @@ public class AulaHashSet {
     }
 
     // Método que demonstra o uso de HashSet com outros tipos (Integer)
-    public static void OtherTypes() {
+    public static void otherTypes() {
         // Cria um HashSet chamado "numbers" para armazenar inteiros
         HashSet<Integer> numbers = new HashSet<Integer>();
 
@@ -73,7 +73,7 @@ public class AulaHashSet {
     }
 
     // Método que implementa exercícios práticos com HashSet
-    public static void Exercicio() {
+    public static void exercicio() {
         // 1. Crie um HashSet vazio chamado "mySet" para inteiros
         HashSet<Integer> mySet = new HashSet<>();
 
@@ -99,28 +99,29 @@ public class AulaHashSet {
 
         // 6. Crie outro HashSet chamado "otherSet" e adicione os números 4, 5, 6 e 7
         HashSet<Integer> otherSet = new HashSet<>();
+
         otherSet.add(4);
         otherSet.add(5);
         otherSet.add(6);
         otherSet.add(7);
-        System.out.println("6. otherSet: " + otherSet);
+        System.out.println("6. OtherSet: " + otherSet);
 
         // 7. Retenha no HashSet "mySet" apenas os elementos presentes em "otherSet"
         // (Operação de interseção - mantém apenas elementos comuns)
         mySet.retainAll(otherSet);
-        System.out.println("7. mySet após reter apenas elementos de otherSet: " + mySet);
+        System.out.println("7. MySet após reter apenas elementos de OtherSet: " + mySet);
 
         // 8. Adicione todos os elementos de "otherSet" ao HashSet "mySet"
         // (Operação de união - adiciona todos elementos, mantendo apenas únicos)
         mySet.addAll(otherSet);
-        System.out.println("8. mySet após adicionar todos elementos de otherSet: " + mySet);
+        System.out.println("8. MySet após adicionar todos elementos de OtherSet: " + mySet);
 
         // 9. Obtenha o tamanho atual do HashSet "mySet"
         int tamanho = mySet.size();
-        System.out.println("9. Tamanho atual de mySet: " + tamanho);
+        System.out.println("9. Tamanho atual de MySet: " + tamanho);
 
         // 10. Percorra todos os elementos do HashSet "mySet" e imprima cada um deles
-        System.out.println("10. Elementos de mySet:");
+        System.out.println("10. Elementos de MySet:");
 
         // Usando Iterator (forma tradicional de percorrer coleções)
         System.out.println("   Usando Iterator:");
@@ -139,10 +140,10 @@ public class AulaHashSet {
     // Método main - ponto de entrada do programa
     public static void main(String[] args) {
         // Executa todos os métodos de demonstração
-        AulaHashSet();      // Operações básicas com HashSet
-        Principal();        // Verificação de elementos com contains()
-        OtherTypes();       // Uso com tipos Integer
-        Exercicio();        // Exercícios práticos
+        aulaHashSet();      // Operações básicas com HashSet
+        principal();        // Verificação de elementos com contains()
+        otherTypes();       // Uso com tipos Integer
+        exercicio();        // Exercícios práticos
     }
 }
 

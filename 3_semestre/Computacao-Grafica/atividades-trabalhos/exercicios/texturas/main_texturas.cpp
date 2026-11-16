@@ -29,7 +29,7 @@ void ajuste(int w, int h) {
     gluPerspective(45.0, (float)w/(float)h, 0.4, 500.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(0,0,200, 0,0,0, 0,1,0);
+    gluLookAt(0, 0, 200, 0, 0, 0, 0, 1, 0);
 }
 
 int main(int argc, char** argv) {

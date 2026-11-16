@@ -18,7 +18,7 @@ void Retangulo::definirTextura(GLuint textura) {
 
 void Retangulo::desenhar() {
     float metadeLargura = largura / 2.0f;
-    float metadeAltura  = altura / 2.0f;
+    float metadeAltura = altura / 2.0f;
 
     // --- COR BRANCA PARA NÃO TINGIR A TEXTURA ---
     glColor3f(1.0f, 1.0f, 1.0f);

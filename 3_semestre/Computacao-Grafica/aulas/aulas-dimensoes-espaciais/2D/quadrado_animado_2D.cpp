@@ -39,7 +39,7 @@ void ajustar(int w, int h) {
 void teclado(unsigned char key, int x, int y) {
 	cout<<(int)key<<endl;
 
-	if(key == ESC) {
+	if (key == ESC) {
 		exit(0);
 	}
 }

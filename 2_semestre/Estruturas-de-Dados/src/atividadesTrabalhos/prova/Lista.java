@@ -1,4 +1,4 @@
-package atividadesTrabalhos.prova;
+package atividadestrabalhos.prova;
 
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ public class Lista {
 
     public static void main(String[] args) {
 
-        String nrElementos = JOptionPane.showInputDialog("Quantos números a lista vai ter? ");
+        String qntdNumeroElementosLista = JOptionPane.showInputDialog("Quantos números a lista vai ter? ");
 
-        int nElementos = Integer.valueOf(nrElementos);
+        int nElementos = Integer.valueOf(qntdNumeroElementosLista);
 
         ArrayList<Integer> lista = new ArrayList<Integer>();
 

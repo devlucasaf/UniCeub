@@ -1,4 +1,4 @@
-package atividadesTrabalhos.prova;
+package atividadestrabalhos.prova;
 
 public class ProvaMolina {
     public static void main(String[] args) {
