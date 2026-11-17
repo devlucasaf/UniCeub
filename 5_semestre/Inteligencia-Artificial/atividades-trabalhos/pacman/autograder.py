@@ -31,57 +31,88 @@ except:
 # register arguments and set default values
 def readCommand(argv):
     parser = optparse.OptionParser(
-        description='Run public tests on student code')
-    parser.set_defaults(generateSolutions=False, edxOutput=False, gsOutput=False,
-                        muteOutput=False, printTestCase=False, noGraphics=False)
-    parser.add_option('--test-directory',
-                      dest='testRoot',
-                      default='test_cases',
-                      help='Root test directory which contains subdirectories corresponding to each question')
-    parser.add_option('--student-code',
-                      dest='studentCode',
-                      default=projectParams.STUDENT_CODE_DEFAULT,
-                      help='comma separated list of student code files')
-    parser.add_option('--code-directory',
-                      dest='codeRoot',
-                      default="",
-                      help='Root directory containing the student and testClass code')
-    parser.add_option('--test-case-code',
-                      dest='testCaseCode',
-                      default=projectParams.PROJECT_TEST_CLASSES,
-                      help='class containing testClass classes for this project')
-    parser.add_option('--generate-solutions',
-                      dest='generateSolutions',
-                      action='store_true',
-                      help='Write solutions generated to .solution file')
-    parser.add_option('--edx-output',
-                      dest='edxOutput',
-                      action='store_true',
-                      help='Generate edX output files')
-    parser.add_option('--gradescope-output',
-                      dest='gsOutput',
-                      action='store_true',
-                      help='Generate GradeScope output files')
-    parser.add_option('--mute',
-                      dest='muteOutput',
-                      action='store_true',
-                      help='Mute output from executing tests')
-    parser.add_option('--print-tests', '-p',
-                      dest='printTestCase',
-                      action='store_true',
-                      help='Print each test case before running them.')
-    parser.add_option('--test', '-t',
-                      dest='runTest',
-                      default=None,
-                      help='Run one particular test.  Relative to test root.')
-    parser.add_option('--question', '-q',
-                      dest='gradeQuestion',
-                      default=None,
-                      help='Grade one particular question.')
-    parser.add_option('--no-graphics',
-                      dest='noGraphics',
-                      action='store_true',
-                      help='No graphics display for pacman games.')
+        description='Run public tests on student code'
+    )
+    parser.set_defaults(
+        generateSolutions=False, 
+        edxOutput=False, 
+        gsOutput=False,
+        muteOutput=False, 
+        printTestCase=False, 
+        noGraphics=False
+    )
+    parser.add_option(
+        '--test-directory',
+        dest='testRoot',
+        default='test_cases',
+        help='Root test directory which contains subdirectories corresponding to each question'
+    )
+    parser.add_option(
+        '--student-code',
+        dest='studentCode',
+        default=projectParams.STUDENT_CODE_DEFAULT,
+        help='comma separated list of student code files'
+    )
+    parser.add_option(
+        '--code-directory',
+        dest='codeRoot',
+        default="",
+        help='Root directory containing the student and testClass code'
+    )
+    parser.add_option(
+        '--test-case-code',
+        dest='testCaseCode',
+        default=projectParams.PROJECT_TEST_CLASSES,
+        help='class containing testClass classes for this project'
+    )
+    parser.add_option(
+        '--generate-solutions',
+        dest='generateSolutions',
+        action='store_true',
+        help='Write solutions generated to .solution file'
+    )
+    parser.add_option(
+        '--edx-output',
+        dest='edxOutput',
+        action='store_true',
+        help='Generate edX output files'
+    )
+    parser.add_option(
+        '--gradescope-output',
+        dest='gsOutput',
+        action='store_true',
+        help='Generate GradeScope output files'
+    )
+    parser.add_option(
+        '--mute',
+        dest='muteOutput',
+        action='store_true',
+        help='Mute output from executing tests'
+    )
+    parser.add_option(
+        '--print-tests', '-p',
+        dest='printTestCase',
+        action='store_true',
+        help='Print each test case before running them.'
+    )
+    parser.add_option(
+        '--test', '-t',
+        dest='runTest',
+        default=None,
+        help='Run one particular test.  Relative to test root.'
+    )
+    parser.add_option(
+        '--question', '-q',
+        dest='gradeQuestion',
+        default=None,
+        help='Grade one particular question.'
+    )
+    parser.add_option(
+        '--no-graphics',
+        dest='noGraphics',
+        action='store_true',
+        help='No graphics display for pacman games.'
+    )
     (options, args) = parser.parse_args(argv)
     return options
 
@@ -157,12 +188,12 @@ def readFile(path, root=""):
 ERROR_HINT_MAP = {
     'q1': {
         "<type 'exceptions.IndexError'>": """
-      We noticed that your project threw an IndexError on q1.
-      While many things may cause this, it may have been from
-      assuming a certain number of successors from a state space
-      or assuming a certain number of actions available from a given
-      state. Try making your code more general (no hardcoded indices)
-      and submit again!
+        We noticed that your project threw an IndexError on q1.
+        While many things may cause this, it may have been from
+        assuming a certain number of successors from a state space
+        or assuming a certain number of actions available from a given
+        state. Try making your code more general (no hardcoded indices)
+        and submit again!
     """
     },
     'q3': {
@@ -244,7 +275,8 @@ def getTestSubdirs(testParser, testRoot, questionToGrade):
         questions = getDepends(testParser, testRoot, questionToGrade)
         if len(questions) > 1:
             print('Note: due to dependencies, the following tests will be run: %s' %
-                  ' '.join(questions))
+                ' '.join(questions)
+            )
         return questions
     if 'order' in problemDict:
         return problemDict['order'].split()
@@ -253,8 +285,8 @@ def getTestSubdirs(testParser, testRoot, questionToGrade):
 
 # evaluate student code
 def evaluate(generateSolutions, testRoot, moduleDict, exceptionMap=ERROR_HINT_MAP,
-             edxOutput=False, muteOutput=False, gsOutput=False,
-             printTestCase=False, questionToGrade=None, display=None):
+            edxOutput=False, muteOutput=False, gsOutput=False,
+            printTestCase=False, questionToGrade=None, display=None):
     # imports of testbench code.  note that the testClasses import must follow
     # the import of student code due to dependencies
     import testParser
@@ -357,6 +389,10 @@ if __name__ == '__main__':
                 display=getDisplay(True, options))
     else:
         evaluate(options.generateSolutions, options.testRoot, moduleDict,
-                 gsOutput=options.gsOutput,
-                 edxOutput=options.edxOutput, muteOutput=options.muteOutput, printTestCase=options.printTestCase,
-                 questionToGrade=options.gradeQuestion, display=getDisplay(options.gradeQuestion != None, options))
+                gsOutput=options.gsOutput,
+                edxOutput=options.edxOutput, 
+                muteOutput=options.muteOutput, 
+                printTestCase=options.printTestCase,
+                questionToGrade=options.gradeQuestion, 
+                display=getDisplay(options.gradeQuestion != None, options)
+        )

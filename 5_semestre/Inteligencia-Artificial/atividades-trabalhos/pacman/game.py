@@ -57,19 +57,23 @@ class Directions:
     WEST = 'West'
     STOP = 'Stop'
 
-    LEFT = {NORTH: WEST,
-            SOUTH: EAST,
-            EAST:  NORTH,
-            WEST:  SOUTH,
-            STOP:  STOP}
+    LEFT = {
+        NORTH: WEST,
+        SOUTH: EAST,
+        EAST: NORTH,
+        WEST: SOUTH,
+        STOP: STOP
+    }
 
     RIGHT = dict([(y, x) for x, y in list(LEFT.items())])
 
-    REVERSE = {NORTH: SOUTH,
-               SOUTH: NORTH,
-               EAST: WEST,
-               WEST: EAST,
-               STOP: STOP}
+    REVERSE = {
+        NORTH: SOUTH,
+        SOUTH: NORTH,
+        EAST: WEST,
+        WEST: EAST,
+        STOP: STOP
+    }
 
 
 class Configuration:
@@ -154,10 +158,12 @@ class AgentState:
 
     def copy(self):
         state = AgentState(self.start, self.isPacman)
+
         state.configuration = self.configuration
         state.scaredTimer = self.scaredTimer
         state.numCarrying = self.numCarrying
         state.numReturned = self.numReturned
+
         return state
 
     def getPosition(self):
@@ -198,7 +204,7 @@ class Grid:
 
     def __str__(self):
         out = [[str(self.data[x][y])[0] for x in range(self.width)]
-               for y in range(self.height)]
+                for y in range(self.height)]
         out.reverse()
         return '\n'.join([''.join(x) for x in out])
 
@@ -309,11 +315,13 @@ class Actions:
     A collection of static methods for manipulating move actions.
     """
     # Directions
-    _directions = {Directions.WEST:  (-1, 0),
-                   Directions.STOP:  (0, 0),
-                   Directions.EAST:  (1, 0),
-                   Directions.NORTH: (0, 1),
-                   Directions.SOUTH: (0, -1)}
+    _directions = {
+        Directions.WEST: (-1, 0),
+        Directions.STOP: (0, 0),
+        Directions.EAST: (1, 0),
+        Directions.NORTH: (0, 1),
+        Directions.SOUTH: (0, -1)
+    }
 
     _directionsAsList = [('West', (-1, 0)), ('Stop', (0, 0)), ('East', (1, 0)), ('North', (0, 1)), ('South', (0, -1))]
 
@@ -633,7 +641,7 @@ class Game:
                             self.totalAgentTimes[i] += time_taken
                         except TimeoutFunctionException:
                             print("Agent %d ran out of time on startup!" %
-                                  i, file=sys.stderr)
+                                    i, file=sys.stderr)
                             self.unmute()
                             self.agentTimeout = True
                             self._agentCrash(i, quiet=True)
@@ -694,7 +702,7 @@ class Game:
                         action = timed_func(observation)
                     except TimeoutFunctionException:
                         print("Agent %d timed out on a single move!" %
-                              agentIndex, file=sys.stderr)
+                                agentIndex, file=sys.stderr)
                         self.agentTimeout = True
                         self._agentCrash(agentIndex, quiet=True)
                         self.unmute()
