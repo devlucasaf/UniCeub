@@ -91,6 +91,12 @@
         src="https://skillicons.dev/icons?i=php"
     />
     <img 
+        alt="swift" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=swift"
+    />
+    <img 
         alt="r" 
         height="40" 
         style="margin:4px" 
@@ -254,7 +260,7 @@
         alt="Antigravity"
         height="40"
         style="margin:4px" 
-        src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/antigravity/antigravity-original.svg"
     />
     <img 
         alt="JetBrains" 
