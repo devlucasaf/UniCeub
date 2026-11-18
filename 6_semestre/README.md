@@ -12,7 +12,7 @@
 | # | Disciplina |
 |:---:|:---|
 | 01 | 📈 [Pesquisa Operacional](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre/Pesquisa-Operacional) |
-| 02 | 🔗 Projeto Integrador II |
+| 02 | 🔗 [Projeto Integrador II](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre/Projeto-Integrador-II) |
 | 03 | 🌐 Redes de Computadores |
 | 04 | 🕸️ [Teoria de Grafos](https://github.com/devlucasaf/UniCeub/tree/main/6_semestre/Teoria-de-Grafos) |
 
@@ -41,10 +41,38 @@
         style="margin:4px" 
         src="https://skillicons.dev/icons?i=c"
     />
+    <img 
+        alt="JavaScript" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=javascript"
+    />
 </div>
 
 ---
 
+### 🌐 Web & Mobile
+
+<div align="left">
+    <img 
+        alt="HTML" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=html"
+    />
+    <img 
+        alt="CSS" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=css"
+    />
+    <img 
+        alt="Django" 
+        height="40" 
+        style="margin:4px" 
+        src="https://skillicons.dev/icons?i=django"
+    />
+</div>
 
 ## 🛠️ Ferramentas & Ambiente
 
